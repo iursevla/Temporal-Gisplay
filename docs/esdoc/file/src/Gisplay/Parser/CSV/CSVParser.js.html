@@ -1,0 +1,785 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">src/Gisplay/Parser/CSV/CSVParser.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/Parser/CSV/CSVParser.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//Import for Intellisense
+import { DataVariable } from &apos;../../VVs/DataVariable&apos;;
+
+let CSVDataWorker = require(&quot;worker-loader?name=CSVDataWorker.js!./CSVDataWorker.js&quot;);
+import { Parser } from &apos;../Parser&apos;;
+import { GeoJSONIdsParser } from &apos;../GeoJSON/GeoJSONIdsParser&apos;;
+import { GisplayDefaults } from &apos;../../GisplayDefaults&apos;;
+
+/**
+ * Fast CSV Parser. This parser was created because current parsers that work on the browser do not provide the required performance for this thesis.
+ * @export
+ * @class NewCSVParser
+ * @extends {Parser}
+ */
+export class CSVParser extends Parser {
+    /**
+     * 
+     * @param {GisplayOptions} gisplayOptions - The options class.
+     * @param {WebGLRenderingContext} webgl - The WebGLRenderingContext.
+     * @memberof NewCSVParser
+     */
+    constructor(gisplayOptions, webgl) {
+        super(gisplayOptions, webgl);
+        console.time(&quot;csvParser&quot;);
+
+        /**
+         * The start byte of the file.
+         * @type {number=0}
+         */
+        this.startByte = 0;
+        /**
+         * Number of bytes to read at the beginning of the file.
+         * @type {number=1024}
+         */
+        this.headerBytesSize = 1024;
+
+        //Load Programmer Options
+        let csvOpts = this.opts.getCSV();
+        /**
+         * The size of each chunk to be read from the file. The default is 10MiB. 
+         * @type {number=1024*1024*10}
+         */
+        this.chunkSize = csvOpts.chunkSize || 1024 * 1024 * 10;
+        /**
+         * The char or string that is used to split columns of each row. Defaults is comma.
+         * @type {string=&apos;,&apos;}
+         */
+        this.columnDelimiter = &apos;,&apos;;
+        /**
+         * The row delimiter. Defaults is \n.
+         * CR = \r (MAC); LF = \n (LINUX); CRLF = \r\n (WINDOWS) 
+         * @see https://en.wikipedia.org/wiki/Newline
+         * @see http://stackoverflow.com/a/1552782/
+         * @see https://stackoverflow.com/a/39259747/
+         * @type {string=&apos;\n&apos;}
+         */
+        this.rowDelimiter = &apos;\n&apos;;
+
+        let numWorkers = Math.max(Math.floor((this.fileSize / this.chunkSize)), 1);
+        numWorkers = numWorkers &gt; 4 ? 4 : numWorkers;
+        // numWorkers = 4;
+        /**
+         * Number of data workers that will process the file in parallel.
+         * @type {number=4}
+         */
+        this.numDataWorkers = csvOpts.numWorkers || numWorkers;
+        /**
+         * The data workers that will read a portion of the CSV dataset.
+         * @type {Array&lt;Worker&gt;}
+         */
+        this.dataWorkers = new Array(this.numDataWorkers);
+        /**
+         * Information to be stored for each worker.
+         * @type {Array&lt;any&gt;}
+         */
+        this.dataWorkersInfo = new Array(this.numDataWorkers);
+
+        //REPLIES
+        /**
+         * The number of worker that replied with the terminated message.
+         * @type {number}
+         */
+        this.workerTerminatedReplies = 0;
+        /**
+         * Used to save the first and last rows of each worker after they&apos;re done processing their part. 
+         * @type {Array&lt;Array&lt;string&gt;&gt;}
+         */
+        this.workerRemainingRows = [];//Array(this.numDataWorkers).fill([]);
+
+        if (this.urlVariable.hasIds())
+            new GeoJSONIdsParser(this.urlVariable.getGeoSpatialURL(), this.urlVariable.getIdOnGeoSpatialURL(), this.webglContext);
+
+        /**
+         * The Filereader.
+         * @type {FileReader}
+         */
+        this.reader = this.createFileReader();
+        this.readHeader();
+    }
+
+    /**
+     * Code that will be used in the future to decide how many workers to start and the amount of bytes each will have to deal with.
+     * @memberof CSVNewParser
+     */
+    unusedConstructorCode() {
+        //Decide num data workers based on file size.
+        if (this.numDataWorkers * this.chunkSize &gt; this.fileSize) {
+            for (let i = 1, found = false; i &lt; this.numDataWorkers &amp;&amp; !found; i++) {//Update numDataworkers
+                if (this.chunkSize * i &gt; this.fileSize) {
+                    this.numDataWorkers = i;
+                    found = true;
+                }
+            }
+        }
+
+        let chunksByWorker = Math.ceil((this.fileSize / this.numDataWorkers) / this.chunkSize);
+        let totalChunks = Math.ceil(chunksByWorker * this.numDataWorkers);
+        this.numChunks = totalChunks &gt; 0 ? totalChunks : 1; //NOT USED ATM
+    }
+
+    /**
+     * Creates a FileReader object and adds the load and error events to it.
+     * @returns {FileReader} - The Filereader object which will be used to read from the file.
+     * @memberof GeoJSONParser
+     */
+    createFileReader() {
+        let reader = new FileReader();
+        reader.onload = (e) =&gt; { this.chunkLoaded(e.target.result); };
+        reader.onerror = (e) =&gt; { console.error(e); };
+        return reader;
+    }
+
+    /**
+     * Reads the first 1024 bytes (1KiB) (the value of this.headerBytesSize) of the file.
+     * @memberof NewCSVParser
+     */
+    readHeader() {
+        let start = Math.min(this.startByte, this.fileSize);
+        let end = Math.min(this.startByte + this.headerBytesSize, this.fileSize - 1);
+        this.reader.readAsText(this.dataFile.slice(start, end));
+    }
+
+    /**
+     * After the header chunk was loaded then look for 
+     * @param {string} textRead - The string of text that was read from the file.  
+     * @memberof NewCSVParser
+     */
+    chunkLoaded(textRead) {
+        //To detect the rowDelimiter we can calculte the number of \r, \n and \r\n
+        let rowDelimiterDetected = this.detectRowDelimiter(textRead);
+        if (!rowDelimiterDetected)
+            this.readHeader();
+        else {
+            if (this.detectColumnDelimiter(textRead))
+                this.processHeader(textRead);
+        }
+    }
+
+    /**
+     * Detects which is the row delimiter for the file in use.
+     * @param {string} textRead - The string of text that was read from the file.  
+     * @return {boolean} true, if the row delimiter was detected, false, otherwise.
+     * @memberof NewCSVParser
+     */
+    detectRowDelimiter(textRead) {
+        let R = textRead.split(&apos;\r&apos;).length;
+        let N = textRead.split(&apos;\n&apos;).length;
+        if (R === N)
+            this.rowDelimiter = &apos;\r\n&apos;;
+        else if (R &gt; N)
+            this.rowDelimiter = &apos;\r&apos;;
+        else
+            this.rowDelimiter = &apos;\n&apos;;
+
+        // logRed(&quot;R&quot;, R, &quot;N&quot;, N);
+        if (R &gt; 1 &amp;&amp; N &gt; 1 &amp;&amp; R !== N) //
+            throw new Error(`Dataset row delimiter is inconsistent! There are more than 1 row delimited by \\r and more than one row delimited by \\n. 
+            Inspect your file with  HxD (https://mh-nexus.de/en/hxd/) and resolve inconsistencies.`);
+
+        let finalText = textRead.split(this.rowDelimiter);
+        if (finalText.length &lt; 2) {
+            this.headerBytesSize *= 2;
+            console.warn(&apos;Not enought bytes read from the file. Attempting to double the number of bytes and trying again...&apos;);
+            return false;
+        }
+        else
+            return true;
+    }
+
+    /**
+     * Detects the column separator for the file in use.
+     * @param {string} textRead - The string of text that was read from the file.  
+     * @see https://data-gov.tw.rpi.edu/wiki/CSV_files_use_delimiters_other_than_commas
+     * @memberof NewCSVParser
+     */
+    detectColumnDelimiter(textRead) {
+        let headerText = textRead.split(this.rowDelimiter)[0];
+        let numCommas = headerText.split(&apos;,&apos;).length - 1;
+        let numSemiColons = headerText.split(&apos;;&apos;).length - 1;
+        let numPipes = headerText.split(&apos;|&apos;).length - 1;
+        if (numCommas &gt; 0 &amp;&amp; numSemiColons === 0 &amp;&amp; numPipes === 0)
+            this.columnDelimiter = &apos;,&apos;;
+        else if (numCommas === 0 &amp;&amp; numSemiColons &gt; 0 &amp;&amp; numPipes === 0)
+            this.columnDelimiter = &apos;;&apos;;
+        else if (numCommas === 0 &amp;&amp; numSemiColons === 0 &amp;&amp; numPipes &gt; 0)
+            this.columnDelimiter = &apos;|&apos;;
+        else
+            throw new Error(`Couldn&apos;t detect the column delimiter. Something must be wrong with the dataset. Header text: ${headerText}`);
+        return true;
+    }
+
+    /**
+     * Process header using the programmer options and the header read from the file.
+     * @param {string} textRead - The string of text that was read from the file.   
+     * @memberof NewCSVParser
+     */
+    processHeader(textRead) {
+        let header = textRead.split(this.rowDelimiter)[0];
+        let columns = header.split(this.columnDelimiter);
+
+        let numColumns = columns.length; //To be used by Workers?
+        let headerIndices = [];
+        let catIndices = [];
+        let contIndices = [];
+        let timeIndex = [];
+        let optionalIndices = [];
+        let geoIndices = [];
+
+        catIndices = this.findVariablesIndices(this.categoricalVariables, columns);
+        contIndices = this.findVariablesIndices(this.continousVariables, columns);
+        timeIndex = this.hasTime ? columns.indexOf(this.timeVariable.getExternalName()) : -1;
+        optionalIndices = this.findVariablesIndices(this.optionalVariables, columns);
+        geoIndices = this.findGeometryIndices(columns);
+
+        // console.log(catIndices, contIndices, timeIndex, optionalIndices, numColumns);
+        this.verifyIndicesIntegrity(catIndices, contIndices, timeIndex, optionalIndices);
+        headerIndices = [catIndices, contIndices, geoIndices, timeIndex, optionalIndices];
+        this.startWorkers(headerIndices, numColumns);
+    }
+
+    /**
+     * For each variable of the given variables find the index of it&apos;s internal name on the header.
+     * @param {Array&lt;DataVariable&gt;} variables - The variables to look for it&apos;s indices.
+     * @param {Array&lt;string&gt;} headerColumns - The header columns
+     * @returns {Array&lt;number&gt;} - the index of each variable internal name on the header.
+     * @memberof NewCSVParser
+     */
+    findVariablesIndices(variables, headerColumns) {
+        let indices = [];
+        for (const variable of variables) {
+            let index = headerColumns.indexOf(variable.getExternalName());
+            if (index &gt; -1)
+                indices.push(index);
+        }
+        return indices;
+    }
+
+    /**
+     * For the CSV file finds the indices of the geometry. If the geometry should be reused then it should return the index of the identifier.
+     * @param {Array&lt;string&gt;} columns - The header keys. 
+     * @returns {number|Array&lt;number&gt;} - The id or the longitude and latitude indices.
+     * @memberof NewCSVParser
+     */
+    findGeometryIndices(columns) {
+        let id = this.urlVariable.getIdOnDataURL();
+        // console.warn(id);
+        if (id)
+            return columns.indexOf(id);
+        else {
+            let longitudeExternalName = this.geometryVariables[0].getExternalName();
+            let latitudeExternalName = this.geometryVariables[1].getExternalName();
+            let lngIndex = columns.indexOf(longitudeExternalName);
+            let latIndex = columns.indexOf(latitudeExternalName);
+            if (latIndex === -1 || lngIndex === -1)
+                throw new Error(&quot;Longitude or Latitude keys not found in the CSV header.&quot;);
+            return [lngIndex, latIndex];
+        }
+    }
+
+    /**
+     * Verifies if there&apos;s any error in any given variable external name.
+     * @param {Array&lt;number&gt;} catIndices - The indices of all categorical variables.
+     * @param {Array&lt;number&gt;} contIndices - The indices of all continuous variables.
+     * @param {number} timeIndex - The index of the time variable.
+     * @param {Array&lt;number&gt;} optionalIndices - The indices of the optional variables.
+     * @throws {Error} - At least one variable external name wasn&apos;t found in the CSV file header. 
+     * @memberof NewCSVParser
+     */
+    verifyIndicesIntegrity(catIndices, contIndices, timeIndex, optionalIndices) {
+        let errCt = 0;
+        if (this.categoricalVariables.length !== catIndices.length)
+            errCt++;
+        if (this.continousVariables.length !== contIndices.length)
+            errCt++;
+        if (this.hasTime &amp;&amp; timeIndex === -1)
+            errCt++;
+        if (this.optionalVariables.length !== optionalIndices.length)
+            errCt++;
+
+        if (errCt &gt; 0)
+            throw new Error(`At least ${errCt} variable(s) external names weren&apos;t found in the CSV file header.`);
+    }
+
+    /**
+     * Creates the workers that will parse the file in chunks.
+     * @param {Array&lt;Array&lt;number&gt;&gt;} headerIndices - The indices of the optional variables, if any.
+     * @param {number} numColumnsPerRow - The number of columns each row must contain.
+     * @see https://stackoverflow.com/a/44782052/
+     * @memberof NewCSVParser
+     */
+    startWorkers(headerIndices, numColumnsPerRow) {
+        let CSVWorkerOptions = {
+            dataFile: this.dataFile,
+            chunkSize: Math.max(this.headerBytesSize, this.chunkSize), //UserDef or 10MB ?
+            columnDelimiter: this.columnDelimiter, //UserDef or comma
+            rowDelimiter: this.rowDelimiter, //UserDef or \n 
+            numColumnsPerRow: numColumnsPerRow, //Used to make sure every line has the same number of 
+            workerIndex: -1, //worker index
+            startByte: 0, //Start Byte for worker
+            endByte: 0, //End byte for worker
+            headerIndices: headerIndices, //The header indices
+
+            categoricalVariables: this._cloneCategoricalVariables(), //this.categoricalVariables,
+            continuousVariables: this.continousVariables,
+            timeVariable: this.timeVariable,
+            // hasIds: this.urlVariable.hasIds(),
+
+            optionalVariables: this.optionalVariables,
+            // webglContext: this.webglContext,
+            classCalcRequired: this.classCalculationRequired(),
+            timeGranularity: headerIndices[3] &gt;= 0 ? this.timeVariable.getGranularity() : &apos;&apos;
+        };
+
+        let numDataWorkers = this.numDataWorkers;
+        let bytesByDataWorker = Math.round(this.fileSize / numDataWorkers);
+        //Loop by this.numDataWorkers e start each with some information
+        for (let i = 0; i &lt; this.numDataWorkers; i++) {
+            CSVWorkerOptions.workerIndex = i;
+            CSVWorkerOptions.startByte = i * bytesByDataWorker;
+            CSVWorkerOptions.endByte = i &lt; numDataWorkers - 1 ? (i + 1) * bytesByDataWorker : this.fileSize;
+            this.dataWorkers[i] = new CSVDataWorker();
+
+            console.log(CSVWorkerOptions);
+
+            this.dataWorkers[i].postMessage({
+                protocolMessage: GisplayDefaults.MESSAGES_CSV().TO_START,
+                messageData: {
+                    workerOptions: CSVWorkerOptions
+                }
+            });
+            this.dataWorkers[i].onmessage = (e) =&gt; { this.receiveWorkersMessage(e.data); };
+        }
+    }
+
+    /**
+     * Clone the categorical variable to remove the gisplayMap object because it can&apos;t be cloned to send to Web Workers.
+     * @returns 
+     * @memberof CSVNewParser
+     */
+    _cloneCategoricalVariables() {
+        let catVarsToSend = [];//new Array(this.categoricalVariables.length);
+        for (const catVar of this.categoricalVariables) {
+            catVarsToSend.push(Object.assign(Object.create(Object.getPrototypeOf(catVar)), catVar));
+        }
+        for (let catVar of catVarsToSend)
+            catVar.gisplayMap = null;
+        console.log(catVarsToSend);
+        return catVarsToSend;
+    }
+
+    /**
+     * Receives the message that was sent by any Worker.
+     * @param {{protocolMessage: string, messageData:Object}} message - The message that was sent by the worker.
+     * @memberof CSVNewParser
+     */
+    receiveWorkersMessage(message) {
+        let protocolMessages = GisplayDefaults.MESSAGES_CSV();
+        switch (message.protocolMessage) {
+            case protocolMessages.END_START: { //Worker processed it&apos;s part
+                if (++this.workerTerminatedReplies === this.numDataWorkers) {
+                    this.workerTerminatedReplies = 0;
+                    this.sendMessageToWorkers(protocolMessages.TO_LIMITS_CAT);
+                }
+                break;
+            }
+            case protocolMessages.END_LIMITS_CAT: {
+                //Save the limits/categories and time granules sent by the W
+                let catVarsCategories = message.messageData.categoricalVariables;
+                for (const catVar of this.categoricalVariables)
+                    if (catVar.classCalculationRequired())
+                        catVar.addCategories(catVarsCategories.get(catVar.getInternalName()));
+
+                let continousVariables = message.messageData.continousVariables;
+                for (const contVar of this.continousVariables) {
+                    let minMax = continousVariables.get(contVar.getInternalName());
+                    contVar.setMinMax(minMax[0]);
+                    contVar.setMinMax(minMax[1]);
+                    contVar.setStep();
+                }
+
+                if (this.hasTime)
+                    this.timeVariable.addTemporalGranulesToSet(message.messageData.timeVariable);
+
+                if (++this.workerTerminatedReplies === this.numDataWorkers) {
+                    //Now we have the TGs and Categories but still need to calculate the histograms for each continuous variable
+                    //Send min/max of each Cont var to the Ws
+                    /*   console.log(&quot;ALL REPLIED&quot;);
+                      console.log(&apos;---------------------------------------&apos;);
+                      console.log(this.categoricalVariables);
+                      console.log(this.continousVariables);
+                      console.log(this.timeVariable);
+                    */
+                    this.workerTerminatedReplies = 0;
+                    let continuousVarsMinMax = [];
+                    for (const contVar of this.continousVariables)
+                        continuousVarsMinMax.push([contVar.getMin(), contVar.getMax()]);
+                    this.sendMessageToWorkers(protocolMessages.TO_LIMITS_CAT_RES, continuousVarsMinMax);
+                }
+                break;
+            }
+            case protocolMessages.END_LIMITS_CAT_RES: {
+                let histograms = message.messageData.histograms;
+                for (let [i, contVar] of this.continousVariables.entries())
+                    if (contVar.classCalculationRequired())
+                        contVar.updateHistogram(histograms[i]);
+
+                if (++this.workerTerminatedReplies === this.numDataWorkers) {
+                    this.workerTerminatedReplies = 0;
+
+                    for (let contVar of this.continousVariables)
+                        contVar.createBins();
+
+                    /*      console.log(&quot;ALL REPLIED SEE CONT VARS&quot;);
+                         console.log(&apos;---------------------------------------&apos;);
+                         console.log(this.continousVariables); */
+
+                    // Generate MVCs and TGs because we already have everything we need to do so
+                    //Each Cat Var generate Map of categories to index
+                    //Each cont var generate classes
+                    //Time Var generate indices for each granule
+                    for (const catVar of this.categoricalVariables) {
+                        if (catVar.classCalculationRequired())
+                            catVar.updateCategoricalInformation();
+                    }
+                    for (const contVar of this.continousVariables)
+                        if (contVar.classCalculationRequired())
+                            contVar.calculateClasses();
+
+                    if (this.hasTime) {
+                        this.timeVariable.createTemporalGranulesMap(this.timeVariable.getTemporalGranulesSet());
+                        this.timeVariable.sortTemporalGranules();
+                    }
+
+                    this.createMapVariableCombinations(); //@TODO: SHouldn&apos;t be called if not needed
+
+                    //Send combinations created to the Ws
+                    this.sendTO_JOIN_DATAMessage();
+                }
+                break;
+            }
+            case protocolMessages.END_JOIN_DATA: {
+                //Should receive the information about each W
+                //Number of elements per MVC/TG
+                this.dataWorkersInfo[message.messageData.workerIndex] = message.messageData.numElemsPerTG;
+                if (++this.workerTerminatedReplies === this.numDataWorkers) {
+                    this.workerTerminatedReplies = 0;
+                    console.log(&quot;All Ws joined their data&quot;);
+                    console.log(this.dataWorkersInfo);
+                    //Generate start and end RGBA for each W MVC/TG 
+                    let rgbasByWorker = this._generateStartRGBAsForWorkers();   //Should send to each worker: 1. the start RGBA of each TG for each MVC 
+                    this.sendMessageToWorkers(protocolMessages.TO_GENERATE_RGBA, rgbasByWorker);
+                }
+                break;
+            }
+            case protocolMessages.END_GENERATE_RGBA: {
+                if (++this.workerTerminatedReplies === this.numDataWorkers) {
+                    this.workerTerminatedReplies = 0;
+                    console.log(&quot;All Ws Generated RGBA Values&quot;);
+                    //All replied then we can start receiving data to build the final MVCs and TGs
+                    this.sendMessageToWorkers(protocolMessages.TO_SEND_DATA);
+                }
+                break;
+            }
+            case protocolMessages.END_SEND_DATA: {
+                let finalDataRows = message.messageData.finalDataRows;
+                //Put each row into its MVC/TG ...
+                // console.log(this.workerTerminatedReplies, finalDataRows);
+                // this.categoricalVariables[0].values = [&apos;N&apos;, &apos;Y&apos;]; /// HERE FIND SOLUTION FOR THIS &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;COMMENTED 21/01/2018
+                // console.warn(this.mapVarCombinations.length);
+                console.warn(finalDataRows);
+                // console.error(&quot;Worker==&quot;, this.workerTerminatedReplies + 1);
+                for (let i = 0; i &lt; finalDataRows.length; i++) { //MVCs
+                    for (let j = 0; j &lt; finalDataRows[i].length; j++) { //TGs
+                        if (finalDataRows[i][j].RGBA.length &gt; 0) {
+                            // if (i === 1 &amp;&amp; j === 0 &amp;&amp; this.workerTerminatedReplies + 1 === 2
+                            //     || i === 1 &amp;&amp; j === 0 &amp;&amp; this.workerTerminatedReplies + 1 === 3) {
+                            // }
+                            /*  console.warn(i, j, this.workerTerminatedReplies + 1);
+                             console.log(this.printFirstRGBA(finalDataRows[i][j].RGBA), this.printLastRGBA(finalDataRows[i][j].RGBA));
+                             console.log(finalDataRows[i][j].RGBA);
+                             console.log(finalDataRows[i][j].numberRGBA); */
+                            this.mapVarCombinations[i].temporalGranules[j].addSetOfRows(finalDataRows[i][j]);
+                        }
+                    }
+                }
+
+                for (const mvc of this.mapVarCombinations) //Update the current RGBA for each Map var combination
+                    mvc.updateCurrentRGBA();
+
+                // console.error(&quot;Worker==&quot;, this.workerTerminatedReplies + 1);
+                // console.error(&quot;-------------------------------------------------------------------&quot;);
+                if (++this.workerTerminatedReplies === this.numDataWorkers) {
+                    //DONE
+                    this.terminateDataWorkers();
+                    console.log(&quot;ALL Ws sent their data and are terminated&quot;);
+                    this.geometryPrimitive = !this.urlVariable.hasIds() ? GisplayDefaults.getPrimitive().CSVPOINT : GisplayDefaults.getPrimitive().CSVIDS;
+                    this.endParser();
+                }
+                else
+                    this.sendMessageToWorkers(protocolMessages.TO_SEND_DATA);
+            }
+        }
+    }
+
+    printFirstRGBA(RGBA) {
+        let firstRGBA = [];
+        for (let i = 0; i &lt; 4; i++)
+            firstRGBA.push(RGBA[i])
+        return firstRGBA;
+    }
+
+    printLastRGBA(RGBA) {
+        let lastRGBA = [];
+        for (let i = RGBA.length - 4; i &lt; RGBA.length; i++)
+            lastRGBA.push(RGBA[i]);
+        return lastRGBA;
+    }
+
+    /**
+     * Generate the start RGBA codes for all possible combinations of MVC/TG in ascending order by worker.
+     * @returns {Array&lt;Array&lt;number&gt;&gt;} -  the start RGBA codes for all possible combinations of MVC/TG in ascending order by worker.
+     * @memberof CSVNewParser
+     */
+    _generateStartRGBAsForWorkersOLD() {
+        let rgbasByWorker = GisplayDefaults.cloneNestedArray(this.dataWorkersInfo);//.slice(0); //To send with the startRGBA for each MVC/TG
+        for (let mvc of this.mapVarCombinationStrToIndexMap.keys()) {
+            let mvcIndex = this.mapVarCombinationStrToIndexMap.get(mvc);
+            let rgba = this.mapVarCombinations[mvcIndex].getStartingRGBA(),
+                rgbaNum = GisplayDefaults.RGBAToNumber(...rgba);
+
+            let first = true,
+                numElems = 0,
+                numTGs = this.mapVarCombinations[mvcIndex].getTemporalGranules().length;
+            for (let tgIndex = 0; tgIndex &lt; numTGs; tgIndex++) {
+                for (let [workerIndex, worker] of this.dataWorkers.entries()) {
+                    numElems += this.dataWorkersInfo[workerIndex][mvcIndex][tgIndex] + 1;
+                    if (first) {
+                        rgbasByWorker[workerIndex][mvcIndex][tgIndex] = rgba;
+                        first = false;
+                    } else {
+                        let newRGBANum = GisplayDefaults.RGBAToNumber(...rgba) + numElems;
+                        let newRGBA = GisplayDefaults.numberToRGBA(newRGBANum);
+                        rgbasByWorker[workerIndex][mvcIndex][tgIndex] = newRGBA;
+                    }
+                }
+            }
+        }
+        let numWorkers = this.dataWorkers.length;
+        for (let i = 0; i &lt; numWorkers; i++)
+            console.log(rgbasByWorker[i]);
+        return rgbasByWorker;
+    }
+
+    _generateStartRGBAsForWorkers() {
+        let rgbasByWorker = GisplayDefaults.cloneNestedArray(this.dataWorkersInfo);//.slice(0); //To send with the startRGBA for each MVC/TG
+        for (let mvc of this.mapVarCombinationStrToIndexMap.keys()) {
+            let mvcIndex = this.mapVarCombinationStrToIndexMap.get(mvc);
+            let rgba = this.mapVarCombinations[mvcIndex].getStartingRGBA();
+
+            let index = 0,
+                numElems = GisplayDefaults.RGBAToNumber(...rgba),
+                numTGs = this.mapVarCombinations[mvcIndex].getTemporalGranules().length;
+            for (let [workerIndex, worker] of this.dataWorkers.entries()) {
+                if (index++ === 0)
+                    rgbasByWorker[workerIndex][mvcIndex] = rgba;
+                else {
+                    rgba = GisplayDefaults.numberToRGBA(numElems);
+                    rgbasByWorker[workerIndex][mvcIndex] = rgba;
+                }
+                numElems += this.dataWorkersInfo[workerIndex][mvcIndex] + 1;
+            }
+        }
+        let numWorkers = this.dataWorkers.length;
+        for (let i = 0; i &lt; numWorkers; i++)
+            console.log(rgbasByWorker[i]);
+        return rgbasByWorker;
+    }
+
+    /**
+     * Send message with name: TO_JOIN, and this way the Ws can join the data given the MVCs and TGs created. 
+     * @memberof CSVNewParser
+     */
+    sendTO_JOIN_DATAMessage() {
+        let protocolMessages = GisplayDefaults.MESSAGES_CSV();
+        let MVCs = this.mapVarCombinationStrToIndexMap;
+        let sortedTGs = this.hasTime ? this.timeVariable.getSortedTemporalGranules() : [0];
+        /*   console.log(MVCs);
+          console.log(sortedTGs); */
+        //Needs to send the cat vars, the cont vars and the time variable and the mvcs created
+        this.sendMessageToWorkers(protocolMessages.TO_JOIN_DATA, {
+            categoricalVariables: this._cloneCategoricalVariables(),//this.categoricalVariables,
+            continuousVariables: this.continousVariables,
+            timeVariable: this.timeVariable,
+            mvcs: MVCs,
+            numberMVCs: MVCs.size,
+            numberTGs: sortedTGs.length
+        });
+    }
+
+    sendMessageToWorkers(message, dataToSend) {
+        let protocolMessages = GisplayDefaults.MESSAGES_CSV();
+        switch (message) {
+            /*  case protocolMessages.TO_REMAINING_ROWS1: {
+                 this.dataWorkers[0].postMessage({
+                     protocolMessage: message,
+                     messageData: dataToSend
+                 });
+                 break;
+             } */
+            case protocolMessages.TO_LIMITS_CAT: {
+                for (const dataWorker of this.dataWorkers)
+                    dataWorker.postMessage({ protocolMessage: message });
+                break;
+            }
+            case protocolMessages.TO_LIMITS_CAT_RES: {
+                for (const dataWorker of this.dataWorkers)
+                    dataWorker.postMessage({
+                        protocolMessage: message,
+                        messageData: dataToSend
+                    });
+                break;
+            }
+            case protocolMessages.TO_JOIN_DATA: {
+                for (const dataWorker of this.dataWorkers)
+                    dataWorker.postMessage({
+                        protocolMessage: message,
+                        messageData: dataToSend
+                    });
+                break;
+            }
+            case protocolMessages.TO_GENERATE_RGBA: {
+                for (const [i, dataWorker] of this.dataWorkers.entries()) {
+                    dataWorker.postMessage({
+                        protocolMessage: message,
+                        messageData: dataToSend[i] //Only the rgbas for this worker
+                    });
+                }
+                break;
+            }
+            case protocolMessages.TO_SEND_DATA: {
+                this.dataWorkers[this.workerTerminatedReplies].postMessage({
+                    protocolMessage: message,
+                    messageData: dataToSend
+                });
+                break;
+            }
+        }
+    }
+
+    /**
+     * Send terminate event to all data workers after their job is done.
+     * @memberof NewCSVParser
+     */
+    terminateDataWorkers() {
+        for (const dataWorker of this.dataWorkers)
+            dataWorker.terminate();
+        delete this.dataWorkers;
+    }
+
+    /**
+     * Split Transitory data, join points if needed and dispatch the parser end event.
+     * @memberof Parser
+     */
+    endParser() {
+        if (!this.urlVariable.hasIds()) {
+            this.setGeometryPrimitiveTGs();
+            this.setNumElementsTemporalGranules();
+
+            console.time(&quot;joinPoints&quot;);
+            if (this.geometryVariables.length &gt; 1) {
+                this.joinMapVarCombinationData();
+                this.joinPickingColors();
+            }
+            console.timeEnd(&quot;joinPoints&quot;);
+        }
+        this.dispatchParseEndEvent();
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

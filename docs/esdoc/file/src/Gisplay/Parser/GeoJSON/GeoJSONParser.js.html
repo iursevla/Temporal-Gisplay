@@ -1,0 +1,608 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">src/Gisplay/Parser/GeoJSON/GeoJSONParser.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/Parser/GeoJSON/GeoJSONParser.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// let GeoJSONWorker = require(&quot;worker-loader?name=worker.js!./GeoJSONWorker.js&quot;);
+import { Parser } from &apos;../Parser&apos;;
+import { GisplayDefaults } from &apos;../../GisplayDefaults&apos;;
+import { GisplayError } from &apos;../../GisplayError&apos;;
+
+const earcut = require(&apos;../../../lib/earcut&apos;);
+// import { earcut } from &apos;../../../lib/earcut&apos;;
+// import earcut from &apos;script-loader!../../../lib/earcut&apos;;
+
+/**
+ * GeoJSON Parser.
+ * @export
+ * @class GeoJSONParser
+ */
+export class GeoJSONParser extends Parser {
+    /**
+     * Creates an instance of GeoJSONParser.
+     * @param {GisplayOptions} gisplayOptions - The options class.
+     * @param {WebGLRenderingContext} webgl - The WebGLRenderingContext.
+     * @memberof GeoJSONParser
+     */
+    constructor(gisplayOptions, webgl) {
+        super(gisplayOptions, webgl);
+        /**
+         * The color number to be used for each polygon/line that is read from the file.
+         * @type {number}
+         */
+        this.RGBAColorNumber = 1;
+        /**
+         * The initial index for the polygons or lines.
+         * @type {number}
+         */
+        this.initialIndex = 0;
+
+        /**
+         * The transitory array that holds data temporarily. 
+         * @type {Array&lt;Object&gt;}
+         */
+        this.transitoryArray = [];
+        /**
+         * This is the maximum length of each array of the transitory data array.
+         * Why 100K? Because, when we have arrays with millions of positions this slows down the access.
+         * [ [       ], [            ], [....   ]
+         *   0   99999  100K   199999  200K...
+         * @type {number}
+         */
+        this.maxArrayLength = 100 * 1000; //100K
+        /**
+         * The number of rows/features read from the file.
+         * @type {number}
+         */
+        this.countTempRows = 0;
+        /**
+         * The index inside the 
+         * @type {number}
+         */
+        this.currentTransitoryArrayIndex = 0;
+
+        /**
+         * The Filereader.
+         * @type {FileReader}
+         */
+        this.reader = this.createFileReader();
+        this.reader.readAsText(this.dataFile);
+        /**
+         * Hold data while we calculate the classes.
+         */
+        this.data = [];
+    }
+
+    /**
+     * Creates a FileReader object and adds the load and error events.
+     * @returns {FileReader} - The Filereader object which will be used to read from the file.
+     * @memberof GeoJSONParser
+     */
+    createFileReader() {
+        let reader = new FileReader();
+        reader.onloadend = (e) =&gt; { this.processFile(e.target.result); };
+        reader.onerror = (e) =&gt; { console.error(e); };
+        return reader;
+    }
+
+    /**
+     * Process the GeoJSON file.
+     * @param {Object} fileData - The GeoJSON data that was read from the file. 
+     * @memberof GeoJSONParser
+     */
+    processFile(fileData) {
+        let geojson = JSON.parse(fileData);
+        console.log(geojson);
+        console.time(&quot;geojsonParser&quot;);
+        let i = 0,
+            limit = Number.MAX_SAFE_INTEGER;
+        if (!this.classCalculationRequired()) {
+            for (let feature of geojson.features) {
+                if (i++ === limit)
+                    break;
+                let mvCombStr = &apos;&apos;; //String that identifies the map variable combination
+                let contValues = []; //Values of the continuous variables
+                let geometry = this.processFeature(feature);
+
+                let time = [];
+                let optionals = [];
+                for (let catVar of this.categoricalVariables)
+                    mvCombStr += catVar.findIndex(feature.properties[catVar.getExternalName()]);
+                for (let contVar of this.continousVariables) {
+                    let contVarValue = feature.properties[contVar.getExternalName()]; //Value read from the continuous variable 
+                    mvCombStr += contVar.findClassIntervalIndex(contVarValue); // Class of contVarValue
+
+                    contVar.setMinMax(contVarValue); //??
+
+                    contValues.push(contVarValue);
+                }
+                if (this.hasTime)
+                    time[0] = feature.properties[this.timeVariable.getExternalName()];
+                for (let optional of this.optionalVariables)
+                    optionals.push(feature.properties[optional.getExternalName()]);
+
+                let row = [contValues, geometry, time, optionals];
+                if (!this.errorsAlreadyChecked) //Verify if has errors on Parsing Options
+                    this.hasErrors(row);
+
+                /*   if (this.findCombinationIndex(mvCombStr) === undefined)
+                      console.log(mvCombStr, i, feature, this.mapVarCombinations); */
+
+                this.mapVarCombinations[this.findCombinationIndex(mvCombStr)].addDataRow(row, this.geometryPrimitive);
+            }
+        } else {
+            for (let feature of geojson.features) {
+                if (i++ === limit)
+                    break;
+                let catValues = [];
+                let contValues = []; //Values of the continuous variables
+                let geometry = this.processFeature(feature);
+
+                let time = [];
+                let optionals = [];
+
+                for (let catVar of this.categoricalVariables) {
+                    let category = feature.properties[catVar.getExternalName()];
+                    if (catVar.classCalculationRequired())
+                        catVar.addCategory(category);
+                    catValues.push(category);
+                }
+                for (let contVar of this.continousVariables) {
+                    let contVarValue = feature.properties[contVar.getExternalName()]; //Value read from the continuous variable 
+                    if (contVar.classCalculationRequired())
+                        contVar.setMinMax(contVarValue); //??
+                    else
+                        contVar.addValueToBins(contVarValue);
+
+                    contValues.push(contVarValue);
+                }
+
+                if (this.hasTime)
+                    time[0] = feature.properties[this.timeVariable.getExternalName()];  // time[0] = this.hasTime ? feature.properties[this.timeVariable.getExternalName()] : undefined;
+
+                for (let optional of this.optionalVariables)
+                    optionals.push(feature.properties[optional.getExternalName()]);
+
+                let row = [[catValues, contValues], geometry, time, optionals];
+                // console.log(row);
+                /*   if (!this.errorsAlreadyChecked) //Verify if has errors on Parsing Options
+                      this.hasErrors(row); */
+                this.addTransitoryData(row);
+            }
+        }
+        // this.numPoints = this.allPoints.length / 2;
+        console.log(this.allPoints, this.transitoryArray);
+        this.endParser(&apos;geojson&apos;);
+        console.timeEnd(&quot;geojsonParser&quot;);
+    }
+
+    /**
+     * Process the GeoJSON file.
+     * @param {Object} fileData - The GeoJSON data that was read from the file. 
+     * @memberof GeoJSONParser
+     */
+    processFileNew(fileData) {
+        let geojson = JSON.parse(fileData);
+        console.log(geojson);
+        console.time(&quot;geojsonParser&quot;);
+        let i = 0,
+            limit = Number.MAX_SAFE_INTEGER; //In case we want to read only a part of the file
+
+        if (this.classCalculationRequired()) {
+            for (let feature of geojson.features) {
+                if (++i === limit)
+                    break;
+                // let mvCombStr = &apos;&apos;; //String that identifies the map variable combination
+                let catValues = [];
+                let contValues = []; //Values of the continuous variables
+                let geometry = this.processFeature(feature);
+
+                let time = [];
+                let optionals = [];
+
+                for (let catVar of this.categoricalVariables) {
+                    let category = feature.properties[catVar.getExternalName()];
+                    if (catVar.classCalculationRequired())
+                        catVar.addCategory(category);
+                    catValues.push(category);
+                }
+                for (let contVar of this.continousVariables) { //Cont Vars that DO NOT require class calculation
+                    let contVarValue = feature.properties[contVar.getExternalName()]; //Value read from the continuous variable 
+                    if (contVar.classCalculationRequired())
+                        contVar.addValueToBins(contVarValue);
+                    //     mvCombStr += contVar.findClassIntervalIndex(contVarValue); // Class of contVarValue
+                    // else
+                    contVar.setMinMax(contVarValue);
+                    contValues.push(contVarValue);
+                }
+
+                if (this.hasTime)
+                    time[0] = GisplayDefaults.getGranule(feature.properties[this.timeVariable.getExternalName()]);  // time[0] = this.hasTime ? feature.properties[this.timeVariable.getExternalName()] : undefined;
+
+                for (let optional of this.optionalVariables)
+                    optionals.push(feature.properties[optional.getExternalName()]);
+
+                let row = [[catValues, contValues], geometry, time, optionals];
+                // console.log(row);
+                /*   if (!this.errorsAlreadyChecked) //Verify if has errors on Parsing Options
+                      this.hasErrors(row); */
+                /*  console.log(row);
+                 console.log(this.transitoryArray); */
+                this.addTransitoryData(row);
+            }
+        } else {
+
+        }
+        console.log(this.allPoints, this.transitoryArray);
+        this.endParser();
+        console.timeEnd(&quot;geojsonParser&quot;);
+    }
+
+    /**
+     * Split each row that was read from the file to it&apos;s respective visual variable combination.
+     * @memberof Parser
+     */
+    splitTransitoryData() {
+        console.time(&quot;splitTransitoryData&quot;);
+        // console.log(&quot;CATVAR&quot;, this.categoricalVariables[0].classCalculationRequired());
+        for (let catVar of this.categoricalVariables)
+            if (catVar.classCalculationRequired())
+                catVar.updateCategoricalInformation(); //Only if its color
+
+        for (let i = 0; i &lt; this.continousVariables.length; i++) {
+            let contVar = this.continousVariables[i];
+            if (contVar.classCalculationRequired()) {  //For each cont var that needs class cal then calculate
+                contVar.createBins();
+                for (let subArray of this.transitoryArray)
+                    for (let row of subArray)
+                        contVar.addValueToBins(row[0][1][i]);
+            }
+            contVar.calculateClasses();
+        }
+
+        if (this.timeVariable) {
+            this.timeVariable.createTemporalGranulesMap(this.timeVariable.getTemporalGranulesSet());
+            this.timeVariable.sortTemporalGranules();
+        }
+
+        //Calculate and create VVCombinations and indexMap
+        this.createMapVariableCombinations();
+
+        //for takes 2.5 seconds for 1M rows (with points )
+        console.time(&quot;for&quot;);
+        //Split data to it&apos;s respective VVCombination
+        for (let subArray of this.transitoryArray) {
+            for (let row of subArray) {
+                let vvCombStr = &apos;&apos;;
+                let indexCat = 0;
+                for (let catVar of this.categoricalVariables)
+                    vvCombStr += catVar.findIndex(row[0][0][indexCat++]);
+                let indexCont = 0;
+                for (let contVar of this.continousVariables)
+                    vvCombStr += contVar.findClassIntervalIndex(row[0][1][indexCont++]);
+                row[0] = row[0][1];
+                this.mapVarCombinations[this.findCombinationIndex(vvCombStr)].addDataRow(row, this.geometryPrimitive);
+                // break; // &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+            }
+        }
+        console.timeEnd(&quot;for&quot;);
+
+        console.timeEnd(&quot;splitTransitoryData&quot;);
+        // console.log(this);
+        // delete this.transitoryArray;
+    }
+
+    /**
+     * Process point or polygon.
+     * @param {Object} feature - The feature to process.
+     * @returns {Polygon|Array&lt;number&gt;} - The processed polygon or the point coordinates.
+     * @memberof GeoJSONParser
+     */
+    processFeature(feature) {
+        if (this.geometryPrimitive === undefined)
+            this._setGeometryPrimitive(feature.geometry.type);
+
+        if (feature.geometry.type === &apos;Polygon&apos; || feature.geometry.type === &apos;MultiPolygon&apos;) {
+            return this.processPolygon(feature);
+        } else if (feature.geometry.type === &apos;Point&apos;) {
+            return this.processPoint(feature);
+        } else if (feature.geometry.type === &apos;LineString&apos; || feature.geometry.type === &apos;MultiLineString&apos;) {
+            return this.processLine(feature);
+        }
+        else
+            throw new GisplayError(&quot;GeoJSON feature is not a Polygon, a Point or a Line&quot;);
+    }
+
+    /**
+     * Returns the point and it&apos;s RGBA color.
+     * @param {{geometry: JSON, properties: JSON}} point - The geometry and properties of the point.
+     * @returns {{spatial: {lineIndices:Array&lt;number&gt;}, RGBA:Array&lt;number&gt;}} - The point coordinates and the RGBA that identifies it.
+     * @memberof GeoJSONParser
+     */
+    processPoint(point) {
+        let RGBA = GisplayDefaults.numberToRGBA(this.RGBAColorNumber++);
+        return { spatial: point.geometry.coordinates, RGBA };
+    }
+
+    /**
+     * Set the type of geometry primitive for the data read. Only need to be called once. 
+     * @param {string} geometryType - The type of geometry. 
+     * @memberof GeoJSONParser
+     */
+    _setGeometryPrimitive(geometryType) {
+        switch (geometryType) {
+            case &apos;Point&apos;:
+                this.geometryPrimitive = GisplayDefaults.getPrimitive().POINT;
+                break;
+            case &apos;Polygon&apos;:
+            case &apos;MultiPolygon&apos;:
+                this.geometryPrimitive = GisplayDefaults.getPrimitive().POLYGON;
+                break;
+            case &apos;LineString&apos;:
+            case &apos;MultiLineString&apos;:
+                this.geometryPrimitive = GisplayDefaults.getPrimitive().LINE;
+                break;
+        }
+    }
+
+    /**
+     * Add the polygon points to the array of all polygon points and saves the polygon borders and triangulation indices.
+     * The triangles and vertices calculated by earcut triangulation.
+     * @param {{geometry: JSON, properties: JSON}} polygon - The geometry and properties of the polygon.
+     * @returns {{spatial: {polygonIndices:Array&lt;number&gt;, bordersIndices:Array&lt;number&gt;}, RGBA:Array&lt;number&gt;}} - An array of Polygons and the RGBA color that identifies said polygon. Each polygon has it&apos;s indices (triangles and borders) in the allPoints array.
+     * @see http://www.macwright.org/2015/03/23/geojson-second-bite.html#polygons
+     * @see https://github.com/mapbox/earcut/
+     * @memberOf GeoJSONParser
+     */
+    processPolygon(polygon) {
+        let polygonIndices = [], //Vertices given by earcut
+            bordersIndices = []; //Save all triangles for the processed polygon or multipolygon
+
+        let RGBA = GisplayDefaults.numberToRGBA(this.RGBAColorNumber++);
+        if (polygon.geometry.type === &quot;Polygon&quot;) { //@TODO: [Demos never use this if statement.]
+
+            let outsidepolygon = polygon.geometry.coordinates[0]; //See: http://geojson.org/geojson-spec.html#polygon
+            let tempVerts = new Array(); //THIS POLYGON
+
+            for (let out = 0; out &lt; outsidepolygon.length - 1; out++) {
+                tempVerts.push(outsidepolygon[out][0], outsidepolygon[out][1]);
+                this.allPoints.push(outsidepolygon[out][0], outsidepolygon[out][1]);
+                this.allColors.push(...RGBA);
+            }
+            /* tempVerts.pop();
+            tempVerts.pop();
+            this.allPoints.pop();
+            this.allPoints.pop(); */
+
+            let earcutVertices = earcut(tempVerts);
+            let finalVertices = earcutVertices.map((e) =&gt; e + this.initialIndex);
+            for (let finalVertex of finalVertices)
+                polygonIndices.push(finalVertex);
+
+            this._createBorders(tempVerts.length / 2, bordersIndices);
+            this.initialIndex += tempVerts.length / 2;
+        }
+        else if (polygon.geometry.type == &quot;MultiPolygon&quot;) { //See http://geojson.org/geojson-spec.html#multipolygon
+            for (const cs of polygon.geometry.coordinates) { //For each polygon
+                let tempVerts = new Array();
+
+                let outsidepolygon = cs[0];
+                for (const c of outsidepolygon) {
+                    tempVerts.push(c[0], c[1]);
+                    this.allPoints.push(c[0], c[1]);
+                    this.allColors.push(...RGBA);
+                }
+
+                /*  tempVerts.pop();
+                 tempVerts.pop();
+                 this.allPoints.pop();
+                 this.allPoints.pop(); */
+
+                let earcutVertices = earcut(tempVerts);
+                console.log(earcutVertices);
+                let finalVertices = earcutVertices.map((e) =&gt; e + this.initialIndex);
+                for (let finalVertex of finalVertices)
+                    polygonIndices.push(finalVertex);
+
+                this._createBorders(tempVerts.length / 2, bordersIndices);
+                this.initialIndex += (tempVerts.length / 2); //Update the first index for the next polygon
+            }
+        }
+        return { spatial: { polygonIndices, bordersIndices }, RGBA };
+    }
+
+    /**
+     * Create the border indices for the polygon starting at it&apos;s initial index.
+     * @param {number} numVertices - The number of vertices of the polygon. 
+     * @param {Array&lt;number&gt;} bordersIndices - The array of indices. If it&apos;s a multipolygon it might contain some indices otherwise it&apos;s empty.
+     * @memberof GeoJSONParser
+     */
+    _createBorders(numVertices, bordersIndices) {
+        //Loop tempVerts and look create indices for this 
+        bordersIndices.push(this.initialIndex);
+        let currentIndex = this.initialIndex;
+        for (let i = 1; i &lt; numVertices; i++) {
+            currentIndex++;
+            bordersIndices.push(currentIndex, currentIndex);
+        }
+        bordersIndices.push(this.initialIndex);
+    }
+
+    /**
+     * Process the line (LineString or MultiLineString).
+     * @param {{geometry: JSON, properties: JSON}} feature - The GeoJSON Feature. 
+     * @returns  {{spatial: {lineIndices:Array&lt;number&gt;}, RGBA:Array&lt;number&gt;}} - the line (array of points) or a group of lines (array of arrays of points).
+     * @see http://wiki.geojson.org/GeoJSON_draft_version_6#MultiLineString
+     * @memberof GeoJSONParser
+     */
+    processLine(feature) {
+        let lineIndices = [];
+        let RGBA = GisplayDefaults.numberToRGBA(this.RGBAColorNumber++);
+        if (feature.geometry.type === &apos;LineString&apos;) {
+            /**
+                 {
+                    &quot;type&quot;: &quot;LineString&quot;,
+                    &quot;coordinates&quot;: [
+                        [100.0, 0.0], [101.0, 1.0]
+                    ]
+                }
+            */
+            let lngLatPoints = [];
+            for (const pt of feature.geometry.coordinates) {
+                lngLatPoints.push(pt[0], pt[1]); //Push lng,lat
+                this.allPoints.push(pt[0], pt[1]);
+                this.allColors.push(...RGBA);
+            }
+
+            this._createLines(lngLatPoints.length / 2, lineIndices);
+            this.initialIndex += (lngLatPoints.length / 2); //Update the first index for the next line
+        }
+        else {
+            /**
+                {
+                    &quot;type&quot;: &quot;MultiLineString&quot;,
+                    &quot;coordinates&quot;: [
+                        [ [100.0, 0.0], [101.0, 1.0] ],
+                        [ [102.0, 2.0], [103.0, 3.0] ]
+                    ]
+                }
+             */
+            for (const line of feature.geometry.coordinates) { //Loop over each line inside multiLineStr
+                let lngLatPoints = [];
+                for (const pt of line) { //Loop over each point of this line
+                    lngLatPoints.push(pt[0], pt[1]); //Push lng/lat
+                    this.allPoints.push(pt[0], pt[1]);
+                    this.allColors.push(...RGBA);
+                }
+                // points.push(linePoints);// [[100, 0, 101, 1], [102, 2, 103, 3]]
+
+                this._createLines(lngLatPoints.length / 2, lineIndices);
+                this.initialIndex += (lngLatPoints.length / 2); //Update the first index for the next line
+            }
+        }
+        return { spatial: { lineIndices }, RGBA };//this.bindLineToWebGLContext(points);
+    }
+
+    /**
+     * Create line segments between each two indices.
+     * @param {number} numIndices - The number of indices to add.
+     * @param {Array&lt;number&gt;} lineIndices - The indices for the line (If it&apos;s a multilinestring may already contain indices).
+     * @memberof GeoJSONIdsParser
+     */
+    _createLines(numIndices, lineIndices) {
+        lineIndices.push(this.initialIndex);
+        let currentIndex = this.initialIndex;
+        for (let i = 1; i &lt; numIndices - 1; i++) {
+            currentIndex++;
+            lineIndices.push(currentIndex, currentIndex);
+        }
+        lineIndices.push(++currentIndex);
+    }
+
+    /**
+     * Split Transitory data, join points if needed and dispatch the parser end event.
+     * @memberof Parser
+     */
+    endParser() {
+        if (this.classCalculationRequired())
+            this.splitTransitoryData();
+
+        this.setGeometryPrimitiveTGs(); //Set the type of Geo for each TG (same as this.geoPrimitive)
+
+        if (GisplayDefaults.hasPolygons(this.geometryPrimitive) || GisplayDefaults.hasLines(this.geometryPrimitive)) {
+            this.joinAllPoints();
+            this.joinAllColors();
+        } else //POINTS
+            this.joinPickingColors();
+
+        this.setNumElementsTemporalGranules();
+
+        console.time(&quot;joinDATA&quot;);
+        this.joinMapVarCombinationData();
+        console.timeEnd(&quot;joinDATA&quot;);
+
+        this.dispatchParseEndEvent();
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

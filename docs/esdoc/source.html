@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="">
+  <title data-ice="title">Source | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1>Source <span data-ice="totalCoverageCount" class="total-coverage-count"></span></h1>
+
+<table class="files-summary" data-ice="files" data-use-coverage="false">
+  <thead>
+    <tr>
+      <td>File</td>
+      <td>Identifier</td>
+      <td class="coverage">Document</td>
+      <td style="display: none;">Size</td>
+      <td style="display: none;">Lines</td>
+      <td style="display: none;">Updated</td>
+    </tr>
+  </thead>
+  <tbody>
+    
+  <tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Gisplay.js.html">src/Gisplay/Gisplay.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">3109 byte</td>
+      <td style="display: none;" data-ice="lines">83</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/GisplayDefaults.js.html">src/Gisplay/GisplayDefaults.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">23894 byte</td>
+      <td style="display: none;" data-ice="lines">705</td>
+      <td style="display: none;" data-ice="updated">2018-01-06 15:58:32 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/GisplayDynamicLoader.js.html">src/Gisplay/GisplayDynamicLoader.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">12264 byte</td>
+      <td style="display: none;" data-ice="lines">310</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/GisplayError.js.html">src/Gisplay/GisplayError.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">2646 byte</td>
+      <td style="display: none;" data-ice="lines">72</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/GisplayErrorChecker.js.html">src/Gisplay/GisplayErrorChecker.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">7553 byte</td>
+      <td style="display: none;" data-ice="lines">201</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/GisplayOptions.js.html">src/Gisplay/GisplayOptions.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">31797 byte</td>
+      <td style="display: none;" data-ice="lines">630</td>
+      <td style="display: none;" data-ice="updated">2018-01-03 19:17:47 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Helpers/ColorBrewer.js.html">src/Gisplay/Helpers/ColorBrewer.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">75451 byte</td>
+      <td style="display: none;" data-ice="lines">1082</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 18:36:48 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Helpers/WebGLUtils.js.html">src/Gisplay/Helpers/WebGLUtils.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">6195 byte</td>
+      <td style="display: none;" data-ice="lines">128</td>
+      <td style="display: none;" data-ice="updated">2018-01-04 23:58:02 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js.html">src/Gisplay/Maps/Background Maps/BGMapBingMaps.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">4477 byte</td>
+      <td style="display: none;" data-ice="lines">119</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js.html">src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">5164 byte</td>
+      <td style="display: none;" data-ice="lines">137</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js.html">src/Gisplay/Maps/Background Maps/BGMapHereMaps.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">6587 byte</td>
+      <td style="display: none;" data-ice="lines">173</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/Background Maps/BGMapMapBox.js.html">src/Gisplay/Maps/Background Maps/BGMapMapBox.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">5067 byte</td>
+      <td style="display: none;" data-ice="lines">146</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js.html">src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">5273 byte</td>
+      <td style="display: none;" data-ice="lines">156</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/Background Maps/BGMapWrapper.js.html">src/Gisplay/Maps/Background Maps/BGMapWrapper.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">8331 byte</td>
+      <td style="display: none;" data-ice="lines">241</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/ChangeMap.js.html">src/Gisplay/Maps/ChangeMap.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">4271 byte</td>
+      <td style="display: none;" data-ice="lines">92</td>
+      <td style="display: none;" data-ice="updated">2018-01-01 16:15:04 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/Choropleth.js.html">src/Gisplay/Maps/Choropleth.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">5629 byte</td>
+      <td style="display: none;" data-ice="lines">138</td>
+      <td style="display: none;" data-ice="updated">2018-01-03 13:03:20 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/DotMap.js.html">src/Gisplay/Maps/DotMap.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">4495 byte</td>
+      <td style="display: none;" data-ice="lines">115</td>
+      <td style="display: none;" data-ice="updated">2018-01-01 16:14:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/FiguresMap.js.html">src/Gisplay/Maps/FiguresMap.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">5459 byte</td>
+      <td style="display: none;" data-ice="lines">133</td>
+      <td style="display: none;" data-ice="updated">2018-01-01 16:15:14 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/GisplayMap.js.html">src/Gisplay/Maps/GisplayMap.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">68923 byte</td>
+      <td style="display: none;" data-ice="lines">1590</td>
+      <td style="display: none;" data-ice="updated">2018-01-06 17:49:41 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/LinesMap.js.html">src/Gisplay/Maps/LinesMap.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">4264 byte</td>
+      <td style="display: none;" data-ice="lines">108</td>
+      <td style="display: none;" data-ice="updated">2018-01-01 16:15:23 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Maps/ProportionalSymbolsMap.js.html">src/Gisplay/Maps/ProportionalSymbolsMap.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">5065 byte</td>
+      <td style="display: none;" data-ice="lines">118</td>
+      <td style="display: none;" data-ice="updated">2018-01-01 16:15:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Parser/CSV/CSVDataWorker.js.html">src/Gisplay/Parser/CSV/CSVDataWorker.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">32173 byte</td>
+      <td style="display: none;" data-ice="lines">762</td>
+      <td style="display: none;" data-ice="updated">2018-01-04 20:42:13 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Parser/CSV/CSVParser.js.html">src/Gisplay/Parser/CSV/CSVParser.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">31613 byte</td>
+      <td style="display: none;" data-ice="lines">697</td>
+      <td style="display: none;" data-ice="updated">2018-01-06 17:51:42 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js.html">src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">14108 byte</td>
+      <td style="display: none;" data-ice="lines">338</td>
+      <td style="display: none;" data-ice="updated">2018-01-05 16:24:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js.html">src/Gisplay/Parser/GeoJSON/GeoJSONParser.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">22512 byte</td>
+      <td style="display: none;" data-ice="lines">520</td>
+      <td style="display: none;" data-ice="updated">2018-01-05 16:11:43 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Parser/Parser.js.html">src/Gisplay/Parser/Parser.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">20761 byte</td>
+      <td style="display: none;" data-ice="lines">501</td>
+      <td style="display: none;" data-ice="updated">2018-01-04 17:59:44 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/Shaders/ShadersInfo.js.html">src/Gisplay/Shaders/ShadersInfo.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">7091 byte</td>
+      <td style="display: none;" data-ice="lines">166</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:55:32 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/VVs/CategoricalVariable.js.html">src/Gisplay/VVs/CategoricalVariable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">9153 byte</td>
+      <td style="display: none;" data-ice="lines">193</td>
+      <td style="display: none;" data-ice="updated">2018-01-06 11:00:50 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/VVs/ContinuousVariable.js.html">src/Gisplay/VVs/ContinuousVariable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">18924 byte</td>
+      <td style="display: none;" data-ice="lines">467</td>
+      <td style="display: none;" data-ice="updated">2018-01-04 18:53:03 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/VVs/DataVariable.js.html">src/Gisplay/VVs/DataVariable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">1374 byte</td>
+      <td style="display: none;" data-ice="lines">45</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/VVs/MapVariable.js.html">src/Gisplay/VVs/MapVariable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">5190 byte</td>
+      <td style="display: none;" data-ice="lines">126</td>
+      <td style="display: none;" data-ice="updated">2018-01-01 09:26:16 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/VVs/MapVariableCombination.js.html">src/Gisplay/VVs/MapVariableCombination.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">16311 byte</td>
+      <td style="display: none;" data-ice="lines">403</td>
+      <td style="display: none;" data-ice="updated">2018-01-06 10:46:34 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/VVs/Picking.js.html">src/Gisplay/VVs/Picking.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">11948 byte</td>
+      <td style="display: none;" data-ice="lines">288</td>
+      <td style="display: none;" data-ice="updated">2018-01-05 19:30:26 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/VVs/TemporalGranule.js.html">src/Gisplay/VVs/TemporalGranule.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">14536 byte</td>
+      <td style="display: none;" data-ice="lines">342</td>
+      <td style="display: none;" data-ice="updated">2018-01-04 20:45:31 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/VVs/TimeVariable.js.html">src/Gisplay/VVs/TimeVariable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">13733 byte</td>
+      <td style="display: none;" data-ice="lines">343</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 23:13:17 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/Gisplay/VVs/URLVariable.js.html">src/Gisplay/VVs/URLVariable.js</a></span></td>
+      <td data-ice="identifier" class="identifiers"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">4050 byte</td>
+      <td style="display: none;" data-ice="lines">138</td>
+      <td style="display: none;" data-ice="updated">2018-01-06 10:11:35 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/TemporalGisplayFinalV.js.html">src/TemporalGisplayFinalV.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">29499 byte</td>
+      <td style="display: none;" data-ice="lines">858</td>
+      <td style="display: none;" data-ice="updated">2018-01-04 22:03:55 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/lib/earcut.js.html">src/lib/earcut.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">19092 byte</td>
+      <td style="display: none;" data-ice="lines">643</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+<tr data-ice="file">
+      <td data-ice="filePath"><span><a href="file/src/lib/noUiSlider/nouislider.js.html">src/lib/noUiSlider/nouislider.js</a></span></td>
+      <td data-ice="identifier" class="identifiers">-</td>
+      <td class="coverage"><span data-ice="coverage">-</span></td>
+      <td style="display: none;" data-ice="size">87501 byte</td>
+      <td style="display: none;" data-ice="lines">2311</td>
+      <td style="display: none;" data-ice="updated">2018-01-07 22:34:29 (UTC)</td>
+    </tr>
+</tbody>
+</table>
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

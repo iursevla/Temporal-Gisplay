@@ -1,0 +1,555 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/VVs/ContinuousVariable.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/VVs/ContinuousVariable.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { MapVariable } from &apos;./MapVariable&apos;;
+import { GisplayDefaults } from &apos;../GisplayDefaults&apos;;
+import { GisplayError } from &apos;../GisplayError&apos;;
+
+/**
+ * Represents a continuous variable.
+ * Continous data, is data where the values can change continuously, and you cannot count the number of different values (e.g. weight, price, profits, counts, etc). 
+ * @see https://eagereyes.org/basics/data-continuous-vs-categorical
+ * @export
+ * @class ContinuousVariable
+ */
+export class ContinuousVariable extends MapVariable {
+    /**
+     * Creates an instance of ContinuousVariable.
+     * @param {string} externalName - The external name for this variable.
+     * @param {string} internalName - The internal name for this variable.
+     * @param {string} typeOfVisualVariable - The type of visual variable (e.g. color, shape, size, orientation or texture).
+     * @param {string} shaderVariableQualifier - The shader variable qualifier. 
+     * @param {Array&lt;string|number&gt;} visualVariableMapping - The mapping for the given type of visual variable.
+     * @param {Array&lt;number&gt;} classBreaks - The classes for this map variable.
+     * @param {string} numberOfClasses - The number of classes for this continuous variable.
+     * @param {string} classBreakMethod - The class breaks method to be used.
+     * @param {Array&lt;number|string&gt;} classBreakMethodParams - The parameters for the class break method.
+     * @memberof ContinuousVariable
+     */
+    constructor(externalName, internalName, typeOfVisualVariable, shaderVariableQualifier, visualVariableMapping, classBreaks, numberOfClasses, classBreakMethod, classBreakMethodParams) {
+        super(externalName, internalName, typeOfVisualVariable, shaderVariableQualifier, visualVariableMapping);
+        /**
+         * The class intervals for the map variable.
+         * @type {Array&lt;number&gt;}
+         */
+        this.classBreaks = classBreaks;
+        /**
+         * The number of classes for the map variable.
+         * @type {number}
+         */
+        this.numberOfClasses = visualVariableMapping ? visualVariableMapping.length : numberOfClasses; //TODO: Send this on the constructor
+        /**
+         * The method to use to calculate classes for the map variable.
+         * @type {string}
+         */
+        this.classBreakMethod = classBreakMethod;
+        /**
+         * Returns the array of params for the class break method.
+         *  @type{Array&lt;number|string&gt;} 
+         */
+        this.classBreakMethodParams = classBreakMethodParams;
+
+        /**
+         * Number of bins. This value is hardcoded to 100. But it should work even if changed to another integer value.
+         * @type {number}
+         */
+        this.numBins = 100;
+        /**
+         * The minimum value.
+         * @type {number}
+         */
+        this.min = Number.MAX_SAFE_INTEGER - 1;
+        /**
+         * The maximum value.
+         * @type {number}
+         */
+        this.max = Number.MIN_SAFE_INTEGER + 1;
+
+        this.newMin = Number.MAX_SAFE_INTEGER;
+        this.newMax = Number.MIN_SAFE_INTEGER;
+
+        /**
+         * Amount between any two bins.
+         * @type {number}
+         */
+        this.step = -1;
+        /**
+         * The bin limits.
+         * @type {Array&lt;number&gt;}
+         */
+        this.bins = new Array(100).fill(-1);
+        /**
+         * Histogram with number of values by bin interval. 
+         * @type {Array&lt;number&gt;}
+         */
+        this.histogram = new Array(100).fill(0); //Array with 100 elements each filled with the value 0
+        /**
+         * The class intervals for the map variable.
+         * @type {Array&lt;Array&lt;number&gt;&gt;}
+         */
+        this.classIntervals;
+
+        if (this.classBreaks) {
+            this.min = this.classBreaks[0];
+            this.max = this.classBreaks[this.classBreaks.length - 1];
+            this.step = (this.getMax() - this.getMin()) / (this.numBins);
+
+            this.bins = this.buildBinIntervals();
+            this.classIntervals = this.calculateClassIntervals(this.classBreaks);
+        }
+        if (this.getVisualVariableMapping())
+            this._setIndexToUsableValueMap();
+
+        /**  
+         * Boolean that stores true if class calcutation is required, false, otherwise.
+         * @type {boolean}
+         */
+        this.classCalculationRequiredBool = this.classBreaks === undefined;
+        console.log(this);
+    }
+
+    /**
+     * Returns the method to be used to calculate the classes for this map variable.
+     * @returns {string} - the method to be used to calculate the classes for this variable.
+     * @memberof ContinuousVariable
+     */
+    getClassBreakMethod() {
+        return this.classBreakMethod;
+    }
+
+    /**
+     * Returns the class intervals for this map variable.
+     * @returns {Array&lt;number&gt;} - the class intervals for the visual variable.
+     * @memberof ContinuousVariable
+     */
+    getClassBreaks() {
+        return this.classBreaks;
+    }
+
+    /**
+     * Sets the class breaks to the calculated class breaks.
+     * @param {Array&lt;number&gt;} calculatedClassBreaks - The array of class intervals for the visual variable.
+     * @memberof ContinuousVariable
+     */
+    setClassBreaks(calculatedClassBreaks) {
+        this.classBreaks = calculatedClassBreaks;
+    }
+
+    /**
+     * Returns true, if the class breaks weren&apos;t given by the programmer for the map variable, false, otherwise. 
+     * @returns {boolean} - true, if the class breaks weren&apos;t given by the programmer for the visual variable, false, otherwise.  
+     * @memberof ContinuousVariable
+     */
+    classCalculationRequired() {
+        return this.classCalculationRequiredBool;
+    }
+
+    /**
+     * Calculates class intervals for this variable.
+     * @param {Array&lt;number&gt;} classBreaks - The class breaks given by the programmer. 
+     * @returns {Array&lt;Array&lt;number&gt;&gt;} - the start and end for each class of this variable.
+     * @memberof ContinuousVariable
+     */
+    calculateClassIntervals(classBreaks) {
+        console.error(&quot;classBreaks = &quot;, classBreaks, this)
+        let res = [];
+
+        /*     
+            [min, a[, [a, b[, [b,c[, [c,max] -&gt; caso em que o min dos dados &#xE9; !== do a
+            min - todos os valore menores que a
+            [a,b,c] -&gt;  [min, a[, [a, b[, [b,c[, [c,max] 
+            Se min for == a ent&#xE3;o n cabe 
+            &gt;= a &amp;&amp; &lt; a 
+
+            1&#xBA; intervalos todos os inferiores a &quot;a&quot;
+            o ultimo intervalo &#xE9; todos os &gt;= a c 
+        */
+        for (let i = 0; i &lt; classBreaks.length - 1; i++)
+            res.push([classBreaks[i], classBreaks[i + 1]]);
+        /*   if (this.classBreaks !== undefined) {
+              res.push([this.min, classBreaks[0]]);
+              for (let i = 0; i &lt; classBreaks.length - 1; i++)
+                  res.push([classBreaks[i], classBreaks[i + 1]]);
+              res.push([classBreaks[classBreaks.length - 1], this.max]);
+          } else {
+              // res.push([this.min, classBreaks[0]]);
+              for (let i = 0; i &lt; classBreaks.length - 1; i++)
+                  res.push([classBreaks[i], classBreaks[i + 1]]);
+              // res.push([classBreaks[classBreaks.length - 1], this.max]);
+          } */
+        return res;
+        // return null;
+    }
+
+    /**
+     * Returns the class intervals for this class.
+     * @returns {Array&lt;Array&lt;number&gt;&gt;} - the class intervals for this class. 
+     * @memberof ContinuousVariable
+     */
+    getClassIntervals() {
+        return this.classIntervals;
+    }
+
+    /**
+     * Find the class index of the given value.
+     * It&apos;s inside a class if it&apos;s value is equal or higher than the starting point and less than the end point.
+     * @param {number} value - The value of the element.
+     * @returns {number} - The  index of the class.
+     * @memberof Parser
+     */
+    findClassIntervalIndex(value) {
+        let classIntervals = this.getClassIntervals();
+        for (let [index, classInterval] of classIntervals.entries())
+            if (value &gt;= classInterval[0] &amp;&amp; value &lt; classInterval[1])
+                return index;
+        if (value &lt; classIntervals[0][0])
+            return 0;
+        return classIntervals.length - 1;
+    }
+
+    /**
+     * Set the min and max values if the given value changes them.
+     * @param {number} value - The given vaue. 
+     * @memberof ContinuousVariable
+     */
+    setMinMax(value) {
+        if (value &lt; this.min)
+            this.min = value;
+        if (value &gt; this.max)
+            this.max = value;
+        /* if (value &lt; this.newMin)
+            this.newMin = value;
+        if (value &gt; this.newMax)
+            this.newMax = value; */
+    }
+
+    /*
+    #####################################################################
+    ######################     CLASS CALCULATION      ###################
+    #####################################################################
+    */
+    /**
+     * Returns the minimum value for the visual variable.
+     * @returns {number} - the minimum value for the visual variable.
+     * @memberof ContinuousVariable
+     */
+    getMin() {
+        return this.min;
+    }
+
+    /**
+     * Returns the maximum value for the visual variable.
+     * @returns {number} -  the maximum value for the visual variable.
+     * @memberof ContinuousVariable
+     */
+    getMax() {
+        return this.max;
+    }
+
+    /**
+     * Update the step vaue.
+     * @memberof ContinuousVariable
+     */
+    setStep() {
+        this.step = (this.getMax() - this.getMin()) / (this.numBins);
+    }
+
+    /**
+     * Returns the step between each bin value.
+     * @returns {number} - the step between each bin value.
+     * @memberof ContinuousVariable
+     */
+    getStep() {
+        return this.step;
+    }
+
+    /**
+     * Returns the histogram for this continuous variable.
+     * @returns {Array&lt;number&gt;} - the histogram for this continuous variable.
+     * @memberof ContinuousVariable
+     */
+    getHistogram() {
+        return this.histogram;
+    }
+
+    /**
+     * Updates the histogram of this continuous variable with the histogram values
+     * @param {Array&lt;number&gt;} histogram - The given histogram
+     * @memberof ContinuousVariable
+     */
+    updateHistogram(histogram) {
+        for (let i = 0; i &lt; histogram.length; i++)
+            this.histogram[i] += histogram[i];
+    }
+
+    /**
+     * Return the number of classes.
+     * @returns {numer} - the number of classes.
+     * @memberof ContinuousVariable
+     */
+    getNumberOfClasses() {
+        return this.numberOfClasses;
+    }
+
+    /**
+     * Create 100 bins with equal intervals between the minimum and maximum value.
+     * @param {number} min - The minimum for this continuous variable. 
+     * @param {number} max - The maximum for this continuous variable.
+     * @returns {Array&lt;number&gt;} - The bins that will be used to calculate the classes.
+     * @memberof LegendClasses
+     */
+    buildBinIntervals() {
+        // let step = (max - min) / this.numBins;
+        if (this.step === -1)
+            this.setStep();
+        let resBins = [];
+        let min = this.min;
+        let max = this.max;
+        // resBins.push(min);
+        for (let i = min; i &lt; max; i += this.step)
+            resBins.push(i);
+
+        if (Math.round(resBins[resBins.length - 1]) === max || max - resBins[resBins.length - 1] &lt; 0.0001) //min = 0, max = 199.2 Math.round(199.19999999999976) = 199 &lt;-- ERROR
+            resBins[resBins.length - 1] = max;
+        else
+            resBins.push(max);
+        return resBins;
+    }
+
+    /**
+     * Create the bins array with 101? values that represent the intervals.
+     * @memberof ContinuousVariable
+     */
+    createBins() {
+        this.bins = this.buildBinIntervals();
+    }
+
+    /**
+     * Add the value to the respective bin index.
+     * This method works at O(1) instead of O(n), since it only needs to calculate the index and add one to it&apos;s bin.
+     * The alternative was to loop through all the bins and find where this value would fit.
+     * @param {number} value - The value to insert into one of the bins. 
+     * @see http://prntscr.com/gdn1wu - Reason for if statement
+     * @memberof ContinuousVariable
+     */
+    addValueToBins(value) {
+        let binIndex = Math.floor((value - this.min) / this.step);
+        if (value &gt;= this.max) //The case it is equal to the max value then change index to the previous.
+            binIndex = this.numBins - 1;
+        else if (value &lt;= this.min)
+            binIndex = 0;
+        this.histogram[binIndex]++;
+        // console.log(&quot;value&quot;, value, &quot;binIndex&quot;, binIndex);
+    }
+
+    /**
+     * Calculates the classes for the visual variable using the method specified by the programmer.
+     * @memberof ContinuousVariable
+     */
+    calculateClasses() {
+        //Usando os bins faz calculo de classes e alterar guardar nos classIntervals
+        switch (this.getClassBreakMethod()) {
+            case &apos;quantiles&apos;:
+                this.classIntervals = this.calculateClassIntervals(this.quantiles());
+                break;
+            case &apos;equalintervals&apos;:
+                // console.log(&apos;equalintervals&apos;);
+                this.classIntervals = this.calculateClassIntervals(this.equalIntervals());
+                break;
+            default:
+                throw new GisplayError(`Continuous Variable: ${this.getInternalName()}. Given method for class calculation does not exist. `);
+        }
+
+        if (this.classIntervals.length !== this.numberOfClasses)
+            throw new GisplayError(&quot;The number of calculated class intervals is different from the number of classes&quot;);
+    }
+
+    /**
+     * Calculate the intervals for each class using the quantiles method.
+     * @param {Array&lt;number&gt;} histogram - Histogram with quantity of values by bin interval. 
+     * @param {number} binValues - The bin values between the minimum and the maximum.
+     * @param {number} numRows - Number of rows read from the file.
+     * @param {number} numClasses - Number of classes to calculate.
+     * @returns {Array&lt;number&gt;} -  The resulting classes using the quantiles method.
+     * @see https://en.wikipedia.org/wiki/Quantile
+     * @memberof ContinuousVariable
+     */
+    quantiles(numberOfClasses = this.getNumberOfClasses()) {
+        let numRows = 0;
+        for (let i = 0, length = this.histogram.length; i &lt; length; i++)
+            numRows += this.histogram[i];
+
+        let numValsPerClass = numRows / numberOfClasses;
+        // console.log(numRows, this.getNumberOfClasses(), numValsPerClass);
+        let classes = [];
+        classes.push(this.bins[0]);
+        let sum = 0;
+        for (let i = 0; i &lt; this.histogram.length - 1; i++) {
+            sum += this.histogram[i];
+            if (sum &gt;= numValsPerClass) {
+                classes.push(this.bins[i + 1]);
+                sum = 0;
+            }
+        }
+        classes.push(this.bins[this.bins.length - 1]);
+        // console.log(classes);
+        // console.log(this);
+        if (classes.length &lt; numberOfClasses)
+            console.warn(`Quantiles method couldn&apos;t create ${numberOfClasses} classes, instead it created ${classes.length - 1} classes. [${classes}]`);
+        else if (classes.length - 1 &gt; numberOfClasses)
+            throw new GisplayError(`Something went wrong with quantiles method. Number of classes calculated is: ${classes.length - 1}, the intended values was ${this.getNumberOfClasses()}`);
+        return classes;
+    }
+
+    /**
+     * Taking the calculated bins, this method will calculate the intervals for each class using the equal intervals method.
+     * @param {number} binValues - The bin values between the minimum and the maximum.
+     * @param {number} numClasses - Number of classes to calculate.
+     * @returns {Array&lt;number&gt;} - The resulting classes using the equal intervals method.
+     * @see http://wiki.gis.com/wiki/index.php/Equal_Interval_classification
+     * @memberof ContinuousVariable
+     */
+    equalIntervals(numberOfClasses = this.getNumberOfClasses()) {
+        let interval = Math.round((this.getMax() - this.getMin()) / numberOfClasses); //To give a integer (this.bins.length - 1) / this.numClasses;
+        // console.log(&quot;EquInt interval=&quot;, interval);
+        // console.log(this.getMin(), this.getMax(), numberOfClasses);
+        let classes = [];
+        classes.push(this.bins[0]);
+        let currentValue = this.getMin(); // Current value
+        for (let i = 0; i &lt; numberOfClasses - 1; i++) {
+            currentValue += interval;
+            classes.push(this._findBin(currentValue));
+        }
+        classes.push(this.bins[this.bins.length - 1]);
+
+        // console.log(&quot;equalIntervals = &quot;, classes);
+        return classes;
+    }
+
+    /**
+     * Find the bin that is higher or equal than the value and the distance to next bin value is smaller than to the first.
+     * @param {number} value - The value used to find the correct bin. 
+     * @returns {number} - the bin that is higher or equal than the value and the distance to next bin value is smaller than to the first. 
+     * @private 
+     * @memberof ContinuousVariable
+     */
+    _findBin(value) {
+        for (let i = 0; i &lt; this.bins.length - 1; i++) {
+            let val1 = this.bins[i];
+            let val2 = this.bins[i + 1];
+            if (value &gt;= val1 &amp;&amp; value &lt; val2) {
+                let distToVal1 = value - val1;
+                let distToVal2 = val2 - value;
+                if (distToVal1 &lt;= distToVal2)
+                    return val1;
+                return val2;
+            }
+        }
+    }
+
+    /**
+     * Set each index (of each class) to it&apos;s respective value (color array, size or orientation value).
+     * E.g. 0 -&gt; [255, 0, 0], 1 -&gt; [0, 128, 0] etc
+     * @private
+     * @memberof ContinuousVariable
+     */
+    _setIndexToUsableValueMap() {
+        let typeOfVisualVariable = this.getTypeOfVisualVariable();
+        switch (typeOfVisualVariable) {
+            case GisplayDefaults.COLOR():
+            case GisplayDefaults.SIZE():
+            case GisplayDefaults.ORIENTATION():
+                for (let [index, vvMapping] of this.getVisualVariableMapping().entries())
+                    this.indexToUsableValueMap.set(index, vvMapping);
+                break;
+            case GisplayDefaults.SHAPE():
+            case GisplayDefaults.TEXTURE():
+                throw new GisplayError(`${typeOfVisualVariable} shouldn&apos;t be used with a continuous variable.`);
+        }
+        // console.log(&quot;CONT VV_TO_INDEX_MAP =========================&quot;, this.indexToUsableValueMap);
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

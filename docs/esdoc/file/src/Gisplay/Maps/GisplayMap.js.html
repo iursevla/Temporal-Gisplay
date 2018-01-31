@@ -1,0 +1,1678 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/Maps/GisplayMap.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/Maps/GisplayMap.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//Imports for Intellisense TODO: DELETE
+import { BGMapWrapper } from &apos;./Background Maps/BGMapWrapper&apos;;
+import { URLVariable } from &apos;../VVs/URLVariable&apos;;
+import { DataVariable } from &apos;../VVs/DataVariable&apos;;
+import { TimeVariable } from &apos;../VVs/TimeVariable&apos;;
+import { TemporalGranule } from &apos;../VVs/TemporalGranule&apos;;
+import { CategoricalVariable } from &apos;../VVs/CategoricalVariable&apos;;
+import { ContinuousVariable } from &apos;../VVs/ContinuousVariable&apos;;
+import { MapVariableCombination } from &apos;../VVs/MapVariableCombination&apos;;
+import { Legend } from &apos;../Layout/Legend&apos;;
+import { ShadersInfo } from &apos;../Shaders/ShadersInfo&apos;;
+
+import { GisplayDefaults } from &apos;../GisplayDefaults&apos;;
+import { GisplayDynamicLoader } from &apos;../GisplayDynamicLoader&apos;;
+import { WebGLUtils } from &apos;../Helpers/WebGLUtils&apos;;
+import { LayoutManager } from &apos;../Layout/LayoutManager&apos;;
+import { GeoJSONParser } from &apos;../Parser/GeoJSON/GeoJSONParser&apos;;
+
+import { GisplayOptions } from &apos;../GisplayOptions&apos;;
+import { GisplayError } from &apos;../GisplayError&apos;;
+import { CSVParser } from &apos;../Parser/CSV/CSVParser&apos;;
+
+/**
+ * This class contains the GisplayMap class which represents the base thematic map of the Gisplay API.
+ * @see Diogo&apos;s thesis pages 57-60 + 64/65
+ */
+export class GisplayMap {
+    /**
+     * Creates an instance of GisplayMap.
+     * @param {Object} parsingOptions - The parsing options.
+     * @param {Object} mappingOptions - The mapping options.
+     * @param {Object} globalOptions - The globabl options.
+     * @memberof GisplayMap
+     */
+    constructor(parsingOptions, mappingOptions, globalOptions) {
+        console.time(&quot;gisplay&quot;);
+        /**
+         * The name of the library loaded event.
+         * @type {string}
+         */
+        this.LIBRARY_LOADED_EVENT = &apos;libraryLoaded&apos;;
+        /**
+         * The name of the parser ended event.
+         * @type {string}
+         */
+        this.PARSER_ENDED_EVENT = &apos;parserEnd&apos;;
+        /**
+         * The name of the event for geometry ids.
+         * @type {string}
+         */
+        this.GEOMETRY_IDS_EVENT = &apos;geometryIdsEnd&apos;;
+        /**
+         * The shapes image loaded event.
+         * Needed, otherwise could cause the error: https://github.com/jywarren/webgl-distort/issues/4
+         * @type {string}
+         */
+        this.SHAPES_IMAGE_LOADED_EVENT = &apos;shapesImageLoaded&apos;;
+        /**
+         * The patterns image loaded event.
+         * @type {string}
+         */
+        this.PATTERNS_IMAGE_LOADED_EVENT = &apos;patternsImageLoaded&apos;;
+        /**
+         * The figures image loaded event.
+         * @type {string}
+         */
+        this.FIGURES_IMAGE_LOADED_EVENT = &apos;figuresImageLoaded&apos;;
+        /**
+         * The finish events for the library load, for parser end, pattern and shapes images and any other that may  be added.
+         * @type {{libraryLoaded: boolean, parserEnded: boolean, geometryIdsEnd:boolean, shapesImageLoaded:boolean, patternsImageLoaded:boolean, figuresImageLoaded: boolean}}
+         */
+        this.finishedEvents = {
+            libraryLoaded: false,
+            parserEnd: false,
+            geometryIdsEnd: true,
+            shapesImageLoaded: false,
+            patternsImageLoaded: false,
+            figuresImageLoaded: false
+        };
+
+        this._setupCustomEventListenners();
+
+        //@TODO: globalOptions.provider is not null if we already called new GisplayErrorChecker(p,m, globalOpts.provider)
+        /**
+         * The gisplay dynamic loader.
+         * @type {GisplayDynamicLoader}
+         */
+        this.dynamicLoader = this.startDynamicLoader(globalOptions.provider);
+        /**
+         * The information about the shaders that will be used for this map.
+         * @type {ShadersInfo}
+         */
+        this.shadersInfo = this.dynamicLoader.getShadersInfo();
+
+        /**
+         * All the options available in the Gisplay API.
+         * @type {GisplayOptions}
+         */
+        this.gisplayOptions = this.loadGisplayOptions(parsingOptions, mappingOptions, globalOptions);
+        /**
+         * All the categorical variables that were created with the given options.
+         * @type {Array&lt;CategoricalVariable&gt;}
+         */
+        this.categoricalVariables = this.gisplayOptions.getCategoricalVariables();
+        /**
+         * All the continuous variables that were created with the given options.
+         * @type {Array&lt;ContinuousVariable&gt;}
+         */
+        this.continousVariables = this.gisplayOptions.getContinousVariables();
+        /**
+         * The time variable or null if there&apos;s no Time in the dataset.
+         * @type {TimeVariable}
+         */
+        this.timeVariable = this.gisplayOptions.getTimeVariable();
+        /**
+         * The URLVariable.
+         * @type {URLVariable} 
+         */
+        this.urlVariable = this.gisplayOptions.getURLVariable();
+
+        this._setupGeometryIdsEventListenner();
+
+        /**
+         * Holds the background maps.
+         * @type {Array&lt;BGMapWrapper&gt;}
+         */
+        this.bgMaps = [];
+        /**
+         * Holds reference to WebGL context and program.
+         * @type {{gl: WebGLRenderingContext, program: WebGLProgram, bordersProgram: WebGLProgram}} _webgl - WebGL rendering context, program and borders program.
+         * @see Diogo&apos;s thesis page 64+
+         */
+        this._webgl = null;
+        /**
+         * The layout manager. 
+         * @type {LayoutManager}
+         */
+        this.layoutManager = new LayoutManager(this.gisplayOptions);
+        /**
+         * Holds all the existing Legends.
+         * @type {Array&lt;Legend&gt;}
+         */
+        this.legends = [];
+
+        /**
+         * An array with extra variables used mainly for picking information or an empty array when the programmer didn&apos;t give any extra variable.
+         * @type {Array&lt;DataVariable&gt;}
+         */
+        this.optionalVariables = this.gisplayOptions.getOptionalVariables();
+        //THIS VARIABLE IS NOT IN USE ATM
+        /**
+         * The geometry variables (longitude and latitude).
+         * @type {Array&lt;DataVariable&gt;}
+         */
+        this.geometryVariables = this.gisplayOptions.getGeometryVariables();
+
+        //WILL COME FROM PARSERs
+        /**
+         * All the Visual Variable Combinations that exist in this map. Read and processed from the dataset.
+         * @type {Array&lt;MapVariableCombination&gt;}
+         */
+        this.mapVariableCombinations = [];
+        /**
+         * Map where each key is a combination string and it&apos;s value is the index of it&apos;s position in the visual variable combinations array.
+         * @type {Map&lt;string, number&gt;}
+         */
+        this.mapVariableCombinationToIndexMap = new Map();
+        /**
+         * The map with ids and their respective geometry.
+         * @type {Map&lt;string, Polygon|Array&lt;number&gt;&gt;}
+         */
+        this.geometryIdsMap = new Map();
+        /**
+         * The buffer with all points. Used for maps with polygons or lines.
+         * @type {WebGLBuffer}
+         */
+        this.allPoints;
+        this.allColors;
+        /**
+         * The geometry primitive that was read from the file.
+         * @type {number}
+         */
+        this.geometryPrimitive;
+
+        //Setup webgl context and program.
+        this.setupWebGL();
+
+        this.readFiles();
+        // console.log(this);
+        window.g = this;
+    }
+
+    /*
+    #####################################################################
+    #######################     INITIAL SETUP      ######################
+    #####################################################################
+    */
+    /**
+     * Sets up a listener for each existing custom event.
+     * @private
+     * @memberof GisplayMap
+     */
+    _setupCustomEventListenners() {
+        document.addEventListener(this.LIBRARY_LOADED_EVENT, () =&gt; { this.initialSetup(this.LIBRARY_LOADED_EVENT); });
+        document.addEventListener(this.SHAPES_IMAGE_LOADED_EVENT, () =&gt; { this.initialSetup(this.SHAPES_IMAGE_LOADED_EVENT); });
+        document.addEventListener(this.PATTERNS_IMAGE_LOADED_EVENT, () =&gt; { this.initialSetup(this.PATTERNS_IMAGE_LOADED_EVENT); });
+        document.addEventListener(this.FIGURES_IMAGE_LOADED_EVENT, () =&gt; { this.initialSetup(this.FIGURES_IMAGE_LOADED_EVENT); });
+        // Listen to parser end/done event
+        document.addEventListener(this.PARSER_ENDED_EVENT, (e) =&gt; this.receiveParserData(e.detail), false);
+    }
+
+    /**
+     * Setup a listener for geometry ids event, if the geometry was given by ids.
+     * @private
+     * @memberof GisplayMap
+     */
+    _setupGeometryIdsEventListenner() {
+        if (this.urlVariable.hasIds()) {
+            this.finishedEvents.geometryIdsEnd = false;
+            document.addEventListener(this.GEOMETRY_IDS_EVENT, (e) =&gt; this.receiveParserGeometryIds(e.detail), false);
+        }
+    }
+
+    /**
+     * Start the Gisplay dynamic loader, responsible to load multiple elements of the Gisplay API.
+     * @param {string} libraryName - The name of the background map. 
+     * @returns {GisplayDynamicLoader} - the GisplayDynamicLoader object created.
+     * @memberof GisplayMap
+     */
+    startDynamicLoader(libraryName) {
+        let vertexShaderFileName = this.getShadersFileNames().vertexShaderFileName;
+        let fragmentShaderFileName = this.getShadersFileNames().fragmentShaderFileName;
+        return new GisplayDynamicLoader(libraryName, vertexShaderFileName, fragmentShaderFileName);
+    }
+
+    /**
+     * Loads user and default options. For each case if it isn&apos;t provided by the user, then it uses
+     * the default option. 1st method to be called.
+     * @param {Object} parsingOptions - The parsing options.
+     * @param {Object} mappingOptions - The mapping options.
+     * @param {Object} globalOptions - The globabl options.
+     * @returns {GisplayOptions} - the processed gisplay options.
+     * @memberof GisplayMap
+     */
+    loadGisplayOptions(parsingOptions, mappingOptions, globalOptions) {
+        return new GisplayOptions(parsingOptions, mappingOptions, globalOptions, this);
+    }
+
+    /**
+     * Sets up WebGL.
+     * @memberof GisplayMap
+     */
+    setupWebGL() {
+        let { vertexShaderFileName, fragmentShaderFileName } = this.getShadersFileNames();
+        let { borderVertexFileName, borderFragmentFileName } = GisplayDefaults.getBordersShadersFileNames();
+        this._webgl = WebGLUtils.setupWebGL(
+            this.layoutManager.getCanvas(),
+            this.layoutManager.getBgmapsDiv(),
+            this.dynamicLoader.loadShaders(vertexShaderFileName, fragmentShaderFileName),
+            this.dynamicLoader.loadShaders(borderVertexFileName, borderFragmentFileName)
+        );
+    }
+
+    /**
+     * Read the data file, and if it exists the geospatial information.
+     * @memberof GisplayMap
+     */
+    readFiles() {
+        let fileName = this.urlVariable.getDataFileName();
+        if (fileName.endsWith(&apos;.json&apos;) || fileName.endsWith(&apos;.geojson&apos;)) {// Start geojson parser for this file and userOptions
+            console.log(&apos;JSON&apos;);
+            new GeoJSONParser(this.gisplayOptions, this._webgl.gl);
+        } else if (fileName.endsWith(&apos;.csv&apos;) || fileName.endsWith(&apos;.CSV&apos;)) {// Start CSV parser for this file and userOptions
+            console.log(&quot;CSV&quot;);
+            // new CSVParser(this.gisplayOptions, this._webgl.gl);
+            new CSVParser(this.gisplayOptions, this._webgl.gl);
+        } else {
+            console.error(&quot;WRONG File extension&quot;);
+        }
+    }
+
+    /**
+     * Receives the parsed data.
+     * @param {{mapVariableCombinations: Array&lt;MapVariableCombination&gt;, mapVariableCombinationToIndexMap:Map&lt;string, number&gt;, categoricalVariables: Array&lt;CategoricalVariable&gt;, continousVariables:Array&lt;ContinuousVariable&gt;, allPoints: WebGLBuffer}} detail - The custom event (parserEnd) data. 
+     * @memberof GisplayMap
+     */
+    receiveParserData(detail) {
+        // console.log(detail);
+        this.mapVariableCombinations = detail.mapVariableCombinations;
+        this.mapVariableCombinationToIndexMap = detail.mapVariableCombinationToIndexMap;
+        this.categoricalVariables = detail.categoricalVariables;
+        this.continousVariables = detail.continousVariables;
+        if (!Array.isArray(detail.allPoints)) { //Only save the allPoints if it contains a WebGLBuffer
+            this.allPoints = detail.allPoints;
+            this.allColors = detail.allColors;
+        }
+        // console.log(this.visualVariableCombinations, this.visualVariableCombinationToIndexMap, this.categoricalVariables, this.continousVariables);
+        this.initialSetup(this.PARSER_ENDED_EVENT);
+    }
+
+    /**
+     * Receives the parsed ids and their respective geometry.
+     * @param {{geometryIdsMap: Map&lt;string, any&gt;, allPoints: WebGLBuffer, geometryPrimitive: number}} detail - The custom event (parserEnd) data. 
+     * @memberof GisplayMap
+     */
+    receiveParserGeometryIds(detail) {
+        this.geometryIdsMap = detail.geometryIdsMap;
+        this.allPoints = detail.allPoints;
+        this.allColors = detail.allColors;
+        this.geometryPrimitive = detail.geometryPrimitive;
+        this.initialSetup(this.GEOMETRY_IDS_EVENT);
+    }
+
+    /**
+     * If all events already ended then it continues the API execution (setup layout, legends, etc), otherwise does nothing.
+     * @param {string} eventName - The name of the fired event. 
+     * @see https://blog.mariusschulz.com/2016/02/10/the-some-and-every-array-methods-in-javascript
+     * @memberof GisplayMap
+     */
+    initialSetup(eventName) {
+        this.finishedEvents[eventName] = true;
+        // console.log(this.finishedEvents);
+        //Verify all events are done
+        let allEventsDone = Object.values(this.finishedEvents).every((v) =&gt; v); //.filter((k) =&gt; k).length === values.length;
+        if (allEventsDone) {
+            console.timeEnd(&quot;gisplay&quot;);
+
+            if (this.urlVariable.hasIds())
+                this.replaceIdsWithGeometry();
+
+            // console.log(this.finishedEvents);
+
+            this.generateTGsRGBAIDs();
+
+            this.setupBGMapsLayout();
+            this.setupTimeControl();
+            this.setupLegends();
+            this.setupInteractionEvents();
+
+            this.layoutManager.resizeCanvas(); //Avoid bug where elems would be above Legends
+            this.drawToMap();
+
+            this.layoutManager.dismissLoader();
+            this.layoutManager.createDisbaleBGMapsIcon();
+            console.log(this);
+            window.tg = this;
+        }
+    }
+
+    /**
+     * Generates the RGBA identifiers for each Map Variable combination and for each Temporal Granule.
+     * @memberof GisplayMap
+     */
+    generateTGsRGBAIDs() {
+        //The R and G will be used to represent the index of the MVC and B and A will be used represent the index of the TG
+        //This way we can find the MVC/TG in O(1)
+        for (const [i, mvc] of this.mapVariableCombinations.entries()) {
+            let [Rmvc, Gmvc, Bmvc, Amvc] = GisplayDefaults.numberToRGBA(i + 1); // Bmvc and Amvc will allow indices between 0-65535
+            for (const [j, tg] of mvc.getTemporalGranules().entries()) {
+                let [Rtg, Gtg, Btg, Atg] = GisplayDefaults.numberToRGBA(j + 1);
+                //                     Index MVC   Index TG
+                tg.setRTGRGBAIdentifier(Bmvc, Amvc, Btg, Atg);
+            }
+        }
+    }
+
+    /**
+     * When the GeoJSONIdsParser is used, we can replace the data that it processed. This data can be used directly by each temporal granule.
+     * This method replaces the ids with the actual geometry and then continues the process by joining the picking colors etc.
+     * @memberof GisplayMap
+     */
+    replaceIdsWithGeometry() {
+        console.warn(this.geometryIdsMap, this.geometryPrimitive);
+        for (const mvc of this.mapVariableCombinations)
+            for (const tg of mvc.getTemporalGranules())
+                tg.setGeometryPrimitive(this.geometryPrimitive);
+
+        for (const mvc of this.mapVariableCombinations)
+            for (const tg of mvc.getTemporalGranules())
+                tg.replaceIdsWithGeometry(this.geometryIdsMap);
+
+        for (const mvc of this.mapVariableCombinations)
+            mvc.joinPickingColors();
+
+        for (const mvc of this.mapVariableCombinations)
+            for (const tg of mvc.getTemporalGranules())
+                tg.setNumElements();
+
+        for (const mvc of this.mapVariableCombinations)
+            mvc.joinTemporalGranuleData(this._webgl.gl, this.geometryPrimitive);
+
+        this.geometryIdsMap = null;
+    }
+
+    printInfo(bgmap = this.bgMaps[0]) {
+        if (!window.numDraws)
+            window.numDraws = 0;
+        let lngCenter = bgmap.getCenterLng();
+        let latCenter = bgmap.getCenterLat();
+        let zoom = bgmap.getZoom();
+        let tileSize = bgmap.getTileSize();
+        let width = bgmap.getWidth();
+        let height = bgmap.getHeight();
+        let mercator = WebGLUtils.webMercatorProjection(lngCenter, latCenter, zoom, tileSize, width, height);
+        let MMatrix = WebGLUtils.finalMatrix(mercator.scale, width, height, mercator.offsetX, mercator.offsetY);
+        console.log(&quot;NumDraws = &quot;, ++window.numDraws, lngCenter, latCenter, zoom, width, height, mercator.scale, mercator.offsetX, mercator.offsetY);
+        // console.log(this.layoutManager.getBgmapsDiv().width, this.layoutManager.getBgmapsDiv().height);
+        // let bgmapsDiv = document.getElementById(&apos;gisplay2_bgmaps&apos;);
+        // console.log(bgmapsDiv.offsetWidth, bgmapsDiv.offsetHeight);
+        console.log(&quot;-------&quot;);
+    }
+
+    /*
+    #####################################################################
+    #######################       SETUP LAYOUT      #####################
+    #####################################################################
+    */
+    /**
+     * Sets up the layout manager for this instance of the Gisplay API.
+     * @memberof GisplayMap
+     */
+    setupBGMapsLayout() {
+        this.bgMaps = this.layoutManager.setupBGMapsLayout();
+        // this.bgMaps = this.layoutManager._createBackgroundMaps();
+    }
+
+    /**
+     * Creates the time control.
+     * @memberof GisplayMap
+     */
+    setupTimeControl() {
+        if (this.timeVariable)
+            this.layoutManager.createTimeControl(this.timeVariable);//timeTitle, type, timeInstants);
+    }
+
+    /**
+     * Creates all the legends needed for this thematic map.
+     * @memberof GisplayMap
+     */
+    setupLegends() {
+        for (const catVar of this.categoricalVariables) {
+            let image;
+            if (catVar.getTypeOfVisualVariable() === GisplayDefaults.TEXTURE())
+                image = this.dynamicLoader.getPatternsImage();
+            else if (catVar.getTypeOfVisualVariable() === GisplayDefaults.SHAPE())
+                image = this.dynamicLoader.getShapesImage();
+            else if (catVar.getTypeOfVisualVariable() === GisplayDefaults.ORIENTATION())
+                image = this.dynamicLoader.getFiguresImage();
+            this.legends.push(this.layoutManager.createLegend(catVar, image));
+        }
+        for (const contVar of this.continousVariables)
+            this.legends.push(this.layoutManager.createLegend(contVar, this.dynamicLoader.getShapesImage()));
+    }
+
+    /**
+     * Setup all interaction events used by the Gisplay API. 
+     * The existing events are pan (drag), zoom, and click on the background map plus the methods for
+     * the time control change, legend change and for the resize of the window.
+     * This events will be fired by the background map provider and we can use them to draw(zoom and pan) or alert information(click).
+     * @memberof GisplayMap
+     */
+    setupInteractionEvents() {
+        for (let bgmap of this.bgMaps) {
+            bgmap.addDragEvent(() =&gt; this.drawToMap(&apos;drag&apos;));
+            bgmap.addZoomEvent(() =&gt; this.drawToMap(&apos;zoom&apos;));
+            bgmap.addClickEvent(this);
+        }
+        //Listen to time control events
+        document.addEventListener(&apos;TimeRangeChanged&apos;, () =&gt; { this.drawToMap(&apos;time&apos;); });
+        //Listen to changes on any Legend
+        document.addEventListener(&apos;LegendChangedEvent&apos;, (e) =&gt; { this.legendChangedEvent(e.detail); });
+
+        window.addEventListener(&apos;resize&apos;, () =&gt; {
+            //  this.layoutManager.resizeCanvas(); 
+            for (let bgmap of this.bgMaps)
+                bgmap.resize();
+            this.drawToMap(&apos;resize&apos;);
+        }, false); //Resize Canvas when the user changes the size of the window
+    }
+
+    /**
+     * Called when any legend state changes.
+     * @memberof GisplayMap
+     */
+    legendChangedEvent() {
+        //                  L1             L2                   legends
+        let states = []; // [false, true], [true, true, true]   state
+        //                   0      1       0     1     2       index
+        for (let legend of this.legends)
+            states.push(legend.getLegendVisibilityState());
+        // console.log(states);
+
+        for (let mvc of this.mapVariableCombinations) {
+            let combinationStr = mvc.getCombinationString();
+            // console.log(combinationStr); //00, 01, 02, 10, 11, 12
+            let finalState = true;
+            for (let i = 0; i &lt; combinationStr.length; i++) { // 0..0
+                let charInteger = +combinationStr[i]; //0
+                let charState = states[i][charInteger]; //states[0][0] -&gt; false
+                finalState = finalState &amp;&amp; charState; //Conjunction between the legend index state and the current state
+            }
+            // console.log(finalState);
+            finalState ? mvc.enable() : mvc.disable();
+        }
+        this.drawToMap(&apos;legend&apos;);
+    }
+
+    /*
+    #####################################################################
+    #######################     WEBGL METHODS      ######################
+    #####################################################################
+    */
+    /**
+     * Clear current buffers to preset values.
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clear
+     * @memberof GisplayMap
+     */
+    clear() {
+        const gl = this._webgl.gl;
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.disable(gl.DEPTH_TEST);
+        // this.layoutManager.deletePickingTooltip();
+    }
+
+    /**
+     * This method is used to draw to the background map. For each enabled map variable combination goes over each 
+     * active temporal granule and draws all it&apos;s geometry with the respective information.
+     * @memberof GisplayMap
+     */
+    drawToMap(eventName = &apos;initial&apos;) {
+        let initT = performance.now();
+        console.time(&quot;drawToMap&quot;);
+        // console.time(&quot;b4&quot;);
+        this.clear();
+        this.layoutManager.deletePickingTooltip();
+        this.layoutManager.resizeCanvas();
+        for (let bgmap of this.bgMaps) //Needed?
+            bgmap.resize();
+        console.warn(eventName);
+        // this.printInfo();
+
+        /*const gl = this._webgl.gl;
+         gl.enable(gl.BLEND);
+         gl.blendFuncSeparate(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA, gl.ONE, gl.ONE_MINUS_SRC_ALPHA); 
+         */
+
+        let granulesIndices = this.getActiveTemporalGranules();
+        for (let mvc of this.mapVariableCombinations) {
+            // console.time(&quot;mvc&quot;);
+            if (mvc.isEnabled()) {
+                let mvcTemporalGranules = mvc.getTemporalGranules();
+                for (let index of granulesIndices) {
+                    let tg = mvcTemporalGranules[index];
+                    // console.time(&quot;draw&quot;);
+                    // console.warn(tg.getNumElements(), tg.hasElements());
+                    if (tg.hasElements())
+                        for (let bgmap of this.bgMaps)
+                            this.draw(mvc, tg, bgmap);
+                    // console.timeEnd(&quot;draw&quot;);
+                }
+            }
+            // console.timeEnd(&quot;mvc&quot;);
+        }
+        console.timeEnd(&quot;drawToMap&quot;);
+        let finalT = performance.now();
+        console.log(initT, finalT, finalT - initT);
+    }
+
+    //@TODO DELETE next 6 methods 
+    /**
+     * The new method to draw points.
+     * @param {MapVariableCombination} mvc 
+     * @param {TemporalGranule} tg 
+     * @param {BGMapWrapper} bgmap 
+     * @memberof GisplayMap
+     */
+    drawPoints(mvc, tg, bgmap) {
+        const gl = this._webgl.gl;
+        const PROGRAM = this._webgl.program;
+        gl.useProgram(PROGRAM);
+        if (gl === null)
+            return;
+
+        this._setViewport(bgmap);
+        this._setAlphaAndColor(mvc);
+        this._setPickingState(false);
+        this._setProjectionMatrix(bgmap);
+
+        this.createImageTexture();
+        this.setShapeIndex(mvc); // SHAPE INDEX
+        this.setSizeUniform(mvc); // SIZE
+
+        this.setPoints(tg); //POSITION
+    }
+
+    /**
+     * Draw proportion symbols.
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @param {TemporalGranule} tg - The temporal granule.
+     * @param {BGMapWrapper} bgmap - The background map
+     * @see https://stats.stackexchange.com/a/144342
+     * @see http://devdocs.io/dom/webglrenderingcontext/vertexattribpointer
+     * @memberof GisplayMap
+     */
+    drawProportionalSymbols(mvc, tg, bgmap) {
+        const gl = this._webgl.gl;
+        const PROGRAM = this._webgl.program;
+        gl.useProgram(PROGRAM);
+        if (gl === null)
+            return;
+
+        this._setViewport(bgmap);
+        this._setAlphaAndColor(mvc);
+        this._setPickingState(false);
+        this._setProjectionMatrix(bgmap);
+
+        this.createImageTexture();
+        this.setShapeIndex(mvc); // SHAPE INDEX
+        this.setSizeMinMaxPixels(); //Min and max pixels default values
+        this.setSizeMinMaxData(mvc); //Min and max data values
+
+        this.setSizeAttributeMultiple(tg); //SIZE
+
+        //All points
+        this.setPoints(tg); //POSITION
+    }
+
+    /**
+     * Draw figures.
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @param {TemporalGranule} tg - The temporal granule.
+     * @param {BGMapWrapper} bgmap - The background map
+     * @see https://stats.stackexchange.com/a/144342
+     * @see http://devdocs.io/dom/webglrenderingcontext/vertexattribpointer
+     * @memberof GisplayMap
+     */
+    drawFigures(mvc, tg, bgmap) {
+        const gl = this._webgl.gl;
+        const PROGRAM = this._webgl.program;
+        gl.useProgram(PROGRAM);
+        if (gl === null)
+            return;
+
+        this._setViewport(bgmap);
+        this._setAlphaAndColor(mvc); //COLOR + ALPHA
+        this._setPickingState(false);  //PICKING
+        this._setProjectionMatrix(bgmap); //MATRICES
+
+        this.createImageTexture(GisplayDefaults.ORIENTATION()); // LOAD TEXTURE IMAGE
+        this._setFigureIndex(mvc); // FIGURE INDEX &lt;&lt;&lt; @TODO METHOD uses a string &apos;figureIndex&apos; how to change?
+        this.setOrientation(mvc);
+        this.setSizeMinMaxPixels(); //Min and max pixels default values from defaults.json
+
+        //SIZE
+        if (mvc.hasSize()) {
+            this.setSizeMinMaxData(mvc); //Min and max data values
+            this.setSizeAttributeMultiple(tg);
+        }
+        else
+            this.setSizeAttributeUnique(mvc);
+
+        //All points
+        this.setPoints(tg); //POSITION
+    }
+
+    /**
+     * The new method to draw Polygons.
+     * @param {MapVariableCombination} mvc - The map variable combination
+     * @param {TemporalGranule} tg - The temporal granule. 
+     * @param {BGMapWrapper} bgmap - The background map where we want to draw.
+     * @memberof GisplayMap
+     */
+    drawPolygons(mvc, tg, bgmap) {
+        const gl = this._webgl.gl;
+        const PROGRAM = this._webgl.program;
+        gl.useProgram(PROGRAM);
+        if (gl === null)
+            return;
+
+        this._setViewport(bgmap);
+        this._setAlphaAndColor(mvc);
+        this._setPickingState(false); // NO PICKING NOW
+        this._setProjectionMatrix(bgmap);
+
+        this.createImageTexture(GisplayDefaults.TEXTURE());
+        this.setTextureIndex(mvc); // PATTERN INDEX
+        this.setTextureSize();
+
+        this.setPolygons(tg); //POSITION
+    }
+
+    /**
+     * The new method to draw Borders.
+     * @param {MapVariableCombination} mvc - The map variable combination
+     * @param {TemporalGranule} tg - The temporal granule. 
+     * @param {BGMapWrapper} bgmap - The background map where we want to draw.
+     * @see https://stackoverflow.com/a/9153755/ - Use program
+     * @memberof GisplayMap
+     */
+    drawBorders(mvc, tg, bgmap) {
+        const gl = this._webgl.gl;
+        const PROGRAM = this._webgl.bordersProgram;
+        gl.useProgram(PROGRAM);
+        if (gl === null)
+            return;
+
+        this._setViewport(bgmap);
+        this._setAlphaAndColor(mvc, true);
+        this._setProjectionMatrix(bgmap, true);
+
+        this.setPolygonsBorders(tg);
+    }
+
+    /**
+     * The new method to draw Lines.
+     * @param {MapVariableCombination} mvc - The map variable combination
+     * @param {TemporalGranule} tg - The temporal granule. 
+     * @param {BGMapWrapper} bgmap - The background map where we want to draw.
+     * @see http://www3.ntu.edu.sg/home/ehchua/programming/opengl/images/GL_GeometricPrimitives.png
+     * @memberof GisplayMap
+     */
+    drawLines(mvc, tg, bgmap) {
+        const gl = this._webgl.gl;
+        const PROGRAM = this._webgl.program;
+        gl.useProgram(PROGRAM);
+        if (gl === null)
+            return;
+
+        this._setViewport(bgmap);
+        this._setAlphaAndColor(mvc);
+        this._setPickingState(false); // NO PICKING NOW
+        this._setProjectionMatrix(bgmap);
+
+        this.setLines(tg); //Draw the lines 
+    }
+
+    /*
+    #####################################################################
+    #######################         WEBGL AUX      ######################
+    #####################################################################
+    */
+    /**
+     * Initial setup for the draw operation. All draw operations should first call this method. 
+     * Sets the program to use, the viewport, the alpha and color, the picking state and the projection matrix. 
+     * @param {MapVariableCombination} mvc - The map variable combination
+     * @param {BGMapWrapper} bgmap - The background map where we want to draw.
+     * @param {boolean} [useBordersProgram=false] - Should use the borders program and color or not.
+     * @memberof GisplayMap
+     */
+    initialDrawSetup(mvc, bgmap, useBordersProgram = false) {
+        const gl = this._webgl.gl;
+        gl.enable(gl.BLEND);
+        gl.blendFuncSeparate(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA, gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+
+        const PROGRAM = useBordersProgram ? this._webgl.bordersProgram : this._webgl.program;
+        gl.useProgram(PROGRAM);
+        if (gl === null)
+            return;
+
+        this._setViewport(bgmap);
+        this._setAlphaAndColor(mvc, useBordersProgram);
+        if (!useBordersProgram)
+            this._setPickingState(false); // NO PICKING NOW
+        this._setProjectionMatrix(bgmap, useBordersProgram);
+    }
+
+    /**
+     * Set the viewport for normal draw.
+     * @param {MapVariableCombination} bgmap - The background map where we want to draw.
+     * @private
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/viewport
+     * @memberof GisplayMap
+     */
+    _setViewport(bgmap) {
+        const gl = this._webgl.gl;
+        let viewport = bgmap.calculateViewPort(this.layoutManager.canvas);
+        gl.viewport(...viewport);
+        gl.scissor(...viewport);
+    }
+
+    /**
+     * Set the alpha and color values in the fragment shader.
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @param {boolean} [useBordersProgram=false] - Should use the borders program and color or not.
+     * @private
+     * @memberof GisplayMap
+     */
+    _setAlphaAndColor(mvc, useBordersProgram = false) {
+        const gl = this._webgl.gl;
+        const webGLProgram = useBordersProgram ? this._webgl.bordersProgram : this._webgl.program;
+        const fragmentColorLocation = gl.getUniformLocation(webGLProgram, this.shadersInfo.getColorName()); // COLOR
+        let color = useBordersProgram ? GisplayDefaults.getDefaultBordersColor() : mvc.getColor();
+        gl.uniform3f(fragmentColorLocation, ...color);
+        const fragmentAlphaLocation = gl.getUniformLocation(webGLProgram, this.shadersInfo.getOpacityName()); // ALPHA
+        gl.uniform1f(fragmentAlphaLocation, mvc.getAlpha());
+    }
+
+    /**
+     * Set the picking state. 1 if we want to draw the picking data, 0, otherwise.
+     * @param {boolean} isEnabled - Enable or disable isPicking in the fragment shader.
+     * @private
+     * @memberof GisplayMap
+     */
+    _setPickingState(isEnabled) {
+        const gl = this._webgl.gl;
+        const fragmentIsPickingLocation = gl.getUniformLocation(this._webgl.program, GisplayDefaults.isPickingName()); //PICKING
+        gl.uniform1i(fragmentIsPickingLocation, isEnabled ? 1 : 0);
+    }
+
+    /**
+     * This method will set the projection matrix to be used to convert the sent lat/lng points/vertices into WebGL coordinates.
+     * @param {BGMapWrapper} bgmap - The background map wrapper.
+     * @param {boolean} [useBordersProgram=false] - Use the borders program or not.
+     * @private
+     * @memberof GisplayMap
+     */
+    _setProjectionMatrix(bgmap, useBordersProgram = false) {
+        const gl = this._webgl.gl;
+        let lngCenter = bgmap.getCenterLng();
+        let latCenter = bgmap.getCenterLat();
+        let zoom = bgmap.getZoom();
+        let tileSize = bgmap.getTileSize();
+        let width = bgmap.getWidth();
+        let height = bgmap.getHeight();
+        let mercator = WebGLUtils.webMercatorProjection(lngCenter, latCenter, zoom, tileSize, width, height);
+        // let MMatrix = WebGLUtils.finalMatrix(mercator.scale, width, height,
+        //     mercator.offsetX + (window.x ? window.x : 0), mercator.offsetY + (window.y ? window.y : 0));
+        let MMatrix = WebGLUtils.finalMatrix(mercator.scale, width, height, mercator.offsetX, mercator.offsetY);
+        const MatrixLocation = gl.getUniformLocation(useBordersProgram ? this._webgl.bordersProgram : this._webgl.program, this.shadersInfo.getMatrixProjectionName());
+        gl.uniformMatrix3fv(MatrixLocation, false, MMatrix);
+    }
+
+    /**
+     * Creates a texture with the image that contains the shapes, figures or patterns.
+     * If it&apos;s a dot or prop symbols then load shapes image.
+     * Else if it&apos;s a figures map load the figures image.
+     * Else if it&apos;s a polygons map load the patterns image.
+     * @param {boolean} [imageType=GisplayDefaults.SHAPE()] - The type of image to load.
+     * @private
+     * @memberof GisplayMap
+     */
+    createImageTexture(imageType = GisplayDefaults.SHAPE()) {
+        const gl = this._webgl.gl;
+        const texture = gl.createTexture();
+        let image;
+        if (imageType === GisplayDefaults.SHAPE())
+            image = this.dynamicLoader.getShapesImage();
+        else if (imageType === GisplayDefaults.TEXTURE())
+            image = this.dynamicLoader.getPatternsImage();
+        else if (imageType === GisplayDefaults.ORIENTATION())
+            image = this.dynamicLoader.getFiguresImage();
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        // Set the parameters so we can render any size image.
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+        // Upload the image into the texture.
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, image);
+    }
+
+    /**
+     * Set the shape index value in the fragment shader.
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @private
+     * @memberof GisplayMap
+     */
+    setShapeIndex(mvc) {
+        const gl = this._webgl.gl;
+        const vertexShapeIndexLocation = gl.getUniformLocation(this._webgl.program, this.shadersInfo.getShapeName()); // SHAPE INDEX
+        gl.uniform1i(vertexShapeIndexLocation, mvc.getShape());
+    }
+
+    /**
+     * Set the size location in the vertex shader when the type of the variable is uniform. 
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @private
+     * @memberof GisplayMap
+     */
+    setSizeUniform(mvc) {
+        const gl = this._webgl.gl;
+        const vertexSizeLocation = gl.getUniformLocation(this._webgl.program, this.shadersInfo.getSizeVarName()); // SIZE UNIFORM
+        gl.uniform1f(vertexSizeLocation, mvc.getSize());
+    }
+
+    /**
+     * Set the size location in the vertex shader when the type of the variable is attribute but we 
+     * only want to use a single value to identify all elements (meaning all elements have the same size). 
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @private
+     * @memberof GisplayMap
+     */
+    setSizeAttributeUnique(mvc) {
+        const gl = this._webgl.gl;
+        const vertexSizeLocation = gl.getAttribLocation(this._webgl.program, this.shadersInfo.getSizeVarName()); // SIZE data itself
+        gl.vertexAttrib1f(vertexSizeLocation, mvc.getSize());
+    }
+
+    /**
+     * Set the size location in the vertex shader when the type of the variable is attribute and each element
+     * will have it&apos;s own size.
+     * @param {TemporalGranule} tg - The temporal granule that contains the information to be drawn. 
+     * @memberof GisplayMap
+     */
+    setSizeAttributeMultiple(tg) {
+        const gl = this._webgl.gl;
+        let attributeData = tg.getAttributeData();
+        const vertexSizeLocation = gl.getAttribLocation(this._webgl.program, this.shadersInfo.getSizeVarName()); // SIZE data itself
+        gl.bindBuffer(gl.ARRAY_BUFFER, attributeData);
+        gl.enableVertexAttribArray(vertexSizeLocation);
+        gl.vertexAttribPointer(vertexSizeLocation, 1, gl.FLOAT, false, GisplayDefaults.getFloat32BytesPerElement(), 0);
+    }
+
+    /**
+     * Sets the vertex shader min and max pixels uniform values.
+     * @private
+     * @memberof GisplayMap
+     */
+    setSizeMinMaxPixels() {
+        //Size Related default values
+        const gl = this._webgl.gl;
+        const webGLProgram = this._webgl.program;
+        const vertexMinPixelsLocation = gl.getUniformLocation(webGLProgram, GisplayDefaults.getMinSizePixels().name); //SIZE min, max pixels
+        gl.uniform1f(vertexMinPixelsLocation, GisplayDefaults.getMinSizePixels().value);
+        const vertexMaxPixelsLocation = gl.getUniformLocation(webGLProgram, GisplayDefaults.getMaxSizePixels().name);
+        gl.uniform1f(vertexMaxPixelsLocation, GisplayDefaults.getMaxSizePixels().value);
+    }
+
+    /**
+     * Set the vertex shader min and maximum data values.
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @private
+     * @memberof GisplayMap
+     */
+    setSizeMinMaxData(mvc) {
+        const gl = this._webgl.gl;
+        const webGLProgram = this._webgl.program;
+        let [min, max] = mvc.getMapVariableMinMax(GisplayDefaults.SIZE());
+        const vertexMinDataLocation = gl.getUniformLocation(webGLProgram, GisplayDefaults.getMinSizeDataName());
+        gl.uniform1f(vertexMinDataLocation, min);
+        const vertexMaxDataLocation = gl.getUniformLocation(webGLProgram, GisplayDefaults.getMaxSizeDataName());
+        gl.uniform1f(vertexMaxDataLocation, max);
+    }
+
+    /**
+     * Set the pattern index in the fragment shader.
+     * If the textureIndex parameter is set then it overrides the value set by the map variable combination.
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @param {number} hasTextureIndex - The index of the texture.
+     * @param {boolean} [hasTextureIndex=true] - If false then set to -1 (meaning it should not use any texture).
+     * @memberof GisplayMap
+     */
+    setTextureIndex(mvc, hasTextureIndex = true) {
+        const gl = this._webgl.gl;
+        const fragmentTextureIndexLocation = gl.getUniformLocation(this._webgl.program, this.shadersInfo.getTextureName()); // PATTERN INDEX
+        gl.uniform1i(fragmentTextureIndexLocation, hasTextureIndex ? mvc.getTexture() : -1);
+    }
+
+    /**
+     * Set the frament pattern size value to the default patterns image size. 
+     * @private
+     * @memberof GisplayMap
+     */
+    setTextureSize() {
+        const gl = this._webgl.gl;
+        const fragmentPatternSize = gl.getUniformLocation(this._webgl.program, &apos;patternSize&apos;); // PATTERN SIZE (128 or 32 or ...)
+        gl.uniform1i(fragmentPatternSize, GisplayDefaults.getPatternImageSize());
+    }
+
+    /**
+     * Set the figure index in the fragment shader.
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @private
+     * @memberof GisplayMap
+     */
+    _setFigureIndex(mvc) {
+        const gl = this._webgl.gl;
+        const fragmentFigureIndexLocation = gl.getUniformLocation(this._webgl.program, &apos;figureIndex&apos;); // FIGURE INDEX
+        gl.uniform1i(fragmentFigureIndexLocation, mvc.getFigure());
+    }
+
+    /**
+     * Set the orientation in the fragment shader.
+     * @param {MapVariableCombination} mvc - The map variable combination.
+     * @memberof GisplayMap
+     */
+    setOrientation(mvc) {
+        const gl = this._webgl.gl;
+        const fragmentOrientationLocation = gl.getUniformLocation(this._webgl.program, this.shadersInfo.getOrientationName()); // ORIENTATION
+        gl.uniform1f(fragmentOrientationLocation, mvc.getOrientation());
+    }
+
+    /**
+     * Set all points inside the given temporal granule to WebGL at once. 
+     * @param {TemporalGranule} tg - The temporal granule that contains the points to be drawn. 
+     * @memberof GisplayMap
+     */
+    setPoints(tg) {
+        const gl = this._webgl.gl;
+        let points = tg.getGeometryData();
+        // console.error(tg, tg.getNumElements(), points);
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, this.shadersInfo.getPositionName()); //POSITION
+        gl.bindBuffer(gl.ARRAY_BUFFER, points);
+        gl.enableVertexAttribArray(vertexCoordsLocation);
+        gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, GisplayDefaults.getFloat32BytesPerElement() * 2, 0);
+        gl.drawArrays(gl.POINTS, 0, tg.getNumElements());
+        // console.log(points, tg.getNumElements());
+    }
+
+    /**
+     * Set the polygons inside the given temporal granule. 
+     * @param {TemporalGranule} tg - The temporal granule that contains the polygons to be drawn. 
+     * @memberof GisplayMap
+     */
+    setPolygons(tg) {
+        const gl = this._webgl.gl;
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, this.shadersInfo.getPositionName());// POSITION
+        let polygons = this._findTemporalGranuleGeometry(tg);
+
+        // console.error(&quot;NUMELMS=&quot;, tg.getNumElements());
+
+        //Enable the use of 32 bit elements
+        gl.getExtension(&quot;OES_element_index_uint&quot;);
+
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.allPoints);
+        gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, 0, 0);
+        gl.enableVertexAttribArray(vertexCoordsLocation);
+
+        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, polygons.polygonsIndices);
+        gl.drawElements(gl.TRIANGLES, tg.getNumElements().polygonsIndices, gl.UNSIGNED_INT, 0);
+    }
+
+    /**
+     * Set the polygons borders inside the given temporal granule. 
+     * @param {TemporalGranule} tg - The temporal granule that contains the polygons borders to be drawn. 
+     * @memberof GisplayMap
+     */
+    setPolygonsBorders(tg) {
+        const gl = this._webgl.gl;
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.bordersProgram, this.shadersInfo.getPositionName());
+        let polygons = this._findTemporalGranuleGeometry(tg);
+
+        // console.error(&quot;NUMELMS=&quot;, tg.getNumElements());
+
+        // gl.getExtension(&quot;OES_element_index_uint&quot;);
+
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.allPoints);
+        gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, GisplayDefaults.getFloat32BytesPerElement() * 2, 0);
+        gl.enableVertexAttribArray(vertexCoordsLocation);
+
+        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, polygons.bordersIndices);
+        gl.drawElements(gl.LINES, tg.getNumElements().bordersIndices, gl.UNSIGNED_INT, 0);
+    }
+
+    /**
+     * Set the lines for the given temporal granule.
+     * @param {TemporalGranule} tg - The temporal granule that contains the polygons borders to be drawn. 
+     * @memberof GisplayMap
+     */
+    setLines(tg) {
+        const gl = this._webgl.gl;
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, this.shadersInfo.getPositionName());
+        let lines = this._findTemporalGranuleGeometry(tg);
+
+        gl.getExtension(&quot;OES_element_index_uint&quot;);
+
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.allPoints);
+        gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, GisplayDefaults.getFloat32BytesPerElement() * 2, 0);
+        gl.enableVertexAttribArray(vertexCoordsLocation);
+
+        gl.bindBuffer(gl.ELEMENT_ARRAY_BUFFER, lines);
+        gl.drawElements(gl.LINES, tg.getNumElements(), gl.UNSIGNED_INT, 0);
+    }
+
+    /**
+     * Returns the indices of the active temporal granules.
+     * @returns {Array&lt;number&gt;|number}
+     * @memberof GisplayMap
+     */
+    getActiveTemporalGranules() {
+        return this.layoutManager.getTimeControl() ? this.layoutManager.getActiveTemporalGranules() : [0];
+    }
+
+    /**
+     * Find temporal granule geometry. If there&apos;s geometry ids then look for each id on the geometry ids map otherwise get it directly from the temporal granule.
+     * @param {TemporalGranule} tg - The temporal granule. 
+     * @returns {Polygon|Array&lt;Array&lt;number&gt;&gt;} - the temporal granule geometry.
+     * @private
+     * @memberof GisplayMap
+     */
+    _findTemporalGranuleGeometry(tg) {
+        let geometryData = tg.getGeometryData();
+        return geometryData;
+        /* if (!this.urlVariable.hasIds())
+            return geometryData;
+        else {
+            let elems = []; //Points, Polygons or lines
+            if (this.urlVariable.hasIds()) //REMOVE IF @TODO
+                for (let elem of geometryData) {
+                    if (this.geometryIdsMap.get(elem[0]) === undefined)
+                        console.log(elem, &quot;COUNTRY? DOES NOT EXIST IN DATASET&quot;, this.geometryIdsMap.get(elem[0]));
+                    elems.push(this.geometryIdsMap.get(elem[0]));
+                }
+            return elems;
+        } */
+    }
+
+    /*
+    #####################################################################
+    #######################     WEBGL PICKING      ######################
+    #####################################################################
+    */
+    /**
+     * Callback for the user click on the map.
+     * @param {number} lng - Longitude of the click event. 
+     * @param {number} lat - Latitude of the click event.
+     * @memberof GisplayMap
+     */
+    clickEvent(clickX, clickY, bgmap) {//lng, lat, zoom, bgmap) {
+        // console.log(&quot;CLICK&quot;);
+        this.drawPickingData(clickX, clickY, bgmap);
+    }
+
+    /**
+     * Draw picking data.
+     * First create a texture to draw the picking data. 
+     * Then draw the picking data in the texture.
+     * After that, look for the clicked pixel on the texture and read it&apos;s information (RGBA color).
+     * Now with the RGBA id, search the MapVariableCombination that contains the Red color.
+     * With the result show a tooltip in the clicked position.
+     * @param {number} clickX - The x position that was clicked on the background map.
+     * @param {number} clickY - The y position that was clicked on the background map.
+     * @param {BGMapWrapper} bgmap - The background map where the click event happened.
+     * @see https://github.com/FarhadG/webgl-picking
+     * @see https://stackoverflow.com/a/15064957 - Read pixels from texture
+     * @see http://www.realtimerendering.com/blog/webgl-2-basics/
+     * @memberof GisplayMap
+     */
+    drawPickingData(clickX, clickY, bgmap) {
+        console.time(&apos;picking&apos;);
+        console.time(&apos;drawPicking&apos;);
+        const gl = this._webgl.gl;
+        let [width, height] = [bgmap.getWidth(), bgmap.getHeight()];
+        let [nextWidth, nextHeight] = bgmap.calcNextPowerOfTwo();
+
+        gl.disable(gl.BLEND);
+
+        //Create frameBuffer
+        let framebuffer = gl.createFramebuffer();
+        gl.bindFramebuffer(gl.DRAW_FRAMEBUFFER, framebuffer); // This is the buffer where we will draw from now on
+
+        //Create texture to be used to draw the picking data
+        let texture = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, nextWidth, nextHeight, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+        gl.framebufferTexture2D(gl.DRAW_FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
+        gl.viewport(0, 0, nextWidth, nextHeight); //Viewport for the texture
+
+        let texture2 = gl.createTexture(); //Refazer o desenho se n der
+        gl.bindTexture(gl.TEXTURE_2D, texture2);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, nextWidth, nextHeight, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+        gl.framebufferTexture2D(gl.DRAW_FRAMEBUFFER, gl.COLOR_ATTACHMENT1, gl.TEXTURE_2D, texture2, 0);
+        gl.viewport(0, 0, nextWidth, nextHeight); //Viewport for the texture
+
+        gl.drawBuffers([gl.COLOR_ATTACHMENT0, gl.COLOR_ATTACHMENT1]); // http://www.realtimerendering.com/blog/webgl-2-basics/
+
+        let textureViewPort = [0, 0, nextWidth, nextHeight];
+        this._drawToTexture(textureViewPort, bgmap);
+
+        console.timeEnd(&apos;drawPicking&apos;);
+
+        // console.log(&quot;HERE&quot;);
+        let clickTextureX = clickX * nextWidth / width;
+        let clickTextureY = nextHeight - (clickY * nextHeight / height);
+
+        console.time(&apos;readPixels&apos;);
+        let pixels = new Uint8Array(4);
+        gl.bindFramebuffer(gl.READ_FRAMEBUFFER, framebuffer);
+        gl.readBuffer(gl.COLOR_ATTACHMENT0); // https://stackoverflow.com/a/45573301
+        gl.readPixels(clickTextureX, clickTextureY, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+        console.log(&quot;Pixels&quot;, pixels);
+        console.timeEnd(&apos;readPixels&apos;);
+
+        let pixelsMVCTG = new Uint8Array(4);
+        gl.readBuffer(gl.COLOR_ATTACHMENT1);
+        gl.readPixels(clickTextureX, clickTextureY, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixelsMVCTG);
+        console.log(&quot;Pixels MVCTG&quot;, pixelsMVCTG);
+
+        console.time(&apos;searchPicked&apos;);
+
+        let message = this._searchMVC(pixelsMVCTG, pixels);
+        if (message)
+            this.layoutManager.createToolTip(clickX, clickY, bgmap, message);
+
+        if (window.a) {
+            let imageData = new Uint8Array(nextWidth * nextHeight * 4);
+            gl.readPixels(0, 0, nextWidth, nextHeight, gl.RGBA, gl.UNSIGNED_BYTE, imageData);
+            console.log(imageData);
+            this.countColors(imageData);
+
+            // this.saveTextureToImage(imageData, nextWidth, nextHeight, clickTextureX, clickTextureY);
+        }
+
+        gl.bindFramebuffer(gl.FRAMEBUFFER, null); //Go back to original FrameBuffer.
+
+        console.timeEnd(&apos;searchPicked&apos;);
+        console.timeEnd(&apos;picking&apos;);
+    }
+
+    /**
+     * Given the RGBA color, then search the respective picking element, if any. 
+     * The value is converted to it&apos;s integer representation that it&apos;s then used to compare with all the picking colors in each
+     * temporal granule of each of the enabled map variable combinations.
+     * To quickly find the right map variable combination, the value of the given RGBA is compared with the start RGBA and end RGBA of each map variable combination.
+     * Upon finding the correct map variable combination, then just loop over each active temporal granule and look for the picked element.
+     * @todo Create binarySearch method to look for the picked color faster. Since the generated colors are sequencial this is can be implemented.
+     * @param {number} r - The red color value. 
+     * @param {number} g - The green color value. 
+     * @param {number} b - The blue color value. 
+     * @param {number} a - The alpha color value. 
+     * @returns {string} - The information of the picked element, if any.
+     * @private
+     * @memberof GisplayMap
+     */
+    _searchMVC(MVCTG, clickedRGBA) {
+        let MVC = [0, 0, MVCTG[0], MVCTG[1]];
+        let TG = [0, 0, MVCTG[2], MVCTG[3]];
+        let numMVC = GisplayDefaults.RGBAToNumber(...MVC);
+        let numTG = GisplayDefaults.RGBAToNumber(...TG);
+        if (numMVC !== 0 &amp;&amp; numTG !== 0) {
+            // console.log(numMVC, numTG);
+            numMVC--; //The ids started at 1 then we want to subtract 1
+            numTG--;//The ids started at 1 then we want to subtract 1
+            // console.log(numMVC, numTG);
+
+            let numRGBA = GisplayDefaults.RGBAToNumber(...clickedRGBA);
+            let pickedTG = this.mapVariableCombinations[numMVC].temporalGranules[numTG];
+            let pickedTGData = pickedTG.getPickingData();
+            let pickedIndex = pickedTGData.findColorIndex(numRGBA, this.urlVariable.hasIds());
+            // console.log(numRGBA, pickedTGData, pickedIndex);
+            if (pickedIndex === -1)
+                console.error(&quot;Something went wrong... It shouldn&apos;t end up here&quot;);
+            else
+                return this.generateToolTipInformation(pickedTG, pickedIndex);
+        }
+    }
+
+    /**
+     * Returns the message to be shown to the user in the tooltip message.
+     * @param {TemporalGranule} tg - The temporal granule that contains the element that was clicked.
+     * @param {number} index - The index inside the picking data for the given temporal granule in the map variable combination. 
+     * @returns {string} - the message to be shown to the user in the tooltip message.
+     * @memberof GisplayMap
+     */
+    generateToolTipInformation(tg, index) {
+        // console.log(&quot;index of picked element = &quot;, index);
+
+        let resMessage = &apos;&apos;;
+
+        let continuousInfo = tg.getPickingData().getIndexContinuousData(index);
+        let optionalData = tg.getPickingData().getIndexOptionalData(index);
+
+        // console.warn(tg.getPickingData());
+        // console.warn(pickingInfo, index);
+
+        for (let [i, opt] of this.optionalVariables.entries())
+            resMessage += opt.getInternalName() + &apos;:&apos; + optionalData[i] + &apos;\n&apos;;
+
+        for (let [i, contVar] of this.continousVariables.entries())
+            resMessage += contVar.getInternalName() + &apos;:&apos; + continuousInfo[i] + &apos;\n&apos;;
+
+        // console.log(mvc.getMapVariablesValues());
+        // console.log(resMessage);
+
+        if (!resMessage) // No Optional variables nor continuous variables, only categorical
+            resMessage = &apos;See Legend for categorical variable information&apos;;
+        return resMessage;
+    }
+
+    /**
+     * Execute the draw operation like it would be done for the screen but now using the picking colors.
+     * @param {Array&lt;number&gt;} textureViewPort - The viewport to draw to. 
+     * @param {BGMapWrapper} bgmap - The background map where the click event happened.
+     * @memberof GisplayMap
+     */
+    _drawToTexture(textureViewPort, bgmap) {
+        console.error(&quot;draw to Texture&quot;);
+
+        let granulesIndices = this.getActiveTemporalGranules();
+        for (let mvc of this.mapVariableCombinations) {
+            if (mvc.isEnabled()) {
+                let mvcTemporalGranules = mvc.getTemporalGranules();
+                for (let index of granulesIndices) {
+                    let tg = mvcTemporalGranules[index];
+                    if (tg.hasElements())
+                        this.drawPicking(mvc, tg, bgmap, textureViewPort);
+                }
+            }
+        }
+    }
+
+    /**
+     * Similar to initialDrawSetup(...) but in this case for picking.
+     * @param {MapVariableCombination} mvc - The map variable combination
+     * @param {BGMapWrapper} bgmap - The background map where we want to draw.
+     * @param {Array&lt;number&gt;} textureViewPort - The viewport of the texture, where we want to draw the picking data. 
+     * @memberof GisplayMap
+     */
+    initialPickingSetup(mvc, bgmap, textureViewPort) {
+        const gl = this._webgl.gl;
+        gl.disable(gl.BLEND);
+        // gl.blendFuncSeparate(gl.SRC_ALPHA, gl.ONE_MINUS_SRC_ALPHA, gl.ONE, gl.ONE_MINUS_SRC_ALPHA);
+
+        const PROGRAM = this._webgl.program;
+        gl.useProgram(PROGRAM);
+        if (gl === null)
+            return;
+
+        this._setPickingViewPort(textureViewPort);
+        this._setAlphaAndColor(mvc);
+        this._setPickingState(true);
+        this._setProjectionMatrix(bgmap);
+    }
+
+    /**
+     * Set viewport for picking draw.
+     * @param {Array&lt;number&gt;} viewport- The viewport of the texture image where the picking data will be drawn.
+     * @private
+     * @memberof GisplayMap
+     */
+    _setPickingViewPort(viewport) {
+        const gl = this._webgl.gl;
+        gl.viewport(...viewport);
+        gl.scissor(...viewport);
+    }
+
+    /**
+     * Upload all picking colors of the given temporal granule to the GPU.
+     * @param {TemporalGranule} tg - The temporal granule where to look for picking colors. 
+     * @private
+     * @memberof GisplayMap
+     */
+    _setAllPickingColors(tg) {
+        const gl = this._webgl.gl;
+
+        this._setMVCTGIdentifier(tg);
+
+        let pickingColors = tg.getPickingData().getPickingColors(); //Colors
+        const vertexPickingColorLocation = gl.getAttribLocation(this._webgl.program, GisplayDefaults.pickingColorName()); //PICKING COLOR
+        console.log(&quot;vertexPickingColorLocation&quot;, vertexPickingColorLocation, this.allPoints, this.allColors, this.geometryPrimitive);
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.allPoints ? this.allColors : pickingColors);
+        gl.enableVertexAttribArray(vertexPickingColorLocation);
+        gl.vertexAttribPointer(vertexPickingColorLocation, 4, gl.UNSIGNED_BYTE, false, 0, 0);
+        return vertexPickingColorLocation;
+    }
+
+    /**
+     * Set the identifier for the MVC and TG.
+     * @param {TemporalGranule} tg - The temporal granule. 
+     * @memberof GisplayMap
+     */
+    _setMVCTGIdentifier(tg) {
+        const gl = this._webgl.gl;
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, GisplayDefaults.pickingMVCTGIdentifierName()); // COLOR
+        gl.uniform4fv(fragmentColorLocation, tg.getRGBAIdentifier());
+        console.log(&quot;ID&quot;, tg.getRGBAIdentifier());
+    }
+
+    /**
+     * Set all points and respective colors for picking.
+     * @param {TemporalGranule} tg - The temporal granule to be used.
+     * @memberof GisplayMap
+     */
+    setPickingColorsAndPoints(tg) {
+        const gl = this._webgl.gl;
+        let vertexPickingColorLocation = this._setAllPickingColors(tg);
+        this.setPoints(tg); // POSITION
+        gl.disableVertexAttribArray(vertexPickingColorLocation);
+    }
+
+    /**
+     * Set all polygons and respective colors for picking.
+     * @param {TemporalGranule} tg - The temporal granule to be used.
+     * @memberof GisplayMap
+     */
+    setPickingColorsAndPolygons(tg) {
+        const gl = this._webgl.gl;
+        let vertexPickingColorLocation = this._setAllPickingColors(tg);
+        this.setPolygons(tg); // POSITION
+        gl.disableVertexAttribArray(vertexPickingColorLocation);
+    }
+
+    /**
+     * Set all lines and respective colors for picking.
+     * @param {TemporalGranule} tg - The temporal granule to be used.
+     * @memberof GisplayMap
+     */
+    setPickingColorsAndLines(tg) {
+        const gl = this._webgl.gl;
+        let vertexPickingColorLocation = this._setAllPickingColors(tg);
+        this.setLines(tg); // POSITION
+        gl.disableVertexAttribArray(vertexPickingColorLocation);
+        /* const PROGRAM = this._webgl.program;
+
+        let pickingColors = tg.getPickingData().getPickingColors(); //Colors
+        const vertexPickingColorLocation = gl.getUniformLocation(PROGRAM, GisplayDefaults.pickingColorName());
+
+        const vertexCoordsLocation = gl.getAttribLocation(PROGRAM, this.shadersInfo.getPositionName());// POSITION
+        let lines = this._findTemporalGranuleGeometry(tg);
+        let i = 0;
+        for (let line of lines) {
+            gl.uniform4f(vertexPickingColorLocation, ...pickingColors[i++]); //One color for each line
+            gl.bindBuffer(gl.ARRAY_BUFFER, line.lineBuffer);
+            gl.enableVertexAttribArray(vertexCoordsLocation);
+            gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, GisplayDefaults.getFloat32BytesPerElement() * 2, 0);
+            gl.drawArrays(gl.LINE_STRIP, 0, line.numElements);
+        } */
+    }
+
+    /*
+    #####################################################################
+    ###################     WEBGL PICKING EXTRAS      ###################
+    #####################################################################
+    */
+    saveTextureToImage(data, width, height, x, y) {
+        let canvas = document.createElement(&apos;canvas&apos;);
+        canvas.width = width;
+        canvas.height = height;
+        let context = canvas.getContext(&apos;2d&apos;);
+
+        // this.countColors(data);
+        this.redClickedPixels(data, width, height, x, y);
+
+        // Copy the pixels to a 2D canvas
+        let imageData = context.createImageData(width, height);
+        imageData.data.set(data);
+        context.putImageData(imageData, 0, 0);
+        // console.log(imageData);
+        let img = new Image();
+        img.id = &apos;s1&apos;;
+        img.src = canvas.toDataURL();
+        let w = window.open(&quot;&quot;); //https://stackoverflow.com/a/27798235/
+        w.document.write(img.outerHTML);
+        return img;
+    }
+
+    countColors(data) {
+        let colors = [];//new Set();
+        for (let i = 0; i &lt; data.length - 4; i++) {
+            let color = [];
+            for (let j = i; j &lt; i + 4; j++)
+                color.push(data[j]);
+            // console.log(color);
+
+            let allEqual = false;
+            for (let c of colors) {
+                let colorExists = true;
+                for (let k = 0; k &lt; 4; k++)
+                    if (c[k] !== color[k])
+                        colorExists = false;
+                allEqual = colorExists;
+            }
+            if (!allEqual)
+                colors.push(color);
+        }
+        console.warn(&quot;!= colors in the image are:&quot;, colors);
+    }
+
+    //https://code.tutsplus.com/tutorials/canvas-from-scratch-pixel-manipulation--net-20573
+    redClickedPixels(data, w, h, x, y) {
+        let roundX = Math.round(x);
+        let roundY = Math.round(y);
+        let startPos = 4 * roundY * w + 4 * roundX - 4;
+        console.log(startPos);
+        for (let i = startPos; i &lt; startPos + 100; i++) {
+            if (i % 4 === 0 || i % 4 === 3)
+                data[i] = 255;
+            else
+                data[i] = 0;
+        }
+        /*  data[startPos] = 255;
+         data[startPos + 1] = 0;
+         data[startPos + 2] = 0;
+         data[startPos + 3] = 255; */
+
+        for (let i = 0; i &lt; 10000; i++) {
+            if (i % 4 === 0 || i % 4 === 3)
+                data[i] = 255;
+            else
+                data[i] = 0;
+        }
+        /*         data[0] = 255;
+                data[1] = 0;
+                data[2] = 0;
+                data[3] = 255; */
+
+    }
+
+    /*
+    #####################################################################
+    #####################      ABSTRACT METHODS      ####################
+    #####################################################################
+    */
+    /**
+     * Draw map function. Must be overriden by subclasses.
+     * @param {MapVariableCombination} mvc - The combination. 
+     * @param {TemporalGranule} tg - The temporal granule.
+     * @param {BGMapWrapper} bgmap - The background map.
+     * @abstract 
+     * @memberof GisplayMap
+     */
+    draw(mvc, tg, bgmap) {
+        throw new Error(`Draw method: draw(${mvc, tg, bgmap}) must be implemented by the subclass.`);
+    }
+
+    /**
+     * The method to be called to draw the picking data after a click on the background map.
+     * @param {MapVariableCombination} mvc - The MapVariableCombination to use.
+     * @param {TemporalGranule} tg - The temporal granule to be used.
+     * @param {BGMapWrapper} bgmap - The background map where the click happened.
+     * @param {Array&lt;number&gt;} textureViewPort - The viewport of the texture, where we want to draw the picking data. 
+     * @memberof GisplayMap
+     */
+    drawPicking(mvc, tg, bgmap, textureViewPort) {
+        console.warn(`The method to draw the picking data drawPicking(${mvc, tg, bgmap, textureViewPort}) is not required, but if you want to use the picking capabilites then you must implement this method in the subclass`);
+    }
+
+    /**
+     * Defaults for each map. Subclasses should override this method.
+     * @returns {{color: {numberOfClasses: number, colors: Array&lt;number&gt;}} - the default values for the color (number of classes and colors).
+     * @abstract 
+     * @memberof GisplayMap
+     */
+    defaults() {
+        throw new Error(&quot;This map has no defaults defined.&quot;);
+    }
+
+    /**
+     * Returns the colors for this map given the number of classes and the nature of the data (sequential, diverging or qualitative). 
+     * @param {number} numClasses - Number of classes. 
+     * @param {string} dataNature - Nature of the data.
+     * @returns {Array&lt;Array&lt;RGB&gt;&gt;} - the default colors for the map given the number of classes and nature of data.
+     * @abstract 
+     * @memberof GisplayMap
+     */
+    getDefaultColors(numClasses, dataNature) {
+        throw new Error(`getDefaultColors(${numClasses, dataNature}) must be overriden by subclasses.`);
+    }
+
+    /**
+     * Returns the available visual variables for this map.
+     * @returns {Array&lt;string&gt;} - the available visual variables for this map.
+     * @abstract
+     * @memberof GisplayMap
+     */
+    getAvailableVisualVariables() {
+        throw new Error(&quot;Sub classes of GisplayMap must implement getAvailableVisualVariables() method which should return the list of available visual varialbes for the map.&quot;);
+    }
+
+    /**
+     * Returns the name of the vertex and fragment shader files.
+     * @returns {{vertexShaderFileName:string, fragmentShaderFileName:string}}
+     * @memberof GisplayMap
+     */
+    getShadersFileNames() {
+        throw new Error(&quot;Sub classes of GisplayMap must implement getShadersFileNames() method which should return the vertex and fragment shader file name.&quot;);
+    }
+
+    /**
+     * Returns the avialable time controls for the thematic map.
+     * @returns {Array&lt;string&gt;}
+     * @memberof GisplayMap
+     */
+    getAvailableTemporalControls() {
+        throw new Error(&quot;Sub classes of GisplayMap must implement getAvailableTemporalControls() method which should return the availabe temporal controls.&quot;);
+    }
+
+    /*
+    #####################################################################
+    #####################       GOLBAL METHODS       ####################
+    #####################################################################
+    */
+    /**
+     * Returns the information about the shaders that will be used for this map.
+     * @returns {ShadersInfo} - the information about the shaders that will be used for this map.
+     * @memberof GisplayMap
+     */
+    getShadersInfo() {
+        return this.shadersInfo;
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

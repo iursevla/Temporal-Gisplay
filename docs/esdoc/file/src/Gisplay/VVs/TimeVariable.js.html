@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/VVs/TimeVariable.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/VVs/TimeVariable.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { DataVariable } from &apos;./DataVariable&apos;;
+import { GisplayDefaults } from &apos;../GisplayDefaults&apos;;
+
+/**
+ * Represents the time information.
+ * @export
+ * @class TimeVariable
+ */
+export class TimeVariable extends DataVariable {
+
+    /**
+     * Creates an instance of TimeVariable.
+     * @param {string} externalName - The external name of the time variable.
+     * @param {string} internalName - The internal name of the time variable.
+     * @param {string} granularity - The granularity of the time variable.
+     * @param {string} timeControl - The time control for the time variable.
+     * @memberof TimeVariable
+     */
+    constructor(externalName, internalName, granularity, timeControl) {
+        super(externalName, internalName);
+        /**
+         * The time granularity.
+         * @type {string}
+         */
+        this.granularity = granularity;
+        /**
+         * The granules for this time variable that were processed from the file.
+         * @type {Set&lt;string|number&gt;}
+         */
+        this.granules = new Set();
+        /**
+         * A map with each temporal granule and it&apos;s index.
+         * @type {Map&lt;number|string, number&gt;}
+         */
+        this.temporalGranulesMap = new Map();
+        /**
+         * The current granule index. This is used to give each granule it&apos;s specific index.
+         * @type {number}
+         */
+        this.granuleIndex = 0;
+        /**
+         * The temporal granules sorted by Date. If its a number (year or day or value etc) then sorted by number.
+         * @type {Array&lt;number|string&gt;}
+         */
+        this.sortedTemporalGranulesArr = [];
+        /** 
+         * The map that contains the string that represents the date and the respective date (e.g. 2016_1_1 =&gt; 1 January 2016 OR 2016 =&gt; 2016)
+         * If the date is a number (e.g. year, monthOfYear, value etc) then the key and the value are equal (2016 =&gt; 2016).
+         * A value here will be a key in the temporalGranulesMap.
+         * @type {Map&lt;string|number, string|number&gt;}
+         */
+        this.strToTemporalGranuleMap = new Map();
+        /** 
+         * The map with the string temporal granules and their respective index inm the sorted temporal granules array.
+         * E.g. Map (3)  {&quot;1 January 2016&quot; =&gt; 0, &quot;2 January 2016&quot; =&gt; 1, &quot;3 January 2016&quot; =&gt; 2, &quot;4 January 2016&quot; =&gt; 3 }.
+         * Used to quickly search for the index of the start and end point of the time control.
+         * A value here is an index in the sortedTemporalGranulesArr.
+         * @type {Map&lt;string|number, number&gt;}
+         */
+        this.sortedTGsToIndexMap = new Map();
+        /**
+         * The time control to use.
+         * @type {string}
+         */
+        this.timeControl = timeControl;
+    }
+
+    /**
+     * The granularity
+     * @returns {string} - The granularity. 
+     * @memberof TimeVariable
+     */
+    getGranularity() {
+        return this.granularity;
+    }
+
+    /**
+     * Returns the type of time control that should be used.
+     * @returns 
+     * @memberof TimeVariable
+     */
+    getTypeOfTimeControl() {
+        return this.timeControl ? this.timeControl : GisplayDefaults.INSTANT();
+    }
+
+    /**
+     * Available granularities for the time value.
+     * @returns {Array&lt;string&gt;} - the set of available granularities.  
+     * @memberof TimeVariable
+     */
+    _getAvailableGranularities() {
+        return [&apos;year&apos;, &apos;month&apos;, &apos;day&apos;, &apos;value&apos;, //Continuous
+            &apos;monthOfYear&apos;, &apos;dayOfYear&apos;, &apos;dayOfMonth&apos;, &apos;hourOfDay&apos;, &apos;minuteOfHour&apos; // Cyclic
+        ];
+    }
+
+    //GRANULES ETC
+    /**
+     * Add all values to the temporal granules map.
+     * @param {Array&lt;number&gt;} values - The array of values to add to the granules map.
+     * @memberof TimeVariable
+     */
+    createTemporalGranulesMap(values) {
+        for (let val of values)
+            this.temporalGranulesMap.set(val, this.granuleIndex++);
+    }
+
+    /**
+     * Add temporal granule to the temporal granules set and return it&apos;s index if it does not exist.
+     * @param {number} temporalGranule - The temporal granule to be added. 
+     * @returns {number} - the index of the given temporal granule.
+     * @memberof TimeVariable
+     */
+    addTemporalGranule(temporalGranule) {
+        if (this.temporalGranulesMap.has(temporalGranule))
+            return this.temporalGranulesMap.get(temporalGranule);
+        else {
+            this.temporalGranulesMap.set(temporalGranule, this.granuleIndex);
+            return this.granuleIndex++;
+        }
+    }
+
+    /**
+     * Add the given temporal granule to the set of existing temporal granules.
+     * @param {string|number} temporalGranule - The temporal granule to add to the set of temporal granules.
+     */
+    addTemporalGranuleToSet(temporalGranule) {
+        this.granules.add(temporalGranule);
+    }
+
+    /**
+     * Add temporal granules to the set of temporal granules.
+     * @param {Set&lt;string&gt;} temporalGranules - The temporal granules. 
+     * @memberof TimeVariable
+     */
+    addTemporalGranulesToSet(temporalGranules) {
+        for (const temporalGranule of temporalGranules.keys())
+            this.addTemporalGranuleToSet(temporalGranule);
+    }
+
+    /**
+     * Returns the Set of temporal granules.
+     * @returns {Set&lt;string&gt;} - the Set of temporal granules. 
+     * @memberof TimeVariable
+     */
+    getTemporalGranulesSet() {
+        return this.granules;
+    }
+
+    /**
+     * Returns the temporal granules that exist on the dataset. E.g. 2016, 2017 etc
+     * @returns {Map&lt;number, number&gt;} - the temporal granules that exist on the dataset.
+     * @memberof TimeVariable
+     */
+    getTemporalGranules() {
+        return this.temporalGranulesMap;//Array.from(this.temporalGranulesMap.keys());
+    }
+
+    /**
+     * Returns true if the temporal granule values were given, false, otherwise.
+     * @returns {booelan} - true if the temporal granule values were given, false, otherwise.
+     * @memberof TimeVariable
+     */
+    classCalculationRequired() {
+        return true;
+    }
+
+    /**
+     * Sort the temporal granules creating an array with those sorted elements.
+     * If the elements are dates then order by date, if they are numbers order by number.
+     * @returns {Array&lt;string|number&gt;} - the sorted temporal granules, sorted by date/number.
+     * @memberof TimeVariable
+     */
+    sortTemporalGranules() {
+        let availableGranularites = this._getAvailableGranularities();
+        let tgs = this.getTemporalGranules().keys();
+        let granularitiesArray = []; // 
+        let strToTGMap = new Map(); // 26_1_0 =&gt; 1 January 2016
+        for (const tg of tgs) {
+            let strGranularity;
+            switch (this.granularity) {
+                case availableGranularites[1]: //Month
+                    strGranularity = this._getMonth(tg);
+                    break;
+                case availableGranularites[2]: //Day
+                    strGranularity = this._getDay(tg);
+                    break;
+                default:
+                    strGranularity = tg;
+                    break;
+            }
+            granularitiesArray.push(strGranularity);
+            strToTGMap.set(strGranularity, tg);
+        }
+        this.strToTemporalGranuleMap = strToTGMap;
+        this.sortedTemporalGranulesArr = granularitiesArray.sort((a, b) =&gt; { return new Date(a) - new Date(b); });
+        for (let [i, sortedTG] of this.sortedTemporalGranulesArr.entries())
+            this.sortedTGsToIndexMap.set(sortedTG, i);
+        /*   console.warn(this.sortedTemporalGranulesArr);
+          console.warn(this.strToTemporalGranuleMap);
+          console.warn(this.sortedTGsToIndexMap); */
+        this._sortTemporalGranulesMap();
+        return this.sortedTemporalGranulesArr;
+    }
+
+    /**
+     * Sort the temporal granules strings (read from file) to the indices of the sorted
+     * temporal granules.
+     * @private
+     * @memberof TimeVariable
+     */
+    _sortTemporalGranulesMap() {
+        let sortedIndexMap = new Map();
+        let sortedTGsToIndexMap = this.sortedTGsToIndexMap; //January 2017 -&gt; 0, February 2017 -&gt; 1
+        let strToTGMap = this.strToTemporalGranuleMap; //January 2017 -&gt; 2017_1, February 2017 -&gt; 2017_2
+        for (let key of sortedTGsToIndexMap.keys())
+            sortedIndexMap.set(strToTGMap.get(key), sortedTGsToIndexMap.get(key)); //2017_1 -&gt; 0
+        this.temporalGranulesMap = sortedIndexMap;
+    }
+
+    /**
+     * Returns the locale month string. 
+     * In portugal will return &apos;janeiro&apos;, &apos;fevereiro&apos; etc... 
+     * @param {string} dateString - The date string read from the file.
+     * @returns {string} - the locale month string.
+     * @private
+     * @see https://stackoverflow.com/a/18648314/
+     * @memberof TimeVariable
+     */
+    _getLocaleMonth(dateString) {
+        let date = new Date(dateString.replace(/_/g, &apos;-&apos;));
+        return date.toLocaleString(&quot;en-us&quot;, { month: &quot;long&quot; });
+    }
+
+    /**
+     * Returns the month name plus the year.
+     * @param {string} dateString 
+     * @returns {string} - the month name plus the year.
+     * @memberof TimeVariable
+     */
+    _getMonth(dateString) {
+        let date = new Date(dateString.replace(/_/g, &apos;-&apos;));
+        let monthName = this._getLocaleMonth(dateString);
+        let year = date.getFullYear();
+        return monthName + &quot; &quot; + year;
+    }
+
+    /**
+     * Get the date including the day (day month year).
+     * @param {string} dateString - The date string read from the file.
+     * @returns {string} - the date including the day.
+     * @see https://stackoverflow.com/a/18648314/
+     * @private
+     * @memberof TimeVariable
+     */
+    _getDay(dateString) {
+        let date = new Date(dateString.replace(/_/g, &apos;-&apos;));
+        let monthName = this._getLocaleMonth(dateString);
+        let day = date.getDate();
+        let year = date.getFullYear();
+        return day + &quot; &quot; + monthName + &quot; &quot; + year;
+    }
+
+    /**
+     * Returns the index of the temporal granule given by the string. 
+     * @param {string|number} temporalgranuleStr - The temporal granule string representation.
+     * @returns {number} - the index of the temporal granule given by the string.
+     * @memberof TimeVariable
+     */
+    getGranuleIndexFromStr(temporalgranuleStr) {
+        let key = this.strToTemporalGranuleMap.get(temporalgranuleStr);
+        return this.temporalGranulesMap.get(key);
+    }
+
+    /**
+     * Returns the index of the temporal granule read from the file.
+     * @param {string} str - The given string 
+     * @returns {number} - the index of the temporal granule read from the file.
+     * @memberof TimeVariable
+     */
+    getTGMapIndex(str) {
+        return this.temporalGranulesMap.get(str);
+    }
+
+    /**
+     * Returns the sorted temporal granules. 
+     * @returns {Array&lt;string|number&gt;} - the sorted temporal granules.  
+     * @memberof TimeVariable
+     */
+    getSortedTemporalGranules() {
+        return this.sortedTemporalGranulesArr;
+    }
+
+    /**
+     * Returns the indices of the temporal granules between the start and end temporal granules string representations.
+     * @param {any} startTGStr - The string representation of the range start temporal granule. 
+     * @param {any} endTGStr - The string representation of the range end temporal granule. 
+     * @returns {Array&lt;number&gt;} - the indices of the temporal granules between the given start and end temporal granules.
+     * @memberof TimeVariable
+     */
+    getRangeIndices(startTGStr, endTGStr) {
+        let [sortedStartIndex, sortedEndIndex] = [this.sortedTGsToIndexMap.get(startTGStr), this.sortedTGsToIndexMap.get(endTGStr)];
+        let sortedTGsArrSliced = this.sortedTemporalGranulesArr.slice(sortedStartIndex, sortedEndIndex + 1);
+        let rangeIndices = [];
+        for (let sortedTG of sortedTGsArrSliced)
+            rangeIndices.push(this.getGranuleIndexFromStr(sortedTG));
+        return rangeIndices;
+    }
+
+    /**
+     * Returns the index of the given temporal granule string/number. 
+     * The index is the value associated with  the given key.
+     * @param {string|number} sortedTemporalGranule - The temporal granule string/number.
+     * @returns {number} - the index of the given temporal granule string/number. 
+     * @memberof TimeVariable
+     */
+    getSortedIndexFromStr(sortedTemporalGranule) {
+        return this.sortedTGsToIndexMap.get(sortedTemporalGranule);
+    }
+
+    /**
+     * Returns the index of the next temporal granule on the &quot;timeline&quot;.
+     * @param {string|number} currentTG - The current temporal granule.
+     * @returns {number} - the index of the next temporal granule on the &quot;timeline&quot;.
+     * @memberof TimeVariable
+     */
+    findNextTGIndex(currentTG) {
+        let indexSortedTG = this.sortedTGsToIndexMap.get(currentTG);
+        let nextSortedTG = this.sortedTemporalGranulesArr[indexSortedTG + 1];
+        return this.getSortedIndexFromStr(nextSortedTG);
+    }
+
+    /**
+     * Returns the index of the previous temporal granule on the &quot;timeline&quot;.
+     * @param {string|number} currentTG - The current temporal granule.
+     * @returns {number} - the index of the previous temporal granule on the &quot;timeline&quot;.
+     * @memberof TimeVariable
+     */
+    findPreviousTGIndex(currentTG) {
+        let indexSortedTG = this.sortedTGsToIndexMap.get(currentTG);
+        let previousTG = this.sortedTemporalGranulesArr[indexSortedTG - 1];
+        return this.getSortedIndexFromStr(previousTG);
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

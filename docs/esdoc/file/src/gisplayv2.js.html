@@ -1,0 +1,332 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/gisplayv2.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs-primitives">Gisplay/VVs/Primitives</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Primitives/Polygon.js~Polygon.html">Polygon</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Primitives/Polygon.js~Polygon2.html">Polygon2</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/gisplayv2.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * This file is the entry point for the Gisplay API
+ */
+import { Gisplay } from &apos;./Gisplay/Gisplay&apos;;
+
+module.exports = {
+    startChoroplethV22: function () {
+        //PT
+        let options = {
+            /*colorScheme: [&quot;white&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;red&quot;],*/
+            numberOfClasses: 4,
+            attr: &apos;f3&apos;,
+            legendTitle: &apos;Fatals&apos;,
+            bounds: {
+                b1: { //PT
+                    NE: { lng: -6.405029, lat: 41.934977 },
+                    SW: { lng: -9.206543, lat: 36.809285 },
+                    larger: true
+                },
+                b2: { //Acores
+                    NE: { lng: -24.818115, lat: 40.128491 },
+                    SW: { lng: -31.563721, lat: 36.597889 }
+                },
+                b3: { //Madeira
+                    NE: { lng: -16.163635, lat: 33.188134 },
+                    SW: { lng: -17.602844, lat: 32.347482 }
+                }/* ,
+                b4: { //Madeira
+                    NE: { lng: -16.163635, lat: 33.188134 },
+                    SW: { lng: -17.602844, lat: 32.347482 }
+                },
+                b5: { //Madeira
+                    NE: { lng: -16.163635, lat: 33.188134 },
+                    SW: { lng: -17.602844, lat: 32.347482 }
+                } */
+            },
+            layout: &apos;GR&apos;,
+            provider: &apos;MB&apos; //MapBox
+        };
+
+        //USA
+        let optionsChoropleth = {
+            /*colorScheme: [&quot;white&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;red&quot;],*/
+            numberOfClasses: 4,
+            attr: &apos;f3&apos;,
+            legendTitle: &apos;Fatals&apos;,
+            bounds: {
+                usa: { //USA
+                    NE: { lng: -67.631836, lat: 48.57479 },
+                    SW: { lng: -123.793945, lat: 23.563987 }
+                },
+                alaska: { //Alaska
+                    NE: { lng: -138.427734, lat: 72.289067 },
+                    SW: { lng: -174.638672, lat: 50.176898 }
+                },
+                hawaii: { //Hawaii
+                    NE: { lng: -162.388916, lat: 17.056785 },
+                    SW: { lng: -153.4021, lat: 22.917923 }
+                }
+            },
+            layout: {
+                vertical: {
+                    sizes: [40, 60],
+                    descendants: [
+                        {
+                            horizontal: {
+                                sizes: [60, 40],
+                                descendants: [&quot;alaska&quot;, &quot;hawaii&quot;]
+                            }
+                        },
+                        &quot;usa&quot;
+                    ]
+                }
+            },
+            /*  layout: {
+                 vertical: {
+                     sizes: [100],
+                     descendants: [&quot;usa&quot;]
+                 }
+             }, */
+            provider: &apos;GM&apos;, //MapBox
+            container: {
+                id: &apos;gisplay&apos;
+            }
+        };
+
+        let reader = new FileReader();
+        reader.onloadend = function () {
+            console.time(&quot;ss&quot;);
+            let data = JSON.parse(reader.result);
+            /*  let gisplay = new Gisplay();
+             gisplay.makeChoroplethV2(data, options); */
+
+            let gis2 = new Gisplay();
+            gis2.makeChoropleth(data, optionsChoropleth);
+        };
+        reader.readAsText(document.getElementById(&quot;file&quot;).files[0]);
+    },
+
+    startChoroplethV2: function () {
+        //USA
+        let optionsChoropleth = {
+            numberOfClasses: 4,
+            attr: &apos;f3&apos;,
+            legendTitle: &apos;Fatals&apos;,
+            bounds: {
+                usa: { //USA
+                    NE: { lng: -67.631836, lat: 48.57479 },
+                    SW: { lng: -123.793945, lat: 23.563987 }
+                },
+                alaska: { //Alaska
+                    NE: { lng: -138.427734, lat: 72.289067 },
+                    SW: { lng: -174.638672, lat: 50.176898 }
+                },
+                hawaii: { //Hawaii
+                    NE: { lng: -162.388916, lat: 17.056785 },
+                    SW: { lng: -153.4021, lat: 22.917923 }
+                }
+            },
+            layout: {
+                vertical: {
+                    sizes: [40, 60],
+                    descendants: [
+                        {
+                            horizontal: {
+                                sizes: [60, 40],
+                                descendants: [&quot;alaska&quot;, &quot;hawaii&quot;]
+                            }
+                        },
+                        &quot;usa&quot;
+                    ]
+                }
+            },
+            provider: &apos;GM&apos;, //MapBox
+            container: {
+                id: &apos;gisplay&apos;
+            }
+        };
+        console.time(&quot;ss&quot;);
+        let gisplay = new Gisplay();
+        gisplay.makeChoropleth(optionsChoropleth);
+    },
+
+    startDotMapV2: function() {
+        let optionsDotMap = {
+            colorScheme: [&quot;red&quot;, &quot;green&quot;],
+            attr: &apos;f1&apos;,
+            legendTitle: &quot;Alcohol&quot;,
+            bounds: {
+                usa: { //USA
+                    NE: { lng: -67.631836, lat: 48.57479 },
+                    SW: { lng: -123.793945, lat: 23.563987 }
+                },
+                alaska: { //Alaska
+                    NE: { lng: -138.427734, lat: 72.289067 },
+                    SW: { lng: -174.638672, lat: 50.176898 }
+                },
+                hawaii: { //Hawaii
+                    NE: { lng: -162.388916, lat: 17.056785 },
+                    SW: { lng: -153.4021, lat: 22.917923 }
+                }
+            },
+            layout: {
+                vertical: {
+                    sizes: [40, 60],
+                    descendants: [
+                        {
+                            horizontal: {
+                                sizes: [60, 40],
+                                descendants: [&quot;alaska&quot;, &quot;hawaii&quot;]
+                            }
+                        },
+                        &quot;usa&quot;
+                    ]
+                }
+            },
+            provider: &apos;MB&apos;,
+            container: {
+                id: &apos;gisplay&apos;
+            }
+        };
+        let gis2 = new Gisplay();
+        gis2.makeDotMap(optionsDotMap);
+    },
+
+    startProportionalSymbolsV2: function () {
+        let propSymbols = {
+            maxPointSize: 100,
+            minPointSize: 5,
+            attr: &apos;f1&apos;,
+            numberOfLegendItems: 3,
+            legendTitle: &quot;Accidents&quot;,
+            //Use this for one bound (USA)
+            bounds: {
+                usa: { //USA
+                    NE: { lng: -67.631836, lat: 48.57479 },
+                    SW: { lng: -123.793945, lat: 23.563987 }
+                }
+            },
+            //Use this for 3 bounds (USA/Hawaii/Alaska)
+            /* 
+            bounds: {
+                usa: { //USA
+                    NE: { lng: -67.631836, lat: 48.57479 },
+                    SW: { lng: -123.793945, lat: 23.563987 }
+                },
+                alaska: { //Alaska
+                    NE: { lng: -138.427734, lat: 72.289067 },
+                    SW: { lng: -174.638672, lat: 50.176898 }
+                },
+                hawaii: { //Hawaii
+                    NE: { lng: -162.388916, lat: 17.056785 },
+                    SW: { lng: -153.4021, lat: 22.917923 }
+                }
+            },
+            layout: {
+                vertical: {
+                    sizes: [40, 60],
+                    descendants: [
+                        {
+                            horizontal: {
+                                sizes: [60, 40],
+                                descendants: [&quot;alaska&quot;, &quot;hawaii&quot;]
+                            }
+                        },
+                        &quot;usa&quot;
+                    ]
+                }
+            }, 
+            */
+            provider: &apos;MB&apos;, //MapBox
+            container: {
+                id: &apos;gisplay&apos;
+            }
+        };
+
+        console.time(&quot;ss&quot;);
+        let gisplay = new Gisplay();
+        gisplay.makeProportionalSymbolsMap(propSymbols);
+    }
+};
+
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/VVs/Picking.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/VVs/Picking.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { GisplayDefaults } from &apos;../GisplayDefaults&apos;;
+
+export class WebGLPicking {
+
+    /**
+     * Creates an instance of WebGLPicking.
+     * @param {WebGLRenderingContext} webglContext - The WebGL context.
+     * @memberof WebGLPicking
+     */
+    constructor(webglContext) {
+        /**
+         * @type {WebGLRenderingContext}
+         */
+        this.webglContext = webglContext;
+
+        this.continuousData = [];
+        this.optionalInfo = [];
+
+        this.transitoryPickingColors = [];
+        this.finalPickingColors = [];
+        this.searchColors = [];
+    }
+
+    /**
+     * Add the picking information.
+     * @param {Array&lt;Object&gt;} dataRow - The row of data that was given by the Parser.
+     * @param {number} geometryPrimitive - The identifier of the geometry primitive.
+     * @memberof TemporalGranule
+     */
+    addRow(row, hasPoints) { //GEOJSON
+        // console.log(row);
+        if (hasPoints)
+            this.transitoryPickingColors.push(...row[1].RGBA);
+        this.searchColors.push(GisplayDefaults.RGBAToNumber(...row[1].RGBA));
+
+        // this.continuousData.push(row[0]); //@TODO: If it does not exist no need to do this 
+        // this.optionalInfo.push(row[2]); //@TODO: If it does not exist no need to do this 
+        for (let i = 0; i &lt; row[0].length; i++) {
+            if (!Array.isArray(this.continuousData[i]))
+                this.continuousData[i] = [];
+            this.continuousData[i].push(row[0][i]);
+        }
+        for (let i = 0; i &lt; row[2].length; i++) {
+            if (!Array.isArray(this.optionalInfo[i]))
+                this.optionalInfo[i] = [];
+            this.optionalInfo[i].push(row[2][i]);
+        }
+    }
+
+    /**
+     * Add a set of rows to this temporal granule.     
+     * @param {{continuousData: Array&lt;Array&lt;number&gt;&gt;, spatialData: Array&lt;number&gt;,optionalData: Array&lt;Array&lt;number|string&gt;&gt;, RGBA: Array&lt;number&gt;, numberRGBA: Array&lt;number&gt;}} dataRows - 
+     * @memberof WebGLPicking
+     */
+    addSetOfRows(dataRows) {//CSV
+        if (this.searchColors.length &gt; 0 &amp;&amp; dataRows.numberRGBA.length &gt; 0) { //@TODO: DELETE IF
+            if (!(this.searchColors[this.searchColors.length - 1] &lt; dataRows.numberRGBA[0])) {
+                let currRGBA = [];
+                for (let i = this.transitoryPickingColors.length - 4; i &lt; this.transitoryPickingColors.length; i++)
+                    currRGBA.push(this.transitoryPickingColors[i]);
+                let givenRGBA = [];
+                for (let i = 0; i &lt; 4; i++)
+                    givenRGBA.push(dataRows.RGBA[i]);
+                console.error(currRGBA, givenRGBA);
+            }
+            console.assert(this.searchColors[this.searchColors.length - 1] &lt; dataRows.numberRGBA[0])
+        }
+
+        for (const rgba of dataRows.RGBA)
+            this.transitoryPickingColors.push(rgba);
+
+        for (const NumRGBA of dataRows.numberRGBA)
+            this.searchColors.push(NumRGBA);
+        // this.searchColors.push(...dataRows.numberRGBA);
+
+        for (let i = 0; i &lt; dataRows.continuousData.length; i++) {
+            if (!Array.isArray(this.continuousData[i]))
+                this.continuousData[i] = [];
+            for (const contData of dataRows.continuousData[i])
+                this.continuousData[i].push(contData);
+            // this.continuousData[i].push(...dataRows.continuousData[i]);
+        }
+        for (let i = 0; i &lt; dataRows.optionalData.length; i++) {
+            if (!Array.isArray(this.optionalInfo[i]))
+                this.optionalInfo[i] = [];
+            for (const optData of dataRows.optionalData[i])
+                this.optionalInfo[i].push(optData);
+            // this.optionalInfo[i].push(...dataRows.optionalData[i]);
+        }
+    }
+
+    getPickingColors() {
+        return this.finalPickingColors;
+    }
+
+    getSearchColors() {
+        return this.searchColors;
+    }
+
+    /**
+     * Find the index of the given RGBA number in the list of searchable colors.
+     * @param {number} numberRGBA - The RGBA number representation.
+     * @param {any} hasIds - Boolean that represents the presence or absence or ids.
+     * @returns {number} - -1 if the numberRGBA is not found.
+     * @memberof WebGLPicking
+     */
+    findColorIndex(numberRGBA, hasIds) {
+        if (!hasIds) { //If not ids then it can use the binary search
+            /* let numPickingColors = this.searchColors.length;
+            if (numPickingColors &gt;= 2) {
+                let firstColor = this.searchColors[0];
+                let lastColor = this.searchColors[numPickingColors - 1];
+                if (numberRGBA === firstColor)
+                    return 0;
+                else if (numberRGBA === lastColor)
+                    return numPickingColors - 1;
+                else if (numberRGBA &gt; firstColor &amp;&amp; numberRGBA &lt; lastColor) {
+                    console.warn(&quot;VAI PARA PESQUISA BINARIA&quot;, &quot;first=&quot;, firstColor
+                        , &quot;numRGBA=&quot;, numberRGBA,
+                        &quot;lastColor&quot;, lastColor,
+                        &quot;indice=&quot;, numberRGBA - firstColor
+                    )
+                    // return numberRGBA - firstColor;
+                    return this.binarySearchColorIndex(numberRGBA);
+                }
+                else
+                    return -1;
+            }
+            else if (numPickingColors === 1 &amp;&amp; numberRGBA === this.searchColors[0])
+                return 0; */
+            return this.binarySearchColorIndex(numberRGBA);
+        } else { //Since it contains ids then the colors are not in a sequential order
+            for (let i = 0; i &lt; this.searchColors.length; i++)
+                if (numberRGBA === this.searchColors[i])
+                    return i;
+        }
+        return -1;
+    }
+
+    binarySearchColorIndex(numberRGBA) {
+        let index = 0,
+            min = 0,
+            max = this.searchColors.length - 1;
+
+        while (min &lt;= max) {
+            index = Math.floor((min + max) / 2);
+            if (this.searchColors[index] === numberRGBA)
+                return min;
+            else if (this.searchColors[index] &lt; numberRGBA)
+                min = index + 1;
+            else
+                max = index - 1;
+        }
+    }
+
+    getOptionalInfo() {
+        return this.optionalInfo;
+    }
+
+    getIndexOptionalData(index) {
+        let optionalInfo = [];
+
+        for (const [i, optVar] of this.optionalInfo.entries())
+            optionalInfo[i] = this.optionalInfo[i][index];
+        return optionalInfo;
+    }
+
+    getIndexContinuousData(index) {
+        let contInfo = [];
+        let numContVars = this.continuousData.length;
+        // for (let i = 0; i &lt; numContVars - 1; i++)
+        //     contInfo[i] = this.continuousData[i][index];
+        for (const [i, contVar] of this.continuousData.entries())
+            contInfo[i] = this.continuousData[i][index];
+        return contInfo;
+    }
+
+    joinPickingColorsPoints() {
+        console.error(&quot;JOIN PICKING COLORS&quot;, this.transitoryPickingColors, this.transitoryPickingColors.length);
+        let gl = this.webglContext;
+        this.finalPickingColors = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.finalPickingColors);
+        gl.bufferData(gl.ARRAY_BUFFER, new Uint8Array(this.transitoryPickingColors), gl.STATIC_DRAW);
+        this.transitoryPickingColors = undefined;
+    }
+
+    /**
+     * Replaces the RGBA with the RGBA from the GeoJSONIdsParser.
+     * @param {number} rowIndex - The index where to replace.
+     * @param {Array&lt;number&gt;} RGBA - The RGBA identifier.
+     * @param {Array&lt;number&gt;} hasPoints - Boolean that represents the presence or absence of points.
+     * @memberof WebGLPicking
+     */
+    replaceRowRGBAValue(rowIndex, RGBA, hasPoints) {
+        this.searchColors[rowIndex] = GisplayDefaults.RGBAToNumber(...RGBA);
+
+        if (hasPoints) // Only if its point that it matters
+            for (let i = 0; i &lt; 4; i++) // Replace color RGBA itself?
+                this.transitoryPickingColors[rowIndex * 4 + i] = RGBA[i];
+    }
+
+    ///////////////////////////////////////////////////////////DELETEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEEE
+    //@TODO DELETE
+    joinPickingColorsPointsCSV() {
+        console.error(&quot;JOIN PICKING COLORS&quot;, this.transitoryPickingColors, this.transitoryPickingColors.length);
+        let allColors = [];
+        // if(Array.isArray(this.pickingColors[0]))
+        for (let RGBA of this.transitoryPickingColors)
+            allColors.push(...RGBA);
+
+        let gl = this.webglContext;
+        this.finalPickingColors = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.finalPickingColors);
+        gl.bufferData(gl.ARRAY_BUFFER, new Uint8Array(allColors), gl.STATIC_DRAW);
+        // this.finalPickingColors = pickingBuffer;
+    }
+
+    //@TODO DELETE
+    //http://prntscr.com/i3ucmf
+    //https://stackoverflow.com/a/15753839/
+    joinPickingColorsPolygonsOLD(polygons) { //generate color for each vertex (each indice generated)
+        console.warn(&quot;JOIN PICKING COLORS POLYGONS&quot;);
+        let finalColors = [];
+        let numTotalVertices = 0;
+        for (const [i, polygon] of polygons.entries()) {
+            let numVertices = polygon.polygonIndices.length; //Numero vertices do poligono ()
+            numTotalVertices += numVertices; //just count
+            let RGBA = this.transitoryPickingColors[i]; //[ [RGBA], [RGBA]]
+            // console.log(polygon.polygonIndices, RGBA);
+            let [r, g, b, a] = [...RGBA];
+
+            //GENERATE COLORS FOR POLYGONS &quot;RANDOM&quot;
+            /*   if (!window.i)
+                  window.i = 200;
+              [r, g, b, a] = [200, 200, 200, window.i++]; */
+
+            for (let j = 0; j &lt; numVertices; j++)
+                finalColors.push(r, g, b, a);
+        }
+        console.assert(numTotalVertices === finalColors.length / 4);
+        console.log(finalColors);
+        console.log(&quot;NumTotalIndices = &quot;, numTotalVertices, &quot;Num Colors = &quot;, finalColors.length);
+
+        this.transitoryPickingColors = undefined;
+
+        let gl = this.webglContext;
+        this.finalPickingColors = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.finalPickingColors);
+        gl.bufferData(gl.ARRAY_BUFFER, new Uint8Array(finalColors), gl.STATIC_DRAW);
+
+        // console.log(gl.isBuffer(this.finalPickingColors));
+
+        // this.finalPickingColors = pickingBuffer;
+        // throw new Error(&quot;WUT&quot;);
+    }
+
+    //@TODO DELETE
+    joinPickingColorsPolygons(polygons) { //generate color for each vertex (each indice generated)
+
+    }
+
+    //@TODO DELETE
+    joinPickingColorsLines(lines) { //generate color for each vertex (each indice generated)
+        console.log(&quot;JOIN PICKING COLORS LINES&quot;, this.transitoryPickingColors, lines);
+        let finalColors = [];
+        let numTotalIndices = 0;
+        for (const [i, line] of lines.entries()) {
+            let numVertices = line.length;
+            numTotalIndices += numVertices;
+            let RGBA = this.transitoryPickingColors[i];
+            let [r, g, b, a] = [...RGBA];
+            for (let j = 0; j &lt; numVertices; j++)
+                finalColors.push(r, g, b, a);
+        }
+        console.log(finalColors);
+        console.assert(numTotalIndices === finalColors.length / 4);
+        console.log(&quot;NumTotalIndices = &quot;, numTotalIndices, &quot;Num Colors = &quot;, finalColors.length / 4);
+
+
+        this.transitoryPickingColors = undefined;
+
+        let gl = this.webglContext;
+        this.finalPickingColors = gl.createBuffer();
+        gl.bindBuffer(gl.ARRAY_BUFFER, this.finalPickingColors);
+        gl.bufferData(gl.ARRAY_BUFFER, new Uint8Array(finalColors), gl.STATIC_DRAW);
+        // this.finalPickingColors = pickingBuffer;
+        // throw new Error(&quot;WUT&quot;);
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

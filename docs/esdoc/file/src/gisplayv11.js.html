@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/gisplayv11.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs-primitives">Gisplay/VVs/Primitives</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Primitives/Polygon.js~Polygon.html">Polygon</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Primitives/Polygon.js~Polygon2.html">Polygon2</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/gisplayv11.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * This file is the entry point for the Gisplay API
+ */
+import { Gisplay } from &apos;./Gisplay/Gisplay&apos;;
+import { BGMapGoogleMaps } from &apos;./Gisplay/Maps/Background Maps/BGMapGoogleMaps&apos;;
+import { BGMapHereMaps } from &apos;./Gisplay/Maps/Background Maps/BGMapHereMaps&apos;;
+import { BGMapBingMaps } from &apos;./Gisplay/Maps/Background Maps/BGMapBingMaps&apos;;
+
+module.exports = {
+
+    /** #############   Google Maps example   #############  */
+    createGoogleMapsBGMap: function () {
+        window.map = new google.maps.Map(document.getElementById(&apos;map&apos;), {
+            zoom: 4,
+            center: { lat: 49.36855556, lng: -81.66371667 }/*,
+            minZoom: 3*/
+        });
+    },
+
+    startGoogleMapsChoropleth: function () {
+        let gm = new BGMapGoogleMaps(window.map);
+        let gisplay = new Gisplay();
+    
+        let options = {
+            /*colorScheme: [&quot;white&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;red&quot;],*/
+           /* numberOfClasses: 4,*/
+            attr: &apos;f3&apos;,
+            legendTitle: &apos;Fatals&apos;
+        };
+
+        let reader = new FileReader();
+        reader.onloadend = function () {
+            let data = JSON.parse(reader.result);
+            gisplay.makeChoropleth(gm, data, options);
+        };
+        reader.readAsText(document.getElementById(&quot;file&quot;).files[0]);
+    },
+
+    /** #############   HERE Maps example   #############  */
+    createHereMapsBGMap: function () {
+        let platform = new H.service.Platform({
+            &apos;app_id&apos;: &apos;8fEgxjuheFTYKcvVQhum&apos;,
+            &apos;app_code&apos;: &apos;5z2K0DvfXPNRLVuIaXcfgg&apos;
+        });
+        let defaultLayers = platform.createDefaultLayers();
+        window.map = new H.Map(
+            document.getElementById(&apos;map&apos;),
+            defaultLayers.normal.map,
+            {
+                zoom: 4,
+                center: { lat: 49.36855556, lng: -81.66371667 }
+            });
+        let mapEvents = new H.mapevents.MapEvents(map);//Enable events
+        let behavior = new H.mapevents.Behavior(mapEvents);//Enable zoom and pan
+    },
+
+    startHereMapsChoropleth: function () {
+        let hereMaps = new BGMapHereMaps(window.map);
+        let gisplay = new Gisplay();
+
+        let options = {
+            colorScheme: [&quot;white&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;red&quot;],
+            numberOfClasses: 4,
+            attr: &apos;f3&apos;,
+            legendTitle: &apos;Fatals&apos;
+        };
+
+        let reader = new FileReader();
+        reader.onloadend = function () {
+            let data = JSON.parse(reader.result);
+            gisplay.makeChoropleth(hereMaps, data, options);
+        };
+        reader.readAsText(document.getElementById(&quot;file&quot;).files[0]);
+    },
+
+    /** #############   Bing Maps example   #############  */
+    createBingMapsBGMap: function () {
+        window.map = new Microsoft.Maps.Map(document.getElementById(&apos;map&apos;), {
+            credentials: &apos;tbS2WTHvuzFWMarVDedF~XGeRrWSh4JVHd1yPrfsUJQ~Al0cgZrtc-S57hQveO9iMLRlZesJBacsvRCzVNsSh5E_TzY8iPE8w_LvRjP2_51i&apos;,
+            center: new Microsoft.Maps.Location(30, -130),
+            zoom: 0
+        });
+    },
+
+    startBingMapsChoropleth: function () {
+        let hereMaps = new BGMapBingMaps(window.map);
+        let gisplay = new Gisplay();
+
+        let options = {
+            colorScheme: [&quot;white&quot;, &quot;yellow&quot;, &quot;orange&quot;, &quot;red&quot;],
+            numberOfClasses: 4,
+            attr: &apos;f3&apos;,
+            legendTitle: &apos;Fatals&apos;
+        };
+
+        let reader = new FileReader();
+        reader.onloadend = function () {
+            let data = JSON.parse(reader.result);
+            gisplay.makeChoropleth(hereMaps, data, options);
+        };
+        reader.readAsText(document.getElementById(&quot;file&quot;).files[0]);
+    },
+
+    /** #############   Google Maps Dot Map example   #############  */
+    startGoogleMapsDotMap: function () {
+        let gm = new BGMapGoogleMaps(window.map);
+        let gisplay = new Gisplay();
+
+          let options = {
+            colorScheme: [&quot;red&quot;, &quot;green&quot;],
+            attr: &apos;f1&apos;,
+            legendTitle: &quot;Alcohol&quot;
+        };
+        
+        let reader = new FileReader();
+        reader.onloadend = function () {
+            let data = JSON.parse(reader.result);
+            gisplay.makeDotMap(gm, data, options);
+        };
+        reader.readAsText(document.getElementById(&quot;file&quot;).files[0]);
+    },
+    /** ######################### HEAT MAP ################################# */
+};
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

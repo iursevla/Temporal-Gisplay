@@ -1,0 +1,908 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../">
+  <title data-ice="title">src/gisplayv3.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs-primitives">Gisplay/VVs/Primitives</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Primitives/Polygon.js~Polygon.html">Polygon</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Primitives/Polygon.js~Polygon2.html">Polygon2</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/gisplayv3.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * This file is the entry point for the Gisplay API
+ */
+import { Gisplay } from &apos;./Gisplay/Gisplay&apos;;
+
+let globalOptionsUSA = {
+    bounds: {
+        usa: { //USA
+            NE: { lng: -67.631836, lat: 48.57479 },
+            SW: { lng: -123.793945, lat: 23.563987 },
+            description: &apos;Mainland USA&apos;
+        },
+        alaska: { //Alaska
+            NE: { lng: -138.427734, lat: 72.289067 },
+            SW: { lng: -174.638672, lat: 50.176898 },
+            description: &apos;Alaska&apos;
+        },
+        hawaii: { //Hawaii
+            NE: { lng: -162.388916, lat: 17.056785 },
+            SW: { lng: -153.4021, lat: 22.917923 },
+            description: &apos;Hawaii Island&apos;
+        }
+    },
+    layout: {
+        vertical: {
+            sizes: [40, 60],
+            descendants: [
+                {
+                    horizontal: {
+                        sizes: [60, 40],
+                        descendants: [&quot;alaska&quot;, &quot;hawaii&quot;]
+                    }
+                },
+                &quot;usa&quot;
+            ]
+        }
+    },
+    container: &apos;gisplay2&apos;,
+    provider: &apos;BM&apos;,
+    // provider: &apos;MBGL&apos;,
+    showLoader: true
+};
+
+let globalOptionsUSAOneBound = {
+    bounds: {
+        usa: { //USA
+            NE: { lng: -57.578144, lat: 71.521815 },
+            SW: { lng: -175.351582, lat: 4.205206 },
+            description: &apos;Mainland USA&apos;
+        }
+    },
+    container: &apos;gisplay2&apos;,
+    provider: &apos;MB&apos;,
+    showLoader: true
+};
+
+let globalOptionsNYCity = {
+    bounds: {
+        ny: { //NY
+            NE: { lng: -74.30809, lat: 40.604569 },
+            SW: { lng: -73.727188, lat: 40.938414 },
+            description: &apos;New York City, USA&apos;
+        }
+    },
+    container: &apos;gisplay2&apos;,
+    provider: &apos;MB&apos;,
+    showLoader: true
+};
+
+let globalOptionsPortugalContinental = {
+    bounds: {
+        pt: { //PT
+            NE: { lng: -4.954834, lat: 42.666281 },
+            SW: { lng: -10.953369, lat: 35.406961 },
+            description: &apos;Portugal Continental&apos;
+        }
+    },
+    container: &apos;gisplay2&apos;,
+    // provider: &apos;MB&apos;, 
+    provider: &apos;MBGL&apos;,
+    showLoader: true
+};
+
+let globalOptionsPortugal = {
+    bounds: {
+        pt: { //PT
+            NE: { lng: -4.954834, lat: 42.666281 },
+            SW: { lng: -10.953369, lat: 35.406961 },
+            description: &apos;Portugal Continental&apos;
+        },
+        acores: { //Acores
+            NE: { lng: -23.543701, lat: 40.430224 },
+            SW: { lng: -32.794189, lat: 35.406961 },
+            description: &apos;Portugal Continental&apos;
+        },
+        madeira: { //PT
+            NE: { lng: -15.477848, lat: 33.770015 },
+            SW: { lng: -17.784977, lat: 31.830899 },
+            description: &apos;Portugal Continental&apos;
+        }
+    },
+    layout: {
+        vertical: {
+            sizes: [40, 60],
+            descendants: [
+                {
+                    horizontal: {
+                        sizes: [60, 40],
+                        descendants: [&quot;acores&quot;, &quot;madeira&quot;]
+                    }
+                },
+                &quot;pt&quot;
+            ]
+        }
+    },
+    container: &apos;gisplay2&apos;,
+    provider: &apos;HM&apos;,
+    showLoader: true
+};
+
+module.exports = {
+
+    //usaaccidents GEOJSON (Dot Map)
+    usaaccidents: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;Alcohol Involvement&apos;,
+                    externalName: &apos;f1&apos;,
+                    values: [&quot;Alcohol Involvement&quot;, &quot;No Alcohol&quot;]
+                },
+                {
+                    internalName: &apos;Number of deaths&apos;,
+                    externalName: &apos;f2&apos;,
+                    values: [0, 23],
+                    classBreakMethod: &apos;equalintervals&apos;
+                    // classBreaks: [0, 1, 20, 23]
+                }
+            ],
+            /* optionalVariables: [
+                {
+                    internalName: &apos;Tem alcool&apos;,
+                    externalName: &apos;f1&apos;,
+                },
+                {
+                    internalName: &apos;Num mortos&apos;,
+                    externalName: &apos;f2&apos;,
+                }
+            ], */
+            urls: {
+                dataURL: &apos;fileAccidents&apos;,
+            }
+        };
+        let mappingOptions = {
+            shape: {
+                externalName: &apos;f1&apos;,
+                mapping: {
+                    &quot;Alcohol Involvement&quot;: &quot;filled_circle&quot;,
+                    &quot;No Alcohol&quot;: &quot;filled_square&quot;
+                },
+                typeOfVisualVariable: &apos;shape&apos;
+            },
+            color: {
+                externalName: &apos;f2&apos;,
+                mapping: [&quot;#f03b20&quot;, &quot;#2c7fb8&quot;, &quot;#1c9099&quot;,],
+                typeOfVisualVariable: &apos;color&apos;
+                // mapping: [10, 30, 50],
+                // typeOfVisualVariable: &apos;size&apos;
+            }
+        };
+        Gisplay.makeDotMap(parsingOptions, mappingOptions, globalOptionsUSA);
+    },
+
+    usa_accidents_figures: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;Alcohol Involvement&apos;,
+                    externalName: &apos;f1&apos;,
+                    values: [&quot;Alcohol Involvement&quot;, &quot;No Alcohol&quot;]
+                },
+                {
+                    internalName: &apos;Number of deaths&apos;,
+                    externalName: &apos;f2&apos;,
+                    values: [0, 23],
+                    classBreakMethod: &apos;equalintervals&apos;
+                }
+            ],
+            /* optionalVariables: [
+                {
+                    internalName: &apos;Tem alcool&apos;,
+                    externalName: &apos;f1&apos;,
+                },
+                {
+                    internalName: &apos;Num mortos&apos;,
+                    externalName: &apos;f2&apos;,
+                }
+            ], */
+            urls: {
+                dataURL: &apos;fileFigures&apos;,
+            }
+        };
+        let mappingOptions = {
+            orientation: {
+                externalName: &apos;f1&apos;,
+                mapping: {
+                    &quot;Alcohol Involvement&quot;: 0,
+                    &quot;No Alcohol&quot;: 50
+                },
+                typeOfVisualVariable: &apos;orientation&apos;
+            },
+            color: {
+                externalName: &apos;f2&apos;,
+                mapping: [&quot;#f03b20&quot;, &quot;#2c7fb8&quot;, &quot;#1c9099&quot;,],
+                typeOfVisualVariable: &apos;color&apos;
+            }
+        };
+        Gisplay.makeFiguresMap(parsingOptions, mappingOptions, globalOptionsUSA);
+    },
+
+    //usaaccidents_by_county GEOJSON Polygons (Choropleth)
+    usaaccidents_by_county: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;Number of deaths&apos;,
+                    externalName: &apos;f3&apos;,
+                    values: [1, 8587],
+                    classBreakMethod: &apos;quantiles&apos;
+                    // classBreaks: [0, 1, 20, 23]
+                }
+            ],
+            optionalVariables: [
+                {
+                    internalName: &apos;State&apos;,
+                    externalName: &apos;f1&apos;,
+                },
+                {
+                    internalName: &apos;County&apos;,
+                    externalName: &apos;f2&apos;,
+                }
+            ],
+            urls: {
+                dataURL: &apos;choroplethByCounty&apos;,
+            }
+        };
+        let mappingOptions = {
+            color: {
+                externalName: &apos;f3&apos;,
+                mapping: [&quot;#ece7f2&quot;, &quot;#a6bddb&quot;, &quot;#2b8cbe&quot;],
+                typeOfVisualVariable: &apos;color&apos;
+            }
+        };
+        Gisplay.makeChoropleth(parsingOptions, mappingOptions, globalOptionsUSA);
+    },
+
+    //crimes_frequent_com_areas GEOJSON  Polygons (Choropleth)
+    crimes_frequent_com_areas: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    /*      internalName: &apos;Amount stolen&apos;,
+                         externalName: &apos;f3&apos;,
+                         values: [1, 8587],
+                         classBreakMethod: &apos;quantiles&apos; */
+                    internalName: &apos;Type of robbery&apos;,
+                    externalName: &apos;f2&apos;,
+                    values: [&apos;THEFT&apos;, &apos;BATTERY&apos;, &apos;NARCOTICS&apos;]
+                },
+                {
+                    internalName: &apos;Amount stolen&apos;,
+                    externalName: &apos;f3&apos;,
+                    values: [35, 3395]
+                }
+            ],
+            optionalVariables: [
+                {
+                    internalName: &apos;Conty&apos;,
+                    externalName: &apos;f1&apos;,
+                },
+                {
+                    internalName: &apos;Amount stolen&apos;,
+                    externalName: &apos;f3&apos;,
+                }
+            ],
+            urls: {
+                dataURL: &apos;crimesFreqComAreas&apos;,
+            }
+        };
+        let mappingOptions = {
+            texture: {
+                externalName: &apos;f2&apos;,
+                mapping: {
+                    &quot;THEFT&quot;: &quot;crossPattern&quot;,
+                    &quot;BATTERY&quot;: &quot;plusPattern&quot;,
+                    &quot;NARCOTICS&quot;: &quot;wavePattern&quot;
+                },
+                typeOfVisualVariable: &apos;texture&apos;
+            },
+            color: {
+                externalName: &apos;f3&apos;,
+                typeOfVisualVariable: &apos;color&apos;
+            }
+        };
+        globalOptionsUSA.bounds = {
+            world: { //NY
+                NE: { lng: -86.82312, lat: 42.823498 },
+                SW: { lng: -89.27124, lat: 40.771991 },
+                description: &apos;World&apos;
+            }
+        };
+        globalOptionsUSA.layout = undefined;
+        Gisplay.makeChoropleth(parsingOptions, mappingOptions, globalOptionsUSA);
+    },
+
+    //usaaccidents_by_county_centroid GEOJSON PROP Symbols
+    usaaccidents_by_county_centroid: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;Number of deaths&apos;,
+                    externalName: &apos;f1&apos;,
+                    values: [1, 8587],
+                    classBreakMethod: &apos;quantiles&apos;
+                    // classBreaks: [0, 1, 20, 23]
+                }
+            ],
+            optionalVariables: [
+                {
+                    internalName: &apos;State&apos;,
+                    externalName: &apos;f2&apos;,
+                },
+                {
+                    internalName: &apos;County&apos;,
+                    externalName: &apos;f3&apos;,
+                }
+            ],
+            urls: {
+                dataURL: &apos;fileCentroid&apos;,
+            }
+        };
+        let mappingOptions = {
+            size: {
+                externalName: &apos;f1&apos;,
+                typeOfVisualVariable: &apos;size&apos;,
+                mapping: [30, 50, 100]
+            }
+        };
+        Gisplay.makeProportionalSymbolsMap(parsingOptions, mappingOptions, globalOptionsUSA);
+    },
+
+    //yellow 500K 1M 5M 10M (Dot Map)
+    CSVYellow1M: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;Store flag&apos;,
+                    externalName: &apos;store_and_fwd_flag&apos;,
+                    values: [&quot;Y&quot;, &quot;N&quot;]
+                },
+                {
+                    internalName: &apos;Trip Distance&apos;,
+                    externalName: &apos;trip_distance&apos;,
+                    values: [0, 199.2],
+                    classBreakMethod: &apos;equalintervals&apos;
+                    // numberOfClasses: 8
+                    // classBreaks: [0, 28, 64, 199.2]
+                },
+                /*
+                                {
+                                    internalName: &apos;Total Amount&apos;,
+                                    externalName: &apos;total_amount&apos;,
+                                    values: [0, 100],
+                                    classBreakMethod: &apos;quantiles&apos;
+                                    // classBreaks: [0, 25, 50, 100]
+                                },
+                 */
+                {
+                    internalName: &apos;Latitude&apos;,
+                    externalName: &apos;pickup_latitude&apos;,
+                },
+                {
+                    internalName: &apos;Longitude&apos;,
+                    externalName: &apos;pickup_longitude&apos;,
+                }
+            ],
+            optionalVariables: [
+                {
+                    internalName: &apos;MTA Tax&apos;,
+                    externalName: &apos;mta_tax&apos;,
+                },
+                {
+                    internalName: &apos;Vendor ID&apos;,
+                    externalName: &apos;VendorID&apos;,
+                }
+            ],
+            urls: {
+                dataURL: &apos;csvTaxis1M&apos;,
+            },
+            csv: {
+                numWorkers: 2,
+                chunkSize: 1024 * 1024 * 20,
+                rowsExpected: 522
+            },
+            time: {
+                internalName: &apos;Pickup Date&apos;,
+                externalName: &apos;tpep_pickup_datetime&apos;,
+                granularity: &apos;hour&apos;,
+                // values: [2010, 2011, 2021, 2013, 2014, 2005]
+                // values: [0, 1, 2, 3, 4, 5]
+            }
+        };
+        let mappingOptions = {
+            color: {
+                externalName: &apos;trip_distance&apos;,
+                // mapping: [&quot;#ff0000&quot;, &quot;#0000ff&quot;, &quot;#0000ff&quot;, &quot;#0000ff&quot;, &quot;#0000ff&quot;, &quot;#ff0000&quot;, &quot;#ff0000&quot;],
+                typeOfVisualVariable: &apos;color&apos;
+            },
+            shape: {
+                externalName: &apos;store_and_fwd_flag&apos;,
+                mapping: {
+                    &quot;Y&quot;: &quot;square&quot;,
+                    &quot;N&quot;: &quot;triangle&quot;,
+                },
+                typeOfVisualVariable: &apos;shape&apos;
+            }
+        };
+        Gisplay.makeDotMap(parsingOptions, mappingOptions, globalOptionsNYCity);
+    },
+
+    //yellow 500K 1M 5M 10M (Proportional Symbols)
+    CSVYellow1MPropSymbols: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;Store flag&apos;,
+                    externalName: &apos;store_and_fwd_flag&apos;,
+                    values: [&quot;Y&quot;, &quot;N&quot;]
+                },
+                {
+                    internalName: &apos;Trip Distance&apos;,
+                    externalName: &apos;trip_distance&apos;,
+                    values: [0, 199.2]
+                    // classBreaks: [0, 28, 64, 199.2]
+                },
+                /*
+                                {
+                                    internalName: &apos;Total Amount&apos;,
+                                    externalName: &apos;total_amount&apos;,
+                                    values: [0, 100],
+                                    classBreakMethod: &apos;quantiles&apos;
+                                    // classBreaks: [0, 25, 50, 100]
+                                },
+                 */
+                {
+                    internalName: &apos;Latitude&apos;,
+                    externalName: &apos;pickup_latitude&apos;,
+                },
+                {
+                    internalName: &apos;Longitude&apos;,
+                    externalName: &apos;pickup_longitude&apos;,
+                }
+            ],
+            optionalVariables: [
+                {
+                    internalName: &apos;MTA Tax&apos;,
+                    externalName: &apos;mta_tax&apos;,
+                },
+                {
+                    internalName: &apos;Vendor ID&apos;,
+                    externalName: &apos;VendorID&apos;,
+                }
+            ],
+            urls: {
+                dataURL: &apos;csvTaxis1MProp&apos;,
+            },
+            csv: {
+                numWorkers: 4,
+                chunkSize: 1024 * 1024 * 10,
+                rowsExpected: 522
+            },
+            time: {
+                internalName: &apos;Pickup Date&apos;,
+                externalName: &apos;tpep_pickup_datetime&apos;,
+                granularity: &apos;day&apos;
+            }
+        };
+        let mappingOptions = {
+            color: {
+                externalName: &apos;store_and_fwd_flag&apos;,
+                mapping: [&quot;red&quot;, &quot;blue&quot;],
+                typeOfVisualVariable: &apos;color&apos;
+            },
+            size: {
+                externalName: &apos;trip_distance&apos;,
+                mapping: [15, 40, 100],
+                typeOfVisualVariable: &apos;size&apos;
+            }
+        };
+        Gisplay.makeProportionalSymbolsMap(parsingOptions, mappingOptions, globalOptionsNYCity);
+    },
+
+    //DadosFP (Dot Map)
+    CSVPortugal: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;G&#xE9;nero&apos;,
+                    externalName: &apos;gender&apos;,
+                    values: [&quot;M&quot;, &quot;F&quot;]
+                },
+                /* {
+                    internalName: &apos;Idade do paciente&apos;,
+                    externalName: &apos;age&apos;,
+                    values: [0, 102],
+                    numberOfClasses: 5
+                }, */
+                {
+                    internalName: &apos;Latitude&apos;,
+                    externalName: &apos;latitudeParish&apos;,
+                },
+                {
+                    internalName: &apos;Longitude&apos;,
+                    externalName: &apos;LongitudeParish&apos;,
+                }
+            ],
+            optionalVariables: [
+                {
+                    internalName: &apos;Dias de admiss&#xE3;o&apos;,
+                    externalName: &apos;admissionDaysClass&apos;,
+                },
+                {
+                    internalName: &apos;Nome Hospital&apos;,
+                    externalName: &apos;desigHospital&apos;,
+                }/* ,
+                {
+                    internalName: &apos;Ano do caso de pulmonia&apos;,
+                    externalName: &apos;year&apos;,
+                } */
+            ],
+            urls: {
+                dataURL: &apos;file&apos;,
+            },
+            /*  csv: {
+                 numWorkers: 7,
+                 chunkSize: 1024 * 1024 * 20,
+                 rowsExpected: 522
+             }, */
+            time: {
+                internalName: &apos;Ano do caso de pulmonia&apos;,
+                externalName: &apos;year&apos;,
+                granularity: &apos;year&apos;,
+                // values: [2010, 2011, 2021, 2013, 2014, 2005]
+                // values: [0, 1, 2, 3, 4, 5]
+            }
+        };
+        let mappingOptions = {
+            color: {
+                externalName: &apos;gender&apos;,
+                mapping: [&quot;#000000&quot;, &quot;#a1b2c3&quot;],
+                typeOfVisualVariable: &apos;color&apos;
+            },
+            shape: {
+                externalName: &apos;gender1&apos;,
+                mapping: {
+                    &quot;M&quot;: &quot;square&quot;,
+                    &quot;F&quot;: &quot;circlefull&quot;,
+                },
+                typeOfVisualVariable: &apos;shape&apos;
+            }
+        };
+        Gisplay.makeDotMap(parsingOptions, mappingOptions, globalOptionsPortugalContinental);
+    },
+
+    IDsDistritosPT: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;N&#xFA;mero de acidentes&apos;,
+                    externalName: &apos;Num_Accidents&apos;,
+                    values: [10, 222]
+                }
+            ],
+            optionalVariables: [
+                {
+                    internalName: &apos;N&#xFA;mero de acidentes&apos;,
+                    externalName: &apos;Num_Accidents&apos;,
+                },
+                {
+                    internalName: &apos;Identificador do distrito&apos;,
+                    externalName: &apos;ID_District&apos;,
+                }
+            ],
+            urls: {
+                dataURL: &apos;data&apos;,
+                geospatialURL: &apos;distritos&apos;,
+                idOnDataURL: &apos;ID_District&apos;,
+                idOnGeoSpatialURL: &apos;ID_1&apos;
+            },
+            time: {
+                internalName: &apos;Ano dos acidentes&apos;,
+                externalName: &apos;Year&apos;,
+                granularity: &apos;year&apos;,
+            }
+        };
+        let mappingOptions = {
+            color: {
+                externalName: &apos;Num_Accidents&apos;,
+                // mapping: [&quot;#000000&quot;, &quot;#a1b2c3&quot;],
+                typeOfVisualVariable: &apos;color&apos;
+            }
+        };
+        Gisplay.makeChoropleth(parsingOptions, mappingOptions, globalOptionsPortugal/* globalOptionsPortugalContinental */);
+    },
+
+    allCountriesHIV: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;N&#xFA;mero de casos HIV anuais&apos;,
+                    externalName: &apos;annual_hiv_deaths_number_all_ages&apos;,
+                    values: [60, 390000],
+                    classBreakMethod: &apos;equalintervals&apos;,
+                    numberOfClasses: 5
+                }
+            ],
+            optionalVariables: [
+                {
+                    internalName: &apos;N&#xFA;mero de casos HIV anuais&apos;,
+                    externalName: &apos;annual_hiv_deaths_number_all_ages&apos;,
+                },
+                {
+                    internalName: &apos;Pa&#xED;s&apos;,
+                    externalName: &apos;geo&apos;,
+                }
+            ],
+            urls: { //geo,time,annual_hiv_deaths_number_all_ages
+                dataURL: &apos;hivCSV&apos;,
+                geospatialURL: &apos;worldFile&apos;,
+                idOnDataURL: &apos;geo&apos;,
+                idOnGeoSpatialURL: &apos;ISO_A3&apos;
+            },
+            time: {
+                internalName: &apos;Ano dos casos de HIV&apos;,
+                externalName: &apos;time&apos;,
+                granularity: &apos;year&apos;,
+            },
+            csv: {
+                numWorkers: 1
+            }
+        };
+        let mappingOptions = {
+            color: {
+                externalName: &apos;annual_hiv_deaths_number_all_ages&apos;,
+                // mapping: [&quot;#000000&quot;, &quot;#a1b2c3&quot;],
+                typeOfVisualVariable: &apos;color&apos;
+            }
+        };
+
+        globalOptionsPortugal.bounds = {
+            world: { //NY
+                NE: { lng: 180, lat: 90 },
+                SW: { lng: -180, lat: -90 },
+                description: &apos;World&apos;
+            }
+        };
+        globalOptionsPortugal.layout = undefined;
+        Gisplay.makeChoropleth(parsingOptions, mappingOptions, globalOptionsPortugal);
+    },
+
+    allCountriesEmploymentRate15_24: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;Employment 15 to 24 yo (%)&apos;,
+                    externalName: &apos;aged_15_24_employment_rate_percent&apos;,
+                    values: [11.3, 81.2],
+                    classBreakMethod: &apos;equalintervals&apos;,
+                    // numberOfClasses: 8
+                }
+            ],
+            optionalVariables: [
+                {
+                    internalName: &apos;Employment 15 to 24 (%)&apos;,
+                    externalName: &apos;aged_15_24_employment_rate_percent&apos;,
+                },
+                {
+                    internalName: &apos;Country&apos;,
+                    externalName: &apos;geo&apos;,
+                }
+            ],
+            urls: { //geo,time,annual_hiv_deaths_number_all_ages
+                dataURL: &apos;employmentFileCSV&apos;,
+                geospatialURL: &apos;worldFile2&apos;,
+                idOnDataURL: &apos;geo&apos;,
+                idOnGeoSpatialURL: &apos;ISO_A3&apos;
+            },
+            time: {
+                internalName: &apos;Ano&apos;,
+                externalName: &apos;time&apos;,
+                granularity: &apos;year&apos;,
+            },
+            csv: {
+                numWorkers: 1
+            }
+        };
+        let mappingOptions = { //geo,time,aged_15_24_employment_rate_percent
+            color: {
+                externalName: &apos;aged_15_24_employment_rate_percent&apos;,
+                // mapping: [&quot;#000000&quot;, &quot;#a1b2c3&quot;],
+                typeOfVisualVariable: &apos;color&apos;
+            }
+        };
+
+        globalOptionsPortugal.bounds = {
+            world: { //NY
+                NE: { lng: 180, lat: 90 },
+                SW: { lng: -180, lat: -90 },
+                description: &apos;World&apos;
+            }
+        };
+        globalOptionsPortugal.layout = undefined;
+        Gisplay.makeChoropleth(parsingOptions, mappingOptions, globalOptionsPortugal);
+    },
+
+    linesMap: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;Valor Lido do CSV&apos;,
+                    externalName: &apos;value&apos;,
+                    values: [&quot;Y&quot;, &quot;N&quot;]
+                }
+            ],
+            optionalVariables: [
+                /*  {
+                     internalName: &apos;N&#xFA;mero de acidentes&apos;,
+                     externalName: &apos;Num_Accidents&apos;,
+                 },
+                 {
+                     internalName: &apos;Identificador do distrito&apos;,
+                     externalName: &apos;ID_District&apos;,
+                 } */
+            ],
+            urls: {
+                dataURL: &apos;linesCSV&apos;,
+                geospatialURL: &apos;linesJSON&apos;,
+                idOnDataURL: &apos;id&apos;,
+                idOnGeoSpatialURL: &apos;id&apos;
+            },
+            time: {
+                internalName: &apos;Ano dos acidentes&apos;,
+                externalName: &apos;year&apos;,
+                granularity: &apos;year&apos;,
+            },
+            csv: {
+                numWorkers: 1
+            }
+        };
+        let mappingOptions = {
+            color: {
+                externalName: &apos;value&apos;,
+                mapping: [&quot;red&quot;, &quot;blue&quot;],
+                typeOfVisualVariable: &apos;color&apos;
+            }
+        };
+        Gisplay.makeLinesMap(parsingOptions, mappingOptions, globalOptionsPortugalContinental);
+    },
+
+    A28Lines: function () {
+        let parsingOptions = {
+            mapVariables: [
+                {
+                    internalName: &apos;Fluxo de autom&#xF3;veis&apos;,
+                    externalName: &apos;flow&apos;,
+                    // values: [12, 2413] // ALL
+                    // values: [30, 1065] // AVERAGE 17 10
+                    values: [35, 1027,] // AVERAGE 18 10
+                    // values: [32, 988] // AVERAGE 19 10
+                }
+            ],
+            optionalVariables: [
+                /*  {
+                     internalName: &apos;N&#xFA;mero de acidentes&apos;,
+                     externalName: &apos;Num_Accidents&apos;,
+                 },
+                 {
+                     internalName: &apos;Identificador do distrito&apos;,
+                     externalName: &apos;ID_District&apos;,
+                 } */
+            ],
+            urls: {
+                dataURL: &apos;linesCSV&apos;,
+                geospatialURL: &apos;linesJSON&apos;,
+                idOnDataURL: &apos;road_id&apos;,
+                idOnGeoSpatialURL: &apos;id&apos;
+            },
+            time: {
+                internalName: &apos;Hora do fluxo&apos;,
+                externalName: &apos;hour&apos;,
+                granularity: &apos;value&apos;,
+            },
+            csv: {
+                numWorkers: 1
+            }
+        };
+        let mappingOptions = {
+            color: {
+                externalName: &apos;flow&apos;,
+                // mapping: [&quot;red&quot;, &quot;blue&quot;],
+                typeOfVisualVariable: &apos;color&apos;
+            }
+        };
+        Gisplay.makeLinesMap(parsingOptions, mappingOptions, globalOptionsPortugalContinental);
+    }
+
+};
+
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/VVs/MapVariable.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/VVs/MapVariable.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { DataVariable } from &apos;./DataVariable&apos;;
+
+
+/**
+ * Represents a Map Variable.
+ * @see https://eagereyes.org/basics/data-continuous-vs-categorical
+ * @see http://leg.ufpr.br/~silvia/CE055/node8.html
+ * @export
+ * @class MapVariable
+ */
+export class MapVariable extends DataVariable {
+
+    /**
+     * Creates an instance of MapVariable.
+     * @param {string} externalName - The external name for this variable.
+     * @param {string} internalName - The internal name for this variable.
+     * @param {string} typeOfVisualVariable - The type of visual variable (e.g. color, shape, size, orientation or texture).
+     * @param {string} shaderVariableQualifier - The shader variable qualifier. 
+     * @param {Array&lt;string|number&gt;|Map&lt;string, string|number&gt;} visualVariableMapping - The mapping for the given type of visual variable.
+     * @memberof MapVariable
+     */
+    constructor(externalName, internalName, typeOfVisualVariable, shaderVariableQualifier, visualVariableMapping) {
+        super(externalName, internalName);
+        /**
+         * The type of visual variable mapping (e.g. color, shape, size, orientation or texture).
+         * @type {string}
+         */
+        this.typeOfVisualVariable = typeOfVisualVariable;
+        /**
+         * The access qualifier for the shader variable.
+         * @type {string}
+         */
+        this.shaderQualifier = shaderVariableQualifier;
+        /**
+         * The shader qualifier is of type attribute or not.
+         * @type {boolean} 
+         */
+        this.qualifierIsAttributeBool = shaderVariableQualifier === &apos;attribute&apos;;
+        /**
+         * The mapping between the values and the type of visual variable availabe values.
+         * E.g. &apos;THEFT&apos; =&gt; &apos;triangle&apos;
+         * @type {Map&lt;string, string&gt;|Array&lt;string|number&gt;}
+         */
+        this.visualVariableMapping = visualVariableMapping;
+        /**
+         * The mapping between each class/category index and it&apos;s visual variable usable value.
+         * Possible keys: 0 .... n-1
+         * Possible values: 1) Array of numbers for color
+         *                  2) Index number for shapes and textures
+         *                  3) Number for size and orientation
+         * E.g. &apos;THEFT&apos; =&gt; &apos;triangle&apos; =&gt; 8 (8 is the index of the triangle in the shapes map)
+         *      &apos;NO THEFT&apos; =&gt; &apos;square&apos; =&gt; 4
+         * Then we would have Map( 0 -&gt; 8, 1 -&gt; 4)
+         * @type {Map&lt;number,Array&lt;number&gt;|number&gt;}
+         */
+        this.indexToUsableValueMap = new Map();
+    }
+
+    /**
+     * Returns the type of visual variable (e.g. color, shape, size, orientation or texture) that this map variable will be mapped to.
+     * @returns {string} - the type of visual variable mapping (e.g. color, shape, size, orientation or texture).
+     * @memberof MapVariable
+     */
+    getTypeOfVisualVariable() {
+        return this.typeOfVisualVariable;
+    }
+
+    /**
+     * Returns the mapping for the type of visual variable. 
+     * It can be a Object&lt;Key, Value&gt; if it&apos;s categorical, an array of strings or array of numbers. 
+     * @returns {Map&lt;string, string&gt;|Array&lt;string|number&gt;} - the mappings for this visual variable.
+     * @memberof MapVariable
+     */
+    getVisualVariableMapping() {
+        return this.visualVariableMapping;
+        //Array number (Cont no size e orientation)
+        //Array string (Cont para color, size e orientation + Cat para color)
+        //Object K-&gt;V (Cat para shape, texture e orientation)
+    }
+
+    /**
+     * This map variable requires it&apos;s classes to be calculated or not. Categorical variables always return false.
+     * @returns {boolean} - true, if we need to calculate the classes, false, otherwise.
+     * @memberof MapVariable
+     */
+    classCalculationRequired() {
+        return false;
+    }
+
+    /**
+     * Returns the mapping between each class/category and it&apos;s visual variable usable value.
+     * @returns {Map&lt;number,Array&lt;number&gt;|number&gt;} - the mapping between each class/category and it&apos;s visual variable usable value.
+     * @memberof MapVariable
+     */
+    getIndexToUSableValueMap() {
+        return this.indexToUsableValueMap;
+    }
+
+    /**
+     * The value associated with the given index.
+     * E.g. [255,0,0] for color or 57 for size/orientation or 3 for shape/texture.
+     * @param {number} index - The index of the visual variable.
+     * @returns {Array&lt;number&gt;|number&gt;}
+     * @memberof MapVariable
+     */
+    findUsableValue(index) {
+        return this.indexToUsableValueMap.get(index);
+    }
+
+    /**
+     * The access qualifier for the shader variable 
+     * @returns {string} - the access qualifier for the shader variable 
+     * @memberOf MapVariable
+     */
+    getShaderVariableQualifier() {
+        return this.shaderQualifier;
+    }
+
+    /**
+     * Returns true if the shader qualifier is equal to attribute, false, otherwise.
+     * @returns {boolean} - true if the shader qualifier is equal to attribute, false, otherwise.
+     * @memberOf MapVariable
+     */
+    qualifierIsAttribute() {
+        return this.qualifierIsAttributeBool;
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

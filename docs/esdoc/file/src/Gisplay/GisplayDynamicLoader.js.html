@@ -1,0 +1,398 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/Gisplay/GisplayDynamicLoader.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/GisplayDynamicLoader.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import shadersFile from &apos;./Shaders/shaders.json&apos;;
+import defaultsFile from &apos;./defaults.json&apos;;
+const vertexShadersFiles = require.context(&quot;./Shaders&quot;, false, /^\.\/.*\.vert$/); //All .vert files
+const fragmentShadersFiles = require.context(&quot;./Shaders&quot;, false, /^\.\/.*\.frag$/); //All .frag files
+import shapesImage from &apos;../img/novas.png&apos;; //Shapes
+import patternsImage from &apos;../img/patterns.png&apos;; //Patterns
+import figuresImage from &apos;../img/figures.png&apos;; //Figures
+
+import loader from &apos;../css/loader.css&apos;; //Gisplay Loader 
+import fonts from &apos;../css/fonts.css&apos;; //Fonts to use
+import errorModal from &apos;../css/error.css&apos;; //The error modal CSS
+import noUiSlider from &apos;../lib/noUiSlider/nouislider.css&apos;; //Time Control Slider CSS
+
+import balloonCSS from &apos;../lib/balloon.css/balloon.css&apos;; //CSS for Tooltips
+
+import { ShadersInfo } from &apos;./Shaders/ShadersInfo&apos;;
+
+/**
+ * Gisplay Dynamic Loader implementation.
+ * @export
+ * @class GisplayDynamicLoader
+ */
+export class GisplayDynamicLoader {
+    constructor(libraryName, vertexShaderFileName, fragmentShaderFileName) {
+        // console.log(libraryName, vertexShaderFileName, fragmentShaderFileName);
+        /**
+         * The number of expected elements to load.
+         * E.g. Mapbox has 1 CSS element and 1 JS element and none was already loaded then we 2 elements to load. 
+         * @type {number}
+         */
+        this.numLibraryElemsToLoad = 0;
+        if (!this._isLibraryLoaded(libraryName))
+            this.loadLibrary(libraryName);
+        else
+            this.libraryElementLoaded();
+
+        /**
+         * The image with shapes.
+         * @type {HTMLImageElement}
+         */
+        this.shapesImage = this.loadImage(shapesImage, &apos;shapesImageLoaded&apos;);//this.loadShapesImage();
+        /**
+         * The image with patterns.
+         * @type {HTMLImageElement}
+         */
+        this.patternsImage = this.loadImage(patternsImage, &apos;patternsImageLoaded&apos;);//this.loadPatternsImage();
+        /**
+         * The image with figures.
+         * @type {HTMLImageElement}
+         */
+        this.figuresImage = this.loadImage(figuresImage, &apos;figuresImageLoaded&apos;);
+
+        /**
+         * The information about the shader.
+         * @type {ShadersInfo}
+         */
+        this.shadersInfo = this.loadShadersOptionsFile(vertexShaderFileName, fragmentShaderFileName);
+    }
+
+    /**
+     * Verifies if the library CSS and JS are loaded into the HTML. If they are then there&apos;s no need to load it again
+     * so this will return true, otherwise, returns false.
+     * @param {string} libraryName - The name of the library (e.g.  Mapbox). 
+     * @returns {boolean} - true if the js and css (if any) of the library were already loaded by the user, false, otherwise.
+     * @see https://stackoverflow.com/a/37820644
+     * @see https://css-tricks.com/snippets/javascript/async-script-loader-with-callback/
+     * @memberOf GisplayDynamicLoader
+     */
+    _isLibraryLoaded(libraryName) {
+        let scriptsSource = this.loadDefaultsFile().bgmapsUrls[libraryName].js;
+        let stylesSource = this.loadDefaultsFile().bgmapsUrls[libraryName].css;
+        if (stylesSource)
+            this.numLibraryElemsToLoad += stylesSource.length;
+        if (scriptsSource)
+            this.numLibraryElemsToLoad += scriptsSource.length;
+        // console.warn(this.numLibraryElemsToLoad);
+        switch (libraryName) {
+            case &apos;MB&apos;:
+                return this._hasScript(scriptsSource) &amp;&amp; this._hasStyle(stylesSource);
+            case &apos;GM&apos;:
+                return this._hasScript(libraryName);
+            case &apos;HM&apos;:
+                {
+                    for (let src of scriptsSource)
+                        if (!this._hasScript(src))
+                            return false;
+                    return true;
+                }
+            case &apos;BM&apos;:
+                return this._hasScript(scriptsSource);
+        }
+    }
+
+    /**
+     * Given the script source, verifies if it exists on the DOM or not.
+     * @param {string} scriptSource - The source of the script.
+     * @returns {boolean} - true, if the script exists in the DOM, false, otherwise.
+     * @private
+     * @memberof GisplayDynamicLoader
+     */
+    _hasScript(scriptSource) {
+        return document.querySelectorAll(`[src=&apos;${scriptSource}&apos;]`).length === 1;
+    }
+
+    /**
+     * Given the source for the stylesheet, verifies if it exists on the DOM or not.
+     * @param {string} libraryName - The source of the stylesheet.
+     * @returns {boolean} - true, if the style exists in the DOM, false, otherwise.
+     * @private
+     * @memberof GisplayDynamicLoader
+     */
+    _hasStyle(styleSource) {
+        return document.querySelectorAll(`[href=&apos;${styleSource}&apos;]`).length === 1;
+    }
+
+    /**
+     * This method should be used to asynchronously or synchronously load the library for Mapbox, Google etc
+     * so this way we won&apos;t need to load it on the main html file.
+     * @param {string} libraryName - Name of the library to load. 
+     * @memberOf LayoutManager
+     */
+    loadLibrary(libraryName) {
+        // console.error(&quot;Load Library &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&quot;);
+        let scriptsSource = this.loadDefaultsFile().bgmapsUrls[libraryName].js;
+        let stylesSource = this.loadDefaultsFile().bgmapsUrls[libraryName].css;
+        switch (libraryName) {
+            case &apos;MB&apos;:
+            case &apos;MBGL&apos;:
+                {
+                    this._loadStyleSheet(stylesSource[0]);
+                    this._loadScript(scriptsSource[0]);
+                }
+                break;
+            case &apos;GM&apos;:
+                this._loadScript(scriptsSource[0]);
+                break;
+            case &apos;HM&apos;:
+                this._loadHereMapsRecursive(this.loadDefaultsFile().bgmapsUrls[libraryName].js, this.numLibraryElemsToLoad);
+                break;
+            case &apos;BM&apos;:
+                this._loadScript(scriptsSource[0]);
+                break;
+        }
+    }
+
+    /**
+     * Load script dynamically.
+     * @param {string} scriptSource - The script source.
+     * @private
+     * @memberof GisplayDynamicLoader
+     */
+    _loadScript(scriptSource) {
+        let js = document.createElement(&apos;script&apos;);
+        js.src = scriptSource;
+        js.onload = (e) =&gt; { this.libraryElementLoaded(e); };
+        document.head.appendChild(js);
+    }
+
+    /**
+     * Load stylesheet dynamically.
+     * @param {string} styleSheetSource - The stylesheet source. 
+     * @private
+     * @memberof GisplayDynamicLoader
+     */
+    _loadStyleSheet(styleSheetSource) {
+        let css = document.createElement(&quot;link&quot;);
+        css.rel = &quot;stylesheet&quot;;
+        css.type = &quot;text/css&quot;;
+        css.href = styleSheetSource;
+        css.onload = (e) =&gt; { this.libraryElementLoaded(e); };
+        document.head.appendChild(css);
+    }
+
+    /**
+     * Recursive method to load Here Maps library scripts. This method is recursive because the three scripts for here maps 
+     * must be loaded in order.
+     * @param {Array&lt;string&gt;} jsFiles -  The src for each of the js files for here maps.
+     * @private
+     * @see https://stackoverflow.com/a/38841736
+     * @memberof GisplayDynamicLoader
+     */
+    _loadHereMapsRecursive(jsFiles, numberOfScripts) {
+        let js = document.createElement(&apos;script&apos;);
+        js.src = jsFiles[0];
+        js.onload = (e) =&gt; {
+            this.libraryElementLoaded(e);
+            jsFiles = jsFiles.slice(1, numberOfScripts);
+            if (jsFiles.length &gt; 0)
+                this._loadHereMapsRecursive(jsFiles);
+        };
+        document.head.appendChild(js);
+    }
+
+    /**
+     * Callback for the load event of the CSS or JS library elements.
+     * @param {Event} e - The load callback event.
+     * @memberOf GisplayDynamicLoader
+     */
+    libraryElementLoaded(e) {
+        // console.error(e);
+        if (--this.numLibraryElemsToLoad &lt;= 0) {
+            console.warn(&quot;All library elements loaded&quot;);
+            document.dispatchEvent(new CustomEvent(&quot;libraryLoaded&quot;, {}));
+        }
+    }
+
+    /**
+     * Loads the json file with shaders options.
+     * @returns {ShadersInfo} - the json file with shaders options.
+     * @memberOf GisplayDynamicLoader
+     */
+    loadShadersOptionsFile(vertexShaderFileName, fragmentShaderFileName) {
+        // console.log(shadersFile, vertexShaderFileName, fragmentShaderFileName);
+        let vertexKeys = shadersFile.vertex[vertexShaderFileName];
+        let fragmentKeys = shadersFile.fragment[fragmentShaderFileName];
+        return new ShadersInfo(vertexKeys, fragmentKeys);
+    }
+
+    /**
+     * Returns the information about the shader.
+     * @returns {ShaderInfo} - the information about the shader.
+     * @memberof GisplayDynamicLoader
+     */
+    getShadersInfo() {
+        return this.shadersInfo;
+    }
+
+    /**
+     * Given the name of the vertex shader and the fragment shader then loads their content into memory.
+     * @param {string} vertexShaderFileName - The name of the vertex shader file.
+     * @param {string} fragmentShaderFileName - The name of the fragment shader file.
+     * @returns {{vertexShaderCode:string, fragmentShaderCode:string}} - the vertex and fragment shaders code.
+     * @see https://stackoverflow.com/a/41410938
+     * @memberOf GisplayDynamicLoader
+     */
+    loadShaders(vertexShaderFileName, fragmentShaderFileName) {
+        // console.log(vertexShaderFileName, fragmentShaderFileName);
+        // this.loadShadersOptionsFile(vertexShaderFileName, fragmentShaderFileName);
+        let vertexShaderCode = &apos;&apos;;
+        let fragmentShaderCode = &apos;&apos;;
+        for (let vertexShaderName of vertexShadersFiles.keys()) {
+            // console.log(vertexShaderName);
+            if (vertexShaderName.split(&apos;./&apos;)[1] === vertexShaderFileName)
+                vertexShaderCode = vertexShadersFiles(vertexShaderName);
+        }
+        if (!vertexShaderCode)
+            throw new Error(`The file name: ${vertexShaderFileName}, for the vertex shader wasn\&apos;t  found on the Shaders directory.`);
+
+        for (let fragmenShaderName of fragmentShadersFiles.keys()) {
+            // console.log(fragmenShaderName);
+            if (fragmenShaderName.split(&apos;./&apos;)[1] === fragmentShaderFileName)
+                fragmentShaderCode = fragmentShadersFiles(fragmenShaderName);
+        }
+        if (!fragmentShaderCode)
+            throw new Error(`The file name: ${fragmentShaderFileName}, for the fragment shader wasn\&apos;t  found on the Shaders directory.`);
+
+        //Create Shaders class based on the fileName
+        return { vertexShaderCode, fragmentShaderCode };
+    }
+
+    /**
+     * Load the given image and then fire the given event.
+     * @param {string} srcImage - The src of the image to load. 
+     * @param {string} eventToFire - The name of the event to fire after loading the image. 
+     * @returns {Image} - the loaded image.
+     * @memberof GisplayDynamicLoader
+     */
+    loadImage(srcImage, eventToFire) {
+        let resImage = new Image();
+        // console.log(srcImage);
+        resImage.src = srcImage;
+        resImage.onload = () =&gt; { document.dispatchEvent(new CustomEvent(eventToFire, {})); };
+        return resImage;
+    }
+
+    /**
+     * Loads the json file with the default values.
+     * @returns {JSON} - the json file with the default values.
+     * @memberOf GisplayDynamicLoader
+     */
+    loadDefaultsFile() {
+        return defaultsFile;
+    }
+
+    /**
+     * Returns the image with the shapes.
+     * @returns {HTMLImageElement}
+     * @memberOf GisplayDynamicLoader
+     */
+    getShapesImage() {
+        return this.shapesImage;
+    }
+
+    /**
+     * Returns the image with the patterns.
+     * @returns {HTMLImageElement}
+     * @memberOf GisplayDynamicLoader
+     */
+    getPatternsImage() {
+        return this.patternsImage;
+    }
+
+    /**
+     * Returns the image with the figures.
+     * @returns {Image} - the image with the figures.
+     * @memberof GisplayDynamicLoader
+     */
+    getFiguresImage() {
+        return this.figuresImage;
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

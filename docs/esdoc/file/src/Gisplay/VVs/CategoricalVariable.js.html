@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/VVs/CategoricalVariable.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/VVs/CategoricalVariable.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { MapVariable } from &apos;./MapVariable&apos;;
+import { GisplayDefaults } from &apos;../GisplayDefaults&apos;;
+import { GisplayError } from &apos;../GisplayError&apos;;
+// import { GisplayMap } from &apos;../Maps/GisplayMap&apos;;
+
+/**
+ * Represents a categorical map variable.
+ * Categorical data, is for those aspects of your data where you make a distinction between different groups, and where you typically can list a small number of categories. This includes product type, gender, age group, etc.
+ * @see https://eagereyes.org/basics/data-continuous-vs-categorical
+ * @export
+ * @class CategoricalVariable
+ */
+export class CategoricalVariable extends MapVariable {
+
+    /**
+     * Creates an instance of CategoricalVariable.
+     * @param {string} externalName - The external name for this variable.
+     * @param {string} internalName - The internal name for this variable.
+     * @param {string} typeOfVisualVariable - The name of visual variable (e.g. color, shape, size, orientation or texture).
+     * @param {string} shaderVariableQualifier - The shader variable qualifier. 
+     * @param {Map&lt;string, string|number&gt;} visualVariableMapping - The mapping for the given visual variable.
+     * @param {GisplayMap} gisplayMap - The GisplayMap. It&apos;s used when we need to get the colors for the variable.
+     * @memberof CategoricalVariable
+     */
+    constructor(externalName, internalName, typeOfVisualVariable, shaderVariableQualifier, visualVariableMapping, gisplayMap) {
+        super(externalName, internalName, typeOfVisualVariable, shaderVariableQualifier, visualVariableMapping);
+        /**
+         * The categories for this categorical variable.
+         * @type {Set&lt;string&gt;}
+         */
+        this.categories = new Set();
+        if (visualVariableMapping &amp;&amp; visualVariableMapping.size &gt; 0) { //The mapping was given by the programmer (Map&lt;&quot;ABC&quot;-&gt;&quot;red&quot;, &quot;DEF&quot;-&gt;&quot;blue&quot; etc&gt; )
+            /**
+             * Map containing the values for this categorical map variable and an integer to represent each of these values.
+             * @type {Map&lt;string, number&gt;} 
+             */
+            this.valueToIndexMap = this._createCategoricalVarMap(visualVariableMapping.keys());
+            this._setIndexToUsableValueMap();
+        }
+
+        /**  
+         * Boolean that stores true if class calcutation is required, false, otherwise.
+         * @type {boolean}
+         */
+        this.classCalculationRequiredBool = this.visualVariableMapping.size === 0;
+        /**
+         * The GisplayMap object.
+         * @type {GisplayMap}
+         */
+        this.gisplayMap = gisplayMap;
+        console.error(this);
+    }
+
+    /**
+     * For each category in this categorical variable, create one index which will be used as substitute.
+     * This replacement will save up a lot of space. 
+     * @param {Array&lt;string&gt;} values - The categories that this visual variable holds. 
+     * @returns {Map&lt;string, number&gt;} - the map which contains a sequential integer to represent each category.
+     * @memberof CategoricalVariable
+     */
+    _createCategoricalVarMap(values) {
+        let map = new Map();
+        let index = 0;
+        for (let value of values)
+            map.set(value, index++);
+        return map;
+    }
+
+    /**
+     * Returns the value to index map.
+     * @returns {Map&lt;string, number&gt;} - the map containing the values for this categorical visual variable and an integer to represent each of these values.
+     * @memberof CategoricalVariable
+     */
+    getValueIndexMapping() {
+        return this.valueToIndexMap;
+    }
+
+    /**
+     * Returns the index of the given category.
+     * @param {string} value - The category to find. 
+     * @returns {number} - the index of the given category.
+     * @memberof CategoricalVariable
+     */
+    findIndex(value) {
+        return this.getValueIndexMapping().get(value);
+    }
+
+    /**
+     * Set each index (of each category) to it&apos;s respective value (color, or number in the shape/texture image).
+     * E.g. 0 -&gt; [255,0,0] etc or 0 -&gt; 14 (index in image).
+     * @private
+     * @memberof CategoricalVariable
+     */
+    _setIndexToUsableValueMap() {
+        let typeOfVisualVariable = this.getTypeOfVisualVariable();
+        let valueToIndexMapKeys = this.valueToIndexMap.keys();
+        console.warn(valueToIndexMapKeys);
+        console.warn(this.getVisualVariableMapping());
+
+        switch (typeOfVisualVariable) {
+            case GisplayDefaults.COLOR():
+                for (let mapkey of valueToIndexMapKeys) {
+                    let index = this.valueToIndexMap.get(mapkey); // 0, 1..
+                    let color = this.visualVariableMapping.get(mapkey); // [255, 0, 0], [122, 220, 85] ...
+                    this.indexToUsableValueMap.set(index, color);
+                }
+                break;
+            case GisplayDefaults.SHAPE():
+                for (let mapkey of valueToIndexMapKeys) { // &quot;Y&quot;, &quot;N&quot;
+                    let index = this.valueToIndexMap.get(mapkey); // 0, 1..
+                    let shapeName = this.visualVariableMapping.get(mapkey); // &quot;terrain&quot;, &quot;bricks&quot;, &quot;triangle&quot;
+                    let shapeIndex = GisplayDefaults.findShapeIndex(shapeName); // 6, 7, 12, 13
+                    // console.log(index, shapeName, textureIndex);
+                    this.indexToUsableValueMap.set(index, shapeIndex);
+                }
+                break;
+            case GisplayDefaults.TEXTURE():
+                for (let mapkey of valueToIndexMapKeys) { // &quot;Y&quot;, &quot;N&quot;
+                    let index = this.valueToIndexMap.get(mapkey); // 0, 1..
+                    let patternName = this.visualVariableMapping.get(mapkey); // &quot;terrain&quot;, &quot;bricks&quot;, &quot;triangle&quot;
+                    let patternIndex = GisplayDefaults.findPatternIndex(patternName); // 6, 7, 12, 13
+                    console.log(index, patternName, patternIndex);
+                    this.indexToUsableValueMap.set(index, patternIndex);
+                }
+                break;
+            case GisplayDefaults.SIZE():
+                throw new GisplayError(&quot;Visual variable: size, can&apos;t be used with a categorical variable.&quot;);
+            case GisplayDefaults.ORIENTATION():
+                console.log(valueToIndexMapKeys, this.valueToIndexMap, this.visualVariableMapping);
+                for (let mapkey of valueToIndexMapKeys) { // &quot;Y&quot;, &quot;N&quot;
+                    let index = this.valueToIndexMap.get(mapkey); // 0, 1..
+                    let orientationValue = this.visualVariableMapping.get(mapkey); // 0, 28, 90 (degrees)
+                    console.log(index, orientationValue);
+                    this.indexToUsableValueMap.set(index, orientationValue);
+                }
+            // throw new Error(&quot;Index to orientation value not yet implemented in Categorical Variable. Should look like COLOR + SHAPE/TEXTURE combined&quot;);
+        }
+        console.log(&quot;CAT VV_TO_INDEX_MAP =========================&quot;, this.indexToUsableValueMap);
+    }
+
+    /**
+     * Add a categorie to the set of categories in this categorical variable.
+     * @param {string} category - The category to add to this categorical variable. 
+     */
+    addCategory(category) {
+        this.categories.add(category);
+    }
+
+    /**
+     * Add the given categories to the set of categories of this Categorical variable.
+     * @param {Set&lt;string&gt;} categories - The categories given. 
+     */
+    addCategories(categories) {
+        for (const category of categories.keys())
+            this.addCategory(category);
+    }
+
+    /**
+     * Returns the set of categories for this Categorical variable.
+     * @returns {Set&lt;string&gt;} - the set of categories for this Categorical variable.
+     * @memberof CategoricalVariable
+     */
+    getCategories() {
+        return this.categories;
+    }
+
+    /**
+     * Update the information when all categories are on the Set. 
+     * Used when the categories weren&apos;t given by the programmer.
+     * @memberof CategoricalVariable
+     */
+    updateCategoricalInformation() {
+        this.valueToIndexMap = this._createCategoricalVarMap(this.categories.keys());
+
+        let categories = Array.from(this.categories);
+        console.error(this.valueToIndexMap.size);
+        if(this.valueToIndexMap.size &lt; 2)
+            throw new GisplayError(`Only one category (${Array.from(this.valueToIndexMap.keys())}) in the dataset. `);
+        let colors = this.gisplayMap.getDefaultColors(this.valueToIndexMap.size, GisplayDefaults.QUALITATIVE());
+        for (let [i, category] of categories.entries()) 
+            this.visualVariableMapping.set(category, colors[i]);
+        
+        this._setIndexToUsableValueMap();
+    }
+
+    /**
+     * This map variable requires it&apos;s classes to be calculated or not. Categorical variables always return false.
+     * @returns {boolean} - true, if we need to calculate the classes, false, otherwise.
+     * @memberof CategoricalVariable
+     */
+    classCalculationRequired() {
+        return this.classCalculationRequiredBool; // the map has no K-&gt;V pairs
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

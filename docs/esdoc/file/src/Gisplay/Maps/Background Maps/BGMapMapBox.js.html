@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">src/Gisplay/Maps/Background Maps/BGMapMapBox.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/Maps/Background Maps/BGMapMapBox.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { BGMapWrapper } from &apos;./BGMapWrapper&apos;;
+
+/**
+ * MapBox JS as background map provider.
+ * @see https://www.mapbox.com/mapbox.js/api/v3.1.1/
+ * @export
+ * @class BGMapMapBox
+ * @extends {BGMapWrapper}
+ */
+export class BGMapMapBox extends BGMapWrapper {
+
+    /**
+     * Creates an instance of BGMapWrapper.
+     * @param {Object} bgmap - The background map object that came from the provider (e.g., Mapbox, Google Maps). 
+     */
+    constructor(bgmapDiv, mapBounds, viewPort) {
+        super(bgmapDiv, mapBounds, viewPort);
+    }
+
+    /**
+     * Method that creates the background map and sets the maximum allowed bounds.
+     * @param {string} bgmapDiv - The div where the map will be contained.
+     * @param {{SW: {lat:number, lng:number}, NE: {lng:number, lat:number}}} mapBounds - The max bounds allowed for this map.
+     * @returns {Object} - The google maps object.
+     * @memberof BGMapMapBox
+     */
+    createBackgroundMap(bgmapDiv, mapBounds) {
+        L.mapbox.accessToken = &apos;pk.eyJ1IjoibG9sYXNkIiwiYSI6ImNpbmxsZDJkejAwOHR2Zm0yZHVwOWV1ejEifQ.SJ6CupBlW0gPic0n-HgY6w&apos;;
+
+        let southWest = L.latLng(mapBounds.SW.lat, mapBounds.SW.lng),
+            northEast = L.latLng(mapBounds.NE.lat, mapBounds.NE.lng),
+            mapbounds = L.latLngBounds(southWest, northEast);
+
+        let map = L.mapbox.map(bgmapDiv.id, &apos;mapbox.streets&apos;, {
+            // set that bounding box as maxBounds to restrict moving the map
+            // see full maxBounds documentation:
+            // http://leafletjs.com/reference.html#map-maxbounds
+            maxBounds: mapbounds,
+            zoom: 10,
+            attributionControl: true
+        });
+
+        // zoom the map to that bounding box
+        map.fitBounds(mapbounds);
+
+        window.m = map;
+
+        return map;
+    }
+
+    /**
+     * Resize the background map object, when a window resize event occurs.
+     * @memberof BGMapMapBoxGLJS
+     */
+    resize() {
+        this.bgMapObject.invalidateSize();
+    }
+
+
+    /**
+     * Returns the map&apos;s containing HTML element.
+     * @return {HTMLElement} - The map&apos;s HTML element container.
+     * @memberof BGMapMapBox
+     */
+    getContainer() {
+        return this.bgMapObject.getContainer();
+    }
+
+    /**
+     * Returns the map&apos;s current zoom level.
+     * @return {number} - The map&apos;s current zoom level.
+     * @memberof BGMapMapBox
+     */
+    getZoom() {
+        return this.bgMapObject.getZoom();
+    }
+
+    /**
+     * Returns the longitude of the bounding box northwest corner.
+     * @return {number} - Longitude of northwest corner, measured in degrees.
+     * @memberof BGMapMapBox
+     */
+    getCenterLng() {
+        return ((((180 + this.bgMapObject.getCenter().lng) % 360) + 360) % 360) - 180;
+    }
+
+    /**
+     * Returns the latitude of the bounding box northwest corner.
+     * @return {number} - Latitude of northwest corner, measured in degrees.
+     * @memberof BGMapMapBox
+     */
+    getCenterLat() {
+        return this.bgMapObject.getCenter().lat;
+    }
+
+    /**
+     * Adds a listener to a specified event type.
+     * @param {string} eventstr - The event type to add a listen for.
+     * @param {Function} eventfunction - The function to be called when the event is fired. The listener function is called with the data object passed to  fire , extended with  target and  type properties.
+     * @return {void} 
+     * @memberof BGMapMapBox
+     */
+    addEventListener(eventstr, eventfunction) {
+        this.bgMapObject.on(eventstr, eventfunction);
+    }
+
+    /**
+     * Add Pan/Drag event.
+     * @param {Function} func - The function to be called when the user performs drag on the map.
+     * @see http://leafletjs.com/reference-1.2.0.html#map-move
+     * @memberof BGMapMapBox
+     */
+    addDragEvent(func) {
+        this.addEventListener(&apos;move&apos;, func);
+        /* this.addEventListener(&apos;movestart&apos;, func);
+        this.addEventListener(&apos;moveend&apos;, func); */
+    }
+
+    /**
+     * Add zoom event.
+     * @param {Function} func - The function to be called when the user performs zoom in/out on the map.
+     * @see http://leafletjs.com/reference-1.2.0.html#map-zoomend
+     * @memberof BGMapMapBox
+     */
+    addZoomEvent(func) {
+        this.addEventListener(&apos;zoomend&apos;, func);
+    }
+
+    /**
+     * Add click event.
+     * @param {GisplayMap} gisplayMap - The gisplay map object.
+     * @see https://jsfiddle.net/5pp9pqf2/
+     * @see http://leafletjs.com/reference-1.2.0.html#map-click
+     * @memberof BGMapMapBox
+     */
+    addClickEvent(gisplayMap) {
+        this.addEventListener(&apos;click&apos;, e =&gt; {
+            //https://jsfiddle.net/5pp9pqf2/
+            let rect = this.bgmapDiv.getClientRects();
+            let c1 = { x: rect[0].left, y: rect[0].top };
+            let p1 = { x: e.originalEvent.pageX, y: e.originalEvent.pageY };
+            let point = { x: p1.x - c1.x, y: p1.y - c1.y };
+            gisplayMap.clickEvent(point.x, point.y, this);
+        });
+    }
+}
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

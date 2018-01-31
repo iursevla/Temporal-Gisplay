@@ -1,0 +1,2399 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/lib/noUiSlider/nouislider.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/lib/noUiSlider/nouislider.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/*! nouislider - 10.1.0 - 2017-07-28 13:09:54 */
+
+(function (factory) {
+    
+        if ( typeof define === &apos;function&apos; &amp;&amp; define.amd ) {
+    
+            // AMD. Register as an anonymous module.
+            define([], factory);
+    
+        } else if ( typeof exports === &apos;object&apos; ) {
+    
+            // Node/CommonJS
+            module.exports = factory();
+    
+        } else {
+    
+            // Browser globals
+            window.noUiSlider = factory();
+        }
+    
+    }(function( ){
+    
+        &apos;use strict&apos;;
+    
+        var VERSION = &apos;10.1.0&apos;;
+    
+    
+        function isValidFormatter ( entry ) {
+            return typeof entry === &apos;object&apos; &amp;&amp; typeof entry.to === &apos;function&apos; &amp;&amp; typeof entry.from === &apos;function&apos;;
+        }
+    
+        function removeElement ( el ) {
+            el.parentElement.removeChild(el);
+        }
+    
+        // Bindable version
+        function preventDefault ( e ) {
+            e.preventDefault();
+        }
+    
+        // Removes duplicates from an array.
+        function unique ( array ) {
+            return array.filter(function(a){
+                return !this[a] ? this[a] = true : false;
+            }, {});
+        }
+    
+        // Round a value to the closest &apos;to&apos;.
+        function closest ( value, to ) {
+            return Math.round(value / to) * to;
+        }
+    
+        // Current position of an element relative to the document.
+        function offset ( elem, orientation ) {
+    
+            var rect = elem.getBoundingClientRect();
+            var doc = elem.ownerDocument;
+            var docElem = doc.documentElement;
+            var pageOffset = getPageOffset(doc);
+    
+            // getBoundingClientRect contains left scroll in Chrome on Android.
+            // I haven&apos;t found a feature detection that proves this. Worst case
+            // scenario on mis-match: the &apos;tap&apos; feature on horizontal sliders breaks.
+            if ( /webkit.*Chrome.*Mobile/i.test(navigator.userAgent) ) {
+                pageOffset.x = 0;
+            }
+    
+            return orientation ? (rect.top + pageOffset.y - docElem.clientTop) : (rect.left + pageOffset.x - docElem.clientLeft);
+        }
+    
+        // Checks whether a value is numerical.
+        function isNumeric ( a ) {
+            return typeof a === &apos;number&apos; &amp;&amp; !isNaN( a ) &amp;&amp; isFinite( a );
+        }
+    
+        // Sets a class and removes it after [duration] ms.
+        function addClassFor ( element, className, duration ) {
+            if (duration &gt; 0) {
+            addClass(element, className);
+                setTimeout(function(){
+                    removeClass(element, className);
+                }, duration);
+            }
+        }
+    
+        // Limits a value to 0 - 100
+        function limit ( a ) {
+            return Math.max(Math.min(a, 100), 0);
+        }
+    
+        // Wraps a variable as an array, if it isn&apos;t one yet.
+        // Note that an input array is returned by reference!
+        function asArray ( a ) {
+            return Array.isArray(a) ? a : [a];
+        }
+    
+        // Counts decimals
+        function countDecimals ( numStr ) {
+            numStr = String(numStr);
+            var pieces = numStr.split(&quot;.&quot;);
+            return pieces.length &gt; 1 ? pieces[1].length : 0;
+        }
+    
+        // http://youmightnotneedjquery.com/#add_class
+        function addClass ( el, className ) {
+            if ( el.classList ) {
+                el.classList.add(className);
+            } else {
+                el.className += &apos; &apos; + className;
+            }
+        }
+    
+        // http://youmightnotneedjquery.com/#remove_class
+        function removeClass ( el, className ) {
+            if ( el.classList ) {
+                el.classList.remove(className);
+            } else {
+                el.className = el.className.replace(new RegExp(&apos;(^|\\b)&apos; + className.split(&apos; &apos;).join(&apos;|&apos;) + &apos;(\\b|$)&apos;, &apos;gi&apos;), &apos; &apos;);
+            }
+        }
+    
+        // https://plainjs.com/javascript/attributes/adding-removing-and-testing-for-classes-9/
+        function hasClass ( el, className ) {
+            return el.classList ? el.classList.contains(className) : new RegExp(&apos;\\b&apos; + className + &apos;\\b&apos;).test(el.className);
+        }
+    
+        // https://developer.mozilla.org/en-US/docs/Web/API/Window/scrollY#Notes
+        function getPageOffset ( doc ) {
+    
+            var supportPageOffset = window.pageXOffset !== undefined;
+            var isCSS1Compat = ((doc.compatMode || &quot;&quot;) === &quot;CSS1Compat&quot;);
+            var x = supportPageOffset ? window.pageXOffset : isCSS1Compat ? doc.documentElement.scrollLeft : doc.body.scrollLeft;
+            var y = supportPageOffset ? window.pageYOffset : isCSS1Compat ? doc.documentElement.scrollTop : doc.body.scrollTop;
+    
+            return {
+                x: x,
+                y: y
+            };
+        }
+    
+        // we provide a function to compute constants instead
+        // of accessing window.* as soon as the module needs it
+        // so that we do not compute anything if not needed
+        function getActions ( ) {
+    
+            // Determine the events to bind. IE11 implements pointerEvents without
+            // a prefix, which breaks compatibility with the IE10 implementation.
+            return window.navigator.pointerEnabled ? {
+                start: &apos;pointerdown&apos;,
+                move: &apos;pointermove&apos;,
+                end: &apos;pointerup&apos;
+            } : window.navigator.msPointerEnabled ? {
+                start: &apos;MSPointerDown&apos;,
+                move: &apos;MSPointerMove&apos;,
+                end: &apos;MSPointerUp&apos;
+            } : {
+                start: &apos;mousedown touchstart&apos;,
+                move: &apos;mousemove touchmove&apos;,
+                end: &apos;mouseup touchend&apos;
+            };
+        }
+    
+        // https://github.com/WICG/EventListenerOptions/blob/gh-pages/explainer.md
+        // Issue #785
+        function getSupportsPassive ( ) {
+    
+            var supportsPassive = false;
+    
+            try {
+    
+                var opts = Object.defineProperty({}, &apos;passive&apos;, {
+                    get: function() {
+                        supportsPassive = true;
+                    }
+                });
+    
+                window.addEventListener(&apos;test&apos;, null, opts);
+    
+            } catch (e) {}
+    
+            return supportsPassive;
+        }
+    
+        function getSupportsTouchActionNone ( ) {
+            return window.CSS &amp;&amp; CSS.supports &amp;&amp; CSS.supports(&apos;touch-action&apos;, &apos;none&apos;);
+        }
+    
+    
+    // Value calculation
+    
+        // Determine the size of a sub-range in relation to a full range.
+        function subRangeRatio ( pa, pb ) {
+            return (100 / (pb - pa));
+        }
+    
+        // (percentage) How many percent is this value of this range?
+        function fromPercentage ( range, value ) {
+            return (value * 100) / ( range[1] - range[0] );
+        }
+    
+        // (percentage) Where is this value on this range?
+        function toPercentage ( range, value ) {
+            return fromPercentage( range, range[0] &lt; 0 ?
+                value + Math.abs(range[0]) :
+                    value - range[0] );
+        }
+    
+        // (value) How much is this percentage on this range?
+        function isPercentage ( range, value ) {
+            return ((value * ( range[1] - range[0] )) / 100) + range[0];
+        }
+    
+    
+    // Range conversion
+    
+        function getJ ( value, arr ) {
+    
+            var j = 1;
+    
+            while ( value &gt;= arr[j] ){
+                j += 1;
+            }
+    
+            return j;
+        }
+    
+        // (percentage) Input a value, find where, on a scale of 0-100, it applies.
+        function toStepping ( xVal, xPct, value ) {
+    
+            if ( value &gt;= xVal.slice(-1)[0] ){
+                return 100;
+            }
+    
+            var j = getJ( value, xVal ), va, vb, pa, pb;
+    
+            va = xVal[j-1];
+            vb = xVal[j];
+            pa = xPct[j-1];
+            pb = xPct[j];
+    
+            return pa + (toPercentage([va, vb], value) / subRangeRatio (pa, pb));
+        }
+    
+        // (value) Input a percentage, find where it is on the specified range.
+        function fromStepping ( xVal, xPct, value ) {
+    
+            // There is no range group that fits 100
+            if ( value &gt;= 100 ){
+                return xVal.slice(-1)[0];
+            }
+    
+            var j = getJ( value, xPct ), va, vb, pa, pb;
+    
+            va = xVal[j-1];
+            vb = xVal[j];
+            pa = xPct[j-1];
+            pb = xPct[j];
+    
+            return isPercentage([va, vb], (value - pa) * subRangeRatio (pa, pb));
+        }
+    
+        // (percentage) Get the step that applies at a certain value.
+        function getStep ( xPct, xSteps, snap, value ) {
+    
+            if ( value === 100 ) {
+                return value;
+            }
+    
+            var j = getJ( value, xPct ), a, b;
+    
+            // If &apos;snap&apos; is set, steps are used as fixed points on the slider.
+            if ( snap ) {
+    
+                a = xPct[j-1];
+                b = xPct[j];
+    
+                // Find the closest position, a or b.
+                if ((value - a) &gt; ((b-a)/2)){
+                    return b;
+                }
+    
+                return a;
+            }
+    
+            if ( !xSteps[j-1] ){
+                return value;
+            }
+    
+            return xPct[j-1] + closest(
+                value - xPct[j-1],
+                xSteps[j-1]
+            );
+        }
+    
+    
+    // Entry parsing
+    
+        function handleEntryPoint ( index, value, that ) {
+    
+            var percentage;
+    
+            // Wrap numerical input in an array.
+            if ( typeof value === &quot;number&quot; ) {
+                value = [value];
+            }
+    
+            // Reject any invalid input, by testing whether value is an array.
+            if ( Object.prototype.toString.call( value ) !== &apos;[object Array]&apos; ){
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;range&apos; contains invalid value.&quot;);
+            }
+    
+            // Covert min/max syntax to 0 and 100.
+            if ( index === &apos;min&apos; ) {
+                percentage = 0;
+            } else if ( index === &apos;max&apos; ) {
+                percentage = 100;
+            } else {
+                percentage = parseFloat( index );
+            }
+    
+            // Check for correct input.
+            if ( !isNumeric( percentage ) || !isNumeric( value[0] ) ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;range&apos; value isn&apos;t numeric.&quot;);
+            }
+    
+            // Store values.
+            that.xPct.push( percentage );
+            that.xVal.push( value[0] );
+    
+            // NaN will evaluate to false too, but to keep
+            // logging clear, set step explicitly. Make sure
+            // not to override the &apos;step&apos; setting with false.
+            if ( !percentage ) {
+                if ( !isNaN( value[1] ) ) {
+                    that.xSteps[0] = value[1];
+                }
+            } else {
+                that.xSteps.push( isNaN(value[1]) ? false : value[1] );
+            }
+    
+            that.xHighestCompleteStep.push(0);
+        }
+    
+        function handleStepPoint ( i, n, that ) {
+    
+            // Ignore &apos;false&apos; stepping.
+            if ( !n ) {
+                return true;
+            }
+    
+            // Factor to range ratio
+            that.xSteps[i] = fromPercentage([
+                 that.xVal[i]
+                ,that.xVal[i+1]
+            ], n) / subRangeRatio (
+                that.xPct[i],
+                that.xPct[i+1] );
+    
+            var totalSteps = (that.xVal[i+1] - that.xVal[i]) / that.xNumSteps[i];
+            var highestStep = Math.ceil(Number(totalSteps.toFixed(3)) - 1);
+            var step = that.xVal[i] + (that.xNumSteps[i] * highestStep);
+    
+            that.xHighestCompleteStep[i] = step;
+        }
+    
+    
+    // Interface
+    
+        function Spectrum ( entry, snap, singleStep ) {
+    
+            this.xPct = [];
+            this.xVal = [];
+            this.xSteps = [ singleStep || false ];
+            this.xNumSteps = [ false ];
+            this.xHighestCompleteStep = [];
+    
+            this.snap = snap;
+    
+            var index, ordered = [ /* [0, &apos;min&apos;], [1, &apos;50%&apos;], [2, &apos;max&apos;] */ ];
+    
+            // Map the object keys to an array.
+            for ( index in entry ) {
+                if ( entry.hasOwnProperty(index) ) {
+                    ordered.push([entry[index], index]);
+                }
+            }
+    
+            // Sort all entries by value (numeric sort).
+            if ( ordered.length &amp;&amp; typeof ordered[0][0] === &quot;object&quot; ) {
+                ordered.sort(function(a, b) { return a[0][0] - b[0][0]; });
+            } else {
+                ordered.sort(function(a, b) { return a[0] - b[0]; });
+            }
+    
+    
+            // Convert all entries to subranges.
+            for ( index = 0; index &lt; ordered.length; index++ ) {
+                handleEntryPoint(ordered[index][1], ordered[index][0], this);
+            }
+    
+            // Store the actual step values.
+            // xSteps is sorted in the same order as xPct and xVal.
+            this.xNumSteps = this.xSteps.slice(0);
+    
+            // Convert all numeric steps to the percentage of the subrange they represent.
+            for ( index = 0; index &lt; this.xNumSteps.length; index++ ) {
+                handleStepPoint(index, this.xNumSteps[index], this);
+            }
+        }
+    
+        Spectrum.prototype.getMargin = function ( value ) {
+    
+            var step = this.xNumSteps[0];
+    
+            if ( step &amp;&amp; ((value / step) % 1) !== 0 ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;limit&apos;, &apos;margin&apos; and &apos;padding&apos; must be divisible by step.&quot;);
+            }
+    
+            return this.xPct.length === 2 ? fromPercentage(this.xVal, value) : false;
+        };
+    
+        Spectrum.prototype.toStepping = function ( value ) {
+    
+            value = toStepping( this.xVal, this.xPct, value );
+    
+            return value;
+        };
+    
+        Spectrum.prototype.fromStepping = function ( value ) {
+    
+            return fromStepping( this.xVal, this.xPct, value );
+        };
+    
+        Spectrum.prototype.getStep = function ( value ) {
+    
+            value = getStep(this.xPct, this.xSteps, this.snap, value );
+    
+            return value;
+        };
+    
+        Spectrum.prototype.getNearbySteps = function ( value ) {
+    
+            var j = getJ(value, this.xPct);
+    
+            return {
+                stepBefore: { startValue: this.xVal[j-2], step: this.xNumSteps[j-2], highestStep: this.xHighestCompleteStep[j-2] },
+                thisStep: { startValue: this.xVal[j-1], step: this.xNumSteps[j-1], highestStep: this.xHighestCompleteStep[j-1] },
+                stepAfter: { startValue: this.xVal[j-0], step: this.xNumSteps[j-0], highestStep: this.xHighestCompleteStep[j-0] }
+            };
+        };
+    
+        Spectrum.prototype.countStepDecimals = function () {
+            var stepDecimals = this.xNumSteps.map(countDecimals);
+            return Math.max.apply(null, stepDecimals);
+         };
+    
+        // Outside testing
+        Spectrum.prototype.convert = function ( value ) {
+            return this.getStep(this.toStepping(value));
+        };
+    
+    /*	Every input option is tested and parsed. This&apos;ll prevent
+        endless validation in internal methods. These tests are
+        structured with an item for every option available. An
+        option can be marked as required by setting the &apos;r&apos; flag.
+        The testing function is provided with three arguments:
+            - The provided value for the option;
+            - A reference to the options object;
+            - The name for the option;
+    
+        The testing function returns false when an error is detected,
+        or true when everything is OK. It can also modify the option
+        object, to make sure all values can be correctly looped elsewhere. */
+    
+        var defaultFormatter = { &apos;to&apos;: function( value ){
+            return value !== undefined &amp;&amp; value.toFixed(2);
+        }, &apos;from&apos;: Number };
+    
+        function validateFormat ( entry ) {
+    
+            // Any object with a to and from method is supported.
+            if ( isValidFormatter(entry) ) {
+                return true;
+            }
+    
+            throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;format&apos; requires &apos;to&apos; and &apos;from&apos; methods.&quot;);
+        }
+    
+        function testStep ( parsed, entry ) {
+    
+            if ( !isNumeric( entry ) ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;step&apos; is not numeric.&quot;);
+            }
+    
+            // The step option can still be used to set stepping
+            // for linear sliders. Overwritten if set in &apos;range&apos;.
+            parsed.singleStep = entry;
+        }
+    
+        function testRange ( parsed, entry ) {
+    
+            // Filter incorrect input.
+            if ( typeof entry !== &apos;object&apos; || Array.isArray(entry) ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;range&apos; is not an object.&quot;);
+            }
+    
+            // Catch missing start or end.
+            if ( entry.min === undefined || entry.max === undefined ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): Missing &apos;min&apos; or &apos;max&apos; in &apos;range&apos;.&quot;);
+            }
+    
+            // Catch equal start or end.
+            if ( entry.min === entry.max ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;range&apos; &apos;min&apos; and &apos;max&apos; cannot be equal.&quot;);
+            }
+    
+            parsed.spectrum = new Spectrum(entry, parsed.snap, parsed.singleStep);
+        }
+    
+        function testStart ( parsed, entry ) {
+    
+            entry = asArray(entry);
+    
+            // Validate input. Values aren&apos;t tested, as the public .val method
+            // will always provide a valid location.
+            if ( !Array.isArray( entry ) || !entry.length ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;start&apos; option is incorrect.&quot;);
+            }
+    
+            // Store the number of handles.
+            parsed.handles = entry.length;
+    
+            // When the slider is initialized, the .val method will
+            // be called with the start options.
+            parsed.start = entry;
+        }
+    
+        function testSnap ( parsed, entry ) {
+    
+            // Enforce 100% stepping within subranges.
+            parsed.snap = entry;
+    
+            if ( typeof entry !== &apos;boolean&apos; ){
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;snap&apos; option must be a boolean.&quot;);
+            }
+        }
+    
+        function testAnimate ( parsed, entry ) {
+    
+            // Enforce 100% stepping within subranges.
+            parsed.animate = entry;
+    
+            if ( typeof entry !== &apos;boolean&apos; ){
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;animate&apos; option must be a boolean.&quot;);
+            }
+        }
+    
+        function testAnimationDuration ( parsed, entry ) {
+    
+            parsed.animationDuration = entry;
+    
+            if ( typeof entry !== &apos;number&apos; ){
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;animationDuration&apos; option must be a number.&quot;);
+            }
+        }
+    
+        function testConnect ( parsed, entry ) {
+    
+            var connect = [false];
+            var i;
+    
+            // Map legacy options
+            if ( entry === &apos;lower&apos; ) {
+                entry = [true, false];
+            }
+    
+            else if ( entry === &apos;upper&apos; ) {
+                entry = [false, true];
+            }
+    
+            // Handle boolean options
+            if ( entry === true || entry === false ) {
+    
+                for ( i = 1; i &lt; parsed.handles; i++ ) {
+                    connect.push(entry);
+                }
+    
+                connect.push(false);
+            }
+    
+            // Reject invalid input
+            else if ( !Array.isArray( entry ) || !entry.length || entry.length !== parsed.handles + 1 ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;connect&apos; option doesn&apos;t match handle count.&quot;);
+            }
+    
+            else {
+                connect = entry;
+            }
+    
+            parsed.connect = connect;
+        }
+    
+        function testOrientation ( parsed, entry ) {
+    
+            // Set orientation to an a numerical value for easy
+            // array selection.
+            switch ( entry ){
+              case &apos;horizontal&apos;:
+                parsed.ort = 0;
+                break;
+              case &apos;vertical&apos;:
+                parsed.ort = 1;
+                break;
+              default:
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;orientation&apos; option is invalid.&quot;);
+            }
+        }
+    
+        function testMargin ( parsed, entry ) {
+    
+            if ( !isNumeric(entry) ){
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;margin&apos; option must be numeric.&quot;);
+            }
+    
+            // Issue #582
+            if ( entry === 0 ) {
+                return;
+            }
+    
+            parsed.margin = parsed.spectrum.getMargin(entry);
+    
+            if ( !parsed.margin ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;margin&apos; option is only supported on linear sliders.&quot;);
+            }
+        }
+    
+        function testLimit ( parsed, entry ) {
+    
+            if ( !isNumeric(entry) ){
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;limit&apos; option must be numeric.&quot;);
+            }
+    
+            parsed.limit = parsed.spectrum.getMargin(entry);
+    
+            if ( !parsed.limit || parsed.handles &lt; 2 ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;limit&apos; option is only supported on linear sliders with 2 or more handles.&quot;);
+            }
+        }
+    
+        function testPadding ( parsed, entry ) {
+    
+            if ( !isNumeric(entry) ){
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;padding&apos; option must be numeric.&quot;);
+            }
+    
+            if ( entry === 0 ) {
+                return;
+            }
+    
+            parsed.padding = parsed.spectrum.getMargin(entry);
+    
+            if ( !parsed.padding ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;padding&apos; option is only supported on linear sliders.&quot;);
+            }
+    
+            if ( parsed.padding &lt; 0 ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;padding&apos; option must be a positive number.&quot;);
+            }
+    
+            if ( parsed.padding &gt;= 50 ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;padding&apos; option must be less than half the range.&quot;);
+            }
+        }
+    
+        function testDirection ( parsed, entry ) {
+    
+            // Set direction as a numerical value for easy parsing.
+            // Invert connection for RTL sliders, so that the proper
+            // handles get the connect/background classes.
+            switch ( entry ) {
+              case &apos;ltr&apos;:
+                parsed.dir = 0;
+                break;
+              case &apos;rtl&apos;:
+                parsed.dir = 1;
+                break;
+              default:
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;direction&apos; option was not recognized.&quot;);
+            }
+        }
+    
+        function testBehaviour ( parsed, entry ) {
+    
+            // Make sure the input is a string.
+            if ( typeof entry !== &apos;string&apos; ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;behaviour&apos; must be a string containing options.&quot;);
+            }
+    
+            // Check if the string contains any keywords.
+            // None are required.
+            var tap = entry.indexOf(&apos;tap&apos;) &gt;= 0;
+            var drag = entry.indexOf(&apos;drag&apos;) &gt;= 0;
+            var fixed = entry.indexOf(&apos;fixed&apos;) &gt;= 0;
+            var snap = entry.indexOf(&apos;snap&apos;) &gt;= 0;
+            var hover = entry.indexOf(&apos;hover&apos;) &gt;= 0;
+    
+            if ( fixed ) {
+    
+                if ( parsed.handles !== 2 ) {
+                    throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;fixed&apos; behaviour must be used with 2 handles&quot;);
+                }
+    
+                // Use margin to enforce fixed state
+                testMargin(parsed, parsed.start[1] - parsed.start[0]);
+            }
+    
+            parsed.events = {
+                tap: tap || snap,
+                drag: drag,
+                fixed: fixed,
+                snap: snap,
+                hover: hover
+            };
+        }
+    
+        function testMultitouch ( parsed, entry ) {
+            parsed.multitouch = entry;
+    
+            if ( typeof entry !== &apos;boolean&apos; ){
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;multitouch&apos; option must be a boolean.&quot;);
+            }
+        }
+    
+        function testTooltips ( parsed, entry ) {
+    
+            if ( entry === false ) {
+                return;
+            }
+    
+            else if ( entry === true ) {
+    
+                parsed.tooltips = [];
+    
+                for ( var i = 0; i &lt; parsed.handles; i++ ) {
+                    parsed.tooltips.push(true);
+                }
+            }
+    
+            else {
+    
+                parsed.tooltips = asArray(entry);
+    
+                if ( parsed.tooltips.length !== parsed.handles ) {
+                    throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): must pass a formatter for all handles.&quot;);
+                }
+    
+                parsed.tooltips.forEach(function(formatter){
+                    if ( typeof formatter !== &apos;boolean&apos; &amp;&amp; (typeof formatter !== &apos;object&apos; || typeof formatter.to !== &apos;function&apos;) ) {
+                        throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;tooltips&apos; must be passed a formatter or &apos;false&apos;.&quot;);
+                    }
+                });
+            }
+        }
+    
+        function testAriaFormat ( parsed, entry ) {
+            parsed.ariaFormat = entry;
+            validateFormat(entry);
+        }
+    
+        function testFormat ( parsed, entry ) {
+            parsed.format = entry;
+            validateFormat(entry);
+        }
+    
+        function testCssPrefix ( parsed, entry ) {
+    
+            if ( entry !== undefined &amp;&amp; typeof entry !== &apos;string&apos; &amp;&amp; entry !== false ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;cssPrefix&apos; must be a string or `false`.&quot;);
+            }
+    
+            parsed.cssPrefix = entry;
+        }
+    
+        function testCssClasses ( parsed, entry ) {
+    
+            if ( entry !== undefined &amp;&amp; typeof entry !== &apos;object&apos; ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;cssClasses&apos; must be an object.&quot;);
+            }
+    
+            if ( typeof parsed.cssPrefix === &apos;string&apos; ) {
+                parsed.cssClasses = {};
+    
+                for ( var key in entry ) {
+                    if ( !entry.hasOwnProperty(key) ) { continue; }
+    
+                    parsed.cssClasses[key] = parsed.cssPrefix + entry[key];
+                }
+            } else {
+                parsed.cssClasses = entry;
+            }
+        }
+    
+        function testUseRaf ( parsed, entry ) {
+            if ( entry === true || entry === false ) {
+                parsed.useRequestAnimationFrame = entry;
+            } else {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;useRequestAnimationFrame&apos; option should be true (default) or false.&quot;);
+            }
+        }
+    
+        // Test all developer settings and parse to assumption-safe values.
+        function testOptions ( options ) {
+    
+            // To prove a fix for #537, freeze options here.
+            // If the object is modified, an error will be thrown.
+            // Object.freeze(options);
+    
+            var parsed = {
+                margin: 0,
+                limit: 0,
+                padding: 0,
+                animate: true,
+                animationDuration: 300,
+                ariaFormat: defaultFormatter,
+                format: defaultFormatter
+            };
+    
+            // Tests are executed in the order they are presented here.
+            var tests = {
+                &apos;step&apos;: { r: false, t: testStep },
+                &apos;start&apos;: { r: true, t: testStart },
+                &apos;connect&apos;: { r: true, t: testConnect },
+                &apos;direction&apos;: { r: true, t: testDirection },
+                &apos;snap&apos;: { r: false, t: testSnap },
+                &apos;animate&apos;: { r: false, t: testAnimate },
+                &apos;animationDuration&apos;: { r: false, t: testAnimationDuration },
+                &apos;range&apos;: { r: true, t: testRange },
+                &apos;orientation&apos;: { r: false, t: testOrientation },
+                &apos;margin&apos;: { r: false, t: testMargin },
+                &apos;limit&apos;: { r: false, t: testLimit },
+                &apos;padding&apos;: { r: false, t: testPadding },
+                &apos;behaviour&apos;: { r: true, t: testBehaviour },
+                &apos;multitouch&apos;: { r: true, t: testMultitouch },
+                &apos;ariaFormat&apos;: { r: false, t: testAriaFormat },
+                &apos;format&apos;: { r: false, t: testFormat },
+                &apos;tooltips&apos;: { r: false, t: testTooltips },
+                &apos;cssPrefix&apos;: { r: false, t: testCssPrefix },
+                &apos;cssClasses&apos;: { r: false, t: testCssClasses },
+                &apos;useRequestAnimationFrame&apos;: { r: false, t: testUseRaf }
+            };
+    
+            var defaults = {
+                &apos;connect&apos;: false,
+                &apos;direction&apos;: &apos;ltr&apos;,
+                &apos;behaviour&apos;: &apos;tap&apos;,
+                &apos;multitouch&apos;: false,
+                &apos;orientation&apos;: &apos;horizontal&apos;,
+                &apos;cssPrefix&apos; : &apos;noUi-&apos;,
+                &apos;cssClasses&apos;: {
+                    target: &apos;target&apos;,
+                    base: &apos;base&apos;,
+                    origin: &apos;origin&apos;,
+                    handle: &apos;handle&apos;,
+                    handleLower: &apos;handle-lower&apos;,
+                    handleUpper: &apos;handle-upper&apos;,
+                    horizontal: &apos;horizontal&apos;,
+                    vertical: &apos;vertical&apos;,
+                    background: &apos;background&apos;,
+                    connect: &apos;connect&apos;,
+                    ltr: &apos;ltr&apos;,
+                    rtl: &apos;rtl&apos;,
+                    draggable: &apos;draggable&apos;,
+                    drag: &apos;state-drag&apos;,
+                    tap: &apos;state-tap&apos;,
+                    active: &apos;active&apos;,
+                    tooltip: &apos;tooltip&apos;,
+                    pips: &apos;pips&apos;,
+                    pipsHorizontal: &apos;pips-horizontal&apos;,
+                    pipsVertical: &apos;pips-vertical&apos;,
+                    marker: &apos;marker&apos;,
+                    markerHorizontal: &apos;marker-horizontal&apos;,
+                    markerVertical: &apos;marker-vertical&apos;,
+                    markerNormal: &apos;marker-normal&apos;,
+                    markerLarge: &apos;marker-large&apos;,
+                    markerSub: &apos;marker-sub&apos;,
+                    value: &apos;value&apos;,
+                    valueHorizontal: &apos;value-horizontal&apos;,
+                    valueVertical: &apos;value-vertical&apos;,
+                    valueNormal: &apos;value-normal&apos;,
+                    valueLarge: &apos;value-large&apos;,
+                    valueSub: &apos;value-sub&apos;
+                },
+                &apos;useRequestAnimationFrame&apos;: true
+            };
+    
+            // AriaFormat defaults to regular format, if any.
+            if ( options.format &amp;&amp; !options.ariaFormat ) {
+                options.ariaFormat = options.format;
+            }
+    
+            // Run all options through a testing mechanism to ensure correct
+            // input. It should be noted that options might get modified to
+            // be handled properly. E.g. wrapping integers in arrays.
+            Object.keys(tests).forEach(function( name ){
+    
+                // If the option isn&apos;t set, but it is required, throw an error.
+                if ( options[name] === undefined &amp;&amp; defaults[name] === undefined ) {
+    
+                    if ( tests[name].r ) {
+                        throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;&quot; + name + &quot;&apos; is required.&quot;);
+                    }
+    
+                    return true;
+                }
+    
+                tests[name].t( parsed, options[name] === undefined ? defaults[name] : options[name] );
+            });
+    
+            // Forward pips options
+            parsed.pips = options.pips;
+    
+            var styles = [[&apos;left&apos;, &apos;top&apos;], [&apos;right&apos;, &apos;bottom&apos;]];
+    
+            // Pre-define the styles.
+            parsed.style = styles[parsed.dir][parsed.ort];
+            parsed.styleOposite = styles[parsed.dir?0:1][parsed.ort];
+    
+            return parsed;
+        }
+    
+    
+    function closure ( target, options, originalOptions ){
+    
+        var actions = getActions();
+        var supportsTouchActionNone = getSupportsTouchActionNone();
+        var supportsPassive = supportsTouchActionNone &amp;&amp; getSupportsPassive();
+    
+        // All variables local to &apos;closure&apos; are prefixed with &apos;scope_&apos;
+        var scope_Target = target;
+        var scope_Locations = [];
+        var scope_Base;
+        var scope_Handles;
+        var scope_HandleNumbers = [];
+        var scope_ActiveHandlesCount = 0;
+        var scope_Connects;
+        var scope_Spectrum = options.spectrum;
+        var scope_Values = [];
+        var scope_Events = {};
+        var scope_Self;
+        var scope_Pips;
+        var scope_Document = target.ownerDocument;
+        var scope_DocumentElement = scope_Document.documentElement;
+        var scope_Body = scope_Document.body;
+    
+    
+        // Creates a node, adds it to target, returns the new node.
+        function addNodeTo ( target, className ) {
+    
+            var div = scope_Document.createElement(&apos;div&apos;);
+    
+            if ( className ) {
+                addClass(div, className);
+            }
+    
+            target.appendChild(div);
+    
+            return div;
+        }
+    
+        // Append a origin to the base
+        function addOrigin ( base, handleNumber ) {
+    
+            var origin = addNodeTo(base, options.cssClasses.origin);
+            var handle = addNodeTo(origin, options.cssClasses.handle);
+    
+            handle.setAttribute(&apos;data-handle&apos;, handleNumber);
+    
+            // https://developer.mozilla.org/en-US/docs/Web/HTML/Global_attributes/tabindex
+            // 0 = focusable and reachable
+            handle.setAttribute(&apos;tabindex&apos;, &apos;0&apos;);
+            handle.setAttribute(&apos;role&apos;, &apos;slider&apos;);
+            handle.setAttribute(&apos;aria-orientation&apos;, options.ort ? &apos;vertical&apos; : &apos;horizontal&apos;);
+    
+            if ( handleNumber === 0 ) {
+                addClass(handle, options.cssClasses.handleLower);
+            }
+    
+            else if ( handleNumber === options.handles - 1 ) {
+                addClass(handle, options.cssClasses.handleUpper);
+            }
+    
+            return origin;
+        }
+    
+        // Insert nodes for connect elements
+        function addConnect ( base, add ) {
+    
+            if ( !add ) {
+                return false;
+            }
+    
+            return addNodeTo(base, options.cssClasses.connect);
+        }
+    
+        // Add handles to the slider base.
+        function addElements ( connectOptions, base ) {
+    
+            scope_Handles = [];
+            scope_Connects = [];
+    
+            scope_Connects.push(addConnect(base, connectOptions[0]));
+    
+            // [::::O====O====O====]
+            // connectOptions = [0, 1, 1, 1]
+    
+            for ( var i = 0; i &lt; options.handles; i++ ) {
+                // Keep a list of all added handles.
+                scope_Handles.push(addOrigin(base, i));
+                scope_HandleNumbers[i] = i;
+                scope_Connects.push(addConnect(base, connectOptions[i + 1]));
+            }
+        }
+    
+        // Initialize a single slider.
+        function addSlider ( target ) {
+    
+            // Apply classes and data to the target.
+            addClass(target, options.cssClasses.target);
+    
+            if ( options.dir === 0 ) {
+                addClass(target, options.cssClasses.ltr);
+            } else {
+                addClass(target, options.cssClasses.rtl);
+            }
+    
+            if ( options.ort === 0 ) {
+                addClass(target, options.cssClasses.horizontal);
+            } else {
+                addClass(target, options.cssClasses.vertical);
+            }
+    
+            scope_Base = addNodeTo(target, options.cssClasses.base);
+        }
+    
+    
+        function addTooltip ( handle, handleNumber ) {
+    
+            if ( !options.tooltips[handleNumber] ) {
+                return false;
+            }
+    
+            return addNodeTo(handle.firstChild, options.cssClasses.tooltip);
+        }
+    
+        // The tooltips option is a shorthand for using the &apos;update&apos; event.
+        function tooltips ( ) {
+    
+            // Tooltips are added with options.tooltips in original order.
+            var tips = scope_Handles.map(addTooltip);
+    
+            bindEvent(&apos;update&apos;, function(values, handleNumber, unencoded) {
+    
+                if ( !tips[handleNumber] ) {
+                    return;
+                }
+    
+                var formattedValue = values[handleNumber];
+    
+                if ( options.tooltips[handleNumber] !== true ) {
+                    formattedValue = options.tooltips[handleNumber].to(unencoded[handleNumber]);
+                }
+    
+                tips[handleNumber].innerHTML = formattedValue;
+            });
+        }
+    
+    
+        function aria ( ) {
+    
+            bindEvent(&apos;update&apos;, function ( values, handleNumber, unencoded, tap, positions ) {
+    
+                // Update Aria Values for all handles, as a change in one changes min and max values for the next.
+                scope_HandleNumbers.forEach(function( handleNumber ){
+    
+                    var handle = scope_Handles[handleNumber];
+    
+                    var min = checkHandlePosition(scope_Locations, handleNumber, 0, true, true, true);
+                    var max = checkHandlePosition(scope_Locations, handleNumber, 100, true, true, true);
+    
+                    var now = positions[handleNumber];
+                    var text = options.ariaFormat.to(unencoded[handleNumber]);
+    
+                    handle.children[0].setAttribute(&apos;aria-valuemin&apos;, min.toFixed(1));
+                    handle.children[0].setAttribute(&apos;aria-valuemax&apos;, max.toFixed(1));
+                    handle.children[0].setAttribute(&apos;aria-valuenow&apos;, now.toFixed(1));
+                    handle.children[0].setAttribute(&apos;aria-valuetext&apos;, text);
+                });
+            });
+        }
+    
+    
+        function getGroup ( mode, values, stepped ) {
+    
+            // Use the range.
+            if ( mode === &apos;range&apos; || mode === &apos;steps&apos; ) {
+                return scope_Spectrum.xVal;
+            }
+    
+            if ( mode === &apos;count&apos; ) {
+    
+                if ( !values ) {
+                    throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): &apos;values&apos; required for mode &apos;count&apos;.&quot;);
+                }
+    
+                // Divide 0 - 100 in &apos;count&apos; parts.
+                var spread = ( 100 / (values - 1) );
+                var v;
+                var i = 0;
+    
+                values = [];
+    
+                // List these parts and have them handled as &apos;positions&apos;.
+                while ( (v = i++ * spread) &lt;= 100 ) {
+                    values.push(v);
+                }
+    
+                mode = &apos;positions&apos;;
+            }
+    
+            if ( mode === &apos;positions&apos; ) {
+    
+                // Map all percentages to on-range values.
+                return values.map(function( value ){
+                    return scope_Spectrum.fromStepping( stepped ? scope_Spectrum.getStep( value ) : value );
+                });
+            }
+    
+            if ( mode === &apos;values&apos; ) {
+    
+                // If the value must be stepped, it needs to be converted to a percentage first.
+                if ( stepped ) {
+    
+                    return values.map(function( value ){
+    
+                        // Convert to percentage, apply step, return to value.
+                        return scope_Spectrum.fromStepping( scope_Spectrum.getStep( scope_Spectrum.toStepping( value ) ) );
+                    });
+    
+                }
+    
+                // Otherwise, we can simply use the values.
+                return values;
+            }
+        }
+    
+        function generateSpread ( density, mode, group ) {
+    
+            function safeIncrement(value, increment) {
+                // Avoid floating point variance by dropping the smallest decimal places.
+                return (value + increment).toFixed(7) / 1;
+            }
+    
+            var indexes = {};
+            var firstInRange = scope_Spectrum.xVal[0];
+            var lastInRange = scope_Spectrum.xVal[scope_Spectrum.xVal.length-1];
+            var ignoreFirst = false;
+            var ignoreLast = false;
+            var prevPct = 0;
+    
+            // Create a copy of the group, sort it and filter away all duplicates.
+            group = unique(group.slice().sort(function(a, b){ return a - b; }));
+    
+            // Make sure the range starts with the first element.
+            if ( group[0] !== firstInRange ) {
+                group.unshift(firstInRange);
+                ignoreFirst = true;
+            }
+    
+            // Likewise for the last one.
+            if ( group[group.length - 1] !== lastInRange ) {
+                group.push(lastInRange);
+                ignoreLast = true;
+            }
+    
+            group.forEach(function ( current, index ) {
+    
+                // Get the current step and the lower + upper positions.
+                var step;
+                var i;
+                var q;
+                var low = current;
+                var high = group[index+1];
+                var newPct;
+                var pctDifference;
+                var pctPos;
+                var type;
+                var steps;
+                var realSteps;
+                var stepsize;
+    
+                // When using &apos;steps&apos; mode, use the provided steps.
+                // Otherwise, we&apos;ll step on to the next subrange.
+                if ( mode === &apos;steps&apos; ) {
+                    step = scope_Spectrum.xNumSteps[ index ];
+                }
+    
+                // Default to a &apos;full&apos; step.
+                if ( !step ) {
+                    step = high-low;
+                }
+    
+                // Low can be 0, so test for false. If high is undefined,
+                // we are at the last subrange. Index 0 is already handled.
+                if ( low === false || high === undefined ) {
+                    return;
+                }
+    
+                // Make sure step isn&apos;t 0, which would cause an infinite loop (#654)
+                step = Math.max(step, 0.0000001);
+    
+                // Find all steps in the subrange.
+                for ( i = low; i &lt;= high; i = safeIncrement(i, step) ) {
+    
+                    // Get the percentage value for the current step,
+                    // calculate the size for the subrange.
+                    newPct = scope_Spectrum.toStepping( i );
+                    pctDifference = newPct - prevPct;
+    
+                    steps = pctDifference / density;
+                    realSteps = Math.round(steps);
+    
+                    // This ratio represents the ammount of percentage-space a point indicates.
+                    // For a density 1 the points/percentage = 1. For density 2, that percentage needs to be re-devided.
+                    // Round the percentage offset to an even number, then divide by two
+                    // to spread the offset on both sides of the range.
+                    stepsize = pctDifference/realSteps;
+    
+                    // Divide all points evenly, adding the correct number to this subrange.
+                    // Run up to &lt;= so that 100% gets a point, event if ignoreLast is set.
+                    for ( q = 1; q &lt;= realSteps; q += 1 ) {
+    
+                        // The ratio between the rounded value and the actual size might be ~1% off.
+                        // Correct the percentage offset by the number of points
+                        // per subrange. density = 1 will result in 100 points on the
+                        // full range, 2 for 50, 4 for 25, etc.
+                        pctPos = prevPct + ( q * stepsize );
+                        indexes[pctPos.toFixed(5)] = [&apos;x&apos;, 0];
+                    }
+    
+                    // Determine the point type.
+                    type = (group.indexOf(i) &gt; -1) ? 1 : ( mode === &apos;steps&apos; ? 2 : 0 );
+    
+                    // Enforce the &apos;ignoreFirst&apos; option by overwriting the type for 0.
+                    if ( !index &amp;&amp; ignoreFirst ) {
+                        type = 0;
+                    }
+    
+                    if ( !(i === high &amp;&amp; ignoreLast)) {
+                        // Mark the &apos;type&apos; of this point. 0 = plain, 1 = real value, 2 = step value.
+                        indexes[newPct.toFixed(5)] = [i, type];
+                    }
+    
+                    // Update the percentage count.
+                    prevPct = newPct;
+                }
+            });
+    
+            return indexes;
+        }
+    
+        function addMarking ( spread, filterFunc, formatter ) {
+    
+            var element = scope_Document.createElement(&apos;div&apos;);
+    
+            var valueSizeClasses = [
+                options.cssClasses.valueNormal,
+                options.cssClasses.valueLarge,
+                options.cssClasses.valueSub
+            ];
+            var markerSizeClasses = [
+                options.cssClasses.markerNormal,
+                options.cssClasses.markerLarge,
+                options.cssClasses.markerSub
+            ];
+            var valueOrientationClasses = [
+                options.cssClasses.valueHorizontal,
+                options.cssClasses.valueVertical
+            ];
+            var markerOrientationClasses = [
+                options.cssClasses.markerHorizontal,
+                options.cssClasses.markerVertical
+            ];
+    
+            addClass(element, options.cssClasses.pips);
+            addClass(element, options.ort === 0 ? options.cssClasses.pipsHorizontal : options.cssClasses.pipsVertical);
+    
+            function getClasses( type, source ){
+                var a = source === options.cssClasses.value;
+                var orientationClasses = a ? valueOrientationClasses : markerOrientationClasses;
+                var sizeClasses = a ? valueSizeClasses : markerSizeClasses;
+    
+                return source + &apos; &apos; + orientationClasses[options.ort] + &apos; &apos; + sizeClasses[type];
+            }
+    
+            function addSpread ( offset, values ){
+    
+                // Apply the filter function, if it is set.
+                values[1] = (values[1] &amp;&amp; filterFunc) ? filterFunc(values[0], values[1]) : values[1];
+    
+                // Add a marker for every point
+                var node = addNodeTo(element, false);
+                    node.className = getClasses(values[1], options.cssClasses.marker);
+                    node.style[options.style] = offset + &apos;%&apos;;
+    
+                // Values are only appended for points marked &apos;1&apos; or &apos;2&apos;.
+                if ( values[1] ) {
+                    node = addNodeTo(element, false);
+                    node.className = getClasses(values[1], options.cssClasses.value);
+                    node.style[options.style] = offset + &apos;%&apos;;
+                    node.innerText = formatter.to(values[0]);
+                }
+            }
+    
+            // Append all points.
+            Object.keys(spread).forEach(function(a){
+                addSpread(a, spread[a]);
+            });
+    
+            return element;
+        }
+    
+        function removePips ( ) {
+            if ( scope_Pips ) {
+                removeElement(scope_Pips);
+                scope_Pips = null;
+            }
+        }
+    
+        function pips ( grid ) {
+    
+            // Fix #669
+            removePips();
+    
+            var mode = grid.mode;
+            var density = grid.density || 1;
+            var filter = grid.filter || false;
+            var values = grid.values || false;
+            var stepped = grid.stepped || false;
+            var group = getGroup( mode, values, stepped );
+            var spread = generateSpread( density, mode, group );
+            var format = grid.format || {
+                to: Math.round
+            };
+    
+            scope_Pips = scope_Target.appendChild(addMarking(
+                spread,
+                filter,
+                format
+            ));
+    
+            return scope_Pips;
+        }
+    
+    
+        // Shorthand for base dimensions.
+        function baseSize ( ) {
+            var rect = scope_Base.getBoundingClientRect(), alt = &apos;offset&apos; + [&apos;Width&apos;, &apos;Height&apos;][options.ort];
+            return options.ort === 0 ? (rect.width||scope_Base[alt]) : (rect.height||scope_Base[alt]);
+        }
+    
+        // Handler for attaching events trough a proxy.
+        function attachEvent ( events, element, callback, data ) {
+    
+            // This function can be used to &apos;filter&apos; events to the slider.
+            // element is a node, not a nodeList
+    
+            var method = function ( e ){
+    
+                if ( scope_Target.hasAttribute(&apos;disabled&apos;) ) {
+                    return false;
+                }
+    
+                // Stop if an active &apos;tap&apos; transition is taking place.
+                if ( hasClass(scope_Target, options.cssClasses.tap) ) {
+                    return false;
+                }
+    
+                e = fixEvent(e, data.pageOffset, data.target || element);
+    
+                // Handle reject of multitouch
+                if ( !e ) {
+                    return false;
+                }
+    
+                // Ignore right or middle clicks on start #454
+                if ( events === actions.start &amp;&amp; e.buttons !== undefined &amp;&amp; e.buttons &gt; 1 ) {
+                    return false;
+                }
+    
+                // Ignore right or middle clicks on start #454
+                if ( data.hover &amp;&amp; e.buttons ) {
+                    return false;
+                }
+    
+                // &apos;supportsPassive&apos; is only true if a browser also supports touch-action: none in CSS.
+                // iOS safari does not, so it doesn&apos;t get to benefit from passive scrolling. iOS does support
+                // touch-action: manipulation, but that allows panning, which breaks
+                // sliders after zooming/on non-responsive pages.
+                // See: https://bugs.webkit.org/show_bug.cgi?id=133112
+                if ( !supportsPassive ) {
+                    e.preventDefault();
+                }
+    
+                e.calcPoint = e.points[ options.ort ];
+    
+                // Call the event handler with the event [ and additional data ].
+                callback ( e, data );
+            };
+    
+            var methods = [];
+    
+            // Bind a closure on the target for every event type.
+            events.split(&apos; &apos;).forEach(function( eventName ){
+                element.addEventListener(eventName, method, supportsPassive ? { passive: true } : false);
+                methods.push([eventName, method]);
+            });
+    
+            return methods;
+        }
+    
+        // Provide a clean event with standardized offset values.
+        function fixEvent ( e, pageOffset, target ) {
+    
+            // Filter the event to register the type, which can be
+            // touch, mouse or pointer. Offset changes need to be
+            // made on an event specific basis.
+            var touch = e.type.indexOf(&apos;touch&apos;) === 0;
+            var mouse = e.type.indexOf(&apos;mouse&apos;) === 0;
+            var pointer = e.type.indexOf(&apos;pointer&apos;) === 0;
+    
+            var x;
+            var y;
+    
+            // IE10 implemented pointer events with a prefix;
+            if ( e.type.indexOf(&apos;MSPointer&apos;) === 0 ) {
+                pointer = true;
+            }
+    
+    
+            // In the event that multitouch is activated, the only thing one handle should be concerned
+            // about is the touches that originated on top of it.
+            if ( touch &amp;&amp; options.multitouch ) {
+                // Returns true if a touch originated on the target.
+                var isTouchOnTarget = function (touch) {
+                    return touch.target === target || target.contains(touch.target);
+                };
+                // In the case of touchstart events, we need to make sure there is still no more than one
+                // touch on the target so we look amongst all touches.
+                if (e.type === &apos;touchstart&apos;) {
+                    var targetTouches = Array.prototype.filter.call(e.touches, isTouchOnTarget);
+                    // Do not support more than one touch per handle.
+                    if ( targetTouches.length &gt; 1 ) {
+                        return false;
+                    }
+                    x = targetTouches[0].pageX;
+                    y = targetTouches[0].pageY;
+                } else {
+                // In the other cases, find on changedTouches is enough.
+                    var targetTouch = Array.prototype.find.call(e.changedTouches, isTouchOnTarget);
+                    // Cancel if the target touch has not moved.
+                    if ( !targetTouch ) {
+                        return false;
+                    }
+                    x = targetTouch.pageX;
+                    y = targetTouch.pageY;
+                }
+            } else if ( touch ) {
+                // Fix bug when user touches with two or more fingers on mobile devices.
+                // It&apos;s useful when you have two or more sliders on one page,
+                // that can be touched simultaneously.
+                // #649, #663, #668
+                if ( e.touches.length &gt; 1 ) {
+                    return false;
+                }
+    
+                // noUiSlider supports one movement at a time,
+                // so we can select the first &apos;changedTouch&apos;.
+                x = e.changedTouches[0].pageX;
+                y = e.changedTouches[0].pageY;
+            }
+    
+            pageOffset = pageOffset || getPageOffset(scope_Document);
+    
+            if ( mouse || pointer ) {
+                x = e.clientX + pageOffset.x;
+                y = e.clientY + pageOffset.y;
+            }
+    
+            e.pageOffset = pageOffset;
+            e.points = [x, y];
+            e.cursor = mouse || pointer; // Fix #435
+    
+            return e;
+        }
+    
+        // Translate a coordinate in the document to a percentage on the slider
+        function calcPointToPercentage ( calcPoint ) {
+            var location = calcPoint - offset(scope_Base, options.ort);
+            var proposal = ( location * 100 ) / baseSize();
+            return options.dir ? 100 - proposal : proposal;
+        }
+    
+        // Find handle closest to a certain percentage on the slider
+        function getClosestHandle ( proposal ) {
+    
+            var closest = 100;
+            var handleNumber = false;
+    
+            scope_Handles.forEach(function(handle, index){
+    
+                // Disabled handles are ignored
+                if ( handle.hasAttribute(&apos;disabled&apos;) ) {
+                    return;
+                }
+    
+                var pos = Math.abs(scope_Locations[index] - proposal);
+    
+                if ( pos &lt; closest ) {
+                    handleNumber = index;
+                    closest = pos;
+                }
+            });
+    
+            return handleNumber;
+        }
+    
+        // Moves handle(s) by a percentage
+        // (bool, % to move, [% where handle started, ...], [index in scope_Handles, ...])
+        function moveHandles ( upward, proposal, locations, handleNumbers ) {
+    
+            var proposals = locations.slice();
+    
+            var b = [!upward, upward];
+            var f = [upward, !upward];
+    
+            // Copy handleNumbers so we don&apos;t change the dataset
+            handleNumbers = handleNumbers.slice();
+    
+            // Check to see which handle is &apos;leading&apos;.
+            // If that one can&apos;t move the second can&apos;t either.
+            if ( upward ) {
+                handleNumbers.reverse();
+            }
+    
+            // Step 1: get the maximum percentage that any of the handles can move
+            if ( handleNumbers.length &gt; 1 ) {
+    
+                handleNumbers.forEach(function(handleNumber, o) {
+    
+                    var to = checkHandlePosition(proposals, handleNumber, proposals[handleNumber] + proposal, b[o], f[o], false);
+    
+                    // Stop if one of the handles can&apos;t move.
+                    if ( to === false ) {
+                        proposal = 0;
+                    } else {
+                        proposal = to - proposals[handleNumber];
+                        proposals[handleNumber] = to;
+                    }
+                });
+            }
+    
+            // If using one handle, check backward AND forward
+            else {
+                b = f = [true];
+            }
+    
+            var state = false;
+    
+            // Step 2: Try to set the handles with the found percentage
+            handleNumbers.forEach(function(handleNumber, o) {
+                state = setHandle(handleNumber, locations[handleNumber] + proposal, b[o], f[o]) || state;
+            });
+    
+            // Step 3: If a handle moved, fire events
+            if ( state ) {
+                handleNumbers.forEach(function(handleNumber){
+                    fireEvent(&apos;update&apos;, handleNumber);
+                    fireEvent(&apos;slide&apos;, handleNumber);
+                });
+            }
+        }
+    
+        // External event handling
+        function fireEvent ( eventName, handleNumber, tap ) {
+    
+            Object.keys(scope_Events).forEach(function( targetEvent ) {
+    
+                var eventType = targetEvent.split(&apos;.&apos;)[0];
+    
+                if ( eventName === eventType ) {
+                    scope_Events[targetEvent].forEach(function( callback ) {
+    
+                        callback.call(
+                            // Use the slider public API as the scope (&apos;this&apos;)
+                            scope_Self,
+                            // Return values as array, so arg_1[arg_2] is always valid.
+                            scope_Values.map(options.format.to),
+                            // Handle index, 0 or 1
+                            handleNumber,
+                            // Unformatted slider values
+                            scope_Values.slice(),
+                            // Event is fired by tap, true or false
+                            tap || false,
+                            // Left offset of the handle, in relation to the slider
+                            scope_Locations.slice()
+                        );
+                    });
+                }
+            });
+        }
+    
+    
+        // Fire &apos;end&apos; when a mouse or pen leaves the document.
+        function documentLeave ( event, data ) {
+            if ( event.type === &quot;mouseout&quot; &amp;&amp; event.target.nodeName === &quot;HTML&quot; &amp;&amp; event.relatedTarget === null ){
+                eventEnd (event, data);
+            }
+        }
+    
+        // Handle movement on document for handle and range drag.
+        function eventMove ( event, data ) {
+    
+            // Fix #498
+            // Check value of .buttons in &apos;start&apos; to work around a bug in IE10 mobile (data.buttonsProperty).
+            // https://connect.microsoft.com/IE/feedback/details/927005/mobile-ie10-windows-phone-buttons-property-of-pointermove-event-always-zero
+            // IE9 has .buttons and .which zero on mousemove.
+            // Firefox breaks the spec MDN defines.
+            if ( navigator.appVersion.indexOf(&quot;MSIE 9&quot;) === -1 &amp;&amp; event.buttons === 0 &amp;&amp; data.buttonsProperty !== 0 ) {
+                return eventEnd(event, data);
+            }
+    
+            // Check if we are moving up or down
+            var movement = (options.dir ? -1 : 1) * (event.calcPoint - data.startCalcPoint);
+    
+            // Convert the movement into a percentage of the slider width/height
+            var proposal = (movement * 100) / data.baseSize;
+    
+            moveHandles(movement &gt; 0, proposal, data.locations, data.handleNumbers);
+        }
+    
+        // Unbind move events on document, call callbacks.
+        function eventEnd ( event, data ) {
+    
+            // The handle is no longer active, so remove the class.
+            if ( data.handle ) {
+                removeClass(data.handle, options.cssClasses.active);
+                scope_ActiveHandlesCount -= 1;
+            }
+    
+            // Unbind the move and end events, which are added on &apos;start&apos;.
+            data.listeners.forEach(function( c ) {
+                scope_DocumentElement.removeEventListener(c[0], c[1]);
+            });
+    
+            if ( scope_ActiveHandlesCount === 0 ) {
+                // Remove dragging class.
+                removeClass(scope_Target, options.cssClasses.drag);
+                setZindex();
+    
+                // Remove cursor styles and text-selection events bound to the body.
+                if ( event.cursor ) {
+                    scope_Body.style.cursor = &apos;&apos;;
+                    scope_Body.removeEventListener(&apos;selectstart&apos;, preventDefault);
+                }
+            }
+    
+            data.handleNumbers.forEach(function(handleNumber){
+                fireEvent(&apos;change&apos;, handleNumber);
+                fireEvent(&apos;set&apos;, handleNumber);
+                fireEvent(&apos;end&apos;, handleNumber);
+            });
+        }
+    
+        // Bind move events on document.
+        function eventStart ( event, data ) {
+    
+            var handle;
+            if ( data.handleNumbers.length === 1 ) {
+    
+                var handleOrigin = scope_Handles[data.handleNumbers[0]];
+    
+                // Ignore &apos;disabled&apos; handles
+                if ( handleOrigin.hasAttribute(&apos;disabled&apos;) ) {
+                    return false;
+                }
+    
+                handle = handleOrigin.children[0];
+                scope_ActiveHandlesCount += 1;
+    
+                // Mark the handle as &apos;active&apos; so it can be styled.
+                addClass(handle, options.cssClasses.active);
+            }
+    
+            // A drag should never propagate up to the &apos;tap&apos; event.
+            event.stopPropagation();
+    
+            // Record the event listeners.
+            var listeners = [];
+    
+            // Attach the move and end events.
+            var moveEvent = attachEvent(actions.move, scope_DocumentElement, eventMove, {
+                // The event target has changed so we need to propagate the original one so that we keep
+                // relying on it to extract target touches.
+                target: event.target,
+                handle: handle,
+                listeners: listeners,
+                startCalcPoint: event.calcPoint,
+                baseSize: baseSize(),
+                pageOffset: event.pageOffset,
+                handleNumbers: data.handleNumbers,
+                buttonsProperty: event.buttons,
+                locations: scope_Locations.slice()
+            });
+    
+            var endEvent = attachEvent(actions.end, scope_DocumentElement, eventEnd, {
+                target: event.target,
+                handle: handle,
+                listeners: listeners,
+                handleNumbers: data.handleNumbers
+            });
+    
+            var outEvent = attachEvent(&quot;mouseout&quot;, scope_DocumentElement, documentLeave, {
+                target: event.target,
+                handle: handle,
+                listeners: listeners,
+                handleNumbers: data.handleNumbers
+            });
+    
+            // We want to make sure we pushed the listeners in the listener list rather than creating
+            // a new one as it has already been passed to the event handlers.
+            listeners.push.apply(listeners, moveEvent.concat(endEvent, outEvent));
+    
+            // Text selection isn&apos;t an issue on touch devices,
+            // so adding cursor styles can be skipped.
+            if ( event.cursor ) {
+    
+                // Prevent the &apos;I&apos; cursor and extend the range-drag cursor.
+                scope_Body.style.cursor = getComputedStyle(event.target).cursor;
+    
+                // Mark the target with a dragging state.
+                if ( scope_Handles.length &gt; 1 ) {
+                    addClass(scope_Target, options.cssClasses.drag);
+                }
+    
+                // Prevent text selection when dragging the handles.
+                // In noUiSlider &lt;= 9.2.0, this was handled by calling preventDefault on mouse/touch start/move,
+                // which is scroll blocking. The selectstart event is supported by FireFox starting from version 52,
+                // meaning the only holdout is iOS Safari. This doesn&apos;t matter: text selection isn&apos;t triggered there.
+                // The &apos;cursor&apos; flag is false.
+                // See: http://caniuse.com/#search=selectstart
+                scope_Body.addEventListener(&apos;selectstart&apos;, preventDefault, false);
+            }
+    
+            data.handleNumbers.forEach(function(handleNumber){
+                fireEvent(&apos;start&apos;, handleNumber);
+            });
+        }
+    
+        // Move closest handle to tapped location.
+        function eventTap ( event ) {
+    
+            // The tap event shouldn&apos;t propagate up
+            event.stopPropagation();
+    
+            var proposal = calcPointToPercentage(event.calcPoint);
+            var handleNumber = getClosestHandle(proposal);
+    
+            // Tackle the case that all handles are &apos;disabled&apos;.
+            if ( handleNumber === false ) {
+                return false;
+            }
+    
+            // Flag the slider as it is now in a transitional state.
+            // Transition takes a configurable amount of ms (default 300). Re-enable the slider after that.
+            if ( !options.events.snap ) {
+                addClassFor(scope_Target, options.cssClasses.tap, options.animationDuration);
+            }
+    
+            setHandle(handleNumber, proposal, true, true);
+    
+            setZindex();
+    
+            fireEvent(&apos;slide&apos;, handleNumber, true);
+            fireEvent(&apos;update&apos;, handleNumber, true);
+            fireEvent(&apos;change&apos;, handleNumber, true);
+            fireEvent(&apos;set&apos;, handleNumber, true);
+    
+            if ( options.events.snap ) {
+                eventStart(event, { handleNumbers: [handleNumber] });
+            }
+        }
+    
+        // Fires a &apos;hover&apos; event for a hovered mouse/pen position.
+        function eventHover ( event ) {
+    
+            var proposal = calcPointToPercentage(event.calcPoint);
+    
+            var to = scope_Spectrum.getStep(proposal);
+            var value = scope_Spectrum.fromStepping(to);
+    
+            Object.keys(scope_Events).forEach(function( targetEvent ) {
+                if ( &apos;hover&apos; === targetEvent.split(&apos;.&apos;)[0] ) {
+                    scope_Events[targetEvent].forEach(function( callback ) {
+                        callback.call( scope_Self, value );
+                    });
+                }
+            });
+        }
+    
+        // Attach events to several slider parts.
+        function bindSliderEvents ( behaviour ) {
+    
+            // Attach the standard drag event to the handles.
+            if ( !behaviour.fixed ) {
+    
+                scope_Handles.forEach(function( handle, index ){
+    
+                    // These events are only bound to the visual handle
+                    // element, not the &apos;real&apos; origin element.
+                    attachEvent ( actions.start, handle.children[0], eventStart, {
+                        handleNumbers: [index]
+                    });
+                });
+            }
+    
+            // Attach the tap event to the slider base.
+            if ( behaviour.tap ) {
+                attachEvent (actions.start, scope_Base, eventTap, {});
+            }
+    
+            // Fire hover events
+            if ( behaviour.hover ) {
+                attachEvent (actions.move, scope_Base, eventHover, { hover: true });
+            }
+    
+            // Make the range draggable.
+            if ( behaviour.drag ){
+    
+                scope_Connects.forEach(function( connect, index ){
+    
+                    if ( connect === false || index === 0 || index === scope_Connects.length - 1 ) {
+                        return;
+                    }
+    
+                    var handleBefore = scope_Handles[index - 1];
+                    var handleAfter = scope_Handles[index];
+                    var eventHolders = [connect];
+    
+                    addClass(connect, options.cssClasses.draggable);
+    
+                    // When the range is fixed, the entire range can
+                    // be dragged by the handles. The handle in the first
+                    // origin will propagate the start event upward,
+                    // but it needs to be bound manually on the other.
+                    if ( behaviour.fixed ) {
+                        eventHolders.push(handleBefore.children[0]);
+                        eventHolders.push(handleAfter.children[0]);
+                    }
+    
+                    eventHolders.forEach(function( eventHolder ) {
+                        attachEvent ( actions.start, eventHolder, eventStart, {
+                            handles: [handleBefore, handleAfter],
+                            handleNumbers: [index - 1, index]
+                        });
+                    });
+                });
+            }
+        }
+    
+    
+        // Split out the handle positioning logic so the Move event can use it, too
+        function checkHandlePosition ( reference, handleNumber, to, lookBackward, lookForward, getValue ) {
+    
+            // For sliders with multiple handles, limit movement to the other handle.
+            // Apply the margin option by adding it to the handle positions.
+            if ( scope_Handles.length &gt; 1 ) {
+    
+                if ( lookBackward &amp;&amp; handleNumber &gt; 0 ) {
+                    to = Math.max(to, reference[handleNumber - 1] + options.margin);
+                }
+    
+                if ( lookForward &amp;&amp; handleNumber &lt; scope_Handles.length - 1 ) {
+                    to = Math.min(to, reference[handleNumber + 1] - options.margin);
+                }
+            }
+    
+            // The limit option has the opposite effect, limiting handles to a
+            // maximum distance from another. Limit must be &gt; 0, as otherwise
+            // handles would be unmoveable.
+            if ( scope_Handles.length &gt; 1 &amp;&amp; options.limit ) {
+    
+                if ( lookBackward &amp;&amp; handleNumber &gt; 0 ) {
+                    to = Math.min(to, reference[handleNumber - 1] + options.limit);
+                }
+    
+                if ( lookForward &amp;&amp; handleNumber &lt; scope_Handles.length - 1 ) {
+                    to = Math.max(to, reference[handleNumber + 1] - options.limit);
+                }
+            }
+    
+            // The padding option keeps the handles a certain distance from the
+            // edges of the slider. Padding must be &gt; 0.
+            if ( options.padding ) {
+    
+                if ( handleNumber === 0 ) {
+                    to = Math.max(to, options.padding);
+                }
+    
+                if ( handleNumber === scope_Handles.length - 1 ) {
+                    to = Math.min(to, 100 - options.padding);
+                }
+            }
+    
+            to = scope_Spectrum.getStep(to);
+    
+            // Limit percentage to the 0 - 100 range
+            to = limit(to);
+    
+            // Return false if handle can&apos;t move
+            if ( to === reference[handleNumber] &amp;&amp; !getValue ) {
+                return false;
+            }
+    
+            return to;
+        }
+    
+        function toPct ( pct ) {
+            return pct + &apos;%&apos;;
+        }
+    
+        // Updates scope_Locations and scope_Values, updates visual state
+        function updateHandlePosition ( handleNumber, to ) {
+    
+            // Update locations.
+            scope_Locations[handleNumber] = to;
+    
+            // Convert the value to the slider stepping/range.
+            scope_Values[handleNumber] = scope_Spectrum.fromStepping(to);
+    
+            // Called synchronously or on the next animationFrame
+            var stateUpdate = function() {
+                scope_Handles[handleNumber].style[options.style] = toPct(to);
+                updateConnect(handleNumber);
+                updateConnect(handleNumber + 1);
+            };
+    
+            // Set the handle to the new position.
+            // Use requestAnimationFrame for efficient painting.
+            // No significant effect in Chrome, Edge sees dramatic performace improvements.
+            // Option to disable is useful for unit tests, and single-step debugging.
+            if ( window.requestAnimationFrame &amp;&amp; options.useRequestAnimationFrame ) {
+                window.requestAnimationFrame(stateUpdate);
+            } else {
+                stateUpdate();
+            }
+        }
+    
+        function setZindex ( ) {
+    
+            scope_HandleNumbers.forEach(function(handleNumber){
+                // Handles before the slider middle are stacked later = higher,
+                // Handles after the middle later is lower
+                // [[7] [8] .......... | .......... [5] [4]
+                var dir = (scope_Locations[handleNumber] &gt; 50 ? -1 : 1);
+                var zIndex = 3 + (scope_Handles.length + (dir * handleNumber));
+                scope_Handles[handleNumber].childNodes[0].style.zIndex = zIndex;
+            });
+        }
+    
+        // Test suggested values and apply margin, step.
+        function setHandle ( handleNumber, to, lookBackward, lookForward ) {
+    
+            to = checkHandlePosition(scope_Locations, handleNumber, to, lookBackward, lookForward, false);
+    
+            if ( to === false ) {
+                return false;
+            }
+    
+            updateHandlePosition(handleNumber, to);
+    
+            return true;
+        }
+    
+        // Updates style attribute for connect nodes
+        function updateConnect ( index ) {
+    
+            // Skip connects set to false
+            if ( !scope_Connects[index] ) {
+                return;
+            }
+    
+            var l = 0;
+            var h = 100;
+    
+            if ( index !== 0 ) {
+                l = scope_Locations[index - 1];
+            }
+    
+            if ( index !== scope_Connects.length - 1 ) {
+                h = scope_Locations[index];
+            }
+    
+            scope_Connects[index].style[options.style] = toPct(l);
+            scope_Connects[index].style[options.styleOposite] = toPct(100 - h);
+        }
+    
+        // ...
+        function setValue ( to, handleNumber ) {
+    
+            // Setting with null indicates an &apos;ignore&apos;.
+            // Inputting &apos;false&apos; is invalid.
+            if ( to === null || to === false ) {
+                return;
+            }
+    
+            // If a formatted number was passed, attemt to decode it.
+            if ( typeof to === &apos;number&apos; ) {
+                to = String(to);
+            }
+    
+            to = options.format.from(to);
+    
+            // Request an update for all links if the value was invalid.
+            // Do so too if setting the handle fails.
+            if ( to !== false &amp;&amp; !isNaN(to) ) {
+                setHandle(handleNumber, scope_Spectrum.toStepping(to), false, false);
+            }
+        }
+    
+        // Set the slider value.
+        function valueSet ( input, fireSetEvent ) {
+    
+            var values = asArray(input);
+            var isInit = scope_Locations[0] === undefined;
+    
+            // Event fires by default
+            fireSetEvent = (fireSetEvent === undefined ? true : !!fireSetEvent);
+    
+            values.forEach(setValue);
+    
+            // Animation is optional.
+            // Make sure the initial values were set before using animated placement.
+            if ( options.animate &amp;&amp; !isInit ) {
+                addClassFor(scope_Target, options.cssClasses.tap, options.animationDuration);
+            }
+    
+            // Now that all base values are set, apply constraints
+            scope_HandleNumbers.forEach(function(handleNumber){
+                setHandle(handleNumber, scope_Locations[handleNumber], true, false);
+            });
+    
+            setZindex();
+    
+            scope_HandleNumbers.forEach(function(handleNumber){
+    
+                fireEvent(&apos;update&apos;, handleNumber);
+    
+                // Fire the event only for handles that received a new value, as per #579
+                if ( values[handleNumber] !== null &amp;&amp; fireSetEvent ) {
+                    fireEvent(&apos;set&apos;, handleNumber);
+                }
+            });
+        }
+    
+        // Reset slider to initial values
+        function valueReset ( fireSetEvent ) {
+            valueSet(options.start, fireSetEvent);
+        }
+    
+        // Get the slider value.
+        function valueGet ( ) {
+    
+            var values = scope_Values.map(options.format.to);
+    
+            // If only one handle is used, return a single value.
+            if ( values.length === 1 ){
+                return values[0];
+            }
+    
+            return values;
+        }
+    
+        // Removes classes from the root and empties it.
+        function destroy ( ) {
+    
+            for ( var key in options.cssClasses ) {
+                if ( !options.cssClasses.hasOwnProperty(key) ) { continue; }
+                removeClass(scope_Target, options.cssClasses[key]);
+            }
+    
+            while (scope_Target.firstChild) {
+                scope_Target.removeChild(scope_Target.firstChild);
+            }
+    
+            delete scope_Target.noUiSlider;
+        }
+    
+        // Get the current step size for the slider.
+        function getCurrentStep ( ) {
+    
+            // Check all locations, map them to their stepping point.
+            // Get the step point, then find it in the input list.
+            return scope_Locations.map(function( location, index ){
+    
+                var nearbySteps = scope_Spectrum.getNearbySteps( location );
+                var value = scope_Values[index];
+                var increment = nearbySteps.thisStep.step;
+                var decrement = null;
+    
+                // If the next value in this step moves into the next step,
+                // the increment is the start of the next step - the current value
+                if ( increment !== false ) {
+                    if ( value + increment &gt; nearbySteps.stepAfter.startValue ) {
+                        increment = nearbySteps.stepAfter.startValue - value;
+                    }
+                }
+    
+    
+                // If the value is beyond the starting point
+                if ( value &gt; nearbySteps.thisStep.startValue ) {
+                    decrement = nearbySteps.thisStep.step;
+                }
+    
+                else if ( nearbySteps.stepBefore.step === false ) {
+                    decrement = false;
+                }
+    
+                // If a handle is at the start of a step, it always steps back into the previous step first
+                else {
+                    decrement = value - nearbySteps.stepBefore.highestStep;
+                }
+    
+    
+                // Now, if at the slider edges, there is not in/decrement
+                if ( location === 100 ) {
+                    increment = null;
+                }
+    
+                else if ( location === 0 ) {
+                    decrement = null;
+                }
+    
+                // As per #391, the comparison for the decrement step can have some rounding issues.
+                var stepDecimals = scope_Spectrum.countStepDecimals();
+    
+                // Round per #391
+                if ( increment !== null &amp;&amp; increment !== false ) {
+                    increment = Number(increment.toFixed(stepDecimals));
+                }
+    
+                if ( decrement !== null &amp;&amp; decrement !== false ) {
+                    decrement = Number(decrement.toFixed(stepDecimals));
+                }
+    
+                return [decrement, increment];
+            });
+        }
+    
+        // Attach an event to this slider, possibly including a namespace
+        function bindEvent ( namespacedEvent, callback ) {
+            scope_Events[namespacedEvent] = scope_Events[namespacedEvent] || [];
+            scope_Events[namespacedEvent].push(callback);
+    
+            // If the event bound is &apos;update,&apos; fire it immediately for all handles.
+            if ( namespacedEvent.split(&apos;.&apos;)[0] === &apos;update&apos; ) {
+                scope_Handles.forEach(function(a, index){
+                    fireEvent(&apos;update&apos;, index);
+                });
+            }
+        }
+    
+        // Undo attachment of event
+        function removeEvent ( namespacedEvent ) {
+    
+            var event = namespacedEvent &amp;&amp; namespacedEvent.split(&apos;.&apos;)[0];
+            var namespace = event &amp;&amp; namespacedEvent.substring(event.length);
+    
+            Object.keys(scope_Events).forEach(function( bind ){
+    
+                var tEvent = bind.split(&apos;.&apos;)[0],
+                    tNamespace = bind.substring(tEvent.length);
+    
+                if ( (!event || event === tEvent) &amp;&amp; (!namespace || namespace === tNamespace) ) {
+                    delete scope_Events[bind];
+                }
+            });
+        }
+    
+        // Updateable: margin, limit, padding, step, range, animate, snap
+        function updateOptions ( optionsToUpdate, fireSetEvent ) {
+    
+            // Spectrum is created using the range, snap, direction and step options.
+            // &apos;snap&apos; and &apos;step&apos; can be updated.
+            // If &apos;snap&apos; and &apos;step&apos; are not passed, they should remain unchanged.
+            var v = valueGet();
+    
+            var updateAble = [&apos;margin&apos;, &apos;limit&apos;, &apos;padding&apos;, &apos;range&apos;, &apos;animate&apos;, &apos;snap&apos;, &apos;step&apos;, &apos;format&apos;];
+    
+            // Only change options that we&apos;re actually passed to update.
+            updateAble.forEach(function(name){
+                if ( optionsToUpdate[name] !== undefined ) {
+                    originalOptions[name] = optionsToUpdate[name];
+                }
+            });
+    
+            var newOptions = testOptions(originalOptions);
+    
+            // Load new options into the slider state
+            updateAble.forEach(function(name){
+                if ( optionsToUpdate[name] !== undefined ) {
+                    options[name] = newOptions[name];
+                }
+            });
+    
+            scope_Spectrum = newOptions.spectrum;
+    
+            // Limit, margin and padding depend on the spectrum but are stored outside of it. (#677)
+            options.margin = newOptions.margin;
+            options.limit = newOptions.limit;
+            options.padding = newOptions.padding;
+    
+            // Update pips, removes existing.
+            if ( options.pips ) {
+                pips(options.pips);
+            }
+    
+            // Invalidate the current positioning so valueSet forces an update.
+            scope_Locations = [];
+            valueSet(optionsToUpdate.start || v, fireSetEvent);
+        }
+    
+        // Throw an error if the slider was already initialized.
+        if ( scope_Target.noUiSlider ) {
+            throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): Slider was already initialized.&quot;);
+        }
+    
+        // Create the base element, initialise HTML and set classes.
+        // Add handles and connect elements.
+        addSlider(scope_Target);
+        addElements(options.connect, scope_Base);
+    
+        scope_Self = {
+            destroy: destroy,
+            steps: getCurrentStep,
+            on: bindEvent,
+            off: removeEvent,
+            get: valueGet,
+            set: valueSet,
+            reset: valueReset,
+            // Exposed for unit testing, don&apos;t use this in your application.
+            __moveHandles: function(a, b, c) { moveHandles(a, b, scope_Locations, c); },
+            options: originalOptions, // Issue #600, #678
+            updateOptions: updateOptions,
+            target: scope_Target, // Issue #597
+            removePips: removePips,
+            pips: pips // Issue #594
+        };
+    
+        // Attach user events.
+        bindSliderEvents(options.events);
+    
+        // Use the public value method to set the start values.
+        valueSet(options.start);
+    
+        if ( options.pips ) {
+            pips(options.pips);
+        }
+    
+        if ( options.tooltips ) {
+            tooltips();
+        }
+    
+        aria();
+    
+        return scope_Self;
+    
+    }
+    
+    
+        // Run the standard initializer
+        function initialize ( target, originalOptions ) {
+    
+            if ( !target || !target.nodeName ) {
+                throw new Error(&quot;noUiSlider (&quot; + VERSION + &quot;): create requires a single element, got: &quot; + target);
+            }
+    
+            // Test the options and create the slider environment;
+            var options = testOptions( originalOptions, target );
+            var api = closure( target, options, originalOptions );
+    
+            target.noUiSlider = api;
+    
+            return api;
+        }
+    
+        // Use an object instead of a function for future expansibility;
+        return {
+            version: VERSION,
+            create: initialize
+        };
+    
+    }));</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

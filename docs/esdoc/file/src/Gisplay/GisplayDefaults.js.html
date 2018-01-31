@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/Gisplay/GisplayDefaults.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/GisplayDefaults.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import defaultsFile from &apos;./defaults.json&apos;;
+import { GisplayError } from &apos;./GisplayError&apos;;
+
+/**
+ * Class that exports the Gisplay default values.
+ * @export
+ * @class GisplayDefaults
+ */
+export class GisplayDefaults {
+
+    /**
+     * Returns the available class break methods.
+     * @returns {string[]} - All available class break methods under Gisplay API.
+     * @memberOf GisplayOptions
+     */
+    static getAvailableClassBreaksMethods() {
+        return defaultsFile.availableClasssBreakMethods; //[&quot;quantiles&quot;, &quot;equalintervals&quot;, &quot;k-means&quot;];
+    }
+
+    /**
+     * Returns a list of available background map providers.
+     * @returns {string[]} - All available background map providers under Gisplay API.
+     * @memberof GisplayOptions
+     */
+    static getAvailableBackgroundProviders() {
+        return defaultsFile.bgmapsProviders;/*[&apos;Google Maps&apos;, &apos;GM&apos;, //All variants of Google Maps
+            &apos;Mapbox&apos;, &apos;MB&apos;, //All variants of Mapbox
+            &apos;Here Maps&apos;, &apos;HM&apos;,
+            &apos;Bing Maps&apos;, &apos;BM&apos;];*/
+    }
+
+    /**
+     * Returns the default class method to calculate classes for continuous variables.
+     * @static
+     * @returns {string} - Returns quantiles, the default method for class calculation.
+     * @memberof GisplayDefaults
+     */
+    static getDefaultClassBreakMethod() {
+        return defaultsFile.defaultClassBreakMethod;//&apos;equalintervals&apos;;
+    }
+
+    /**
+     * Returns the list of available granularities.
+     * @static
+     * @returns 
+     * @memberof GisplayDefaults
+     */
+    static getAvailableGranularities() {
+        return [&apos;monthOfYear&apos;, &apos;dayOfYear&apos;, &apos;dayOfMonth&apos;, &apos;hourOfDay&apos;, &apos;minuteOfHour&apos;, &apos;year&apos;, &apos;month&apos;, &apos;day&apos;, &apos;value&apos;];
+    }
+
+    /**
+     * Returns the available color brewer methods.
+     * @returns {Array&lt;string&gt;} - the available color brewer methods.
+     * @memberof GisplayDefaults
+     */
+    static getAvailableColorBrewerMethods() {
+        return [
+            &apos;colorbrewer-&apos; + GisplayDefaults.SEQUENTIAL().toLocaleLowerCase(),
+            &apos;colorbrewer-&apos; + GisplayDefaults.DIVERGENT().toLocaleLowerCase(),
+            &apos;colorbrewer-&apos; + GisplayDefaults.QUALITATIVE().toLocaleLowerCase()
+        ];
+    }
+
+    /**
+     * Convert the time string to the granularity we want.
+     * @param {string} timeString - The time as it was read from the file. 
+     * @returns {number} - The granul
+     * @memberof CSVDataWorker
+     */
+    static getGranule(timeString) {
+        let value;
+        // console.warn(timeString, this.timeGranularity);
+        /*
+            //if cyclic then ...
+            day of year -&gt; dayOfYear (n temos )
+            month of year -&gt; monthOfYear (temos)
+            day of month -&gt; dayOfMonth (temos)
+            hour of day -&gt; hourOfDay (temos)
+            minute of hour -&gt; minuteOfHour (temos)
+            
+            //else continuous
+            year -&gt; 2015, 2016 ...
+            month -&gt; 2015_01, 2015_02 ... 2016_01 etc
+            day -&gt; 2015_01_01, 2015_01_02 ...
+            hour -&gt; 2015_01_01_01, 2015_01_01_01 ...
+            minute
+            value
+        */
+        switch (this.timeGranularity) {
+            //CYCLIC
+            case &apos;monthOfYear&apos;: //Mes do ano
+                value = (new Date(timeString).getMonth() + 1); //GOOD
+                break;
+            case &apos;dayOfYear&apos;:
+                value = -1; //CHANGE to calculate day of year
+                break;
+            case &apos;dayOfMonth&apos;:
+                value = new Date(timeString).getDate(); //GOOD
+                break;
+            case &apos;hourOfDay&apos;:
+                value = new Date(timeString).getHours(); //GOOD
+                break;
+            case &apos;minuteOfHour&apos;:
+                value = new Date(timeString).getMinutes(); //GOOD
+                break;
+
+            //CONTINUOUS
+            case &apos;year&apos;:
+                value = new Date(timeString).getFullYear();
+                break;
+            case &apos;month&apos;: //Mes do ano
+                value = new Date(timeString).getFullYear() + &quot;_&quot; + (new Date(timeString).getMonth() + 1);
+                break;
+            case &apos;day&apos;:
+                value = new Date(timeString).getFullYear() + &quot;_&quot; + (new Date(timeString).getMonth() + 1) + &quot;_&quot; + new Date(timeString).getDate();
+                // value = Number(new Date(timeString).getFullYear() + &quot;&quot; + new Date(timeString).getMonth() + &quot;&quot; + new Date(timeString).getDay());
+                break;
+            case &apos;value&apos;:
+                value = +timeString;
+                break;
+        }
+        // console.log(value);
+        return value;
+    }
+
+    /*
+    #####################################################################
+    #######################     VISUAL VARIABLES   ######################
+    #####################################################################
+    */
+    /**
+     * The color visual variable.
+     * @static
+     * @returns {string} - the string &apos;color&apos;.
+     * @memberOf GisplayDefaults
+     */
+    static COLOR() {
+        return defaultsFile.visualVariables.COLOR;
+    }
+
+    /**
+     * The saturation visual variable.
+     * @static 
+     * @returns {string} - The saturation visual variable string. 
+     * @memberOf GisplayDefaults
+     */
+    static OPACITY() {
+        return defaultsFile.visualVariables.OPACITY;
+    }
+
+    /**
+     * The shape visual variable.
+     * @static
+     * @returns {string} - The shape visual  variable.
+     * @memberOf GisplayDefaults
+     */
+    static SHAPE() {
+        return defaultsFile.visualVariables.SHAPE;
+    }
+
+    /**
+     * The position visual variable.
+     * @static
+     * @returns {string} - The position visual variable.
+     * @memberOf GisplayDefaults
+     */
+    static POSITION() {
+        return defaultsFile.visualVariables.POSITION;
+    }
+
+    /**
+     * The variable that is used to hold the matrix projection 
+     * @static
+     * @returns {string} - the projection matrix variable name on all shaders.
+     * @memberOf GisplayDefaults
+     */
+    static MPROJ() {
+        return defaultsFile.defaultShadersVariables.projectionMatrix;
+    }
+
+    /**
+     * The texture visual variable.
+     * @static
+     * @returns {string} - The texture visual variable.
+     * @memberOf GisplayDefaults
+     */
+    static TEXTURE() {
+        return defaultsFile.visualVariables.TEXTURE;
+    }
+
+    /**
+     * The size visual variable.
+     * @static
+     * @returns {string} - The size visual variable.
+     * @memberOf GisplayDefaults
+     */
+    static SIZE() {
+        return defaultsFile.visualVariables.SIZE;
+    }
+
+    /**
+     * The orientation visual variable.
+     * @static
+     * @returns {string} - The orientation visual  variable.
+     * @memberOf GisplayDefaults
+     */
+    static ORIENTATION() {
+        return defaultsFile.visualVariables.ORIENTATION;
+    }
+
+    /**
+     * Returns the index of the given shape.
+     * @static
+     * @param {string} shapeName - The name of the given shape.
+     * @returns {number} - the index of the given shape.
+     * @throws {GisplayError} - If the given shape does not exist.
+     * @memberof GisplayDefaults
+     */
+    static findShapeIndex(shapeName) {
+        // console.warn(shapeTextureName);
+        let shapeIndex = defaultsFile.shapes[shapeName];
+        if (shapeIndex &gt;= 0)
+            return shapeIndex;
+        throw new GisplayError(`Shape with name: ${shapeName}, not found.`);
+    }
+
+    /**
+     * Returns the index of the given pattern.
+     * @static
+     * @param {string} patternName - The name of the given pattern.
+     * @returns {number} - the index of the given pattern.
+     * @throws {GisplayError} - If the given pattern does not exist.
+     * @memberof GisplayDefaults
+     */
+    static findPatternIndex(patternName) {
+        let patternIndex = defaultsFile.patterns[patternName];
+        if (patternIndex &gt;= 0)
+            return patternIndex;
+        throw new GisplayError(`Pattern with name: ${patternName}, not found.`);
+    }
+
+    /**
+     * Returns the index of the given figure name.
+     * @static
+     * @param {string} figureName - The figure name. 
+     * @returns {number} - the index of the given figure name.
+     * @throws {GisplayError} - If the given figure does not exist.
+     * @memberof GisplayDefaults
+     */
+    static findFigureIndex(figureName) {
+        let figureIndex = defaultsFile.figures[figureName];
+        if (figureIndex &gt;= 0)
+            return figureIndex;
+        throw new GisplayError(`Figure with name: ${figureName}, not found.`);
+    }
+
+    /**
+     * Returns the default color.
+     * @static
+     * @returns {Array&lt;number&gt;}  - the default color. 
+     * @memberof GisplayDefaults
+     */
+    static getDefaultColor() {
+        return defaultsFile.defaultColor;
+    }
+
+    /**
+     * Returns the index of the default shape.
+     * @static
+     * @returns {number} - the index of the default shape .
+     * @memberof GisplayDefaults
+     */
+    static getDefaultShapeIndex() {
+        return this.findShapeIndex(defaultsFile.defaultShape); //GisplayDefaults.CIRCLE_FULL.name);
+    }
+
+    /**
+     * Returns the index of the default texture.
+     * @static
+     * @returns {number} - the index of the default texture.
+     * @memberof GisplayDefaults
+     */
+    static getDefaultTextureIndex() {
+        return this.findShapeIndex(defaultsFile.defaultTexture);
+    }
+
+    /**
+     * Returns the index of the default figure.
+     * @static
+     * @returns {number} - the index of the default figure.
+     * @memberof GisplayDefaults
+     */
+    static getDefaultFigureIndex() {
+        return this.findFigureIndex(defaultsFile.defaultFigure);
+    }
+
+    /**
+     * Returns the default size of a point for the Gisplay API.
+     * @static
+     * @returns {number=15} - the default size of a point for the Gisplay API.
+     * @memberof GisplayDefaults
+     */
+    static getDefaultSizeValue() {
+        return defaultsFile.defaultSize;
+    }
+
+    /**
+     * Returns the minimum size for points.
+     * @static
+     * @returns {number} -  the minimum size for points.
+     * @memberof GisplayDefaults
+     */
+    static getMinSizeValue() {
+        return defaultsFile.minSize;
+    }
+
+    /**
+     * Returns the maximum size for points.
+     * @static
+     * @returns {number} -  the maximum size for points.
+     * @memberof GisplayDefaults
+     */
+    static getMaxSizeValue() {
+        return defaultsFile.maxSize;
+    }
+
+    /**
+     * Returns the default orientation of a figure or shape in the Gisplay API.
+     * @static
+     * @returns {number=0} - the default orientation of a figure or shape in the Gisplay API. 
+     * @memberof GisplayDefaults
+     */
+    static getDefaultOrientationValue() {
+        return defaultsFile.defaultOrientation;
+    }
+
+    /*
+    #####################################################################
+    #######################     IMAGE DEFAUTLS     ######################
+    #####################################################################
+    */
+    /**
+     * Returns the size of the any shape image.
+     * @static
+     * @returns {number} - the size of the any shape image.
+     * @memberof GisplayDefaults
+     */
+    static getShapeImageSize() {
+        return defaultsFile.shapesImageSize;
+    }
+
+    /**
+     * Returns the size of the any pattern image.
+     * @static
+     * @returns {number} - the size of the any pattern image.
+     * @memberof GisplayDefaults
+     */
+    static getPatternImageSize() {
+        return defaultsFile.patternsImageSize;
+    }
+
+    /**
+     * Returns the size of the any figure image.
+     * @static
+     * @returns {number} - the size of the any figure image.
+     * @memberof GisplayDefaults
+     */
+    static getFigureImageSize() {
+        return defaultsFile.figuresImageSize;
+    }
+
+    /*
+    #####################################################################
+    #######################     WEBGL DEFAUTLS     ######################
+    #####################################################################
+    */
+    /**
+     * The default alpha value for the 
+     * @returns 
+     * @memberof GisplayDefaults
+     */
+    static getDefaultAlphaValue() {
+        return defaultsFile.defaultAlpha;
+    }
+
+    /**
+     * Returns the number of bytes for each element of a Float32Array.
+     * @static
+     * @returns {number} - the number of bytes for each element of a Float32Array.
+     * @memberof GisplayDefaults
+     */
+    static getFloat32BytesPerElement() {
+        return Float32Array.BYTES_PER_ELEMENT;
+    }
+
+    /**
+     * The number of bytes for each element of a Uint8Array (Unsigned int).
+     * @static
+     * @returns {number} - the number of bytes for each element of a Uint8Array (Unsigned int).
+     * @memberof GisplayDefaults
+     */
+    static getUint8BytesPerElement() {
+        return Uint8Array.BYTES_PER_ELEMENTM;
+    }
+
+    /**
+     * Returns the names of the borders files (vertex and fragment shaders).
+     * @static
+     * @returns {{borderVertexFileName: string, borderFragmentFileName:string}}
+     * @memberof GisplayDefaults
+     */
+    static getBordersShadersFileNames() {
+        return { borderVertexFileName: &apos;borders.vert&apos;, borderFragmentFileName: &apos;borders.frag&apos; };
+    }
+
+    /**
+     * Returns the default color for the borders.
+     * @static
+     * @returns {Array&lt;number&gt;} - the default color for the borders.
+     * @memberof GisplayDefaults
+     */
+    static getDefaultBordersColor() {
+        return [0, 0, 0];
+    }
+
+    /*
+    #####################################################################
+    #######################     WEBGL SIZE     ######################
+    #####################################################################
+    */
+    /**
+     * The min data name to be used in all shaders that use size as a visual variable.
+     * @static
+     * @returns {string} - min data name to be used in all shaders that use size as a visual variable.
+     * @memberof GisplayDefaults
+     */
+    static getMinSizeDataName() {
+        return &apos;minData&apos;;
+    }
+
+    /**
+     * The max data name to be used in all shaders that use size as a visual variable.
+     * @static
+     * @returns {string} - max data name to be used in all shaders that use size as a visual variable.
+     * @memberof GisplayDefaults
+     */
+    static getMaxSizeDataName() {
+        return &apos;maxData&apos;;
+    }
+
+    static getMinSizePixels() {
+        return { name: &apos;minPixels&apos;, value: defaultsFile.minSize };
+    }
+
+    static getMaxSizePixels() {
+        return { name: &apos;maxPixels&apos;, value: defaultsFile.maxSize };
+    }
+
+    /**
+     * Returns the type of primitive we want.
+     * @static
+     * @returns 
+     * @memberof GisplayDefaults
+     */
+    static getPrimitive() {
+        return {
+            POINT: 0,
+            POLYGON: 1,
+            LINE: 2,
+            CSVPOINT: 3,
+            CSVIDS: 4
+        };
+    }
+
+    /**
+     * Returns true if the given primitive is polygon.
+     * @static
+     * @param {number} geoPrimitive - The identifier of the primitive. 
+     * @returns {boolean} - true if the given primitive is polygon.
+     * @memberof GisplayDefaults
+     */
+    static hasPolygons(geoPrimitive) {
+        return geoPrimitive === this.getPrimitive().POLYGON;
+    }
+
+    /**
+     * Returns true if the given primitive is line.
+     * @static
+     * @param {number} geoPrimitive - The identifier of the primitive. 
+     * @returns {boolean} - true if the given primitive is line.
+     * @memberof GisplayDefaults
+     */
+    static hasLines(geoPrimitive) {
+        return geoPrimitive === this.getPrimitive().LINE;
+    }
+
+    /**
+     * Returns true if the given primitive is line.
+     * @static
+     * @param {number} geoPrimitive - The identifier of the primitive. 
+     * @returns {boolean} - true if the given primitive is line.
+     * @memberof GisplayDefaults
+     */
+    static hasPoints(geoPrimitive) {
+        return geoPrimitive === this.getPrimitive().POINT;
+    }
+
+    /**
+     * Returns true if the given primitive is points coming from the CSV Parser.
+     * @static
+     * @param {number} geoPrimitive - The identifier of the primitive. 
+     * @returns {boolean} - true if the given primitive is points coming from the CSV Parser.
+     * @memberof GisplayDefaults
+     */
+    static hasCSVPoints(geoPrimitive) {
+        return geoPrimitive === this.getPrimitive().CSVPOINT;
+    }
+
+    /*
+    #####################################################################
+    #######################      WEBGL PICKING     ######################
+    #####################################################################
+    */
+    /**
+     * Convert the given RGBA color color to it&apos;s respective integer value. 
+     * @param {number} r - The red value.
+     * @param {number} g - The green value.
+     * @param {number} b - The blue value.
+     * @param {number} a - The alpha value.
+     * @returns {number} - the integer value converted from the given RGBA value.
+     * @see https://github.com/mcwhittemore/rgb-to-int/blob/master/index.js
+     * @memberof GisplayDefaults
+     */
+    static RGBAToNumber(r, g, b, a) {
+        // return r * Math.pow(256, 3) + g * Math.pow(256, 2) + b * Math.pow(256, 1) + a;
+        return r * Math.pow(256, 3) + (g &lt;&lt; 16 | b &lt;&lt; 8 | a); // g&lt;&lt;16 === g * 2^16
+    }
+
+    /**
+     * Convert the given number to it&apos;s RGBA representation.
+     * @static
+     * @param {number} num - The number to be converted. 
+     * @returns {Array&lt;number&gt;} - the RGBA representation of the given number.
+     * @see https://math.stackexchange.com/a/1636055
+     * @see https://developer.mozilla.org/pt-PT/docs/Web/JavaScript/Reference/Operators/Operator_Precedence
+     * @memberof GisplayDefaults
+     */
+    static numberToRGBA(num) {
+        let r = Math.floor(num / Math.pow(256, 3));
+        let g = Math.floor(num / Math.pow(256, 2) % 256);
+        let b = Math.floor(num / 256 % 256);
+        let a = num - (Math.pow(256, 3) * r + Math.pow(256, 2) * g + 256 * b);
+        return [r, g, b, a];
+    }
+
+    /**
+     * The name for the boolean variable that is used on the shader to know if we want to draw to picking texture or normal draw.
+     * @static
+     * @returns {string} - he name for the boolean variable that is used on the shader to know if we want to draw to picking texture or normal draw.
+     * @memberof GisplayDefaults
+     */
+    static isPickingName() {
+        return &apos;isPicking&apos;;
+    }
+
+    /**
+     * The name of the variable that holds the RGBA colors used for picking.
+     * @static
+     * @returns {string} - the name of the variable that holds the RGBA colors used for picking.
+     * @memberof GisplayDefaults
+     */
+    static pickingColorName() {
+        return &apos;pickingColor&apos;;
+    }
+
+    /**
+     * Returns the name of the picking identifier for the MVC/TG.
+     * @static
+     * @returns {string} - the name of the picking identifier for the MVC/TG.
+     * @memberof GisplayDefaults
+     */
+    static pickingMVCTGIdentifierName() {
+        return &quot;MVCTGPickingColor&quot;;
+    }
+
+    /*
+    #####################################################################
+    #######################     TIME DEFAUTLS     ######################
+    #####################################################################
+    */
+    /**
+     * Returns the instant time variable.
+     * @static
+     * @returns {string} - the instant time variable.
+     * @memberOf GisplayDefaults
+     */
+    static INSTANT() {
+        return defaultsFile.timeVariables.INSTANT;
+    }
+
+    /**
+     * Returns the interval time variable.
+     * @static
+     * @returns {string} -  the interval time variable.
+     * @memberOf GisplayDefaults
+     */
+    static INTERVAL() {
+        return defaultsFile.timeVariables.INTERVAL;
+    }
+
+    /**
+     * The animation time variable.
+     * @static
+     * @returns {string} - the animation time variable.
+     * @memberOf GisplayDefaults
+     */
+    static ANIMATION() {
+        return defaultsFile.timeVariables.ANIMATION;
+    }
+
+    /*
+    #####################################################################
+    #######################     DATA NATURE     ######################
+    #####################################################################
+    */
+    /**
+     * Returns the sequential data nature.
+     * @static
+     * @returns {string} - the sequential data nature.
+     * @memberof GisplayDefaults
+     */
+    static SEQUENTIAL() {
+        return &apos;sequential&apos;;
+    }
+
+    /**
+     * Returns the divergent data nature.
+     * @static
+     * @returns {string} - the divergent data nature.
+     * @memberof GisplayDefaults
+     */
+    static DIVERGENT() {
+        return &apos;divergent&apos;;
+    }
+
+    /**
+     * Returns the qualitative data nature.
+     * @static
+     * @returns {string} - the qualitative data nature.
+     * @memberof GisplayDefaults
+     */
+    static QUALITATIVE() {
+        return &apos;qualitative&apos;;
+    }
+
+    /*
+    #####################################################################
+    #######################     MESSAGES CSV       ######################
+    #####################################################################
+    */
+    static MESSAGES_CSV() {
+        return {
+            TO_START: &apos;start&apos;, //From TP to Ws to start processing their part
+            END_START: &apos;end_start&apos;, //FROM each W to TP flag that the W as terminated its part
+
+            /*  TO_REMAINING_ROWS11: &apos;remaining_rows&apos;, //FROM TP to first W to process remaining rows
+             END_REMAINING_ROWS1: &apos;end_remaining_rows&apos;, //FROM first W to TP to flag worker processed remaining rows */
+
+            TO_LIMITS_CAT: &apos;limits_categories&apos;, //FROM TP to Ws to get the min and max and categories for each cat and cont vars 
+            END_LIMITS_CAT: &apos;end_limits_categories&apos;, //FROM each W to TP with min/max and categories
+
+            TO_LIMITS_CAT_RES: &apos;limits_categories_res&apos;, //FROM TP to Ws with the resulting classes/categories and time granules
+            END_LIMITS_CAT_RES: &apos;end_limits_categories_res&apos;, //FROM each W to TP meaning the W has all the MVCs and TGs in place
+
+            TO_JOIN_DATA: &apos;join_data&apos;, //FROM TP To Ws with information about MVCs and TGs in order to join the final rows
+            END_JOIN_DATA: &apos;end_join_data&apos;, //FROM Ws To TP as a flag to receive data
+
+            TO_GENERATE_RGBA: &apos;generate_rgba&apos;,//FROM TP To Ws to generate RGBA information for each row
+            END_GENERATE_RGBA: &apos;end_generate_rgba&apos;, //FROM each W to TP meaning the W generated all RGBA values
+
+            TO_SEND_DATA: &apos;send_data&apos;, //FROM TP to one W at a time to receive its data
+            END_SEND_DATA: &apos;end_send_data&apos; //FROM W to TP with the MVCs and TGs created 
+        };
+    }
+
+    /**
+     * Clone a nested array in Javascript.
+     * @static
+     * @param {Array&lt;any&gt;} arr - The given array. 
+     * @returns {Array&lt;any&gt;} - the cloned nested array.
+     * @memberof GisplayDefaults
+     */
+    static cloneNestedArray(arr) {
+        let i, copy;
+        if (Array.isArray(arr)) {
+            copy = arr.slice(0);
+            for (let i = 0; i &lt; copy.length; i++)
+                copy[i] = this.cloneNestedArray(copy[i]);
+            return copy;
+        } else if (typeof arr === &apos;object&apos;)
+            throw new Error(&apos;Cannot clone array containing an object!&apos;);
+        else
+            return arr;
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../../">
+  <title data-ice="title">src/Gisplay/Parser/GeoJSON/GeoJSONWorker.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMapDeletedMethods.js~GisplayMapOLD.html">GisplayMapOLD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs-primitives">Gisplay/VVs/Primitives</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Primitives/Polygon.js~Polygon.html">Polygon</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/Parser/GeoJSON/GeoJSONWorker.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">importScripts(&apos;./lib/earcut.js&apos;); //https://stackoverflow.com/a/33145603/
+let worker = self;
+/**
+ * A geoJSON worker that processes polygons using earcut library (for triangulation).
+ * @deprecated Unfortunately in this case it will take more time with workers than without them.
+ * @class GeoJSONWorker
+ */
+class GeoJSONWorker {
+    constructor() {
+        this.polygons = [];
+        this.webglContext;
+        worker.onmessage = (e) =&gt; { this.onMessage(e); };
+    }
+
+    onMessage(e) {
+        if (e.data.shutdown) {
+            console.log(&quot;END&quot;);
+            self.postMessage(this.polygons);
+            this.polygons = [];
+        } else {
+            if (e.data.webglContext)
+                for (const row of e.data)
+                    this.polygons.push({ id: row.id, data: this.processCoordinates(row.coordinates, row.mp) });
+        }
+    }
+
+    processCoordinates(coordinates, isMultiPolygon) {
+        let polyarray = [];
+        if (isMultiPolygon) { //See http://geojson.org/geojson-spec.html#multipolygon
+            for (const cs of coordinates) { //Each polygon
+                let outsidepolygon = cs[0];
+                let tempVerts = new Array();
+                for (const c of outsidepolygon)
+                    tempVerts.push(c[0], c[1]);
+                let triangles_vert = earcut(tempVerts);
+                polyarray.push({ triangles: triangles_vert, vertices: tempVerts });
+            }
+        } else {
+            let outsidepolygon = coordinates[0]; //See: http://geojson.org/geojson-spec.html#polygon
+            let tempVerts = new Array();
+            for (let out = 0; out &lt; outsidepolygon.length - 1; out++)
+                tempVerts.push(outsidepolygon[out][0], outsidepolygon[out][1]);//_vertexcount += (outsidepolygon.length + 1) / 2;
+            let triangles_vert = earcut(tempVerts); // _tricount += (triangles_vert.length / 3);
+            polyarray.push({ triangles: triangles_vert, vertices: tempVerts });
+        }
+        this.polygons.push(this.bindPolygonsToWebGLContext(polyarray));
+        return polyarray;
+    }
+
+    /**
+    * Convert the vertices and triangulation values to borders and triangles (inner part of the polygon).
+    * @param {{vertices: Array&lt;number&gt;, trianglesIndeces: Array&lt;number&gt;}} polygonArray - The polygon outside (vertices) and how to draw the inside (trianglesIndeces). 
+    * @param {number} [id=0] - The identifier of the polygon
+    * @returns {Polygon} - the polygon with an identifier and it&apos;s borders and triangles in multiple buffers.
+    * @see http://prntscr.com/gcz27k
+    * @memberof GeoJSONParser
+    */
+    bindPolygonsToWebGLContext(polygonArray, id = 0) {
+        const gl = this.webglContext;
+        const bufferBorders = []; //Buffer borders
+        const bufferTriangles = []; //WebGL Buffers with  triangles
+
+        for (const [polygonIndex, polygon] of polygonArray.entries()) {
+            let verticesOfPolygon = polygon.vertices;
+            let trianglesIndeces = polygon.trianglesIndeces;
+
+            // Create Triangles for the polygon
+            let temporalTriangles = [];
+            for (const triangleIndex of trianglesIndeces) {
+                let [lng, lat] = [verticesOfPolygon[triangleIndex * 2], verticesOfPolygon[triangleIndex * 2 + 1]];
+                temporalTriangles.push(lng, lat);
+            }
+            bufferTriangles.push(gl.createBuffer());
+            gl.bindBuffer(gl.ARRAY_BUFFER, bufferTriangles[polygonIndex]);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(temporalTriangles), gl.STATIC_DRAW);
+
+            // Create Borders for the polygon
+            let temporalVertices = [];
+            for (let i = 0; i &lt; verticesOfPolygon.length; i += 2) {
+                let [lng, lat] = [verticesOfPolygon[i], verticesOfPolygon[i + 1]];
+                temporalVertices.push(lng, lat);
+            }
+            bufferBorders.push(gl.createBuffer());
+            gl.bindBuffer(gl.ARRAY_BUFFER, bufferBorders[polygonIndex]);
+            gl.bufferData(gl.ARRAY_BUFFER, new Float32Array(temporalVertices), gl.STATIC_DRAW);
+        }
+        return [id, bufferBorders, bufferTriangles];
+    }
+}
+new GeoJSONWorker();
+
+/**
+
+ if (this.onlyGeometry) {
+            let idGeometryMap = new Map();
+            //id -&gt; [lng, lat] if points 
+            //id -&gt; {triangles:..., vertices:...} if polygons
+            for (let feature of geojson.features) {
+                let id = feature.properties[&quot;id&quot;];
+                let geometry = this.processFeature(feature);
+                idGeometryMap.set(id, geometry);
+            }
+            document.dispatchEvent(new CustomEvent(&quot;idGeometryEnd&quot;, {  //Retornar pelo menos os dados processados e as classes 
+                &apos;detail&apos;: {
+                    idGeometry: idGeometryMap,
+                    hasPoints: this.hasPoints
+                }
+            }));
+        } 
+
+
+ */</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

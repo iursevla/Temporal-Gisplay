@@ -1,0 +1,1255 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/Maps/GisplayMapDeletedMethods.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMapDeletedMethods.js~GisplayMapOLD.html">GisplayMapOLD</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs-primitives">Gisplay/VVs/Primitives</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Primitives/Polygon.js~Polygon.html">Polygon</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/Maps/GisplayMapDeletedMethods.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//Imports for Intellisense TODO: DELETE
+import { BGMapWrapper } from &apos;./Background Maps/BGMapWrapper&apos;;
+import { URLVariable } from &apos;../VVs/URLVariable&apos;;
+import { DataVariable } from &apos;../VVs/DataVariable&apos;;
+import { TimeVariable } from &apos;../VVs/TimeVariable&apos;;
+import { TemporalGranule } from &apos;../VVs/TemporalGranule&apos;;
+import { CategoricalVariable } from &apos;../VVs/CategoricalVariable&apos;;
+import { ContinuousVariable } from &apos;../VVs/ContinuousVariable&apos;;
+import { MapVariableCombination } from &apos;../VVs/MapVariableCombination&apos;;
+import { Legend } from &apos;../Layout/Legend&apos;;
+
+// import { Aesthetic } from &apos;../Layout/Aesthetic&apos;;
+import { GisplayOptions } from &apos;../GisplayOptions&apos;;
+import { WebGLUtils } from &apos;../Helpers/WebGLUtils&apos;;
+import { LayoutManager } from &apos;../Layout/LayoutManager&apos;;
+
+import { GeoJSONParser } from &apos;../Parser/GeoJSON/GeoJSONParser&apos;;
+import { CSVParser } from &apos;../Parser/CSV/CSVParser&apos;;
+
+/**
+ * This class contains the Map class which represents the current map.
+ * Each map has a group of functions available. There is only one map yet(maybe there will be two if we want to compare two).
+ * @see Diogo&apos;s thesis pages 57-60 + 64/65
+ */
+export class GisplayMapOLD {
+    /**
+     * Creates an instance of Map.
+     * @param {Object} parsingOptions - The parsing options.
+     * @param {Object} mappingOptions - The mapping options.
+     * @param {Object} globalOptions - The globabl options.
+     * @memberof Map
+     */
+    constructor(parsingOptions, mappingOptions, globalOptions) {
+        let thematicMapOptions = {
+            visualVariables: this.getAvailableVisualVariables(),
+            defaults: this.defaults()
+        };
+        // console.log(thematicMapOptions);
+
+        /**
+         * All the options available in the Gisplay API.
+         * @type {GisplayOptions}
+         */
+        this.gisplayOptions = this.loadOptions(parsingOptions, mappingOptions, globalOptions, thematicMapOptions);
+        /**
+         * This variable holds the background maps.
+         * @type {Array&lt;BGMapWrapper&gt;}
+         */
+        this.bgMaps = [];
+        /**
+         * Holds reference to WebGL context and program.
+         * @type {Object} _webgl - WebGL object.  Init webgl properties
+         * @property  {WebGLRenderingContext} _webgl.gl - The WebGLRenderingContext to be used.
+         * @property  {WebGLProgram} _webgl.program -  The WebGLProgram to be used. 
+         * @see Diogo&apos;s thesis page 64+
+         */
+        this._webgl = null;
+        /**
+         * The layout manager. 
+         * @type {LayoutManager}
+         */
+        this.layoutManager = new LayoutManager(this.gisplayOptions.getGlobalOptions());
+        /**
+         * Holds all the existing Legends.
+         * @type {Array&lt;Legend&gt;}
+         */
+        this.legends = [];
+
+        //Setup webgl context and program.
+        this.setupWebGL();
+
+        //THESE VARIABLES ARE NOT IN USE ATM
+        /**
+         * All the categorical variables that were created with the given options.
+         * @type {Array&lt;CategoricalVariable&gt;}
+         */
+        this.categoricalVariables = this.gisplayOptions.getCategoricalVariables();
+        /**
+         * All the continuous variables that were created with the given options.
+         * @type {Array&lt;ContinuousVariable&gt;}
+         */
+        this.continousVariables = this.gisplayOptions.getContinousVariables();
+        /**
+         * The time variable or null if there&apos;s no Time in the dataset.
+         * @type {TimeVariable}
+         */
+        this.timeVariable = this.gisplayOptions.getTimeVariable();
+        /**
+         * An array with extra variables used mainly for picking information or an empty array when the programmer didn&apos;t give any extra variable.
+         * @type Array&lt;Variable&gt;}
+         */
+        this.optionalVariables = this.gisplayOptions.getOptionalVariables();
+        /**
+         * The URLVariable.
+         * @type {URLVariable} 
+         */
+        this.urlVariable = this.gisplayOptions.getURLVariable();
+        /**
+         * The geometry variables (longitude and latitude).
+         * @type {Array&lt;DataVariable&gt;}
+         */
+        this.geometryVariables = this.gisplayOptions.getGeometryVariables();
+
+
+        //WILL COME FROM PARSER
+        /**
+         * All the Visual Variable Combinations that exist in this map. Read and processed from the dataset.
+         * @type {Array&lt;MapVariableCombination&gt;}
+         */
+        this.mapVariableCombinations = [];
+        /**
+         * Map where each key is a combination string and it&apos;s value is the index of it&apos;s position in the visual variable combinations array.
+         * @type {GisplayMap&lt;string, number&gt;}
+         */
+        this.mapVariableCombinationToIndexMap = new Map();
+
+        console.log(this.gisplayOptions);
+        console.log(&quot;----------------------------------&quot;);
+
+        this.texture;
+        this.loadImage();
+
+        console.log(this);
+        this.readFiles();
+        this.setupLayout();
+    }
+
+    loadImage() {
+        let texture = new Image();
+        // texture.src = &apos;combo.png&apos;;
+        texture.src = &apos;combo2.png&apos;;
+        // texture.src = &apos;2.jpg&apos;;
+        // texture.src = &apos;3.jpg&apos;;
+        // texture.src = &apos;5.png&apos;;
+        // texture.src = &apos;4.png&apos;;
+        texture.onload = () =&gt; { this.texture = texture; };
+    }
+
+    /**
+     * M1) Loads user and default options. For each case if it isn&apos;t provided by the user, then it uses
+     * the default option. 1st method to be called.
+     * @param {Object} parsingOptions - The parsing options.
+     * @param {Object} mappingOptions - The mapping options.
+     * @param {Object} globalOptions - The globabl options.
+     * @param {Object} thematicMapOptions - The thematic map options.
+     * @memberof Map
+     */
+    loadOptions(parsingOptions, mappingOptions, globalOptions, thematicMapOptions) {
+        return new GisplayOptions(parsingOptions, mappingOptions, globalOptions, thematicMapOptions);
+    }
+
+    /**
+     * Sets up the layout manager for this instance of the Gisplay API.
+     * @returns {LayoutManager} - The layout manager created with the given options.
+     * @memberof MapV2
+     */
+    setupLayout() {
+        // this.layoutManager = new LayoutManager(this.gisplayOptions.getGlobalOptions());
+        this.bgMaps = this.layoutManager.setupBGMapsLayout();
+    }
+
+    /**
+     * Sets up WebGL.
+     * @memberof GisplayMap
+     */
+    setupWebGL() {
+        this._webgl = WebGLUtils.setupWebGL(this.layoutManager.getCanvas(), this.layoutManager.getBgmapsDiv(), this.dynamicShaders());  //WebGL
+    }
+
+    /**
+     * M5) Setup all events used by the API. Right now the API uses: drag, zoom and click events. 
+     * This events will be fired by the background map provider and we can use them to draw(zoom and pan) or alert information(click).
+     * Pan/Zoom = move, click = click
+     * rtree will be used to find the closest polygon to the where the clicked event happened.
+     * kdtree will be used to find the closest point to where the click event happened.
+     * @todo This method is doing uneccessary job if the user set interative to false and mapOnClickFunction is undefined.
+     * @param {number} mappos - This map id. 
+     * @return {void}
+     * @see https://www.mapbox.com/mapbox-gl-js/api/#events
+     * @see http://stackoverflow.com/a/34349737
+     */
+    setupEvents() {
+        for (let bgmap of this.bgMaps) {
+            bgmap.addPanEvent(() =&gt; this.draw());
+            bgmap.addZoomEvent(() =&gt; this.draw());
+            bgmap.addClickEvent(this);
+        }
+        //Listen to time control events
+        document.addEventListener(&apos;TimeRangeChanged&apos;, () =&gt; { this.draw(); });
+    }
+
+    /**
+     * Creates the time control.
+     * @memberof GisplayMap
+     */
+    setupTimeControl() {
+        let timeTitle = this.timeVariable.getInternalName();//getGranularity();
+        let type = &apos;instant&apos;;
+        let timeInstants = this.timeVariable.getTemporalGranules();
+        // console.warn(timeTitle, type, timeInstants);
+        this.layoutManager.createTimeControl(timeTitle, type, timeInstants);
+    }
+
+    /**
+     * Returns the indices of the active temporal granules.
+     * @returns {Array&lt;number&gt;|number}
+     * @memberof GisplayMap
+     */
+    getActiveTemporalGranules() {
+        return this.layoutManager.getTimeControl().getActiveTemporalGranules();
+    }
+
+    /**
+     * M6) To be called when the user clicks on the map.
+     * @param {number} lng - Longitude of the click event. 
+     * @param {number} lat - Latitude of the click event.
+     * @memberOf Map
+     */
+    clickEvent(clickX, clickY, bgmap) {//lng, lat, zoom, bgmap) {
+        this.createTexture(clickX, clickY, bgmap);
+    }
+
+    //DELETE
+    /**
+     * Create texture to get the clicked object, if any.
+     * The clicked X and Y are relative to the bgmap top-right corner (ie. how many pixels in x and y from that point).
+     * @param {BGMapWrapper} bgmap - The background map that fired the click event.
+     * @memberof Map
+     */
+    createTexture(clickX, clickY, bgmap) {
+        const gl = this._webgl.gl;
+        let [width, height] = [bgmap.getWidth(), bgmap.getHeight()];
+        let [nextWidth, nextHeight] = bgmap.calcNextPowerOfTwo();
+        // console.log(bgmap.getWidth(), bgmap.getHeight(), bgmap, nextWidth, nextHeight);
+
+        //Create frameBuffer
+        let framebuffer = gl.createFramebuffer();
+        gl.bindFramebuffer(gl.FRAMEBUFFER, framebuffer); // This is the buffer where we will draw from now on
+
+        //Create texture
+        let texture = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        gl.framebufferTexture2D(gl.FRAMEBUFFER, gl.COLOR_ATTACHMENT0, gl.TEXTURE_2D, texture, 0);
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, nextWidth, nextHeight, 0, gl.RGBA, gl.UNSIGNED_BYTE, null);
+        gl.viewport(0, 0, nextWidth, nextHeight); //Viewport for the texture
+
+        //Normal drawTriangles
+        for (let aes of this.aesthetics) {    //for loop through aesthetic elements and draw them if they are active
+            if (aes.isEnabled()) {
+                this.drawPolygonsToTexture(aes, bgmap);
+                // this.drawPointsToTexture(aes, bgmap);
+            }
+        }
+
+        let clickTextureX = clickX * nextWidth / width; //Mudar
+        let clickTextureY = nextHeight - (clickY * nextHeight / height);
+
+        let pixels = new Uint8Array(4);
+        gl.readPixels(clickTextureX, clickTextureY, 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixels);
+        console.log(&quot;Pixels Normal:&quot;, clickX, clickY);
+        console.log(&quot;Pixels Texture:&quot;, clickTextureX, clickTextureY, &quot;Color:&quot;, pixels);
+
+        this.findFeature(pixels[0], pixels[1], pixels[2], pixels[3]);
+
+        /*    let imageData = new Uint8Array(nextWidth * nextHeight * 4);
+           gl.readPixels(0, 0, nextWidth, nextHeight, gl.RGBA, gl.UNSIGNED_BYTE, imageData);
+           this.saveTextureToImage(imageData, nextWidth, nextHeight); */
+
+        //Go back to original FrameBuffer.
+        gl.bindFramebuffer(gl.FRAMEBUFFER, null);
+
+        /*  
+        let pixelsCima = new Uint8Array(4);
+         gl.readPixels(Math.ceil(clickTextureX), Math.ceil(clickTextureY), 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixelsCima);
+         console.log(&quot;Pixels_ceil&quot;, Math.ceil(clickTextureX), Math.ceil(clickTextureY), pixelsCima);
+ 
+         let pixelsMeio = new Uint8Array(4);
+         gl.readPixels(Math.round(clickTextureX), Math.round(clickTextureY), 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixelsMeio);
+         console.log(&quot;Pixels_round&quot;, Math.round(clickTextureX), Math.round(clickTextureY), pixelsMeio);
+ 
+         let pixelsBaixo = new Uint8Array(4);
+         gl.readPixels(Math.floor(clickTextureX), Math.floor(clickTextureY), 1, 1, gl.RGBA, gl.UNSIGNED_BYTE, pixelsBaixo);
+         console.log(&quot;pixels_floor&quot;, Math.floor(clickTextureX), Math.floor(clickTextureY), pixelsBaixo); 
+         */
+
+
+        /*   let imageData = new Uint8Array(nextWidth * nextHeight * 4);
+          gl.readPixels(0, 0, nextWidth, nextHeight, gl.RGBA, gl.UNSIGNED_BYTE, imageData);
+          this.saveTextureToImage(imageData, nextWidth, nextHeight); */
+
+        //  this.clear();
+        // gl.bindBuffer(gl.FRAMEBUFFER, null);
+    }
+
+    //DELETE
+    drawPointsToTexture(aes, bgmap) {
+        const gl = this._webgl.gl;
+        if (gl === null)
+            return;
+
+        const fsize = Float32Array.BYTES_PER_ELEMENT;
+        const currentZoom = bgmap.getZoom();
+        const pointSize = Math.max(currentZoom - 5.0, 1.0);
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, &apos;coords&apos;);
+        const vertexSizeLocation = gl.getAttribLocation(this._webgl.program, &apos;aPointSize&apos;);
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, &quot;u_color&quot;);
+        const isPointLocation = gl.getUniformLocation(this._webgl.program, &apos;isPoint&apos;);
+        const isTextureLocation = gl.getUniformLocation(this._webgl.program, &apos;isTexture&apos;); //Use texture convertion
+        let [r, g, b, a] = aes.getFillColor();
+
+        this.setMatrices(gl, bgmap);
+        gl.vertexAttrib1f(vertexSizeLocation, pointSize);
+        gl.uniform1f(isPointLocation, 1.0);
+        gl.uniform1f(isTextureLocation, 1.0); //Should convert to texture coordinates
+        gl.uniform4f(fragmentColorLocation, r / 255, g / 255, b / 255, a);
+
+        let allFeatures = aes.getAllFeatures();
+        for (const allF of allFeatures) {
+            let points = allF.getPoints();
+            for (const p of points) {
+                gl.bindBuffer(gl.ARRAY_BUFFER, p);
+                gl.enableVertexAttribArray(vertexCoordsLocation);
+                gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+                gl.drawArrays(gl.POINTS, 0, p.numItems);
+            }
+        }
+    }
+
+    //DELETE
+    drawPolygonsToTexture(aes, bgmap) {
+        const gl = this._webgl.gl;
+        if (gl === null)
+            return;
+
+        const fsize = Float32Array.BYTES_PER_ELEMENT;
+        const currentZoom = bgmap.getZoom();
+        const pointSize = Math.max(currentZoom - 5.0, 1.0);
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, &apos;coords&apos;);
+        const vertexSizeLocation = gl.getAttribLocation(this._webgl.program, &apos;aPointSize&apos;);
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, &quot;u_color&quot;);
+        const isPointLocation = gl.getUniformLocation(this._webgl.program, &apos;isPoint&apos;);
+        // const isTextureLocation = gl.getUniformLocation(this._webgl.program, &apos;isTexture&apos;); //Use texture convertion
+
+        this.setMatrices(gl, bgmap);
+        gl.vertexAttrib1f(vertexSizeLocation, pointSize);
+        gl.uniform1f(isPointLocation, 0.0);
+        // gl.uniform1f(isTextureLocation, 1.0); //Should convert to texture coordinates
+
+        let features = aes.getFeatures();
+        for (const f of features) {
+            let [ra, ga, ba, aa] = f.getId();
+            let triangles = f.getTriangles();
+            gl.uniform4f(fragmentColorLocation, ra / 255, ga / 255, ba / 255, aa / 255);
+            for (const t of triangles) {
+                gl.bindBuffer(gl.ARRAY_BUFFER, t);
+                gl.enableVertexAttribArray(vertexCoordsLocation);
+                gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+                gl.drawArrays(gl.TRIANGLES, 0, t.numItems);
+            }
+        }
+    }
+
+    //DELETE
+    //https://stackoverflow.com/a/18804083/
+    saveTextureToImage(data, width, height) {
+        let canvas = document.createElement(&apos;canvas&apos;);
+        canvas.width = width;
+        canvas.height = height;
+        let context = canvas.getContext(&apos;2d&apos;);
+
+        // Copy the pixels to a 2D canvas
+        let imageData = context.createImageData(width, height);
+        imageData.data.set(data);
+        context.putImageData(imageData, 0, 0);
+
+        let img = new Image();
+        img.src = canvas.toDataURL();
+        let w = window.open(&quot;&quot;); //https://stackoverflow.com/a/27798235/
+        w.document.write(img.outerHTML);
+        return img;
+    }
+
+    //DELETE
+    findFeature(r, g, b, a) {
+        let [indexG, indexB, indexA] = [this.calcIndex(g, 4), this.calcIndex(b, 4), this.calcIndex(a, 16)];
+        let picked = this.pickingData[r][indexG][indexB][indexA];
+        for (let pick of picked) {
+            // console.log(pick);
+            let colorId = pick.colorId;
+            // console.log(colorId);
+            let [rId, gId, bId, aId] = colorId;
+            // console.log(rId, gId, bId, aId);
+            if (rId === r &amp;&amp; gId === g &amp;&amp; bId === b &amp;&amp; aId === a) {
+                this.layoutManager.printInPickingInformation(JSON.stringify(pick.props));
+                // alert(JSON.stringify(pick.props));
+                break;
+            }
+        }
+        // console.log(this.pickingData[r][indexG][indexB][indexA]);
+        // return [r, indexG, indexB, indexA];
+    }
+
+    //DELETE
+    calcIndex(color, nDivisions) {
+        let colorsForDivision = 256 / nDivisions;
+        return Math.floor(color / colorsForDivision);
+    }
+
+    /**
+     * Reads the file(s) of data, and if it exists the geospatial information.
+     * @memberof Map
+     */
+    readFiles() {
+        // Listen to parser end/done event
+        document.addEventListener(&quot;parserEnd&quot;, (e) =&gt; this.receiveParserData(e.detail), false);
+
+        let fileName = this.urlVariable.getDataFileName();
+        if (fileName.endsWith(&apos;.json&apos;) || fileName.endsWith(&apos;.geojson&apos;)) {// Start geojson parser for this file and userOptions
+            // console.log(&apos;JSON&apos;);
+            new GeoJSONParser(this.gisplayOptions, this._webgl.gl);
+        } else if (fileName.endsWith(&apos;.csv&apos;) || fileName.endsWith(&apos;.CSV&apos;)) {// Start CSV parser for this file and userOptions
+            // console.log(&quot;CSV&quot;);
+            new CSVParser(this.gisplayOptions, this._webgl.gl);
+        } else {
+            console.error(&quot;WRONG File extension&quot;);
+        }
+    }
+
+    receiveParserData(detail) {
+        console.log(detail);
+        this.mapVariableCombinations = detail.mapVariableCombinations;
+        this.mapVariableCombinationToIndexMap = detail.mapVariableCombinationToIndexMap;
+        this.categoricalVariables = detail.categoricalVariables;
+        this.continousVariables = detail.continousVariables;
+
+        // console.log(this.visualVariableCombinations, this.visualVariableCombinationToIndexMap, this.categoricalVariables, this.continousVariables);
+
+        //Depois ir a cada VVCombination e fazer set da cor/shape/size de acordo com a VVCombinationString e os defaults de cada mapa + mappingOptions (are inside each VVCOMb)
+        //this.buildLegend();
+
+        this.setupTimeControl();
+
+        this.setupEvents();
+        this.draw();
+
+        console.log(this);
+
+        if (window.aaaaaaaaa) {
+            let opts = this.gisplayOptions; //GisplayOptions
+            this.pickingData = detail.pickingData; // RGBA ids to be used for picking.
+            console.log(detail);
+            this.aesthetics = this.createAesthetics(detail.classes, detail.isQuantitative);
+            console.log(this.aesthetics);
+            let isGeoJSON = detail.geojson !== undefined;
+            if (isGeoJSON) {//Processed geojson file
+                // console.log(&quot;Event is called: &quot;, e.detail);
+                this.insertData(detail.data, detail.hasPoints);
+            } else { //Processed CSV File
+                //??
+            }
+
+            /*   if (opts.showLoader) //@TODO: Change this if to be the 1st thing done inside the setTimeout
+                  this.showLoader(); */
+            if (opts.showLegend)
+                this.buildLegend();
+            this.draw();
+            // console.log(&quot;drawed&quot;);
+            console.timeEnd(&quot;ss&quot;);
+        }
+    }
+
+    //DELETE
+    /**
+     * Create Aesthetic classes.
+     * @param {Array&lt;?&gt;} classes - Array with classes. 
+     * @param {any} isQuantitative - If the classes are quantitative or not (qualitative).
+     * @returns {Array&lt;Aesthetic&gt;} - Aesthetic classes built based on the given class breaks.
+     * @memberof Map
+     */
+    createAesthetics(classes, isQuantitative) {
+        let opts = this.gisplayOptions; //GisplayOptions
+        let colorScheme = opts.colorScheme; //Color scheme defined by the user
+        let aesarray = []; //Array of aesthetic objects (Legend Classes)
+        let fcolor; //Fill Colors to be used
+
+        //Create Aesthetic objects (Legend classes)
+        if (isQuantitative) {
+            if (classes.length &gt; 2) {
+                if (colorScheme !== undefined)
+                    fcolor = chroma.scale(colorScheme).colors(classes.length - 1);
+                else
+                    fcolor = this.getDefaultColors(classes.length - 1);
+
+                for (let i = 0; i &lt; classes.length - 1; i++) {
+                    let [r, g, b] = chroma(fcolor[i]).rgb();
+                    let aes;
+                    if (i !== classes.length - 2)
+                        aes = new Aesthetic(i, opts.attr, [Math.round(r), Math.round(g), Math.round(b), opts.alpha], [0, 0, 0, 1], null, [classes[i], classes[i + 1]]);
+                    else {
+                        aes = new Aesthetic(i, opts.attr, [Math.round(r), Math.round(g), Math.round(b), opts.alpha], [0, 0, 0, 1], null, [classes[i], classes[i + 1]]);
+                        aes.outer = true;
+                    }
+                    aesarray.push(aes);
+                }
+            }
+            else { //TODO this is used for PSymbols
+                colorScheme = this.getDefaultColors(classes.length);
+                let [r, g, b] = chroma(colorScheme[0]).rgb();
+                let aes = new Aesthetic(0, opts.attr, [Math.round(r), Math.round(g), Math.round(b), opts.alpha], [0, 0, 0, 1], null, [classes[0], classes[1]]);
+                aes.outer = true;
+                aesarray.push(aes);
+            }
+        } else {
+            if (colorScheme !== undefined) //User defined colorScheme
+                fcolor = chroma.scale(colorScheme).colors(classes.length);
+            else
+                fcolor = this.getDefaultColors(classes.length, &apos;Qualitative&apos;);
+
+            for (let i = 0; i &lt; classes.length; i++) {
+                let [r, g, b] = chroma(fcolor[i]).rgb();
+                let aes = new Aesthetic(i, opts.attr, [Math.round(r), Math.round(g), Math.round(b), 1], [0, 0, 0, 1], null, [classes[i]]);
+                aesarray.push(aes);
+            }
+        }
+        return aesarray;
+    }
+
+    //DELETE
+    insertData(features, hasPoints) {
+        if (hasPoints) {
+            //if isDynamic
+            // if (this.gisplayOptions.isDynamic)
+            this.insertGroupedPoints(features);
+            /*  else
+                 this.insertPoints(features); */
+        } else { //Polygon
+            this.insertPolygons(features);
+        }
+    }
+
+    //DELETE
+    insertPolygons(features) {
+        const gl = this._webgl.gl;
+        console.log(&quot;Insert Polygons&quot;);
+        for (let feature of features) {
+            // console.log(feature);
+
+            //SEE:  http://prntscr.com/g2nq82 &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+            const polygons = feature[0];
+
+            const currentTriangles = []; //Polygon Triangles vertices
+            const bufferT = []; //WebGL Buffers with  triangles
+            const currentBorders = []; //Polygon Borders vertices
+            const bufferB = []; //Buffer borders
+
+            for (let i = 0; i &lt; polygons.length; i++) { //For each Polygon
+                const trianglesPolygon = polygons[i].triangles; //indices of vertices to group together
+                const border = polygons[i].vertices;
+                currentTriangles[i] = new Array(); //Add This Polygon triangles
+                currentBorders[i] = new Array(); //Add this Polygon borders
+
+                for (let j = 0; j &lt; trianglesPolygon.length; j++) { //Triangles
+                    currentTriangles[i].push(border[trianglesPolygon[j] * 2], border[trianglesPolygon[j] * 2 + 1]);
+
+                    if (j === trianglesPolygon.length - 1) {
+                        bufferT.push(gl.createBuffer());
+                        let vertArray = new Float32Array(currentTriangles[i]);
+                        gl.bindBuffer(gl.ARRAY_BUFFER, bufferT[i]);
+                        gl.bufferData(gl.ARRAY_BUFFER, vertArray, gl.STATIC_DRAW);
+                        bufferT[i].itemSize = 2;
+                        bufferT[i].numItems = vertArray.length / 2;
+                    }
+                }
+
+                for (let k = 0; k &lt; border.length; k += 2) { //Borders
+                    currentBorders[i].push(border[k], border[k + 1]);
+                    if (k === border.length - 2) {
+                        bufferB.push(gl.createBuffer());
+                        let vertArray = new Float32Array(currentBorders[i]);
+                        gl.bindBuffer(gl.ARRAY_BUFFER, bufferB[i]);
+                        gl.bufferData(gl.ARRAY_BUFFER, vertArray, gl.STATIC_DRAW);
+                        bufferB[i].itemSize = 2;
+                        bufferB[i].numItems = vertArray.length / 2;
+                    }
+                }
+            }
+            // console.log(feature[1]);
+            //feature[2] is the RGBA id
+            this.insertFeature(feature[2], feature[1], bufferT, bufferB, []);
+        }
+    }
+
+    //DELETE AFTER
+    insertGroupedPoints(points) {
+        let tempAestheticPoints = [];
+        for (let i = 0; i &lt; this.aesthetics.length; i++)
+            tempAestheticPoints[i] = [];
+
+        for (let point of points) {
+            let lng = point[0][0];
+            let lat = point[0][1];
+
+            let attrValue = point[1];
+            let aesPos = this.fitFeature(attrValue);// console.log(lnglat, val);
+            tempAestheticPoints[aesPos].push(lng, lat);
+            // this.treepoints.push({ lng: lng, lat: lat, attr: val });
+        }
+        // console.log(tempAestheticPoints);
+        //Add Points to webgl buffers
+        const gl = this._webgl.gl;
+        for (let i = 0; i &lt; tempAestheticPoints.length; i++) {
+            if (tempAestheticPoints[i].length &gt; 0) {
+                const vertArray = new Float32Array(tempAestheticPoints[i]);
+                const bufferP = [];
+                bufferP.push(gl.createBuffer());
+                gl.bindBuffer(gl.ARRAY_BUFFER, bufferP[0]);
+                gl.bufferData(gl.ARRAY_BUFFER, vertArray, gl.STATIC_DRAW);
+                bufferP[0].itemSize = 2;
+                bufferP[0].numItems = vertArray.length / 2;
+                this.insertGroupedFeature(i, [], [], bufferP);
+            }
+        }
+    }
+
+    //DELETE AFTER
+    insertPoints(points) {
+        for (let point of points) {
+            console.log(point);
+            /*  const currentPoints = new Array();
+             currentPoints.push(geometry.coordinates[0], geometry.coordinates[1]);
+             const bufferPoints = [];//Buffer points
+             let vertArray = new Float32Array(currentPoints);
+ 
+             bufferPoints.push(gl.createBuffer());
+             gl.fsize = vertArray.BYTES_PER_ELEMENT;
+             gl.bindBuffer(gl.ARRAY_BUFFER, bufferPoints[0]);
+             gl.bufferData(gl.ARRAY_BUFFER, vertArray, gl.STATIC_DRAW);
+ 
+             bufferPoints[0].itemSize = 2;
+             bufferPoints[0].numItems = vertArray.length / 2;
+ 
+             this.insertFeature(featureId, properties, [], [], bufferPoints); */
+        }
+    }
+
+    //DELETE
+    /**
+     * M16) Inserts the Feature into one Aesthetic object.
+     * @param {number} id - The Feature id. 
+     * @param {JSON} properties - The Feature properties. 
+     * @param {{itemSize: number, numItems: number}} triangles - Triangles, each in one WebGLBuffer.
+     * @param {{itemSize: number, numItems: number}} borders - Borders, each in one WebGLBuffer.
+     * @param {{itemSize: number, numItems: number}} points - Points, each in one WebGLBuffer.
+     * @return {void}
+     * @memberOf Map
+     */
+    insertFeature(id, properties, triangles, borders, points) {
+        for (const aes of this.aesthetics)
+            if (aes.checkProperty(properties))
+                return aes.addFeature(id, properties, triangles, borders, points); //@TODO return when we find one
+    }
+
+    //DELETE
+    /**
+     * M17) Returns an array of Aesthetic ids that tells us the objects where the Feature belongs.
+     * @param {JSON} properties - The Feature properties
+     * @returns {Array&lt;number&gt;} - The Aesthetic ids where the Feature belongs.
+     * @memberOf Map
+     */
+    fitFeature(properties) {
+        for (let i = 0; i &lt; this.aesthetics.length; i++)
+            if (this.aesthetics[i].checkProperty(properties))
+                return i;
+    }
+
+    //DELETE
+    /**
+     * M19) Similar to insertFeature, in this case inserts a group of Features like it was only one.
+     * It creates one WebGLBuffer with all the points instead of one WebGLBuffer per point.
+     * This method should only be used when we already grouped the Features by Aesthetic class (fitFeature() method).
+     * This method exists to provide one alternative less expensive in terms of memory for low end devices.
+     * Used only on Dot Map because on those we can easily end up with millions of different Features.
+     * @param {number} id - Aesthethics id. 
+     * @param {{itemSize: number, numItems: number}} triangles - Not used
+     * @param {{itemSize: number, numItems: number}} borders - Not used
+     * @param {{itemSize: number, numItems: number}} points - All the points for the Aesthethic object in one WebGLBuffer.
+     * @memberOf Map
+     */
+    insertGroupedFeature(id, triangles, borders, points) {
+        this.aesthetics[id].addGroupedFeature(null, triangles, borders, points);
+    }
+
+    /** ########################    LEGEND METHODS    ######################## */
+    //DELETE
+    /**
+     * @TODO: DELETE
+     * M17) Creates a Legend element suitable for polygons based on the Aesthethic objects.
+     * Should be overriden by subclasses.
+     * @return {void}
+     * @abstract
+     * @deprecated {NOT USED}
+     * @memberOf Map
+     */
+    buildLegend() {
+        const mapCanvas = document.getElementById(`mapCanvas${this.id}`);
+        const legendDiv = document.createElement(&apos;div&apos;);
+        legendDiv.id = `legendDiv${this.id}`;
+        legendDiv.style.position = &apos;absolute&apos;;
+        legendDiv.style.backgroundColor = &apos;white&apos;;
+        legendDiv.style.width = 250;
+        legendDiv.style.bottom = 20;
+        legendDiv.style.right = 0;
+        legendDiv.style.borderColor = &apos;black&apos;;
+        legendDiv.style.border = &apos;solid&apos;;
+
+        const table = document.createElement(&apos;table&apos;);
+        const thvalue = document.createElement(&apos;th&apos;);
+        const thcolor = document.createElement(&apos;th&apos;);
+        table.style.zIndex = &quot;2000&quot;;
+        thcolor.style.width = 100;
+        table.appendChild(thcolor);
+        table.appendChild(thvalue);
+
+        for (const currentaes of this.aesthetics) {
+            const row = document.createElement(&apos;tr&apos;);
+            const value = document.createElement(&apos;td&apos;);
+            const color = document.createElement(&apos;td&apos;);
+            const ptext = document.createElement(&apos;p&apos;);
+            let text;
+            if (typeof currentaes.range[0] === &apos;number&apos;)
+                text = document.createTextNode(`[${currentaes.range[0]}, ${currentaes.range[1]}[`);
+            else
+                text = document.createTextNode(currentaes.range[0]);
+            ptext.appendChild(text);
+            value.appendChild(ptext);
+
+            const colorDiv = document.createElement(&apos;div&apos;);
+            colorDiv.style.position = &apos;relative&apos;;
+            const rgbc = `rgba(${currentaes.fillColor[0]},${currentaes.fillColor[1]},${currentaes.fillColor[2]},${currentaes.fillColor[3]})`;
+            colorDiv.style[&apos;backgroundColor&apos;] = rgbc;
+            colorDiv.style.height = 25;
+            colorDiv.style.width = 80;
+            color.appendChild(colorDiv);
+
+            row.appendChild(color);
+            row.appendChild(value);
+            table.appendChild(row);
+        }
+
+        legendDiv.appendChild(table);
+        this.bGMap.getContainer().appendChild(legendDiv);
+    }
+
+    /** ########################    WEBGL METHODS    ######################## */
+    /**
+     * M21) Clear current buffers to preset values.
+     * @see https://developer.mozilla.org/en-US/docs/Web/API/WebGLRenderingContext/clear
+     * @memberOf Map
+     */
+    clear() {
+        const gl = this._webgl.gl;
+        gl.clear(gl.COLOR_BUFFER_BIT);
+        gl.disable(gl.DEPTH_TEST);
+    }
+
+    //DELETE
+    /**
+     * DELETE
+     * M22) Receiving an Aesthetics object, draws the triangles contained in it&apos;s Features,
+     * using the color that the Aesthethics object has.
+     * @param {Aesthetic} aes - The Aesthetic object.
+     * @param {BGMapWrapper} bgmap
+     * @returns {void}
+     * @see Diogo&apos;s thesis Page 58/59
+     * @memberOf Map
+     */
+    drawTriangles(aes, bgmap) {
+        const gl = this._webgl.gl;
+        if (gl === null)
+            return;
+
+        let viewPort = bgmap.calculateViewPort(this.layoutManager.canvas);
+        gl.viewport(...viewPort);
+        gl.scissor(...viewPort);
+
+        const fsize = Float32Array.BYTES_PER_ELEMENT;
+        const currentZoom = bgmap.getZoom();
+        const pointSize = Math.max(currentZoom - 5.0, 1.0);
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, &apos;coords&apos;);
+        const vertexSizeLocation = gl.getAttribLocation(this._webgl.program, &apos;aPointSize&apos;);
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, &quot;u_color&quot;);
+        const isPointLocation = gl.getUniformLocation(this._webgl.program, &apos;isPoint&apos;);
+        let [r, g, b, a] = aes.getFillColor();
+
+        this.setMatrices(gl, bgmap);
+        gl.vertexAttrib1f(vertexSizeLocation, pointSize);
+        gl.uniform1f(isPointLocation, 0.0);
+        gl.uniform4f(fragmentColorLocation, r / 255, g / 255, b / 255, a);
+
+        let features = aes.getFeatures();
+        for (const f of features) {
+            let triangles = f.getTriangles();
+            for (const t of triangles) {
+                gl.bindBuffer(gl.ARRAY_BUFFER, t);
+                gl.enableVertexAttribArray(vertexCoordsLocation);
+                gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+                gl.drawArrays(gl.TRIANGLES, 0, t.numItems);
+            }
+        }
+    }
+
+    /**
+     * The new method to draw Triangles.
+     * @param {MapVariableCombination} mvc - The map variable combination
+     * @param {TemporalGranule} tg - The temporal granule. 
+     * @param {BGMapWrapper} bgmap - The background map where we want to draw.
+     * @memberof GisplayMap
+     */
+    drawTrianglesNew(mvc, tg, bgmap) {
+        const gl = this._webgl.gl;
+        if (gl === null)
+            return;
+
+        let viewPort = bgmap.calculateViewPort(this.layoutManager.canvas);
+        gl.viewport(...viewPort);
+        gl.scissor(...viewPort);
+
+        const fsize = Float32Array.BYTES_PER_ELEMENT;
+        let [r, g, b] = mvc.getColor();// .map((x) =&gt; x / 255); --&gt; Normalize color  // console.log(r,g,b);
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, &apos;coords&apos;);
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, &quot;u_color&quot;);
+        gl.uniform4f(fragmentColorLocation, r / 255, g / 255, b / 255, mvc.getAlpha());
+
+        this.setMatrices(gl, bgmap);
+        let polygons = tg.getGeometryData();//.getTemporalGranuleData(0);//.getTemporalGranularityData(0);
+        for (const p of polygons) {
+            for (const triangles of p.getTriangles()) {
+                gl.bindBuffer(gl.ARRAY_BUFFER, triangles.buffer);
+                gl.enableVertexAttribArray(vertexCoordsLocation);
+                gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+                gl.drawArrays(gl.TRIANGLES, 0, triangles.numElements);
+            }
+        }
+    }
+
+    /**
+     * The new method to draw Borders.
+     * @param {MapVariableCombination} mvc - The map variable combination
+     * @param {TemporalGranule} tg - The temporal granule. 
+     * @param {BGMapWrapper} bgmap - The background map where we want to draw.
+     * @memberof GisplayMap
+     */
+    drawBordersNew(mvc, tg, bgmap) {
+        const gl = this._webgl.gl;
+        if (gl === null)
+            return;
+
+        let viewPort = bgmap.calculateViewPort(this.layoutManager.canvas);
+        gl.viewport(...viewPort);
+        gl.scissor(...viewPort);
+
+        const fsize = Float32Array.BYTES_PER_ELEMENT;
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, &apos;coords&apos;);
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, &quot;u_color&quot;);
+        gl.uniform4f(fragmentColorLocation, 0, 0, 0, 1);
+
+        this.setMatrices(gl, bgmap);
+        let polygons = tg.getGeometryData();
+        for (const p of polygons) {
+            for (let border of p.getBorders()) {
+                gl.bindBuffer(gl.ARRAY_BUFFER, border.buffer);
+                gl.enableVertexAttribArray(vertexCoordsLocation);
+                gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+                gl.drawArrays(gl.LINE_LOOP, 0, border.numElements);
+            }
+        }
+    }
+
+    //DELETE
+    /**
+     * M23) Receiving an Aesthetics object, draws the borders contained in it&apos;s Features, 
+     * aplying the color specified in the Aeshteic object for the line color(Aeshteic.strokeColor).
+     * @param {Aesthetic} aes - The Aesthetic object.
+     * @returns {void}
+     * @memberOf Map
+     */
+    drawBorders(aes, bgmap) {
+        const gl = this._webgl.gl;
+        if (gl === null)
+            return;
+
+        let viewPort = bgmap.calculateViewPort(this.layoutManager.canvas);
+        gl.viewport(...viewPort);
+        gl.scissor(...viewPort);
+
+        /* Are these lines needed? drawPoints/PropPoints have them too 
+         gl.enable(gl.BLEND);
+         gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA); */
+
+        const fsize = Float32Array.BYTES_PER_ELEMENT;
+        const currentZoom = bgmap.getZoom();
+        const pointSize = Math.max(currentZoom - 5.0, 1.0);
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, &apos;coords&apos;);
+        const vertexSizeLocation = gl.getAttribLocation(this._webgl.program, &apos;aPointSize&apos;);
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, &quot;u_color&quot;);
+        const isPointLocation = gl.getUniformLocation(this._webgl.program, &apos;isPoint&apos;);
+        let [r, g, b, a] = aes.getStrokeColor();
+
+        this.setMatrices(gl, bgmap);
+        gl.vertexAttrib1f(vertexSizeLocation, pointSize);
+        gl.uniform1f(isPointLocation, 0.0);
+        gl.uniform4f(fragmentColorLocation, r / 255, g / 255, b / 255, a);
+
+        let features = aes.getFeatures();
+        for (const f of features) {
+            let borders = f.getBorders();
+            for (const b of borders) {
+                gl.bindBuffer(gl.ARRAY_BUFFER, b);
+                gl.enableVertexAttribArray(vertexCoordsLocation);
+                gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+                gl.drawArrays(gl.LINE_LOOP, 0, b.numItems);
+            }
+        }
+    }
+
+    /**
+     * M24) Receiving an Aesthetics object, draws the points contained in it&apos;s Features, 
+     * aplying the values specified in that Aesthetic object visual variables (color and size).
+     * @param {Aesthetic} aes - The Aesthetic object.
+     * @returns {void}
+     * @memberOf Map
+     */
+    drawPoints(aes, bgmap) {
+        const gl = this._webgl.gl;
+        if (gl === null)
+            return;
+
+        let viewPort = bgmap.calculateViewPort(this.layoutManager.canvas);
+        gl.viewport(...viewPort);
+        gl.scissor(...viewPort);
+
+        /* Are these lines needed? drawPoints/PropPoints have them too 
+         gl.enable(gl.BLEND);
+         gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA); */
+
+        const fsize = Float32Array.BYTES_PER_ELEMENT;
+        const currentZoom = bgmap.getZoom();
+        const pointSize = Math.max(currentZoom - 4.0 + aes.getPointSize(), aes.getPointSize());
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, &apos;coords&apos;);
+        const vertexSizeLocation = gl.getAttribLocation(this._webgl.program, &apos;aPointSize&apos;);
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, &quot;u_color&quot;);
+        const isPointLocation = gl.getUniformLocation(this._webgl.program, &apos;isPoint&apos;);
+        let [r, g, b, a] = aes.getFillColor();
+
+        this.setMatrices(gl, bgmap); //Set M1, M2 and M3
+        gl.vertexAttrib1f(vertexSizeLocation, pointSize);
+        gl.uniform1f(isPointLocation, 1.0);
+        gl.uniform4f(fragmentColorLocation, r / 255, g / 255, b / 255, a);
+
+        let features = aes.getFeatures();
+        let allFeatures = aes.getAllFeatures();
+        if (this.gisplayOptions.isDynamic &amp;&amp; aes.getFeatures().length &gt; 0) {
+            for (const f of features) {
+                let points = f.getPoints();
+                for (const p of points) {
+                    gl.bindBuffer(gl.ARRAY_BUFFER, p);
+                    gl.enableVertexAttribArray(vertexCoordsLocation);
+                    gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+                    gl.drawArrays(gl.POINTS, 0, p.numItems);
+                }
+            }
+        }
+        else if (allFeatures !== null &amp;&amp; !this.gisplayOptions.isDynamic) {
+            for (const allF of allFeatures) {
+                let points = allF.getPoints();
+                for (const p of points) {
+                    gl.bindBuffer(gl.ARRAY_BUFFER, p);
+                    gl.enableVertexAttribArray(vertexCoordsLocation);
+                    gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+                    gl.drawArrays(gl.POINTS, 0, p.numItems);
+                }
+            }
+        }
+    }
+
+    /**
+     * The new method to draw points.
+     * @param {MapVariableCombination} mvc 
+     * @param {TemporalGranule} tg 
+     * @param {BGMapWrapper} bgmap 
+     * @memberof GisplayMap
+     */
+    drawPointsNew(mvc, tg, bgmap) {
+        const gl = this._webgl.gl;
+        if (gl === null)
+            return;
+
+        let viewPort = bgmap.calculateViewPort(this.layoutManager.canvas);
+        gl.viewport(...viewPort);
+        gl.scissor(...viewPort);
+
+        const fsize = Float32Array.BYTES_PER_ELEMENT;
+        let [r, g, b] = mvc.getColor(); // console.log(r,g,b);
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, &quot;u_color&quot;); // COLOR
+        gl.uniform4f(fragmentColorLocation, r / 255, g / 255, b / 255, mvc.getAlpha());
+        const vertexShapeIndexLocation = gl.getUniformLocation(this._webgl.program, &apos;index&apos;); // SHAPE INDEX
+        gl.uniform1f(vertexShapeIndexLocation, mvc.getShape());
+        const vertexSizeLocation = gl.getAttribLocation(this._webgl.program, &apos;aPointSize&apos;); // POINT SIZE
+        const pointSize = Math.max(bgmap.getZoom() - 4.0 + mvc.getSize(), mvc.getSize());
+        gl.vertexAttrib1f(vertexSizeLocation, pointSize);
+
+        const texture = gl.createTexture();
+        gl.bindTexture(gl.TEXTURE_2D, texture);
+        // Set the parameters so we can render any size image.
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_S, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_WRAP_T, gl.CLAMP_TO_EDGE);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MIN_FILTER, gl.NEAREST);
+        gl.texParameteri(gl.TEXTURE_2D, gl.TEXTURE_MAG_FILTER, gl.NEAREST);
+        // Upload the image into the texture.
+        gl.texImage2D(gl.TEXTURE_2D, 0, gl.RGBA, gl.RGBA, gl.UNSIGNED_BYTE, this.texture);
+
+
+        this.setMatrices(gl, bgmap);
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, &apos;coords&apos;); //Coordenadas dos pontos
+        // for (const point of points) {
+        let points = tg.getGeometryData();
+        gl.bindBuffer(gl.ARRAY_BUFFER, points);
+        gl.enableVertexAttribArray(vertexCoordsLocation);
+        gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+        gl.drawArrays(gl.POINTS, 0, tg.getNumElements()); //4 pq &#xE9; no exemplo que tenho
+        // }
+    }
+
+    /**
+     * M25) Receiving an Aesthetics object, draws the points contained in it&apos;s Features, 
+     * aplying the color specified in the Aeshteic object for the line color(Aeshteic.strokeColor) 
+     * and the size of the point is based on the attribute value and the specified limits.
+     * @param {Aesthetic} aes - The Aesthetic object. 
+     * @returns {void} 
+     * @memberOf Map
+     */
+    drawProportionalPoints(aes, bgmap) {
+        console.log(&quot;drawProportionalSymbols&quot;)
+        const gl = this._webgl.gl;
+        if (gl === null)
+            return;
+
+        let viewPort = bgmap.calculateViewPort(this.layoutManager.canvas);
+        gl.viewport(...viewPort);
+        gl.scissor(...viewPort);
+
+        /* Are these lines needed? drawPoints/PropPoints have them too 
+         gl.enable(gl.BLEND);
+         gl.blendFunc(gl.ONE, gl.ONE_MINUS_SRC_ALPHA); */
+
+        const currentZoom = bgmap.getZoom();
+        const vertexCoordsLocation = gl.getAttribLocation(this._webgl.program, &apos;coords&apos;);
+        const vertexSizeLocation = gl.getAttribLocation(this._webgl.program, &apos;aPointSize&apos;);
+        const fragmentColorLocation = gl.getUniformLocation(this._webgl.program, &quot;u_color&quot;);
+        const isPointLocation = gl.getUniformLocation(this._webgl.program, &apos;isPoint&apos;);
+        let [r, g, b] = aes.getFillColor();
+
+        this.setMatrices(gl, bgmap);
+        gl.uniform1f(isPointLocation, 1.0);
+        gl.uniform4f(fragmentColorLocation, r / 255, g / 255, b / 255, this.gisplayOptions.alpha); //TODO: Para 2.5D usar alpha a 0?
+
+        const fsize = Float32Array.BYTES_PER_ELEMENT;
+        let opts = this.gisplayOptions;
+        if (this.gisplayOptions.isDynamic) {
+            let features = aes.getAllFeatures();
+            for (const f of features) {
+                const propvalue = parseFloat(f.getProperties()[opts.attr]);
+                const temppointsize = ((opts.maxPointSize - opts.minPointSize) / (this.max - this.min)) * (propvalue - this.min);
+                const pointSize = Math.max(currentZoom - 4.0 + temppointsize * currentZoom / 4, 2);
+
+                let points = f.getPoints();
+                for (let p of points) {
+                    gl.bindBuffer(gl.ARRAY_BUFFER, p);
+                    gl.vertexAttrib1f(vertexSizeLocation, pointSize);
+                    gl.enableVertexAttribArray(vertexCoordsLocation);
+                    gl.vertexAttribPointer(vertexCoordsLocation, 2, gl.FLOAT, false, fsize * 2, 0);
+                    gl.drawArrays(gl.POINTS, 0, p.numItems);
+                }
+            }
+        }
+    }
+
+    /**
+     * M26) This method will set all matrices needed to compute each point/vertex position. This will use the 
+     * Before sending the matrix to webGL we change the last column transformation in X and Y to the last row X and Y 
+     * because WebGL is column major. See MMatrix[6] =...
+     * @param {WebGLRenderingContext} gl - The webGL rendering context.
+     * @param {BGMapWrapper} bgmap - The background map wrapper.
+     * @memberof MapV2
+     */
+    setMatrices(gl, bgmap) {
+        let lngCenter = bgmap.getCenterLng();
+        let latCenter = bgmap.getCenterLat();
+        let zoom = bgmap.getZoom();
+        let tileSize = bgmap.getTileSize();//this.gisplayOptions.tileSize;
+        let width = bgmap.getWidth();
+        let height = bgmap.getHeight(); // console.log(lngCenter, latCenter, zoom, tileSize, width, height);
+        let mercator = WebGLUtils.webMercatorProjection(lngCenter, latCenter, zoom, tileSize, width, height);
+        let MMatrix = WebGLUtils.finalMatrix(mercator.scale, width, height, mercator.offsetX, mercator.offsetY);
+        const Mloc = gl.getUniformLocation(this._webgl.program, &apos;M&apos;);
+        gl.uniformMatrix3fv(Mloc, false, MMatrix);
+    }
+
+    /** ########################    ABSTRACT METHODS    ######################## */
+    /**
+     * M20) Draw map function. Must be overriden by subclasses.
+     * @abstract 
+     */
+    draw() {
+        throw new Error(&quot;Draw must be implemented by subclass.&quot;);
+    }
+
+    /**
+     * M10) Defaults for each map. Subclasses should override this method.
+     * @abstract 
+     * @returns {{color: {numberOfClasses: number, colors: Array&lt;number&gt;}} - the default values for the color (number of classes and colors).
+     * @override 
+     * @memberOf Map
+     */
+    defaults() {
+        throw new Error(&quot;This map has no defaults defined.&quot;);
+    }
+
+    /**
+     * This function should be implemented by any subclass that wants to use another way of processing data.
+     * By default it loads GeoJSON but if the user wants to load another type of data it should do so by implementing this method.
+     * A function similar to loadGeoJSON should also be implemented
+     * @param {Object|JSON} data - Dataset to be used. 
+     * TODO: Add static to this method.
+     * @abstract
+     */
+    processData(data) {
+        this.loadGeoJSON(geojson);
+    }
+
+    /**
+     * Returns the colors for this map given the number of classes and the nature of the data (sequential, diverging or qualitative). 
+     * @param {number} numClasses - Number of classes. 
+     * @param {string} dataNature - Nature of the data.
+     * @returns {Array&lt;Array&lt;RGB&gt;&gt;} Default colors for the map given the number of classes and nature of data.
+     * @abstract 
+     * @memberOf GisplayMap
+     */
+    getDefaultColors(numClasses, dataNature) {
+    }
+
+    /**
+     * Returns the available visual variables for this map.
+     * @returns {Array&lt;string&gt;} - the available visual variables for this map.
+     * @abstract
+     * @memberof GisplayMap
+     */
+    getAvailableVisualVariables() {
+        throw new Error(&quot;Available visual variables must be a method in any subclass.&quot;);
+    }
+
+    /**
+     * Returns the dynamic shader source code for this map.
+     * @returns { {vertex:{dynamicHeader:string,dynamicMain:string}, fragment: {dynamicHeader:string,dynamicMain:string}} - 
+     * @memberof GisplayMap
+     */
+    dynamicShaders() {
+        throw new Error(&quot;Sub classes of GisplayMap should implement the method dynamicShadersCode() that should return the vertex and fragment shaders dynamic code.&quot;);
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

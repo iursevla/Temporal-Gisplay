@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/VVs/MapVariableCombination.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/VVs/MapVariableCombination.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//Import for intellisense
+import { MapVariable } from &apos;./MapVariable&apos;;
+import { CategoricalVariable } from &apos;./CategoricalVariable&apos;;
+
+import { TemporalGranule } from &apos;./TemporalGranule&apos;;
+import { GisplayDefaults } from &apos;../GisplayDefaults&apos;;
+
+/**
+ * This class represents a map variable Combination. A map variable combination is created by joining one or multiple map variables.
+ * This class will hold the string for the combination and the data associated with this combination.
+ * Inside a combination can very well exist multiple temporal granules. The data can further be split into multiple granules.
+ * @class MapVariableCombination
+ */
+export class MapVariableCombination {
+
+    /**
+     * Creates an instance of MapVariableCombination.
+     * @param {string} combinationString - String that represents this map variable combination.
+     * @param {Array&lt;MapVariable&gt;} mapVariables - The variables themselves.
+     * @param {Array&lt;number&gt;} startRGBA - The first RGBA color for this map variable combination.
+     * @param {Array&lt;TemporalGranule&gt;} temporalGranules - The temporal granules that are present on this map variable combination.
+     * @param {WebGLRenderingContext} webglContext - The WebGL renderind context.
+     * @param {boolean} hasPoints - Has points or not.
+     * @param {boolean} anyQualifierIsAttribute - If any continuous variable has &apos;attribute&apos; qualifier in the shader.
+     * @memberof MapVariableCombination
+     */
+    constructor(combinationString, mapVariables, startRGBA, temporalGranules, webglContext, anyQualifierIsAttribute) {
+        /**
+         * The string that represents this combination.
+         * @type {string}
+         */
+        this.combinationString = combinationString;
+        /**
+         * The values for each map variable that is part of this combination.
+         * This contains: Visual Variable  value (e.g 99-184) + 
+         * @type {Array&lt;MapVariable&gt;}
+         */
+        this.mapVariables = mapVariables;
+
+        /**
+         * The current RGBA that will identify each  
+         * @type {Array&lt;number&gt;}
+         */
+        this.currentRGBAPickingColor = startRGBA;
+        /**
+         * The start RGBA color of this map variable combination.
+         * @type {Array&lt;number&gt;}
+         */
+        this.startRGBA = [...startRGBA];
+
+        /**
+         * If this map variable combination is currently enabled on the map or not. 
+         * @type {boolean}
+         */
+        this.isEnabledBool = true;
+
+        //  ########################  TIME
+        /**
+         * Holds all temporal granularities that exist.
+         * @type {Array&lt;TemporalGranule&gt;}
+         */
+        this.temporalGranules = [];
+        if (temporalGranules === undefined || temporalGranules.length === 0)
+            this.temporalGranules.push(new TemporalGranule(0, webglContext, anyQualifierIsAttribute));
+        else
+            for (const temporalgranule of temporalGranules)
+                this.temporalGranules.push(new TemporalGranule(temporalgranule, webglContext, anyQualifierIsAttribute));
+
+        // [ [VVs], [Geo], [Time?], [Extras?] ]
+        //   0      1      2        3
+        //Position of elements from Parser
+        /**
+         * The position of the time granularity information on the data array. 
+         * If time exists on the data then holds the value 2, otherwise, holds false.
+         * @type {number|boolean}
+         */
+        this.posTime = this.temporalGranules.length &gt; 1; //TODO: DELETE
+
+        /**
+         * This map will contain for each visual variable on this map variable combination it&apos;s value.
+         * E.g. shape -&gt; 3 (index in the shapes image)
+         * E.g. color -&gt; [0, 255, 0]
+         * @todo Fix this variable because it does not make much sense. Fix the _findVisualVariablesValues() method too.
+         * @type {Map&lt;string, Array&lt;number&gt;|number&gt;}
+         */
+        this.visualVariableValues = new Map();
+        this._findVisualVariablesValues();
+    }
+
+    /**
+     * Returns all temporal granularities that exist in this map variable combination.
+     * @returns {Array&lt;TemporalGranule&gt;} - all temporal granularities that exist in this map variable combination.
+     * @memberof MapVariableCombination
+     */
+    getTemporalGranules() {
+        return this.temporalGranules;
+    }
+
+    /**
+     * Returns true or false depending on the state of the enabled variable.
+     * @returns {boolean} - true if enabled, false, otherwise.
+     * @memberof MapVariableCombination
+     */
+    isEnabled() {
+        return this.isEnabledBool;
+    }
+
+    /**
+     * Inverse of current state. If enabled then disable, otherwise, enable.
+     * @memberof MapVariableCombination
+     */
+    enableDisable() {
+        this.isEnabledBool = !this.isEnabledBool;
+    }
+
+    /**
+     * Disables the map variable combination.
+     * @memberof MapVariableCombination
+     */
+    disable() {
+        this.isEnabledBool = false;
+    }
+
+    /**
+     * Enables the map variable combination.
+     * @memberof MapVariableCombination
+     */
+    enable() {
+        this.isEnabledBool = true;
+    }
+
+    /**
+     * Add one data row  associated with this combination of map variables.
+     * @param {Array&lt;string|number&gt;} dataRow - The data row.
+     * @param {number} geometryPrimitive - The identifier of the geometry primtive.
+     * @memberof MapVariableCombination
+     */
+    addDataRow(dataRow, geometryPrimitive) {
+        //data[2][0] ||0 -&gt; If time is undefined then add to the only existing temporal granularity 0. Otherwise add to the position given by the array.
+        this.temporalGranules[dataRow[2][0] || 0].addDataRow([dataRow[0], dataRow[1], dataRow[3]], geometryPrimitive);
+        // console.log(dataRow);
+    }
+
+    /**
+     * For each Temporal Granularity join the point data in a single WebGLBuffer.
+     * @deprecated Parser calls each temporal granularity directly, bypassing this method.
+     * @memberof MapVariableCombination
+     */
+    joinTemporalGranuleData(webglContext, geometryPrimitive) {
+        //Se nao existir nenhuma VV que tenha o seu qualifier como 
+
+        let isAttribute = false;
+        for (let mapVar of this.mapVariables)
+            if (mapVar.qualifierIsAttribute())
+                isAttribute = true;
+
+        // console.log(&quot;joinTGDATA&quot;, geometryPrimitive, isAttribute);
+        switch (geometryPrimitive) {
+            case GisplayDefaults.getPrimitive().POINT:
+            case GisplayDefaults.getPrimitive().CSVPOINT: {
+                for (const tg of this.temporalGranules) {
+                    if (isAttribute)
+                        tg.joinAttributeData(webglContext);
+                    tg.joinPointData(webglContext);
+                }
+                break;
+            }
+            case GisplayDefaults.getPrimitive().POLYGON: {
+                for (const tg of this.temporalGranules)
+                    tg.joinPolygonData(webglContext);
+                break;
+            }
+            case GisplayDefaults.getPrimitive().LINE:
+                for (const tg of this.temporalGranules)
+                    tg.joinLineData(webglContext);
+                break;
+        }
+    }
+
+    /**
+     * Join the picking RGBA identifiers into one WebGLBuffer when the primitive to draw are points.
+     * @memberof MapVariableCombination
+     */
+    joinPickingColors() {
+        for (const tg of this.temporalGranules)
+            tg.joinPickingColors();
+    }
+
+    /**
+     * Returns the WebGLBuffer (if points) or Polygon associated with the the temporal granule with index equal to timeIndex.
+     * @param {number} timeIndex - The index of the temporal granule. 
+     * @returns {WebGLBuffer|Polygon}
+     * @memberof MapVariableCombination
+     */
+    getTemporalGranuleData(timeIndex) {
+        return this.temporalGranules[timeIndex].getGeometryData();
+    }
+
+    /**
+     * Generates a sequential color to identify the Feature (point/polygon). The generated colors are sequential.
+     * @returns {Uint8Array} - The RGBA generated color.
+     * @memberof MapVariableCombination
+     */
+    generateSequentialColor() {
+        let r = 0,
+            g = 1,
+            b = 2,
+            a = 3;
+
+        //@TODO: Change to 
+        //Gerar num sequencial int novo
+        //  
+        if (++this.currentRGBAPickingColor[a] % 256 === 0 &amp;&amp; this.currentRGBAPickingColor[a] !== 0) { // !==  0 otherwise when 0 wouldnt move or wouldnt generate alpha equal to 0
+            this.currentRGBAPickingColor[a] = 0;
+            if (++this.currentRGBAPickingColor[b] % 256 === 0 &amp;&amp; this.currentRGBAPickingColor[b] !== 0) {
+                this.currentRGBAPickingColor[b] = 0;
+                if (++this.currentRGBAPickingColor[g] % 256 === 0 &amp;&amp; this.currentRGBAPickingColor[g] !== 0) {
+                    this.currentRGBAPickingColor[g] = 0;
+                    this.currentRGBAPickingColor[r]++;
+                }
+            }
+        }
+
+        //TODO: USe this Uint8Array instead of rgbaPickingColor.^^
+        let color = new Uint8Array(4);
+        color[0] = this.currentRGBAPickingColor[r];
+        color[1] = this.currentRGBAPickingColor[g];
+        color[2] = this.currentRGBAPickingColor[b];
+        color[3] = this.currentRGBAPickingColor[a];
+        return color;
+    }
+
+    /**
+     * Returns the current RGBA color for this Visual Variable Combination.
+     * @returns {Array&lt;number&gt;} - the current RGBA color for this Visual Variable Combination.
+     * @memberof MapVariableCombination
+     */
+    getStartingRGBA() {
+        return this.startRGBA;
+    }
+
+    /**
+     * Returns the current RGBA picking color.
+     * @returns {number} - the current RGBA color. 
+     * @memberof MapVariableCombination
+     */
+    getCurrentRGBA() {
+        return this.currentRGBAPickingColor;
+    }
+
+    /**
+     * Used to update the current RGBA value when all data is correctly stored in the Temporal granules.
+     * @memberof MapVariableCombination
+     */
+    updateCurrentRGBA() {
+        // console.error(&quot;UPDATE CURR RGBA&quot;, this.temporalGranules.length);
+        for (let i = this.temporalGranules.length - 1; i &gt;= 0; i--) {
+
+            let searchColors = this.temporalGranules[i].getPickingData().getSearchColors();
+            if (searchColors.length &gt; 0) {
+                let lastColor = searchColors[searchColors.length - 1];
+                this.currentRGBAPickingColor = GisplayDefaults.numberToRGBA(lastColor);
+                break;
+            }
+        }
+    }
+
+    /**
+     * Returns this map variable combination string.
+     * @returns {string} - this map variable combination string.
+     * @memberof MapVariableCombination
+     */
+    getCombinationString() {
+        return this.combinationString;
+    }
+
+    /**
+     * For each map variable use the its combination value to find the associated class or category
+     * depending on the type of map variable. 
+     * @returns {Array&lt;any&gt;}
+     * @memberof MapVariableCombination
+     */
+    getMapVariablesValues() {
+        let mapVarValues = [];
+        let combStr = this.combinationString;
+        for (let i = 0; i &lt; combStr.length; i++) {
+            let combValue = +combStr[i];
+            let mapVar = this.mapVariables[i];
+            if (mapVar instanceof CategoricalVariable)
+                mapVarValues.push(mapVar.getValues()[combValue]);
+            else
+                mapVarValues.push(mapVar.getClassIntervals()[combValue]);
+        }
+        return mapVarValues;
+    }
+
+    /**
+     * For each combination string index find it&apos;s respective visual variable usable value. 
+     * This means that if the combination string is &quot;03&quot;. 
+     * This method will look for each map variable and for the first get the value for the index 0 and for the second the value for the index 3.
+     * @deprecated Not used anymore.
+     * @memberof MapVariableCombination
+     */
+    _findVisualVariablesValues() {
+        // console.error(&quot;FIND VV VALS&quot;)
+        let indices = [];
+        for (const indexStr of this.combinationString) //&quot;010&quot; -&gt; [0, 1, 0]
+            indices.push(+indexStr);
+
+        for (let [i, mapVar] of this.mapVariables.entries()) {
+            let typeOfVisualVariable = mapVar.getTypeOfVisualVariable();
+            // console.log(mapVar.findUsableValue(indices[i]));
+            this.visualVariableValues.set(typeOfVisualVariable, mapVar.findUsableValue(indices[i]));
+        }
+        // console.error(&quot;findVVs&quot;, this.visualVariableValues);
+    }
+
+    /**
+     * Returns the fill Color for this map variable combination.
+     * @returns {Array&lt;number&gt;} - the RGB color to fill this map variable combination.
+     * @memberof MapVariableCombination
+     */
+    getColor() {
+        // console.log(this.visualVariableValues);
+        return this.visualVariableValues.get(GisplayDefaults.COLOR()) || GisplayDefaults.getDefaultColor();
+    }
+
+    /**
+     * Returns the shape index for this map variable combination.
+     * @returns {number} - the shape index for this map variable combination.
+     * @memberof MapVariableCombination
+     */
+    getShape() {
+        let shapeIndex = this.visualVariableValues.get(GisplayDefaults.SHAPE());
+        return shapeIndex &gt;= 0 ? shapeIndex : GisplayDefaults.getDefaultShapeIndex();
+    }
+
+    /**
+     * Returns the texture index for this map variable combination.
+     * @returns {number} - the texture index for this map variable combination.
+     * @memberof MapVariableCombination
+     */
+    getTexture() {
+        let textureIndex = this.visualVariableValues.get(GisplayDefaults.TEXTURE());
+        return textureIndex &gt;= 0 ? textureIndex : -1;//GisplayDefaults.getDefaultTextureIndex();
+    }
+
+    /**
+     * Returns the size for this map variable combination.
+     * @returns {number} - the size for this map variable combination.
+     * @memberof MapVariableCombination
+     */
+    getSize() {
+        return this.visualVariableValues.get(GisplayDefaults.SIZE()) || GisplayDefaults.getDefaultSizeValue();
+    }
+
+    /**
+     * Returns true if the this map variable combination has any map variable that has size visual variable.
+     * @returns {boolean} - true if the this map variable combination has any variable that has size visual variable, false, otherwise.
+     * @memberof MapVariableCombination
+     */
+    hasSize() {
+        return this.visualVariableValues.get(GisplayDefaults.SIZE()) !== undefined;
+    }
+
+    /**
+     * Returns the minimum and the maximum for the map variable that has the given type of visual variable.
+     * @param {string} typeOfVisualVariable - The type of visual variable (color, shape, etc).
+     * @returns {Array&lt;number&gt;} - the minimum and the maximum for the map variable that has the given type of visual variable.
+     * @memberof MapVariableCombination
+     */
+    getMapVariableMinMax(typeOfVisualVariable) {
+        let mapVar = this.mapVariables.filter((mapVar) =&gt; mapVar.getTypeOfVisualVariable() === typeOfVisualVariable)[0];
+        return [mapVar.getMin(), mapVar.getMax()];
+    }
+
+    /**
+     * Returns the orientation for this map variable combination.
+     * @returns {number} - the orientation for this map variable combination.
+     * @memberof MapVariableCombination
+     */
+    getOrientation() {
+        let orientationValue = this.visualVariableValues.get(GisplayDefaults.ORIENTATION());
+        return orientationValue &gt;= 0 ? orientationValue : GisplayDefaults.getDefaultOrientationValue();
+    }
+
+    /**
+     * Returns the alpha value for this map variable combination.
+     * @returns {number=GisplayDefaults.getDefaultAlphaValue()} - the alpha value for this map variable combination.
+     * @memberof MapVariableCombination
+     */
+    getAlpha() {
+        return GisplayDefaults.getDefaultAlphaValue();
+    }
+
+    /**
+     * Returns the default figure index.
+     * @returns {number} - the default figure index.
+     * @memberof MapVariableCombination
+     */
+    getFigure() {
+        return GisplayDefaults.getDefaultFigureIndex();
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

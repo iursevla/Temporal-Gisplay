@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/VVs/TemporalGranule.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/VVs/TemporalGranule.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import { WebGLPicking } from &apos;./Picking&apos;;
+import { GisplayDefaults } from &apos;../GisplayDefaults&apos;;
+import { GisplayError } from &apos;../GisplayError&apos;;
+
+/**
+ * Represents a temporal granule.
+ * @export
+ * @class TemporalGranule
+ */
+export class TemporalGranule {
+
+    /**
+     * Creates an instance of TemporalGranule.
+     * @param {number} granuleIndex - The index of this temporal granule. NOT USED ATM.
+     * @param {WebGLRenderingContext} webglContext - The WebGL renderind context.
+     * @param {boolean} anyQualifierIsAttribute - If any continuous variable has &apos;attribute&apos; qualifier in the shader.
+     * @memberof TemporalGranule
+     */
+    constructor(granuleIndex, webglContext, anyQualifierIsAttribute) {
+        /**
+         * Information about the temporal granule. Example: January or 0. December or 11.
+         * @type {string|number} 
+         */
+        this.granuleIndex = granuleIndex;
+        /**
+         * This holds the geometry data for this temporal granule until we have all the data and can create the Buffer with it.
+         * @type {Array&lt;number&gt;|Array&lt;{polygonIndices:Array&lt;number&gt;, bordersIndices:Array&lt;number&gt;}&gt;}
+         */
+        this.transitoryGeometryData = [];
+        /**
+         * This is the data that will be drawn for each time data is draw on the canvas.
+         * @type {WebGLBuffer|{polygonsIndices: WebGLBuffer, bordersIndices:WebGLBuffer}}
+         */
+        this.geometryDataBuffer;
+        /**
+         * The geometry primitive.
+         * @type {string}
+         */
+        this.geometryPrimitive;
+        if (anyQualifierIsAttribute) {
+            /**
+             * An array that saves the data for the continuous variables when there&apos;s at least  one that has qualifier equal to &apos;attribute&apos;. 
+             * @type {Array&lt;Array&lt;number&gt;&gt;}
+             */
+            this.attributeData = [];
+        }
+
+        /**
+         * Number of points/polygons/lines that this temporal granule contains.
+         * Used for points.
+         * @type {number}
+         */
+        this.numElements = 0;
+        /**
+         * Boolean that&apos;s true if there&apos;s at least one element in this temporal granule to be drawn.
+         * @type {boolean}
+         */
+        this.hasElementsBool = false;
+        /**
+         * Human readable name for this granule;
+         * @type {string}
+         */
+        this.label = granuleIndex;
+
+        /**
+         * Holds the picking data.
+         * @type {WebGLPicking}
+         */
+        this.webGLPicking = new WebGLPicking(webglContext);
+
+        /**
+         * The identifier of this temporal granule.
+         * @type {Array&lt;number&gt;}
+         */
+        this.RGBAIdentifier;
+
+        this.hasPoints = false; //Used to only add the RGBA to the pickingColors if has points from the GeoJSON file
+        this.alreadyExecutedOnce = false; //So it isnt always calling the hasPoints method
+    }
+
+    /**
+     * Add the row of data to this temporal granule. Adds the picking information to the WebGLPicking object.
+     * @param {Array&lt;Object&gt;} dataRow - The row of data that was given by the Parser.
+     * @param {number} geometryPrimitive - The identifier of the geometry primitive.
+     * @memberof TemporalGranule
+     */
+    addDataRow(dataRow, geometryPrimitive) { //GEOJSON
+        // console.log(dataRow);
+        if (!this.alreadyExecutedOnce) {
+            this.alreadyExecutedOnce = true;
+            this.hasPoints = GisplayDefaults.hasPoints(geometryPrimitive);
+        }
+        if (this.hasPoints)
+            this.transitoryGeometryData.push(...dataRow[1].spatial); //Push geometry
+        else
+            this.transitoryGeometryData.push(dataRow[1].spatial); //Push geometry
+
+        if (this.attributeData)
+            this.attributeData.push(dataRow[0]);
+        this.webGLPicking.addRow(dataRow, this.hasPoints);
+    }
+
+    /**
+     * Add a set of rows to this temporal granule. Used for the CSV parser.
+     * @param {{continuousData: Array&lt;Array&lt;number&gt;&gt;, spatialData: Array&lt;number&gt;,optionalData: Array&lt;Array&lt;number|string&gt;&gt;, RGBA: Array&lt;number&gt;, numberRGBA: Array&lt;number&gt;}} dataRows - 
+     * @memberof TemporalGranule
+     */
+    addSetOfRows(dataRows) { //CSV
+        // console.log(dataRows);
+        if (dataRows.spatialData.length &gt; 0) {
+            for (const lnglat of dataRows.spatialData)
+                this.transitoryGeometryData.push(lnglat);
+            this.webGLPicking.addSetOfRows(dataRows);
+            if (this.attributeData) {
+                let attrData = dataRows.continuousData[0]; //@TODO: If the first is not the attributeData we want? E.g. 2 continuous variables
+                for (let attr of attrData) { 
+                    this.attributeData.push(attr);
+                }
+            }
+        }
+    }
+
+    /**
+     * Returns the array of data. This data can be a WebGLBuffer is it holds points, an Array of Polygons if it holds Polygons or an Array of Lines if it holds lines.
+     * @returns {WebGLBuffer|{polygonsIndices: WebGLBuffer, bordersIndices:WebGLBuffer}}
+     * @memberof TemporalGranule
+     */
+    getGeometryData() {
+        return this.geometryDataBuffer;
+    }
+
+    /**
+     * Returns the data relative to the continuous variable that has &apos;attribute&apos; qualifier.
+     * @returns {Array&lt;Array&lt;number&gt;&gt;} 
+     * @memberof TemporalGranule
+     */
+    getAttributeData() {
+        return this.attributeData;
+    }
+
+    /**
+     * The number of elements in the data array.
+     * @returns {number} - number of elements in the data array.
+     * @memberof TemporalGranule
+     */
+    getNumElements() {
+        return this.numElements;
+    }
+
+    /**
+     * Returns true if there&apos;s at least one element to be drawn, false otherwise.
+     * @returns {boolean} - true if there&apos;s at least one element to be drawn, false otherwise.s
+     * @memberof TemporalGranule
+     */
+    hasElements() {
+        return this.hasElementsBool;
+    }
+
+    /**
+     * Update the geometry primitive.
+     * @param {string} geometryPrimitive 
+     * @memberof TemporalGranule
+     */
+    setGeometryPrimitive(geometryPrimitive) {
+        this.geometryPrimitive = geometryPrimitive;
+    }
+
+    /**
+     * Set the number of elements. This way updates the number of elements for this temporal granule.
+     * @memberof TemporalGranule
+     */
+    setNumElements() {
+        // console.log(this.transitoryGeometryData, this.geometryPrimitive);
+        if (GisplayDefaults.hasPolygons(this.geometryPrimitive)) {//Array.isArray(this.transitoryGeometryData[0]) &amp;&amp; Array.isArray(this.transitoryGeometryData[0].polygonIndices)) { //Change to this.primitive === POLYGON
+            this.numElements = {
+                polygonsIndices: 0,
+                bordersIndices: 0
+            };
+            for (let geo of this.transitoryGeometryData) {
+                this.numElements.polygonsIndices += geo.polygonIndices.length;
+                this.numElements.bordersIndices += geo.bordersIndices.length;
+            }
+        }
+        else if (GisplayDefaults.hasLines(this.geometryPrimitive)) {
+            for (let geo of this.transitoryGeometryData)
+                this.numElements += geo.lineIndices.length;
+        }
+        else if (GisplayDefaults.hasPoints(this.geometryPrimitive) || GisplayDefaults.hasCSVPoints(this.geometryPrimitive)) { //POINTS
+            this.numElements = this.transitoryGeometryData.length / 2; //Since each point is inside an array of [lng, lat] then no need to divide by 2
+        }
+
+        if (+this.numElements === +this.numElements &amp;&amp; this.numElements &gt; 0)
+            this.hasElementsBool = true;
+        else if (this.numElements.polygonsIndices &gt; 0)
+            this.hasElementsBool = true;
+        // console.log(this.numElements, this.hasPoints, this.hasElements(), this.geometryPrimitive);
+    }
+
+    /**
+     * Defines the RGBA identifier for this 
+     * @param {number} r - Used to identify the the MVC
+     * @param {number} g - Used to identify the the MVC
+     * @param {number} b - Used to identify the the TG
+     * @param {number} a - Used to identify the the TG
+     * @memberof TemporalGranule
+     */
+    setRTGRGBAIdentifier(r, g, b, a) {
+        // console.error(r, g, b, a);
+        this.RGBAIdentifier = [r, g, b, a];
+    }
+
+    /**
+     * Returns the RGBA identifier that is being used for this MVC/TG combination.
+     * @returns {Array&lt;number&gt;} - the RGBA identifier that is being used for this MVC/TG combination.
+     * @memberof TemporalGranule
+     */
+    getRGBAIdentifier() {
+        return this.RGBAIdentifier;
+    }
+
+    /**
+     * Joins all points into one single WebGLBuffer. This allows for a nicer and faster way to draw all of them at once.
+     * @param {WebGLRenderingContext} webglContext - the context to use to join all points in one WebGLBuffer.
+     * @memberof TemporalGranule
+     */
+    joinPointData(webglContext) {
+        const vertArray = new Float32Array(this.transitoryGeometryData);
+        this.geometryDataBuffer = webglContext.createBuffer();
+        webglContext.bindBuffer(webglContext.ARRAY_BUFFER, this.geometryDataBuffer);
+        webglContext.bufferData(webglContext.ARRAY_BUFFER, vertArray, webglContext.STATIC_DRAW);
+        this._clearTransitoryGeometryData();
+    }
+
+    /**
+     * Join all indices for all polygons that make this temporal granule. This way all polygons can be drawn in one call.
+     * @param {WebGLRenderingContext} webglContext - The contex to use to join the attribute data. 
+     * @memberof TemporalGranule
+     */
+    joinPolygonData(webglContext) {
+        this.geometryDataBuffer = {};
+
+        let tempPolygonIndices = [];
+        for (let geoIndices of this.transitoryGeometryData)
+            for (let geoIndex of geoIndices.polygonIndices)
+                tempPolygonIndices.push(geoIndex);
+        // console.log(&quot;POLYGON DATA JOIN POLis&quot;, tempPolygonIndices);
+        const vertArray = new Uint32Array(tempPolygonIndices);
+        this.geometryDataBuffer.polygonsIndices = webglContext.createBuffer();
+        webglContext.bindBuffer(webglContext.ELEMENT_ARRAY_BUFFER, this.geometryDataBuffer.polygonsIndices);
+        webglContext.bufferData(webglContext.ELEMENT_ARRAY_BUFFER, vertArray, webglContext.DYNAMIC_DRAW);
+
+        // console.log(&quot;TG polygonIndices = &quot;, tempPolygonIndices.length);
+
+        let tempBordersIndices = [];
+        for (let geoIndices of this.transitoryGeometryData)
+            for (let geoIndex of geoIndices.bordersIndices)
+                tempBordersIndices.push(geoIndex);
+        // console.log(&quot;POLYGON DATA JOIN BORDERS&quot;, tempBordersIndices);
+        const vertArray2 = new Uint32Array(tempBordersIndices);
+        this.geometryDataBuffer.bordersIndices = webglContext.createBuffer();
+        webglContext.bindBuffer(webglContext.ELEMENT_ARRAY_BUFFER, this.geometryDataBuffer.bordersIndices);
+        webglContext.bufferData(webglContext.ELEMENT_ARRAY_BUFFER, vertArray2, webglContext.DYNAMIC_DRAW);
+
+        this._clearTransitoryGeometryData();
+    }
+
+    /**
+     * Join the lines into one single WebGLBuffer.
+     * @memberof TemporalGranule
+     */
+    joinLineData(webglContext) {
+        let tempLineIndices = [];
+        console.log(this.transitoryGeometryData);
+        for (let geoIndices of this.transitoryGeometryData)
+            for (let geoIndex of geoIndices.lineIndices)
+                tempLineIndices.push(geoIndex);
+        console.warn(&quot;LINEDATA&quot;, tempLineIndices);
+        const vertArray = new Uint32Array(tempLineIndices);
+        this.geometryDataBuffer = webglContext.createBuffer();
+        webglContext.bindBuffer(webglContext.ELEMENT_ARRAY_BUFFER, this.geometryDataBuffer);
+        webglContext.bufferData(webglContext.ELEMENT_ARRAY_BUFFER, vertArray, webglContext.DYNAMIC_DRAW);
+        this._clearTransitoryGeometryData();
+    }
+
+    /**
+     * Clear (allow garbage collection) the transitory geometry data array.
+     * @memberof TemporalGranule
+     */
+    _clearTransitoryGeometryData() {
+        this.transitoryGeometryData = undefined;
+    }
+
+    /**
+     * Join attribute data into one WebGLBuffer.
+     * @param {WebGLRenderingContext} webglContext - The contex to use to join the attribute data. 
+     * @memberof TemporalGranule
+     */
+    joinAttributeData(webglContext) {
+        console.log(this.attributeData);
+        const attrDataVertex = new Float32Array(this.attributeData);
+        const bufferAttrData = webglContext.createBuffer();
+        webglContext.bindBuffer(webglContext.ARRAY_BUFFER, bufferAttrData);
+        webglContext.bufferData(webglContext.ARRAY_BUFFER, attrDataVertex, webglContext.STATIC_DRAW);
+        this.attributeData = bufferAttrData;
+    }
+
+    /**
+     * Join all picking colors into one WebGLBuffer.
+     * @memberof TemporalGranule
+     */
+    joinPickingColors() {
+        if (GisplayDefaults.hasPoints(this.geometryPrimitive) || GisplayDefaults.hasCSVPoints(this.geometryPrimitive))
+            this.webGLPicking.joinPickingColorsPoints();
+    }
+
+    /**
+     * Returns the picking data associated with this visual variable combination.
+     * @returns {WebGLPicking} - the picking data associated with this visual variable combination.
+     * @memberof TemporalGranule
+     */
+    getPickingData() {
+        return this.webGLPicking;
+    }
+
+    /**
+     * Replace the ids on the transitory geometry data with the real geometry.
+     * @param {Map&lt;string, {spatial:{any}, RGBA: Array&lt;number&gt;} &gt;} geometryIdsMap - The geometry to ids map processed by the GeoJSONIdsParser.
+     * @memberof TemporalGranule
+     */
+    replaceIdsWithGeometry(geometryIdsMap) {
+        for (let i = 0; i &lt; this.transitoryGeometryData.length; i++) {
+            let id = this.transitoryGeometryData[i];
+            let geoRGBA = geometryIdsMap.get(id); //Geometry (spatial) + RGBA identifier
+            // console.log(geoRGBA);
+            if (!geoRGBA)
+                throw new GisplayError(`The id:${id} was not found in the geometry read from the GeoJSON file. Check the geometry file...`);
+            this.transitoryGeometryData[i] = geoRGBA.spatial;
+            this.webGLPicking.replaceRowRGBAValue(i, geoRGBA.RGBA, this.hasPoints);
+        }
+        if (!this.hasPoints)
+            this.webGLPicking.transitoryPickingColors = null;
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

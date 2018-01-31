@@ -1,0 +1,589 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/Parser/Parser.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/Parser/Parser.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">//Import for Intellisense
+import { URLVariable } from &apos;../VVs/URLVariable&apos;;
+import { DataVariable } from &apos;../VVs/DataVariable&apos;;
+import { TimeVariable } from &apos;../VVs/TimeVariable&apos;;
+import { CategoricalVariable } from &apos;../VVs/CategoricalVariable&apos;;
+import { ContinuousVariable } from &apos;../VVs/ContinuousVariable&apos;;
+
+import { MapVariableCombination } from &apos;../VVs/MapVariableCombination&apos;;
+import { GisplayDefaults } from &apos;../GisplayDefaults&apos;;
+import { GisplayOptions } from &apos;../GisplayOptions&apos;;
+import { GisplayError } from &apos;../GisplayError&apos;;
+
+/**
+ * General parser class.
+ * @class Parser
+ */
+export class Parser {
+
+    /**
+     * Creates an instance of Parser.
+     * @param {GisplayOptions} gisplayOptions - The options class.
+     * @param {WebGLRenderingContext} webgl - The WebGLRenderingContext.
+     * @memberof Parser
+     */
+    constructor(gisplayOptions, webgl) {
+        /**
+         * All the options for the Gisplay AAPI.
+         * @type {GisplayOptions}
+         */
+        this.opts = gisplayOptions;
+        /**
+         * All the categorical variables that were created with the given options.
+         * @type {Array&lt;CategoricalVariable&gt;}
+         */
+        this.categoricalVariables = this.opts.getCategoricalVariables();
+        /**
+         * All the continuous variables that were created with the given options.
+         * @type {Array&lt;ContinuousVariable&gt;}
+         */
+        this.continousVariables = this.opts.getContinousVariables();
+        /**
+         * The time variable or null if there&apos;s no Time in the dataset.
+         * @type {TimeVariable}
+         */
+        this.timeVariable = this.opts.getTimeVariable();
+        /**
+         * An array with extra variables used mainly for picking information or an empty array when the programmer didn&apos;t give any extra variable.
+         * @type Array&lt;Variable&gt;}
+         */
+        this.optionalVariables = this.opts.getOptionalVariables();
+        /**
+         * The URLVariable.
+         * @type {URLVariable} 
+         */
+        this.urlVariable = this.opts.getURLVariable();
+        /**
+         * The geometry variables (longitude and latitude).
+         * @type {Array&lt;DataVariable&gt;}
+         */
+        this.geometryVariables = this.opts.getGeometryVariables();
+
+        let URLVariable = this.urlVariable;
+        /**
+         * The file with the data.
+         * @type {File}
+         */
+        this.dataFile = URLVariable.getDataFile();
+        /**
+         * The size of the file in bytes.
+         * @type {number}
+         */
+        this.fileSize = URLVariable.getDataFileSize();
+        /**
+         * The name of the file.
+         * @type {string}
+         */
+        this.fileName = URLVariable.getDataFileName();
+
+        /**
+         * The WebGLRenderingContext.
+         * @type {WebGLRenderingContext}
+         */
+        this.webglContext = webgl;
+        /**
+         * The dataset contains time or not.
+         * @type {boolean}
+         */
+        this.hasTime = this.timeVariable ? true : false;
+
+        //COMBINATIONS
+        /**
+         * Map where each key is a combination string and it&apos;s value is the index of it&apos;s position in the visual variable combinations array.
+         * @type {Map&lt;string, number&gt;}
+         */
+        this.mapVarCombinationStrToIndexMap = new Map();
+        /**
+         * Array of visual variable combinations.
+         * @type {Array&lt;MapVariableCombination&gt;}
+         */
+        this.mapVarCombinations = [];
+        if (!this.classCalculationRequired())
+            this.createMapVariableCombinations(); //Call method to create VVCombinations and associated info
+
+        //SAVE DATA FOR POLYGONS OR LINES
+        /** 
+         * The identifier of the type of primitive (Point, polygon or line).
+         * @type {number}
+         */
+        this.geometryPrimitive;
+        /** 
+         * An array that holds all points of all polygons/lines. 
+         * @type {Array&lt;number&gt;|WebGLBuffer}
+         */
+        this.allPoints = [];
+        /**
+         * An array that holds all colors for all polygons/lines. One color for each vertex.
+         * @type {Array&lt;number&gt;|WebGLBuffer}
+         */
+        this.allColors = [];
+    }
+
+    /**
+     * Returns true if there&apos;s the need to calculate the classes for any visual variable or not.
+     * @returns {boolean} true, if any continuous variable requires class calculation.
+     * @memberof GisplayOptions
+     */
+    classCalculationRequired() {
+        for (let catVariable of this.categoricalVariables)
+            if (catVariable.classCalculationRequired()) //If at least one cont or time 
+                return true;
+        for (let contVariable of this.continousVariables)
+            if (contVariable.classCalculationRequired()) //If at least one cont or time 
+                return true;
+        if (this.timeVariable)
+            return true;
+        return false;
+    }
+
+    /**
+     * Verify if the row has errors or not. This method is called by the respective Parser for each row or just for one row.
+     * The programmer may decide to never call this method if he is sure the given options are all correct.
+     * Basically will look if all given options (visual variables, Geometry, time and extra variables) are according to it&apos;s specification in the Parsing options.
+     * @param {Array&lt;Object&gt;} row - Any row given to look for existing errors.
+     * @memberof Parser
+     */
+    hasErrors(row) {
+        let [vvs, geo, time, optionals] = [...row];
+        let geometryExists = geo !== undefined;
+        let timeExists = time !== undefined &amp;&amp; time.lenght === 1;
+
+        if (!geometryExists || (this.hasTime &amp;&amp; !timeExists)
+            || !this.continousVariables &amp;&amp; vvs[0].length &gt; 0
+            || this.optionalVariables.length !== optionals.length) {
+            console.log(row);
+            throw new Error(&quot;Found errors parsing file.&quot;);
+        }
+        this.errorsAlreadyChecked = true;
+    }
+
+    /**
+     * Create combinations of map variables. 
+     * This method must only be executed when the classes for all continuous variables are calculated, otherwise it won&apos;t work.
+     * @see https://stackoverflow.com/a/33352604 - Create array with index 0..n-1
+     * @memberof Parser
+     */
+    createMapVariableCombinations() {
+        let categoricalVariables = this.categoricalVariables;
+        let continuousVariables = this.continousVariables;
+
+        let indices = [];
+        for (let catVar of categoricalVariables) {
+            let numCategories = catVar.getVisualVariableMapping().size;
+            indices.push([...Array(numCategories).keys()]); //.map(x =&gt; ++x) https://stackoverflow.com/a/33352604
+        }
+        for (let contVar of continuousVariables) {
+            let numIntervals = contVar.getClassIntervals().length;
+            indices.push([...Array(numIntervals).keys()]);
+        }
+
+        //Create visual variable combination strings
+        let vvCombinationStrs = this.generateVVCombinationStrings(indices);
+        let startingRGBAs = this.calculateStartingRGBAs(vvCombinationStrs.length);
+        // console.warn(startingRGBAs);
+        for (let [index, vvCombStr] of vvCombinationStrs.entries()) {
+            // console.warn(index, vvCombStr);
+            this.mapVarCombinations.push(
+                new MapVariableCombination(
+                    vvCombStr,
+                    [...categoricalVariables, ...continuousVariables],
+                    startingRGBAs[index],
+                    this.timeVariable ? Array(this.timeVariable.granuleIndex).keys() : [],
+                    this.webglContext,
+                    this.anyQualifierIsAttribute()
+                ));
+        }
+        // console.log(this.VVCombinations);
+        this.mapVarCombinationStrToIndexMap = this.createMVCombinationStrToIndexMap(vvCombinationStrs); // Create the combination string -&gt; index map
+    }
+
+    /**
+     * Generates the visual variable combination strings.
+     * If there&apos;s only one visual variable then return it&apos;s indices as an array of strings, otherwise, if there&apos;s more than one 
+     * visual variable, then call the recursive method.
+     * @param {Array&lt;number&gt;|Array&lt;Array&lt;number&gt;&gt;} indices 
+     * @returns {Array&lt;string&gt;|Array&lt;Array&lt;string&gt;&gt;}
+     * @memberof Parser
+     */
+    generateVVCombinationStrings(indices) {
+        let vvCombinationStrs = [];
+        if (indices.length === 1)
+            for (let indice of indices[0])
+                vvCombinationStrs.push(&apos;&apos; + indice);
+        else
+            vvCombinationStrs = this.generateVVCombinationStringsRec(indices);
+        return vvCombinationStrs;
+    }
+
+    /**
+     * Recursive method that generates all possible combinations of values, given the arrays of values possible values for each visual variable.
+     * These values can be indeces (0..n) of classes or categories and/or strings of categories.
+     * @param {Array&lt;Array&lt;string|number&gt;&gt;} visVarsValues - Array with visual variable values 
+     * @returns {Array&lt;string&gt;} - the resulting combinations of the given values.
+     * @see https://stackoverflow.com/q/4331092
+     * @memberof Parser
+     */
+    generateVVCombinationStringsRec(visVarsValues) {
+        if (visVarsValues.lenght === 0)
+            return [];
+        else if (visVarsValues.length === 1)
+            return visVarsValues[0];
+        else {
+            let result = [];
+            let rec = this.generateVVCombinationStringsRec(visVarsValues.slice(1));
+            for (let i = 0; i &lt; rec.length; i++)
+                for (let j = 0; j &lt; visVarsValues[0].length; j++)
+                    result.push(&apos;&apos; + visVarsValues[0][j] + rec[i]);
+            return result;
+        }
+    }
+
+    /**
+     * Calculates the first RGBA color for each visual variable combination.
+     * This first color can be used to quickly identify the containing visual variable combination of the clicked element (Picking).
+     * @param {number} nCombs - Number of combinations of visual variables. 
+     * @returns {Array&lt;Uint8Array&gt;} - the color (RGBA) that starts 
+     * @memberof Parser
+     */
+    calculateStartingRGBAs(nCombs) {
+        let colorPerCombination = Math.round(Math.pow(256, 4) / nCombs); //4MM / number combinations
+        let startingPoints = [];
+        let [r, g, b, a] = [0, 0, 0, 1];
+        startingPoints.push([r, g, b, a]);
+        for (let i = 1; i &lt; nCombs; i++)
+            startingPoints.push(GisplayDefaults.numberToRGBA(i * colorPerCombination));
+        return startingPoints;
+    }
+
+    /**
+     * Creates a Map with as many keys as map variable combinations. 
+     * Each combination will have an index generated sequentially.
+     * @param {Array&lt;string&gt;} combinations - The calculated combinations.
+     * @returns {Map&lt;string, number&gt;} - a map with each key being the map variable combination and the value is the respective index, generated sequentially.
+     * @memberof Parser
+     */
+    createMVCombinationStrToIndexMap(combinations) {
+        let associationMap = new Map();
+        let index = 0;
+        for (let combination of combinations)
+            associationMap.set(combination, index++);
+        return associationMap;
+    }
+
+    /**
+     * Retuns the index of the given visual variable combination string.
+     * @param {string} combinationString - The name of the visual variable combination.
+     * @returns {number} - the index of the given visual variable combination string. 
+     * @memberof Parser
+     */
+    findCombinationIndex(combinationString) {
+        return this.mapVarCombinationStrToIndexMap.get(combinationString);
+    }
+
+    /**
+     * This is the event called when the data is completly processed and should be send back to the Map (type) to be drawn and used accordingly.
+     * @see https://developer.mozilla.org/en-US/docs/Web/Guide/Events/Creating_and_triggering_events
+     * @memberof Parser
+     */
+    dispatchParseEndEvent() {
+        console.log(&quot;ParserEnd event&quot;);
+        document.dispatchEvent(new CustomEvent(&quot;parserEnd&quot;, {  //Retornar pelo menos os dados processados e as classes 
+            detail: {
+                mapVariableCombinations: this.mapVarCombinations,
+                mapVariableCombinationToIndexMap: this.mapVarCombinationStrToIndexMap,
+                categoricalVariables: this.categoricalVariables,
+                continousVariables: this.continousVariables,
+                allPoints: this.allPoints,
+                allColors: this.allColors
+            }
+        }));
+    }
+
+    /**
+     * Returns true if any of the continuous variables has &apos;attribute&apos; qualifier on the shader.
+     * @returns {boolean} - true if any of the continuous variables has &apos;attribute&apos; qualifier on the shader, false, otherwise.
+     * @memberof Parser
+     */
+    anyQualifierIsAttribute() {
+        return this.continousVariables.filter((cv) =&gt; cv.qualifierIsAttribute()).length &gt; 0;
+    }
+
+    //DELETE THIS
+    /**
+     * Create transitory sub arrays
+     * @param {number} numElements - Number of elements on the dataset. 
+     * @memberof Parser
+     */
+    createTransitoryDataArray(numElements) {
+        let numSubArrays = Math.ceil(numElements / (100 * 1000));
+        for (let i = 0; i &lt; numSubArrays; i++)
+            this.transitoryArray[i] = [];
+        window.ta = this.transitoryArray; //TODO: DELETE
+    }
+
+    /**
+     * Add one row to the transitory data array.
+     * @param {Array&lt;Object&gt;} row - The row with visual variables, geometry, time (if exists) and extra variables (if any).
+     * @memberof Parser
+     */
+    addTransitoryData(row) {
+        if (this.countTempRows++ % (this.maxArrayLength) === 0 &amp;&amp; this.countTempRows !== 1)
+            this.currentTransitoryArrayIndex++;
+        if (!this.transitoryArray[this.currentTransitoryArrayIndex]) //Create the sub-array if it does not exist
+            this.transitoryArray[this.currentTransitoryArrayIndex] = [];
+        this.transitoryArray[this.currentTransitoryArrayIndex].push(row);
+    }
+
+    /**
+     * Split each row that was read from the file to it&apos;s respective visual variable combination.
+     * @memberof Parser
+     */
+    splitTransitoryData_OLD() {
+        console.time(&quot;splitTransitoryData&quot;);
+        //For each cont var that needs class cal then calculate
+        for (let contVar of this.continousVariables)
+            if (contVar.classCalculationRequired())
+                contVar.calculateClasses();
+
+        //Calculate and create VVCombinations and indexMap
+        this.createMapVariableCombinations();
+
+        //for takes 2.5 seconds for 1M rows (with points )
+        console.time(&quot;for&quot;);
+        //Split data to it&apos;s respective VVCombination
+        for (let subArray of this.transitoryArray) {
+            for (let row of subArray) {
+                let vvCombStr = row[0][0];
+                let index = 0;
+                for (let contVar of this.continousVariables) {
+                    if (contVar.classCalculationRequired())
+                        vvCombStr += contVar.findClassIntervalIndex(row[0][1][index]);
+                    index++;
+                }
+                // console.log(row);
+                row[0] = row[0][1];
+                // console.log(row); // &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+                this.mapVarCombinations[this.findCombinationIndex(vvCombStr)].addDataRow(row);
+                // break; // &lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;&lt;
+            }
+        }
+        console.timeEnd(&quot;for&quot;);
+
+        console.timeEnd(&quot;splitTransitoryData&quot;);
+        // console.log(this);
+        // delete this.transitoryArray;
+    }
+
+    /**
+     * Split each row that was read from the file to it&apos;s respective visual variable combination.
+     * @memberof Parser
+     */
+    splitTransitoryData() {
+        throw new GisplayError(&apos;Not yet implemented method to split transitory data array for this parser&apos;);
+    }
+
+    /**
+     * For each temporal granularity inside of each visual variable combination, join all data points in a single WebGLBuffer.
+     * @memberof Parser
+     */
+    joinMapVarCombinationData() {
+        for (const mvc of this.mapVarCombinations)
+            mvc.joinTemporalGranuleData(this.webglContext, this.geometryPrimitive);
+    }
+
+    /**
+     * If the primitive to draw are points then join all RGBA identifiers into one WebGLBuffer.
+     * @memberof Parser
+     */
+    joinPickingColors() {
+        for (const mvc of this.mapVarCombinations)
+            mvc.joinPickingColors();
+    }
+
+    /**
+     * For each temporal granule inside each map variable combination, update it&apos;s numElements variable.
+     * @memberof Parser
+     */
+    setNumElementsTemporalGranules() {
+        for (const mvc of this.mapVarCombinations)
+            for (const tg of mvc.getTemporalGranules())
+                tg.setNumElements();
+    }
+
+    /**
+     * Join all points of all polygons/lines into a single WebGL buffer.
+     * @memberof Parser
+     */
+    joinAllPoints() {
+        let webglContext = this.webglContext;
+        const vertArray = new Float32Array(this.allPoints);
+        const bufferP = webglContext.createBuffer();
+        webglContext.bindBuffer(webglContext.ARRAY_BUFFER, bufferP);
+        webglContext.bufferData(webglContext.ARRAY_BUFFER, vertArray, webglContext.STATIC_DRAW);
+        this.allPoints = bufferP;
+    }
+
+    /**
+     * Join all points of all polygons/lines into a single WebGL buffer.
+     * @memberof Parser
+     */
+    joinAllColors() {
+        let webglContext = this.webglContext;
+        const vertArray = new Uint8Array(this.allColors);
+        const bufferP = webglContext.createBuffer();
+        webglContext.bindBuffer(webglContext.ARRAY_BUFFER, bufferP);
+        webglContext.bufferData(webglContext.ARRAY_BUFFER, vertArray, webglContext.STATIC_DRAW);
+        this.allColors = bufferP;
+    }
+
+    /**
+     * Set the geometry primitive of each Temporal Granule.
+     * @memberof Parser
+     */
+    setGeometryPrimitiveTGs() {
+        // console.error(this.geometryPrimitive);
+        for (const mvc of this.mapVarCombinations)
+            for (const tg of mvc.getTemporalGranules())
+                tg.setGeometryPrimitive(this.geometryPrimitive);
+    }
+
+    /**
+     * Split Transitory data, join points if needed and dispatch the parser end event.
+     * @memberof Parser
+     */
+    endParser(parserName) {
+        // console.error(this.transitoryArray);
+        throw new GisplayError(`Parser has no endParser method...`);
+        /*     switch (parserName) {
+                case &apos;csv&apos;: {
+                    if (this.urlVariable.hasIds()) {
+                        console.error(&quot;HASURLS&quot;);
+                        console.log(this.mapVarCombinations);
+                        this.dispatchParseEndEvent();
+                    }
+                    else {
+                        this.setGeometryPrimitiveTGs();
+    
+                        this.setNumElementsTemporalGranules();
+                        console.time(&quot;joinPoints&quot;);
+                        // this.geometryPrimitive = 0;
+                        if (this.geometryVariables.length &gt; 1) {
+                            this.joinMapVarCombinationData();
+                            this.joinPickingColors();
+                        }
+                        console.timeEnd(&quot;joinPoints&quot;);
+                        this.dispatchParseEndEvent(); //TODO: Move to the end of the Map?
+                    }
+                    break;
+                }
+                case &apos;geojson&apos;: {
+                    if (this.classCalculationRequired())
+                        this.splitTransitoryData();
+    
+                    this.setGeometryPrimitiveTGs(); //Set the type of Geo for each TG (same as this.geoPrimitive)
+                   
+                    if (GisplayDefaults.hasPolygons(this.geometryPrimitive) || GisplayDefaults.hasLines(this.geometryPrimitive)){
+                        this.joinAllPoints();
+                        this.joinAllColors();
+                    } else{
+                        this.joinPickingColors();
+                    }
+    
+                    this.setNumElementsTemporalGranules();
+    
+                    console.time(&quot;joinDATA&quot;);
+                    this.joinMapVarCombinationData();
+                    console.timeEnd(&quot;joinDATA&quot;);
+                    this.dispatchParseEndEvent();
+                    break;
+                }
+            } */
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/Gisplay/GisplayOptions.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/GisplayOptions.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">// import { GisplayMap } from &apos;./Maps/GisplayMap&apos;;
+
+import { URLVariable } from &apos;./VVs/URLVariable&apos;;
+import { DataVariable } from &apos;./VVs/DataVariable&apos;;
+import { TimeVariable } from &apos;./VVs/TimeVariable&apos;;
+import { CategoricalVariable } from &apos;./VVs/CategoricalVariable&apos;;
+import { ContinuousVariable } from &apos;./VVs/ContinuousVariable&apos;;
+
+import { GisplayError } from &apos;./GisplayError&apos;;
+import { GisplayDefaults } from &apos;./GisplayDefaults&apos;;
+import { ColorBrewer } from &apos;./Helpers/ColorBrewer&apos;;
+
+/**
+ * This class will contain all the options available on the Gisplay API.
+ * @see Diogo&apos;s thesis page 50-52
+ */
+export class GisplayOptions {
+    /**
+     * Creates an instance of GisplayOptions.
+     * @param {Object} parsingOptions - The parsing options object. 
+     * @param {Object} variableUsage - The variable usage options.
+     * @param {Object} globalOptions - The global options object.
+     * @param {GisplayMap} gisplayMap - The GisplayMap object.
+     * @memberof GisplayOptions
+     */
+    constructor(parsingOptions, variableUsage, globalOptions, gisplayMap) {
+        this.parsingOptions = parsingOptions;
+
+        /**
+         * The time variable.
+         * @type {TimeVariable}
+         */
+        this.timeVariable = this.processTimeVariable(variableUsage, globalOptions, gisplayMap);
+        /**
+         * The url variable.
+         * @type {URLVariable}
+         */
+        this.urlVariable = this.processURLOptions(parsingOptions.urls);
+        /**
+         * The CSV parser information.
+         * @type {{chunkSize: number, numWorkers: number}}
+         */
+        this.csv = this.loadCSVParserOptions(parsingOptions.csv);
+        /**
+         * The global options.
+         * @type {Object}
+         */
+        this.globalOptions = this.processGlobalOptions(globalOptions);
+        /**
+         * The geometry variables (longitude and latitude).
+         * @type {Array&lt;DataVariable&gt;}
+         */
+        this.geometryVariables = this.processGeometryVariables(variableUsage);
+
+        //Opcionais sao as q n estiverem no variableUsage
+
+        /**
+         * The map variables.
+         * @type {Array&lt;MapVariable&gt;}
+         */
+        this.thematicVariables = this.processThematicVariables(variableUsage, gisplayMap);
+
+        //@TODO OPTIONAL VARIABLES
+        /**
+         * The optional variables.
+         * @type {Array&lt;DataVariable&gt;}
+         */
+        this.optionalVariables = this.processOptionalVariables();
+
+
+        console.log(this);
+    }
+
+    /**
+     * Process the time variable and return the created time variable. 
+     * @param {Object} parsingOptions - The parsing options.
+     * @param {{temporalInformation: Object}} variableUsage - The information about the variables.
+     * @param {Object} globalOptions - The global options. 
+     * @param {GisplayMap} gisplayMap - The thematic map. 
+     * @returns {TimeVariable|undefined} - the time variable if given by the programmer, otherwise undefined.
+     * @memberof NewGisplayOptions
+     */
+    processTimeVariable(variableUsage, globalOptions, gisplayMap) {
+        if (!variableUsage.temporalInformation)
+            return undefined;
+        let internalName = variableUsage.temporalInformation.internalName;
+        let granularity = variableUsage.temporalInformation.granularity;
+        if (!granularity) //No granularity given
+            throw new GisplayError(&apos;No granularity was given&apos;);
+        else if (GisplayDefaults.getAvailableGranularities().indexOf(granularity) === -1) //The given granularity does not exist
+            throw new GisplayError(`The given granularity: ${granularity} doesn&apos;t belong to the list of available granularities: ${GisplayDefaults.getAvailableGranularities()}.`);
+        else if (!this._findVariableDeclaration(internalName)) //internal name not defined in the 
+            throw new GisplayError(`The given internalName: ${internalName} doesn&apos;t exist in the list of variable declarations.`);
+
+        let variable = this._findVariableDeclaration(internalName);
+        let timeControl = globalOptions.timeControl;
+        if (!timeControl)
+            timeControl = gisplayMap.getAvailableTemporalControls()[0];
+        return new TimeVariable(variable.externalName, internalName, granularity, timeControl);
+    }
+
+    /**
+     * Process URL options.
+     * @param {{dataURL: string, geospatialURL: string, idOnDataURL: string, idOnGeoSpatialURL: string}} urls - The urls options given by the programmer. 
+     * @returns {URLVariable} - the URLVariable that holds the reference to the URLs and ids.
+     * @see https://stackoverflow.com/a/15979390/
+     * https://stackoverflow.com/questions/12460378/how-to-get-json-from-url-in-javascript
+     * @memberof GisplayOptions
+     */
+    processURLOptions(urls) {
+        //Needs to see if the url is a local url(file) or not
+        let dataURL;
+        if (!urls.dataURL)
+            throw new GisplayError(`The data URL was not given, and it is mandatory.`);
+        else {
+            if (urls.dataURL.includes(&apos;http&apos;) || urls.dataURL.includes(&apos;https&apos;))
+                dataURL = urls.dataURL;
+            else {
+                dataURL = document.getElementById(urls.dataURL);
+                if (dataURL &amp;&amp; dataURL.files[0]) {
+                    dataURL = dataURL.files[0];
+                    this._validateFileExtension(dataURL.name);
+                }
+                else
+                    throw new GisplayError(`No file was selected.`);
+            }
+        }
+
+        let geospatialURL;
+        if (urls.geospatialURL !== undefined) {
+            if (urls.geospatialURL.includes(&apos;http&apos;) || urls.geospatialURL.includes(&apos;https&apos;))
+                geospatialURL = urls.geospatialURL;
+            else {
+                geospatialURL = document.getElementById(urls.geospatialURL);
+                if (geospatialURL &amp;&amp; geospatialURL.files[0])
+                    geospatialURL = geospatialURL.files[0];
+                if (geospatialURL)
+                    this._validateFileExtension(geospatialURL.name);
+            }
+        }
+        return new URLVariable(dataURL, geospatialURL, urls.idOnDataURL, urls.idOnGeoSpatialURL);
+    }
+
+    /**
+     * Validate the file extension 
+     * @param {string} fileName - The name of the file to validate.
+     * @returns {boolean} - true if the filename is valid, otherwise will throw an Error.
+     * @memberof NewGisplayOptions
+     */
+    _validateFileExtension(fileName) {
+        if (fileName === undefined)
+            throw new GisplayError(&apos;The given file has a type this is not parseable by the Temporal Gisplay API.&apos;);
+        fileName = fileName.toLowerCase();
+        if (fileName.endsWith(&apos;.csv&apos;) || fileName.endsWith(&apos;.json&apos;) || fileName.endsWith(&apos;.geojson&apos;))
+            return true;
+        else
+            throw new GisplayError(&apos;The given file has a type that isn\&apos;t parseable by the Temporal Gisplay API.&apos;);
+    }
+
+    /**
+     * Find the variable declaration in the parsing options.
+     * @param {{variableDeclarations: Object, urls:Object}} parsingOptions - The parsing options.
+     * @param {string} internalName - The internal name to look for in the variable declarations.
+     * @returns {{internalName?:string, externalName: string}|boolean} - the variable declared in the parsing options.
+     * @memberof NewGisplayOptions
+     */
+    _findVariableDeclaration(internalName) {
+        let variables = this.parsingOptions.variableDeclarations;
+        if (!variables)
+            throw new GisplayError(&quot;Declaration of variables not found.&quot;);
+        for (const variable of variables)
+            if (variable.internalName === internalName || variable.externalName === internalName) //If the internal name is found in the declarations then return the variable
+                return variable;
+        return false;
+    }
+
+    /**
+     * Loads parser options.
+     * @param {Object} userOptions - User defined options.
+     * @returns {{chunkSize: number, numWorkers: number}} - Options for the parser.
+     * @memberof GisplayOptions
+     */
+    loadCSVParserOptions(userOptions) {
+        if (!userOptions)
+            userOptions = {};
+        return {
+            /**
+             * Size of each chunk that each worker will read at a time.
+             * @type {number}
+             */
+            chunkSize: userOptions.chunkSize, //UserDef or 10MB
+            /** 
+             * Number of workers that will process the data file.
+             * @type {number}
+             */
+            numWorkers: userOptions.numWorkers, //Worker threads 
+        };
+    }
+
+    /**
+     * Process global options for the Gisplay API.
+     * @param {{bounds: Object, layout: Object, container: string, provider: string, showLoader: boolean, mapOnClickFunction: Function, timeControl: string}} globalOptions - The global options. 
+     * @returns {{bounds: Object, layout: Object, container: string, provider: string, showLoader: boolean, mapOnClickFunction: Function, timeControl: string}} - the global options.
+     * @memberof NewGisplayOptions
+     */
+    processGlobalOptions(globalOptions) {
+        //@TODO: verify errors for global opts
+        return {
+            bounds: globalOptions.bounds,
+            layout: globalOptions.layout || this._completeLayout(globalOptions.bounds),
+            container: globalOptions.container,
+            provider: globalOptions.provider || &apos;MB&apos;,
+            showLoader: globalOptions.showLoader || true,
+            mapOnClickFunction: globalOptions.mapOnClickFunction,
+            legendOnClickFunction: globalOptions.legendOnClickFunction,
+            timeControl: globalOptions.timeControl
+        };
+    }
+
+    /**
+     * Complete layout when there&apos;s one bound given and no layout for the said bound.
+     * @returns {Object} - The layout for the bound.
+     * @private
+     * @memberof GisplayOptions
+     */
+    _completeLayout(bounds) {
+        if (Object.keys(bounds).length === 1) {
+            return {
+                vertical: {
+                    sizes: [100],
+                    descendants: [Object.keys(bounds)[0]]
+                }
+            };
+        }
+        else
+            throw new GisplayError(&quot;Layout is lacking in the options object.&quot;);
+    }
+
+    /**
+     * Creates the geometry variables. These are used in CSV parsing to parse the latitude and longitude.
+     * @param {any} variableUsage - The usage of the declared variables.
+     * @param {any} parsingOptions - The parsing options. 
+     * @returns {Array&lt;DataVariable&gt;} - the geometry variables (lng, lat) in an array, where the first element will contiain the longitude DataVariable and the second the latitude.
+     * @memberof GisplayOptions
+     */
+    processGeometryVariables(variableUsage) {
+        let geometryVariables = [];
+        let geoVars = variableUsage.spatialInformation;
+        if (geoVars &amp;&amp; Object.keys(geoVars).length === 2) {
+            let longitudeInternalName = geoVars.longitude ? geoVars.longitude.internalName : undefined;
+            let latitudeInternalName = geoVars.latitude ? geoVars.latitude.internalName : undefined;
+            if (longitudeInternalName &amp;&amp; latitudeInternalName) {
+                let longitudeVariable = this._findVariableDeclaration(longitudeInternalName);
+                let latitudeVariable = this._findVariableDeclaration(latitudeInternalName);
+                if (!latitudeVariable || !longitudeVariable)
+                    throw new GisplayError(&apos;Latitude or longitude weren\&apos;t correctly given.&apos;);
+                else {
+                    geometryVariables.push(new DataVariable(longitudeVariable.externalName, longitudeInternalName));
+                    geometryVariables.push(new DataVariable(latitudeVariable.externalName, latitudeInternalName));
+                }
+            }
+        }
+
+        if (geometryVariables.length &lt; 2 &amp;&amp; !this.getURLVariable().dataFileIsGeoJSON() &amp;&amp; !this.getURLVariable().hasIds())
+            throw new GisplayError(&apos;No longitude/latitude given but they are required.&apos;);
+        return geometryVariables;
+    }
+
+    /**
+     * Process the themaic variables and create the respective (categorical or continous) class object.
+     * @param {any} variableUsage 
+     * @param {GisplayMap} gisplayMap - The Gisplay map.
+     * @returns {Array&lt;CategoricalVariable|ContinuousVariable&gt;}
+     * @memberof NewGisplayOptions
+     */
+    processThematicVariables(variableUsage, gisplayMap) {
+        let shaderVariablesMap = gisplayMap.getShadersInfo().getShaderVariablesMap();
+        let categoricalVVs = [];
+        let continuousVVs = [];
+
+        let thematicVariables = variableUsage.thematicInformation;
+        let vvs = Object.keys(thematicVariables);
+        for (const visualVarName of vvs) {
+            console.warn(visualVarName, thematicVariables[visualVarName]); //DELETE
+
+            let vvOptions = thematicVariables[visualVarName];
+            let variable = this._findVariableDeclaration(vvOptions.internalName);
+            if (!vvOptions.internalName || !variable)
+                throw new GisplayError(`Internal name for visual variable: ${visualVarName}, not given or not declared in variable declarations.`);
+
+            let vvMapping = vvOptions.mapping;
+            if (visualVarName === GisplayDefaults.COLOR()) {
+                let mappingMethod = vvOptions.mappingMethod; //e.g. colorbrewer-sequential
+                if (!vvMapping &amp;&amp; !mappingMethod)
+                    throw new GisplayError(`No mapping given nor mapping method. When the visual variable is color then is mandatory to provide a mapping method or the mapping.`);
+                if (mappingMethod &amp;&amp; ((typeof mappingMethod === &apos;string&apos; &amp;&amp; GisplayDefaults.getAvailableColorBrewerMethods().indexOf(mappingMethod.toLocaleLowerCase()) === -1) || typeof mappingMethod !== &apos;string&apos;))
+                    throw new GisplayError(`The mapping method: ${mappingMethod} is not available`);
+
+                if (vvMapping) { //has mapping: some value
+                    if (Array.isArray(vvMapping)) {
+                        if (vvMapping[0].value) // Categorical &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+                            categoricalVVs.push(this._createCategoricalVariableColor(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName, gisplayMap));
+                        else   //                  Continuous &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+                            continuousVVs.push(this._createContinuousVariableColor(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName, gisplayMap, undefined));
+                    } else
+                        throw new GisplayError(&apos;Given mapping object is not an array of values hence not valid&apos;);
+                } else {
+                    if (mappingMethod) {
+                        if (mappingMethod.toLowerCase().includes(GisplayDefaults.QUALITATIVE().toLowerCase())) // Categorical &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+                            categoricalVVs.push(this._createCategoricalVariableColor(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName, gisplayMap));
+                        else  //                                                                                  Continuous &gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;&gt;
+                            continuousVVs.push(this._createContinuousVariableColor(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName, gisplayMap, mappingMethod.split(&apos;-&apos;)[1]));
+                    } else
+                        throw new GisplayError(`Wrong options provided for visual variable: ${visualVarName}.`);
+                }
+            }
+            else {
+                if (!vvMapping) //No mapping then error
+                    throw new GisplayError(`The visual variable: ${visualVarName}, needs to include it&apos;s mapping in the given options.`);
+                else if (!Array.isArray(vvMapping))
+                    throw new GisplayError(`The mapping for the visual variable: ${visualVarName}, isn&apos;t provided in array format.`);
+                else {
+                    if (vvMapping[0].value)   // If mapping[0] has value key then its categorical
+                        categoricalVVs.push(this._createCategoricalVariable(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName));
+                    else  //                     Otherwise its continuous
+                        continuousVVs.push(this._createContinuousVariable(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName, gisplayMap));
+                }
+            }
+            console.log(&quot;----------------------------------&quot;); //DELETE
+        }
+        return [categoricalVVs, continuousVVs];
+    }
+
+    /**
+     * Returns the continuous variable created using the provided parameters.
+     * @param {any} vvOptions - The options for this visual variable inside the thematicInformation object.
+     * @param {Array&lt;string&gt;} vvMapping - The mapping between the values and their visual value (e.g. [20,40, 80] or [&apos;#121212&apos;, &apos;#000000&apos;]).
+     * @param {Map&lt;string, {name: string, type: number, qualifier: string}&gt;} shaderVariablesMap - The shaders for the current map.
+     * @param {{externalName: string, internalName: string}} variable - The variable in the  variable declarations.
+     * @param {string} visualVarName - The name of the visual variable. 
+     * @param {GisplayMap} gisplayMap - The Gisplay map.
+     * @returns {ContinuousVariable} - the continuous variable created using the provided parameters.
+     * @memberof NewGisplayOptions
+     */
+    _createContinuousVariable(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName, gisplayMap) {
+        let numberOfClasses = vvOptions.numberOfClasses;
+        let classBreaks = vvOptions.classBreaks;
+
+        if (numberOfClasses !== undefined) {
+            if (+numberOfClasses !== +numberOfClasses)
+                throw new GisplayError(&apos;The numberOfClasses key must be a number&apos;);
+            else if (numberOfClasses &lt;= 1)
+                throw new GisplayError(&apos;The number of classes must be a number and higher than 1.&apos;);
+            else if (numberOfClasses !== vvMapping.length)
+                throw new GisplayError(&apos;The number of classes is not equal to the number of mappings&apos;);
+        }
+        numberOfClasses = vvMapping.length;
+
+        if (classBreaks !== undefined) {
+            if (!Array.isArray(classBreaks))
+                throw new GisplayError(&apos;classBreaks key must be an array.&apos;);
+            else if (!classBreaks.every((e) =&gt; +e === +e))
+                throw new GisplayError(&apos;classBreaks must be an array of numbers.&apos;);
+            else if (classBreaks.length !== numberOfClasses - 1)
+                throw new GisplayError(&apos;The classBreaks don\&apos;t match the number of classes.&apos;);
+        }
+
+        let classBreaksMethod = vvOptions.classBreaksMethod;
+        let params = vvOptions.params;
+        if (classBreaksMethod &amp;&amp; typeof classBreaksMethod === &apos;string&apos; &amp;&amp; GisplayDefaults.getAvailableClassBreaksMethods().indexOf(classBreaksMethod.toLowerCase()) === -1)
+            throw new GisplayError(`The class break method: ${classBreaksMethod} is not available.`);
+
+        console.error(classBreaks, classBreaksMethod);
+        if (!classBreaks &amp;&amp; !classBreaksMethod)
+            throw new GisplayError(`Neither class breaks nor class breaks method were given for the variable with internal name: ${vvOptions.internalName} and visual variable: ${visualVarName}.`);
+
+        return new ContinuousVariable(
+            variable.externalName,
+            vvOptions.internalName,
+            visualVarName,
+            shaderVariablesMap.get(visualVarName).qualifier,
+            vvMapping,
+            classBreaks,
+            numberOfClasses,
+            classBreaksMethod,
+            params
+        );
+    }
+
+    /**
+     * Returns the continuous variable when the visual variable is color.
+     * @param {any} vvOptions - The options for this visual variable inside the thematicInformation object.
+     * @param {Array&lt;string&gt;} vvMapping - The mapping between the values and their visual value (e.g. [20,40, 80] or [&apos;#121212&apos;, &apos;#000000&apos;]).
+     * @param {Map&lt;string, {name: string, type: number, qualifier: string}&gt;} shaderVariablesMap - The shaders for the current map.
+     * @param {{externalName: string, internalName: string}} variable - The variable in the  variable declarations.
+     * @param {string} visualVarName - The name of the visual variable. 
+     * @param {GisplayMap} gisplayMap - The Gisplay map.
+     * @param {string} mappingMethod - The color brewer mapping method.
+     * @returns {ContinuousVariable} - the continuous variable when the visual variable is color.
+     * @memberof NewGisplayOptions
+     */
+    _createContinuousVariableColor(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName, gisplayMap, dataNature) {
+        let numberOfClasses = vvOptions.numberOfClasses;
+        let numClassesIsNumber = +numberOfClasses === +numberOfClasses;
+        let classBreaks = vvOptions.classBreaks;
+
+        if (vvMapping !== undefined) {
+            if (numberOfClasses !== undefined) {
+                if (!numClassesIsNumber)
+                    throw new GisplayError(&apos;The number of classes must be a number&apos;);
+                else if (numberOfClasses &lt;= 1)
+                    throw new GisplayError(&apos;The number of classes must be a number and higher than 1.&apos;);
+                else if (numberOfClasses !== vvMapping.length)
+                    throw new GisplayError(&apos;The number of classes is not equal to the number of mappings&apos;);
+            }
+
+            if (vvMapping.every((color) =&gt; color.split(&apos;#&apos;).length !== 2)) //&apos;#a&apos;.split(&apos;#&apos;).length = 2
+                throw new GisplayError(`The mapping color given aren&apos;t in the hexadecimal format but it&apos;s mandatory to do so for continuous variables.`);
+            else { //Get the colors from GisplayMap
+                let rgbColors = [];
+                for (let hexColor of vvMapping)
+                    rgbColors.push(ColorBrewer.convertHexColorToRGB(hexColor));
+                vvMapping = rgbColors;
+            }
+            numberOfClasses = vvMapping.length;
+        } else {
+            if (classBreaks) {
+                numberOfClasses = classBreaks.length - 1; //@TODO Change HERE for new class breaks calculation
+                numClassesIsNumber = true;
+            }
+            vvMapping = gisplayMap.getDefaultColors(numClassesIsNumber ? numberOfClasses : gisplayMap.defaults().color.numberOfClasses, dataNature);
+            // numberOfClasses = vvMapping.length;
+        }
+
+        if (classBreaks !== undefined) {
+            if (!Array.isArray(classBreaks))
+                throw new GisplayError(&apos;classBreaks key must be an array.&apos;);
+            else if (!classBreaks.every((e) =&gt; +e === +e))
+                throw new GisplayError(&apos;classBreaks must be an array of numbers.&apos;);
+            else if (classBreaks.length !== numberOfClasses + 1) //Possible problem here when is color
+                throw new GisplayError(&apos;The classBreaks don\&apos;t match the number of classes.&apos;);
+        }
+
+        let classBreaksMethod = vvOptions.classBreaksMethod;
+        let params = vvOptions.params;
+        if (classBreaksMethod &amp;&amp; typeof classBreaksMethod === &apos;string&apos; &amp;&amp; GisplayDefaults.getAvailableClassBreaksMethods().indexOf(classBreaksMethod.toLowerCase()) === -1)
+            throw new GisplayError(`The class break method: ${classBreaksMethod} is not available.`);
+
+        return new ContinuousVariable(
+            variable.externalName,
+            vvOptions.internalName,
+            visualVarName,
+            shaderVariablesMap.get(visualVarName).qualifier,
+            vvMapping,
+            classBreaks,
+            numberOfClasses,
+            classBreaksMethod,
+            params
+        );
+    }
+
+    /**
+     * Returns the categorical variable created using the provided parameters.
+     * @param {any} vvOptions - The options for this visual variable inside the thematicInformation object.
+     * @param {Array&lt;{value: string, visual:string}&gt;} vvMapping - The mapping between the values and their visual value (e.g. &quot;Y&quot;-&gt; &quot;red&quot;).
+     * @param {Map&lt;string, {name: string, type: number, qualifier: string}&gt;} shaderVariablesMap - The shaders for the current map.
+     * @param {{externalName: string, internalName: string}} variable - The variable in the  variable declarations.
+     * @param {string} visualVarName - The name of the visual variable. 
+     * @returns {CategoricalVariable} - the categorical variable created using the provided parameters.
+     * @memberof NewGisplayOptions
+     */
+    _createCategoricalVariable(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName) {
+        let vvMappingMap = new Map();
+        for (let mappingValue of vvMapping) {
+            if (visualVarName === GisplayDefaults.ORIENTATION())
+                vvMappingMap.set(mappingValue.value, +mappingValue.visual); //+mappingValue.visual is to MAKE sure it&apos;s a number
+            else
+                vvMappingMap.set(mappingValue.value, mappingValue.visual);
+        }
+        return new CategoricalVariable(variable.externalName, vvOptions.internalName, visualVarName, shaderVariablesMap.get(visualVarName).qualifier, vvMappingMap);
+    }
+
+    /**
+     * Returns the categorical variable when the visual variable is color.
+     * @param {any} vvOptions - The options for this visual variable inside the thematicInformation object.
+     * @param {Array&lt;{value: string, visual:string}&gt;} vvMapping - The mapping between the values and their visual value (e.g. &quot;Y&quot;-&gt; &quot;red&quot;).
+     * @param {Map&lt;string, {name: string, type: number, qualifier: string}&gt;} shaderVariablesMap - The shaders for the current map.
+     * @param {{externalName: string, internalName: string}} variable - The variable in the  variable declarations.
+     * @param {string} visualVarName - The name of the visual variable. 
+     * @param {GisplayMap} gisplayMap - The name of the visual variable. 
+     * @returns {CategoricalVariable} - the categorical variable created using the provided parameters.
+     * @memberof NewGisplayOptions
+     */
+    _createCategoricalVariableColor(vvOptions, vvMapping, shaderVariablesMap, variable, visualVarName, gisplayMap) {
+        console.log(&quot;CATEGORICAL&quot;, gisplayMap);
+        let vvMappingMap = new Map();
+        if (vvMapping) {
+            for (let mappingValue of vvMapping) {
+                let rgbColor;
+                let givenColor = mappingValue.visual;
+                if (givenColor.split(&apos;#&apos;).length === 2) // Hexadecimal color
+                    rgbColor = ColorBrewer.convertHexColorToRGB(givenColor);
+                else //                               Named color
+                    rgbColor = ColorBrewer.convertNameToRGB(givenColor);
+                vvMappingMap.set(mappingValue.value, rgbColor);
+            }
+        }
+        console.log(vvMappingMap);
+        return new CategoricalVariable(variable.externalName, vvOptions.internalName, visualVarName, shaderVariablesMap.get(visualVarName).qualifier, vvMappingMap, gisplayMap);
+    }
+
+    /**
+     * Return the array of optional variables.  
+     * @param {Array&lt;Object&gt;} optionalVariables - The optional variables array given by the programmer. 
+     * @returns {Array&lt;DataVariable&gt;} - the array of optional variables.
+     * @memberof GisplayOptions
+     */
+    processOptionalVariables() {
+        let optionalVariables = [];
+
+        let allVariables = this.parsingOptions.variableDeclarations;
+        for (let variable of allVariables) {
+            let externalName = variable.externalName;
+            let internalName = variable.internalName || externalName;
+
+            //Look into spatial + thematic + temporal to see if the variable is one of them
+            let foundVariable = false;
+            for (let geoVar of this.geometryVariables)
+                if (geoVar.getExternalName() === externalName)
+                    foundVariable = true;
+
+            let catVars = this.getCategoricalVariables();
+            for (let catVar of catVars)
+                if (catVar.getExternalName() === externalName)
+                    foundVariable = true;
+
+            let contVars = this.getContinousVariables();
+            for (let contVar of contVars)
+                if (contVar.getExternalName() === externalName)
+                    foundVariable = true;
+
+            let timeVar = this.getTimeVariable();
+            if (timeVar &amp;&amp; timeVar.getExternalName() === externalName)
+                foundVariable = true;
+
+            if (!foundVariable)
+                optionalVariables.push(new DataVariable(externalName, internalName));
+        }
+        // for (let optionalVar of optionalVariables)
+        // resOptsVariables.push(new DataVariable(optionalVar.externalName, optionalVar.internalName || optionalVar.externalName));
+        return optionalVariables;
+    }
+
+    /*
+    #####################################################################
+    ######################     UTILITY METHODS      #####################
+    #####################################################################
+    */
+    /**
+     * Returns the URLVariable instance. 
+     * @returns {URLVariable} - the URLVariable instance. 
+     * @memberof GisplayOptions
+     */
+    getURLVariable() {
+        return this.urlVariable;
+    }
+
+    /**
+     * Returns an array with all the categorical variables that were created with the given options.
+     * @returns {Array&lt;CategoricalVariable&gt;} - all the categorical variables that were created with the given options.
+     * @memberof GisplayOptions
+     */
+    getCategoricalVariables() {
+        return this.thematicVariables[0];
+    }
+
+    /**
+     * Returns an array with all the continuous variables that were created with the given options.
+     * @returns {Array&lt;CategoricalVariable&gt;} - all the continuous variables that were created with the given options.
+     * @memberof GisplayOptions
+     */
+    getContinousVariables() {
+        return this.thematicVariables[1];
+    }
+
+    /**
+     * Returns the TimeVariable instance. 
+     * @returns {TimeVariable} - the time variable, or null if time wasn&apos;t given. 
+     * @memberof GisplayOptions
+     */
+    getTimeVariable() {
+        return this.timeVariable;
+    }
+
+    /**
+     * Returns an array with extra variables used mainly for picking information (click on map).
+     * @returns {Array&lt;DataVariable&gt;} - an array with extra variables used mainly for picking information or an empty array when the programmer didn&apos;t give any extra variable.
+     * @memberof GisplayOptions
+     */
+    getOptionalVariables() {
+        return this.optionalVariables;
+    }
+
+    /**
+     * Returns the global options.
+     * @returns {Object} - the global options. 
+     * @memberof NewGisplayOptions
+     */
+    getGlobalOptions() {
+        return this.globalOptions;
+    }
+
+    /**
+     * Returns the CSV options object.
+     * @returns {Object} - the CSV options object.
+     * @memberof GisplayOptions
+     */
+    getCSV() {
+        return this.csv;
+    }
+
+    /**
+     * Returns the geometry variables.
+     * @returns {Array&lt;DataVariable&gt;} - the geometry variables.
+     * @memberof GisplayOptions
+     */
+    getGeometryVariables() {
+        return this.geometryVariables;
+    }
+}   
+</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

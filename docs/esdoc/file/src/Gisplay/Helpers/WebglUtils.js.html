@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../../">
+  <title data-ice="title">src/Gisplay/Helpers/WebGLUtils.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/Helpers/WebGLUtils.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">/**
+ * Class with static methods that will help with WebGL related stuff(Matrices, web mercator projection and shaders).
+ * Always remeber WebGL is column major when reading the matrix code.
+ * @see http://ptgmedia.pearsoncmg.com/images/chap3_9780321902924/elementLinks/03fig27.jpg
+ * @static 
+ * @class WebGLUtils
+ */
+export class WebGLUtils {
+    /**
+     * Calculates the scale and offset(X and Y) for the Web Mercator projection.
+     * @static
+     * @param {number} longitudeCenter - Longitude of the given position.
+     * @param {number} latitudeCenter - Latitude of the given position.
+     * @param {number} zoom - Current zoom level of the background map.
+     * @param {number} tileSize - The size of each tile in the background map. Usually is 256. If different should be given in the API options.
+     * @param {number} width - Width of the current canvas.
+     * @param {number} height - Height of the current canvas.
+     * @returns {{scale: number, offsetX: number, offsetY: number}} - Returns the scale, offsetX and offsetY of the point given using the Web Mercator projection.
+     * @see https://bl.ocks.org/enjalot/fb7f3d696167e9b83a72#viewport.js
+     * @see https://en.wikipedia.org/wiki/Web_Mercator
+     * @memberof WebGLUtils
+     */
+    static webMercatorProjection(longitudeCenter, latitudeCenter, zoom, tileSize, width, height) {
+        // console.log(longitudeCenter, latitudeCenter, zoom, tileSize,  width, height);
+        let PI = Math.PI;
+        let scale = ((tileSize / 2) / PI) * Math.pow(2, zoom);
+        let lambda = longitudeCenter * (PI / 180); // Convert longitude to radians
+        let phi = latitudeCenter * (PI / 180); // Convert latitude to radians
+
+        let xCenter = scale * (lambda + PI);
+        let yCenter = scale * (PI - Math.log(Math.tan((PI / 4) + (phi / 2))));
+        let offsetX = (width / 2) - xCenter;
+        let offsetY = (height / 2) - yCenter;
+
+        return { scale: scale, offsetX: offsetX, offsetY: offsetY };
+    }
+
+    /**
+     * This is the result matrix from the multiplication of M1*M2*M3
+     * @static
+     * @param {number} scale - The scale calculated with WebMercator projection.
+     * @param {number} width - The width of the canvas.
+     * @param {number} height - The height of the canvas.
+     * @param {number} offsetX - The offsetX calculated with WebMercator projection.
+     * @param {number} offsetY - The offsetY calculated with WebMercator projection.
+     * @returns {Float32Array} The resulting matrix (M1*M2*M3) in a single matrix to send to WebGL in order to calculate the resulting position.
+     * @see Rui&apos;s thesis
+     * @memberof WebGLUtils
+     */
+    static finalMatrix(scale, width, height, offsetX, offsetY) {
+        let p0 = (2 * Math.PI * scale) / (width * 180);
+        let p2 = ((2 * Math.PI * scale) / width) + ((2 * offsetX) / width) - 1;
+        let p4 = (2 * scale) / height;
+        let p5 = ((2 * offsetY / height) - 1);
+        return new Float32Array([
+            p0, 0, 0,
+            0, p4, 0,
+            p2, p5, 1
+        ]);
+    }
+
+    /**
+     * Creates and compiles a shader.
+     * @static
+     * @param {string} type - Type of shader. Options are: VERTEX_SHADER or FRAGMENT_SHADER;
+     * @param {string} source_code - The shader source code.
+     * @param {WebGLRenderingContext} gl - Webgl object used by the Map class.
+     * @returns {WebGLShader} - The shader(vertex of fragment).
+     * @memberof WebGLUtils
+     */
+    static createAndCompileShader(type, source_code, gl) {
+        let shader = gl.createShader(type);
+        gl.shaderSource(shader, source_code);
+        gl.compileShader(shader);
+        console.log(gl.getShaderInfoLog(shader));
+        return shader;
+    }
+
+    /**
+     * Initializes:
+     * 1)WebGLProgram, 2) Generates shadders, 3) Attaches shaders to the program, 4) links program, 5) use program.
+     * @static
+     * @param {{gl: WebGLRenderingContext, program: WebGLProgram}} webgl - The webgl rendering context and program.
+     * @param {{vertexShaderCode:string, fragmentShaderCode:string}} shaderSourceCode - The dynamic shaders given by the programmer.
+     * @returns {WebGLProgram} - the program with the given shaders attached to it.
+     * @memberof WebGLUtils
+     */
+    static createWebGLProgram(gl, shaderSourceCode) {
+        let program = gl.createProgram();
+
+        const vertex_shader = this.createAndCompileShader(gl.VERTEX_SHADER, shaderSourceCode.vertexShaderCode, gl);
+        const fragment_shader = this.createAndCompileShader(gl.FRAGMENT_SHADER, shaderSourceCode.fragmentShaderCode, gl);
+
+        gl.attachShader(program, vertex_shader);
+        gl.attachShader(program, fragment_shader);
+
+        gl.linkProgram(program);
+        gl.useProgram(program);
+        return program;
+    }
+
+    /**
+     * Sets up webgl.
+     * @static
+     * @param {HTMLCanvasElement} canvas - The canvas element.
+     * @param {{width:number, height: number}} bgmapDivSizes - The width and height of the background maps div. 
+     * @param {{vertexShaderCode:string, fragmentShaderCode:string}} shaderSourceCode - The code for the vertex and fragment shaders.
+     * @param {{vertexShaderCode:string, fragmentShaderCode:string}} bordersSourceCode - The code for the vertex and fragment shaders for the borders.
+     * @returns {{gl: WebGLRenderingContext, program: WebGLProgram, bordersProgram: WebGLProgram}} - The webgl rendering context and program. 
+     * @memberof WebGLUtils
+     */
+    static setupWebGL(canvas, bgmapDivSizes, shaderSourceCode, bordersSourceCode) {
+        let webgl = {
+            gl: null,
+            program: null,
+            bordersProgram: null
+        };
+        webgl.gl = canvas.getContext(&quot;webgl2&quot;);
+        webgl.gl.viewport(0, 0, bgmapDivSizes.width, bgmapDivSizes.height);
+        webgl.gl.disable(webgl.gl.DEPTH_TEST);
+        
+        webgl.program = this.createWebGLProgram(webgl.gl, shaderSourceCode);
+        webgl.bordersProgram = this.createWebGLProgram(webgl.gl, bordersSourceCode);
+
+        window.canvas = canvas;
+
+        return webgl;
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>

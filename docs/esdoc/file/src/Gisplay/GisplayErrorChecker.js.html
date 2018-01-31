@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <base data-ice="baseUrl" href="../../../">
+  <title data-ice="title">src/Gisplay/GisplayErrorChecker.js | gisplay-es6-webpack</title>
+  <link type="text/css" rel="stylesheet" href="css/style.css">
+  <link type="text/css" rel="stylesheet" href="css/prettify-tomorrow.css">
+  <script src="script/prettify/prettify.js"></script>
+  <script src="script/manual.js"></script>
+<meta name="description" content="Gisplay with ES6 version using webpack."><meta property="twitter:card" content="summary"><meta property="twitter:title" content="gisplay-es6-webpack"><meta property="twitter:description" content="Gisplay with ES6 version using webpack."></head>
+<body class="layout-container" data-ice="rootContainer">
+
+<header>
+  <a href="./">Home</a>
+  
+  <a href="identifiers.html">Reference</a>
+  <a href="source.html">Source</a>
+  
+  <div class="search-box">
+  <span>
+    <img src="./image/search.png">
+    <span class="search-input-edge"></span><input class="search-input"><span class="search-input-edge"></span>
+  </span>
+    <ul class="search-result"></ul>
+  </div>
+</header>
+
+<nav class="navigation" data-ice="nav"><div>
+  <ul>
+    
+  <li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay">Gisplay</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Gisplay.js~Gisplay.html">Gisplay</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDefaults.js~GisplayDefaults.html">GisplayDefaults</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayDynamicLoader.js~GisplayDynamicLoader.html">GisplayDynamicLoader</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayError.js~GisplayError.html">GisplayError</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayErrorChecker.js~GisplayErrorChecker.html">GisplayErrorChecker</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/GisplayOptions.js~GisplayOptions.html">GisplayOptions</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-helpers">Gisplay/Helpers</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/ColorBrewer.js~ColorBrewer.html">ColorBrewer</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Helpers/WebGLUtils.js~WebGLUtils.html">WebGLUtils</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps">Gisplay/Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ChangeMap.js~ChangeMap.html">ChangeMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Choropleth.js~Choropleth.html">Choropleth</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/DotMap.js~DotMap.html">DotMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/FiguresMap.js~FiguresMap.html">FiguresMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/GisplayMap.js~GisplayMap.html">GisplayMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/LinesMap.js~LinesMap.html">LinesMap</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/ProportionalSymbolsMap.js~ProportionalSymbolsMap.html">ProportionalSymbolsMap</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-maps-background-maps">Gisplay/Maps/Background Maps</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapBingMaps.js~BGMapBingMaps.html">BGMapBingMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapGoogleMaps.js~BGMapGoogleMaps.html">BGMapGoogleMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapHereMaps.js~BGMapHereMaps.html">BGMapHereMaps</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBox.js~BGMapMapBox.html">BGMapMapBox</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapMapBoxGLJS.js~BGMapMapBoxGLJS.html">BGMapMapBoxGLJS</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Maps/Background Maps/BGMapWrapper.js~BGMapWrapper.html">BGMapWrapper</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser">Gisplay/Parser</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/Parser.js~Parser.html">Parser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-csv">Gisplay/Parser/CSV</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/CSV/CSVParser.js~CSVParser.html">CSVParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-parser-geojson">Gisplay/Parser/GeoJSON</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONIdsParser.js~GeoJSONIdsParser.html">GeoJSONIdsParser</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Parser/GeoJSON/GeoJSONParser.js~GeoJSONParser.html">GeoJSONParser</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-shaders">Gisplay/Shaders</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/Shaders/ShadersInfo.js~ShadersInfo.html">ShadersInfo</a></span></span></li>
+<li data-ice="doc"><a data-ice="dirPath" class="nav-dir-path" href="identifiers.html#gisplay-vvs">Gisplay/VVs</a><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/CategoricalVariable.js~CategoricalVariable.html">CategoricalVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/ContinuousVariable.js~ContinuousVariable.html">ContinuousVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/DataVariable.js~DataVariable.html">DataVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariable.js~MapVariable.html">MapVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/MapVariableCombination.js~MapVariableCombination.html">MapVariableCombination</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/Picking.js~WebGLPicking.html">WebGLPicking</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TemporalGranule.js~TemporalGranule.html">TemporalGranule</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/TimeVariable.js~TimeVariable.html">TimeVariable</a></span></span></li>
+<li data-ice="doc"><span data-ice="kind" class="kind-class">C</span><span data-ice="name"><span><a href="class/src/Gisplay/VVs/URLVariable.js~URLVariable.html">URLVariable</a></span></span></li>
+</ul>
+</div>
+</nav>
+
+<div class="content" data-ice="content"><h1 data-ice="title">src/Gisplay/GisplayErrorChecker.js</h1>
+<pre class="source-code line-number raw-source-code"><code class="prettyprint linenums" data-ice="content">import defaultsFile from &apos;./defaults.json&apos;;
+
+/**
+ * NOT YET IMPLEMENTED
+ * Used to verify all errors that can be checked from the given options and the defaults and shaders files.
+ * @export
+ * @class GisplayErrorChecker
+ */
+export class GisplayErrorChecker {
+
+    constructor(options) {
+
+    }
+
+    /**
+     * Verifies if the parsing, mapping and global options exist.
+     * @param {Object} parsingOptions 
+     * @param {Object} mappingOptions 
+     * @param {Object} globalOptions 
+     * @memberOf GisplayErrorChecker
+     */
+    checkMainOptions(parsingOptions, mappingOptions, globalOptions) {
+        if (!parsingOptions)
+            this.alertAndThrowError(&apos;Parsing options not found&apos;);
+        if (!mappingOptions)
+            this.alertAndThrowError(&apos;Mapping options not found&apos;);
+        if (!globalOptions)
+            this.alertAndThrowError(&apos;Global options not found&apos;);
+    }
+
+    // ############################################# OLD METHODS #############################################
+    /**
+     * Used to check errors on the given userOptions.
+     * @memberof GisplayOptions
+     */
+    checkPreErrors(userOptions) {
+        if ((!userOptions.bounds &amp;&amp; userOptions.layout)) {
+            this.alertError();
+            throw new Error(&quot;Invalid bounds and/or layout options&quot;);
+        }
+    }
+
+    /**
+     * This method is fired after the constructor is done and should check for all types of erros 
+     * that are possible to catch at this stage (eg. did the user provide an attribute?)
+     * @memberof GisplayOptions
+     */
+    checkPossibleErrors() {
+        //Errors:
+        //1 sum of layout sizes higher than 100
+        // this.checkBounds();
+        this.checkExistingGisplayId(this.container.id);
+        this.checkValidLayoutRec(this.layout);
+    }
+
+    checkExistingGisplayId(gisplayId) {
+        if (document.querySelectorAll(&apos;#&apos; + gisplayId).length &gt; 1) {
+            this.alertError();
+            throw new Error(&quot;Gisplay identifier given: &quot; + gisplayId + &quot; already exists&quot;);
+        }
+    }
+
+    /**
+     * Validates the given layout.
+     * Now checks: size of each descendant does not exceeds 100 per cent and the id exists on the bounds object. 
+     * @param {any} obj 
+     * @memberof GisplayOptions
+     */
+    checkValidLayoutRec(obj) {
+        let orientation = obj.vertical || obj.horizontal;
+        this.checkSizes(orientation);
+        for (let i = 0; i &lt; orientation.sizes.length; i++)
+            if (typeof orientation.descendants[i] === &apos;string&apos;) //Leaf found	
+                this.checkExistingBound(orientation.descendants[i]);
+            else
+                this.checkValidLayoutRec(orientation.descendants[i]);
+    }
+
+    /**
+     * Validates the sum of all sizes for this orientation.
+     * @param {Object} orientation - The vertical/horizontal object. 
+     * @memberof GisplayOptions
+     */
+    checkSizes(orientation) {
+        let sum = 0;
+        for (let size of orientation.sizes)
+            sum += size;
+        if (sum !== 100) {//sum &gt; 100 || sum &lt; 100)
+            this.alertError();
+            throw new Error(&quot;Sum of sizes exceeds 100 per cent at: &quot; + JSON.stringify(orientation));
+        }
+    }
+
+    /**
+     * The id of the bound to check the existence on the bounds object.
+     * @param {string} boundId - The bounds id. 
+     * @memberof GisplayOptions
+     */
+    checkExistingBound(boundId) {
+        // if (!boundId)
+        if (!this.bounds[boundId]) {
+            this.alertError();
+            throw new Error(&quot;Bound named: &quot; + boundId + &quot; does not exist. Available bounds are: [&quot; + Object.keys(this.bounds) + &quot;]&quot;);
+        }
+    }
+
+    /**
+     * Send an alert to the user and throw the error given.
+     * @param {string} errorString - The error to throw.
+     * @memberOf GisplayErrorChecker
+     */
+    alertAndThrowError(errorString) {
+        this.alertError();
+        throw new Error(errorString);
+    }
+
+    //
+    /**
+     * This method fires an alert because the user provider wrong or conflicting options.
+     * @memberof GisplayOptions
+     */
+    alertError() {
+        alert(&quot;Error on Options object found. Check browser console for more details.&quot;);
+    }
+
+    // ############################################# DEPRECATED
+    /**
+     * @deprecated It&apos;s not used because the visual variables already hold all information of parsing Options.
+     * Returns the mapping options.
+     * @returns {Object} - the mapping options.
+     * @memberof NewGisplayOptions
+     */
+    getMappingOptions() {
+        return this.mappingOptions;
+    }
+
+    /**
+     * @deprecated 
+     * Process options for mapping of visual variables.
+     * @param {Object} mappingOptions - Mapping options given by the user.
+     * @returns {Array&lt;Object&gt;} - The resulting options after processing.
+     * @property {string} legendTitle - The title of the legend
+     * @property {string} visualVariable - The type of visual variable for each option.
+     * @property {Array&lt;Object|string|number&gt;} mapping - The mapping between each class/category of the variable and it&apos;s value. 
+     * @memberof NewGisplayOptions
+     */
+    processMappingOptions(mappingOptions) {
+        let mappingOptionsVariables = [];
+        for (let externalName of Object.keys(mappingOptions)) {
+            let value = mappingOptions[externalName];
+            let mappingInfoVariable = {
+                externalName: externalName,
+                legendTitle: value.legendTitle || externalName,
+                visualVariable: value.visualVariable,
+                mapping: value.mapping
+            };
+            mappingOptionsVariables.push(mappingInfoVariable);
+
+            this.optionsMap.set(externalName, { parsing: this._findParsingVariable(externalName), mapping: mappingInfoVariable }); //For each visual variable create: externalName -&gt; options
+        }
+
+        // this.optionsMap = map; //For each visual variable create: externalName -&gt; options
+        //TODO: verify errors for mapping
+        //1. Should have as many keys as the sum of this.parsinOptions.categoricalVars + sequentialVars
+        return mappingOptionsVariables;
+    }
+
+    /**
+     * @deprecated 
+     * Finds the variable on the parsing options.
+     * @param {string} externalName - External name.
+     * @returns {Object} - The parsing options for the variable with the given name.
+     * @private 
+     * @memberof NewGisplayOptions
+     */
+    _findParsingVariable(externalName) {
+        let cat = this.parsingOptions.categoricalVars;
+        let seq = this.parsingOptions.sequentialVars;
+        for (let i = 0; i &lt; cat.length; i++)
+            if (cat[i].externalName === externalName)
+                return cat[i];
+
+        for (let i = 0; i &lt; seq.length; i++)
+            if (seq[i].externalName === externalName)
+                return seq[i];
+        return null; //TODO: throw new Error(&apos;Name not found on the parsing options.&apos;)
+    }
+
+    /**
+     * @deprecated 
+     * @param {any} externalName 
+     * @returns 
+     * @memberof GisplayOptions
+     */
+    _findMappingVariable(externalName) {
+        let mappingOpts = this.mappingOptions;
+        for (let i = 0; i &lt; mappingOpts.length; i++)
+            if (mappingOpts[i].externalName === externalName)
+                return mappingOpts[i];
+        return null; //TODO: throw new Error(&apos;Name not found on the parsing options.&apos;)
+    }
+}</code></pre>
+
+</div>
+
+<footer class="footer">
+  Generated by <a href="https://esdoc.org">ESDoc<span data-ice="esdocVersion">(1.0.3)</span><img src="./image/esdoc-logo-mini-black.png"></a>
+</footer>
+
+<script src="script/search_index.js"></script>
+<script src="script/search.js"></script>
+<script src="script/pretty-print.js"></script>
+<script src="script/inherited-summary.js"></script>
+<script src="script/test-summary.js"></script>
+<script src="script/inner-link.js"></script>
+<script src="script/patch-for-local.js"></script>
+</body>
+</html>
